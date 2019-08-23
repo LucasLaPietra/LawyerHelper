@@ -59,12 +59,12 @@
             this.CuadroAbogado = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.BotonCobros = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(277, 441);
+            this.BotonCancelar.Location = new System.Drawing.Point(277, 450);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 68;
@@ -73,7 +73,7 @@
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(14, 441);
+            this.BotonAceptar.Location = new System.Drawing.Point(14, 450);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 67;
@@ -318,21 +318,21 @@
             this.BotonCobros.Text = "Asignar Cobros";
             this.BotonCobros.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // BotonJuiciosAsignados
             // 
-            this.button1.Location = new System.Drawing.Point(197, 401);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 23);
-            this.button1.TabIndex = 92;
-            this.button1.Text = "Asignar Pagos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(197, 401);
+            this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
+            this.BotonJuiciosAsignados.Size = new System.Drawing.Size(175, 23);
+            this.BotonJuiciosAsignados.TabIndex = 92;
+            this.BotonJuiciosAsignados.Text = "Ver Juicios asociados";
+            this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
             // 
             // AltaPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 477);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(384, 496);
+            this.Controls.Add(this.BotonJuiciosAsignados);
             this.Controls.Add(this.BotonCobros);
             this.Controls.Add(this.CuadroAbogado);
             this.Controls.Add(this.label11);
@@ -403,6 +403,6 @@
         private System.Windows.Forms.TextBox CuadroAbogado;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button BotonCobros;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BotonJuiciosAsignados;
     }
 }
