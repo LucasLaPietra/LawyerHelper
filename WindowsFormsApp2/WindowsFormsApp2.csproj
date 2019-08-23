@@ -105,6 +105,12 @@
     <Compile Include="UI\Juicios\MenuJuicios.Designer.cs">
       <DependentUpon>MenuJuicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Juicios\ModificarJuicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Juicios\ModificarJuicio.Designer.cs">
+      <DependentUpon>ModificarJuicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pagos\AltaPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Juicios\MenuJuicios.resx">
       <DependentUpon>MenuJuicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Juicios\ModificarJuicio.resx">
+      <DependentUpon>ModificarJuicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Pagos\AltaPago.resx">
       <DependentUpon>AltaPago.cs</DependentUpon>
