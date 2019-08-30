@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp2.Juicios;
+using LawyerHelper.UI.Juicios;
 
 namespace WindowsFormsApp2
 {
@@ -27,6 +28,12 @@ namespace WindowsFormsApp2
         private void BotonConsulta_Click(object sender, EventArgs e)
         {
             ConsultaJuicios iMenuNuevo = new ConsultaJuicios();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonModificacion_Click(object sender, EventArgs e)
+        {
+            ModificarJuicio iMenuNuevo = new ModificarJuicio();
             iMenuNuevo.ShowDialog();
         }
     }
