@@ -34,7 +34,7 @@
             this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
             this.BotonMostrarTodo = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BotonDocumentacion = new System.Windows.Forms.Button();
+            this.BotonVerDocumentacion = new System.Windows.Forms.Button();
             this.LabelExpediente = new System.Windows.Forms.Label();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.LabelFolio = new System.Windows.Forms.Label();
@@ -126,7 +126,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.BotonDocumentacion, 1, 20);
+            this.tableLayoutPanel1.Controls.Add(this.BotonVerDocumentacion, 1, 20);
             this.tableLayoutPanel1.Controls.Add(this.LabelExpediente, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.LabelFecha, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.LabelFolio, 0, 2);
@@ -194,16 +194,16 @@
             this.tableLayoutPanel1.TabIndex = 5;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
-            // BotonDocumentacion
+            // BotonVerDocumentacion
             // 
-            this.BotonDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BotonDocumentacion.Enabled = false;
-            this.BotonDocumentacion.Location = new System.Drawing.Point(206, 250);
-            this.BotonDocumentacion.Name = "BotonDocumentacion";
-            this.BotonDocumentacion.Size = new System.Drawing.Size(120, 26);
-            this.BotonDocumentacion.TabIndex = 41;
-            this.BotonDocumentacion.Text = "Ver";
-            this.BotonDocumentacion.UseVisualStyleBackColor = true;
+            this.BotonVerDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonVerDocumentacion.Enabled = false;
+            this.BotonVerDocumentacion.Location = new System.Drawing.Point(206, 250);
+            this.BotonVerDocumentacion.Name = "BotonVerDocumentacion";
+            this.BotonVerDocumentacion.Size = new System.Drawing.Size(120, 26);
+            this.BotonVerDocumentacion.TabIndex = 41;
+            this.BotonVerDocumentacion.Text = "Ver";
+            this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
             // 
             // LabelExpediente
             // 
@@ -633,7 +633,7 @@
         private System.Windows.Forms.Label LabelDemandado2;
         private System.Windows.Forms.Label LabelJurisdiccion;
         private System.Windows.Forms.Label LabelEtapa;
-        private System.Windows.Forms.Button BotonDocumentacion;
+        private System.Windows.Forms.Button BotonVerDocumentacion;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Label label2;
     }

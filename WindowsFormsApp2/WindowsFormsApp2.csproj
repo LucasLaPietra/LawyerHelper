@@ -135,6 +135,12 @@
     <Compile Include="UI\Personas\AltaPersona.Designer.cs">
       <DependentUpon>AltaPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Personas\ConsultaPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Personas\ConsultaPersona.Designer.cs">
+      <DependentUpon>ConsultaPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Personas\MenuPersonas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\AltaPersona.resx">
       <DependentUpon>AltaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Personas\ConsultaPersona.resx">
+      <DependentUpon>ConsultaPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\MenuPersonas.resx">
       <DependentUpon>MenuPersonas.cs</DependentUpon>
