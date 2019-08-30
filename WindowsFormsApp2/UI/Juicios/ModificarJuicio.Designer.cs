@@ -514,7 +514,7 @@
             // 
             // BotonBusquedaAvanzada
             // 
-            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(385, 65);
+            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 59);
             this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
             this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
             this.BotonBusquedaAvanzada.TabIndex = 12;
