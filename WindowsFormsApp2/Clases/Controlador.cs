@@ -15,12 +15,13 @@ namespace WindowsFormsApp2
     public MostrarAgenda(){
         using (var context = new Contexto())
         {
-             var query = from recordatorio in context.Contexto
+            var query = from recordatorio in context.Contexto
                 where recordatorio.FechayHora >= DateTime.Today()
                 select recordatorio;
    
             //el siguiente All es de dudosa procedencia
             var agenda = query.All<Contexto>();
+            return(agenda);
         }
     }
     }
