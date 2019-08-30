@@ -15,5 +15,7 @@ namespace LawyerHelper.Clases
         public String Nombre { get; set; }
         public String Detalle { get; set; }
         public DateTime Fecha { get; set; }
+
+        public Juicio Juicio { get; set; }
     }
 }
