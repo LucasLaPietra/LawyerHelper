@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeFecha = new System.Windows.Forms.DateTimePicker();
             this.LabelFolio = new System.Windows.Forms.Label();
             this.LabelExpediente = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -73,12 +73,12 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Fecha:";
             // 
-            // dateTimePicker1
+            // dateTimeFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(93, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(276, 20);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dateTimeFecha.Location = new System.Drawing.Point(93, 30);
+            this.dateTimeFecha.Name = "dateTimeFecha";
+            this.dateTimeFecha.Size = new System.Drawing.Size(276, 20);
+            this.dateTimeFecha.TabIndex = 15;
             // 
             // LabelFolio
             // 
@@ -393,7 +393,7 @@
             this.Controls.Add(this.LabelExpediente);
             this.Controls.Add(this.LabelFolio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimeFecha);
             this.Name = "AltaJuicios";
             this.Text = "AltaJuicios";
             this.Load += new System.EventHandler(this.AltaJuicios_Load);
@@ -407,7 +407,7 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimeFecha;
         private System.Windows.Forms.Label LabelFolio;
         private System.Windows.Forms.Label LabelExpediente;
         private System.Windows.Forms.Label label1;
