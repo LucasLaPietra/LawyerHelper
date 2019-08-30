@@ -25,5 +25,11 @@ namespace LawyerHelper.Clases
         public String Libro { get; set; }
         public String Jurisdiccion { get; set; }
         public Double Precio { get; set; }
+
+        public IList<Cobro> Cobros { get; set; }
+        public IList<Pago> Pagos { get; set; }
+        public IList<Demandado> Demandados { get; set; }
+        public IList<Demandante> Demandantes { get; set; }
+        public IList<Documento> Documentos { get; set; }
     }
 }
