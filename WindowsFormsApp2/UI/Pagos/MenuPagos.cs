@@ -27,7 +27,7 @@ namespace WindowsFormsApp2
 
         private void BotonBaja_Click(object sender, EventArgs e)
         {
-            BajaPagos iMenuNuevo = new BajaPagos();
+            BajaPago iMenuNuevo = new BajaPago();
             iMenuNuevo.ShowDialog();
         }
     }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LawyerHelper.UI.Pagos
 {
-    public partial class BajaPagos : Form
+    public partial class BajaPago : Form
     {
-        public BajaPagos()
+        public BajaPago()
         {
             InitializeComponent();
         }
