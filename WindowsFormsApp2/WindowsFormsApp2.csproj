@@ -75,6 +75,12 @@
       <DependentUpon>AltaCobro.cs</DependentUpon>
     </Compile>
     <Compile Include="Fachada.cs" />
+    <Compile Include="UI\Documentos\AltaDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Documentos\AltaDocumento.Designer.cs">
+      <DependentUpon>AltaDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Juicios\AltaJuicios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,12 @@
     <Compile Include="UI\Pagos\BajaPagos.Designer.cs">
       <DependentUpon>BajaPagos.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Pagos\ConsultaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Pagos\ConsultaPago.Designer.cs">
+      <DependentUpon>ConsultaPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pagos\MenuPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,12 @@
     </Compile>
     <Compile Include="UI\Personas\AltaPersona.Designer.cs">
       <DependentUpon>AltaPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Personas\BajaPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Personas\BajaPersona.Designer.cs">
+      <DependentUpon>BajaPersona.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Personas\ConsultaPersona.cs">
       <SubType>Form</SubType>
@@ -167,6 +185,9 @@
     <EmbeddedResource Include="UI\Cobros\AltaCobro.resx">
       <DependentUpon>AltaCobro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Documentos\AltaDocumento.resx">
+      <DependentUpon>AltaDocumento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Juicios\AltaJuicios.resx">
       <DependentUpon>AltaJuicios.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,11 +212,17 @@
     <EmbeddedResource Include="UI\Pagos\BajaPagos.resx">
       <DependentUpon>BajaPagos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Pagos\ConsultaPago.resx">
+      <DependentUpon>ConsultaPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Pagos\MenuPagos.resx">
       <DependentUpon>MenuPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\AltaPersona.resx">
       <DependentUpon>AltaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Personas\BajaPersona.resx">
+      <DependentUpon>BajaPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\ConsultaPersona.resx">
       <DependentUpon>ConsultaPersona.cs</DependentUpon>
@@ -233,8 +260,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Documentos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -47,7 +47,7 @@
             // LabelImporte
             // 
             this.LabelImporte.AutoSize = true;
-            this.LabelImporte.Location = new System.Drawing.Point(16, 97);
+            this.LabelImporte.Location = new System.Drawing.Point(21, 126);
             this.LabelImporte.Name = "LabelImporte";
             this.LabelImporte.Size = new System.Drawing.Size(45, 13);
             this.LabelImporte.TabIndex = 2;
@@ -56,7 +56,7 @@
             // LabelDetalle
             // 
             this.LabelDetalle.AutoSize = true;
-            this.LabelDetalle.Location = new System.Drawing.Point(18, 126);
+            this.LabelDetalle.Location = new System.Drawing.Point(21, 175);
             this.LabelDetalle.Name = "LabelDetalle";
             this.LabelDetalle.Size = new System.Drawing.Size(43, 13);
             this.LabelDetalle.TabIndex = 3;
@@ -64,22 +64,22 @@
             // 
             // CuadroImporte
             // 
-            this.CuadroImporte.Location = new System.Drawing.Point(67, 94);
+            this.CuadroImporte.Location = new System.Drawing.Point(67, 122);
             this.CuadroImporte.Name = "CuadroImporte";
-            this.CuadroImporte.Size = new System.Drawing.Size(193, 20);
+            this.CuadroImporte.Size = new System.Drawing.Size(290, 20);
             this.CuadroImporte.TabIndex = 6;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(67, 126);
+            this.textBox1.Location = new System.Drawing.Point(67, 177);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 108);
+            this.textBox1.Size = new System.Drawing.Size(290, 165);
             this.textBox1.TabIndex = 7;
             // 
             // BotonJuicio
             // 
-            this.BotonJuicio.Location = new System.Drawing.Point(54, 265);
+            this.BotonJuicio.Location = new System.Drawing.Point(97, 372);
             this.BotonJuicio.Name = "BotonJuicio";
             this.BotonJuicio.Size = new System.Drawing.Size(180, 26);
             this.BotonJuicio.TabIndex = 8;
@@ -88,7 +88,7 @@
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(11, 326);
+            this.BotonAceptar.Location = new System.Drawing.Point(54, 433);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 9;
@@ -97,7 +97,7 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(177, 326);
+            this.BotonCancelar.Location = new System.Drawing.Point(220, 433);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 10;
@@ -107,14 +107,14 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(67, 22);
+            this.dateTimePicker1.Location = new System.Drawing.Point(67, 24);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(193, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(290, 20);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // CuadroHora
             // 
-            this.CuadroHora.Location = new System.Drawing.Point(67, 57);
+            this.CuadroHora.Location = new System.Drawing.Point(67, 73);
             this.CuadroHora.Name = "CuadroHora";
             this.CuadroHora.Size = new System.Drawing.Size(24, 20);
             this.CuadroHora.TabIndex = 12;
@@ -122,7 +122,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 60);
+            this.label1.Location = new System.Drawing.Point(21, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
             this.label1.TabIndex = 13;
@@ -139,7 +139,7 @@
             // 
             // CuadroMinutos
             // 
-            this.CuadroMinutos.Location = new System.Drawing.Point(105, 57);
+            this.CuadroMinutos.Location = new System.Drawing.Point(105, 73);
             this.CuadroMinutos.Name = "CuadroMinutos";
             this.CuadroMinutos.Size = new System.Drawing.Size(24, 20);
             this.CuadroMinutos.TabIndex = 15;
@@ -147,7 +147,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 60);
+            this.label3.Location = new System.Drawing.Point(94, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 17;
@@ -159,7 +159,7 @@
             this.CuadroAM.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.CuadroAM.Location = new System.Drawing.Point(135, 56);
+            this.CuadroAM.Location = new System.Drawing.Point(135, 73);
             this.CuadroAM.Name = "CuadroAM";
             this.CuadroAM.Size = new System.Drawing.Size(46, 21);
             this.CuadroAM.TabIndex = 18;
@@ -169,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 381);
+            this.ClientSize = new System.Drawing.Size(384, 496);
             this.Controls.Add(this.CuadroAM);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CuadroMinutos);

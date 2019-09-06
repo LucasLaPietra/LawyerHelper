@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace LawyerHelper.UI.Personas
 {
-    public partial class ModificarPersona : Form
+    public partial class BajaPersona : Form
     {
-        public ModificarPersona()
+        public BajaPersona()
         {
             InitializeComponent();
-        }
-
-        private void LabelDomicilio2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ModificarPersona_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

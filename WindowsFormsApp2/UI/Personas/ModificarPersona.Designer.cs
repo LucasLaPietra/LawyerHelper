@@ -34,7 +34,6 @@
             this.LabelApellido = new System.Windows.Forms.Label();
             this.LabelNombre = new System.Windows.Forms.Label();
             this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
-            this.BotonCancelar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LabelDNI = new System.Windows.Forms.Label();
             this.LabelDomicilio = new System.Windows.Forms.Label();
@@ -62,6 +61,8 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.BotonModificarJuicio = new System.Windows.Forms.Button();
             this.BotonModificarCobro = new System.Windows.Forms.Button();
+            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,15 +115,6 @@
             this.BotonBusquedaAvanzada.TabIndex = 43;
             this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
-            // 
-            // BotonCancelar
-            // 
-            this.BotonCancelar.Location = new System.Drawing.Point(143, 460);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
-            this.BotonCancelar.TabIndex = 45;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -387,14 +379,33 @@
             this.BotonModificarCobro.Text = "Modificar Cobro";
             this.BotonModificarCobro.UseVisualStyleBackColor = true;
             // 
+            // BotonCancelar
+            // 
+            this.BotonCancelar.Location = new System.Drawing.Point(349, 460);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
+            this.BotonCancelar.TabIndex = 70;
+            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
+            // 
+            // BotonAceptar
+            // 
+            this.BotonAceptar.Location = new System.Drawing.Point(86, 460);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
+            this.BotonAceptar.TabIndex = 69;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
+            // 
             // ModificarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(524, 496);
+            this.ClientSize = new System.Drawing.Size(559, 496);
+            this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.BotonModificarCobro);
             this.Controls.Add(this.BotonModificarJuicio);
-            this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonBuscar);
@@ -404,6 +415,7 @@
             this.Controls.Add(this.LabelNombre);
             this.Name = "ModificarPersona";
             this.Text = "ModificarPersona";
+            this.Load += new System.EventHandler(this.ModificarPersona_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -419,7 +431,6 @@
         private System.Windows.Forms.Label LabelApellido;
         private System.Windows.Forms.Label LabelNombre;
         private System.Windows.Forms.Button BotonBusquedaAvanzada;
-        private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label LabelDNI;
         private System.Windows.Forms.Label LabelDomicilio;
@@ -447,5 +458,7 @@
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Button BotonModificarJuicio;
         private System.Windows.Forms.Button BotonModificarCobro;
+        private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.Button BotonAceptar;
     }
 }
