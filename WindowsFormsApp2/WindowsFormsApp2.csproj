@@ -99,6 +99,12 @@
     <Compile Include="UI\Cobros\MenuCobros.Designer.cs">
       <DependentUpon>MenuCobros.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Juicios\BajaJuicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Juicios\BajaJuicio.Designer.cs">
+      <DependentUpon>BajaJuicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Juicios\BuscarJuicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,12 @@
     <Compile Include="UI\Personas\BajaPersona.Designer.cs">
       <DependentUpon>BajaPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Personas\BuscarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Personas\BuscarPersona.Designer.cs">
+      <DependentUpon>BuscarPersona.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Personas\ConsultaPersona.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +215,9 @@
     <EmbeddedResource Include="UI\Cobros\MenuCobros.resx">
       <DependentUpon>MenuCobros.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Juicios\BajaJuicio.resx">
+      <DependentUpon>BajaJuicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Juicios\BuscarJuicio.resx">
       <DependentUpon>BuscarJuicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\BajaPersona.resx">
       <DependentUpon>BajaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Personas\BuscarPersona.resx">
+      <DependentUpon>BuscarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\ConsultaPersona.resx">
       <DependentUpon>ConsultaPersona.cs</DependentUpon>

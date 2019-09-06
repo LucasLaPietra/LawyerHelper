@@ -10,31 +10,11 @@ using System.Windows.Forms;
 
 namespace LawyerHelper.UI.Personas
 {
-    public partial class ParametroDeBusqueda : Form
+    public partial class BuscarPersona : Form
     {
-        public ParametroDeBusqueda()
+        public BuscarPersona()
         {
             InitializeComponent();
-        }
-
-        private void LabelApellido_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CuadroApellido_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LabelExpediente_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
