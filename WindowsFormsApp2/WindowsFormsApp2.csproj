@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Clases\Cobro.cs" />
     <Compile Include="Clases\Contexto.cs" />
+    <Compile Include="Clases\Controlador.cs" />
     <Compile Include="Clases\Demandado.cs" />
     <Compile Include="Clases\Demandante.cs" />
     <Compile Include="Clases\Documento.cs" />
