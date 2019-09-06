@@ -42,18 +42,18 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 202);
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 134);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(440, 184);
+            this.checkedListBox1.Size = new System.Drawing.Size(494, 244);
             this.checkedListBox1.TabIndex = 99;
             // 
             // BotonMostrarTodos
             // 
-            this.BotonMostrarTodos.Location = new System.Drawing.Point(236, 150);
+            this.BotonMostrarTodos.Location = new System.Drawing.Point(343, 85);
             this.BotonMostrarTodos.Name = "BotonMostrarTodos";
             this.BotonMostrarTodos.Size = new System.Drawing.Size(163, 28);
             this.BotonMostrarTodos.TabIndex = 98;
-            this.BotonMostrarTodos.Text = "Ver todos los juicios";
+            this.BotonMostrarTodos.Text = "Mostrar todos los juicios";
             this.BotonMostrarTodos.UseVisualStyleBackColor = true;
             // 
             // BotonCancelar
@@ -76,16 +76,16 @@
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.Location = new System.Drawing.Point(236, 103);
+            this.BotonBuscar.Location = new System.Drawing.Point(418, 12);
             this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(163, 28);
+            this.BotonBuscar.Size = new System.Drawing.Size(90, 28);
             this.BotonBuscar.TabIndex = 95;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
             // 
             // CuadroParametro
             // 
-            this.CuadroParametro.Location = new System.Drawing.Point(221, 68);
+            this.CuadroParametro.Location = new System.Drawing.Point(196, 46);
             this.CuadroParametro.Name = "CuadroParametro";
             this.CuadroParametro.Size = new System.Drawing.Size(202, 20);
             this.CuadroParametro.TabIndex = 94;
@@ -93,7 +93,7 @@
             // labelCuadroParametro
             // 
             this.labelCuadroParametro.AutoSize = true;
-            this.labelCuadroParametro.Location = new System.Drawing.Point(103, 71);
+            this.labelCuadroParametro.Location = new System.Drawing.Point(20, 53);
             this.labelCuadroParametro.Name = "labelCuadroParametro";
             this.labelCuadroParametro.Size = new System.Drawing.Size(95, 13);
             this.labelCuadroParametro.TabIndex = 93;
@@ -102,7 +102,7 @@
             // comboBoxParametro
             // 
             this.comboBoxParametro.FormattingEnabled = true;
-            this.comboBoxParametro.Location = new System.Drawing.Point(221, 16);
+            this.comboBoxParametro.Location = new System.Drawing.Point(196, 15);
             this.comboBoxParametro.Name = "comboBoxParametro";
             this.comboBoxParametro.Size = new System.Drawing.Size(202, 21);
             this.comboBoxParametro.TabIndex = 92;
@@ -110,7 +110,7 @@
             // LabelComboBoxParametro
             // 
             this.LabelComboBoxParametro.AutoSize = true;
-            this.LabelComboBoxParametro.Location = new System.Drawing.Point(34, 16);
+            this.LabelComboBoxParametro.Location = new System.Drawing.Point(9, 15);
             this.LabelComboBoxParametro.Name = "LabelComboBoxParametro";
             this.LabelComboBoxParametro.Size = new System.Drawing.Size(181, 13);
             this.LabelComboBoxParametro.TabIndex = 91;
@@ -120,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 496);
+            this.ClientSize = new System.Drawing.Size(518, 496);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.BotonCancelar);
