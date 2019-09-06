@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LawyerHelper.UI.Juicios
 {
-    public partial class CuadroCompetencia : Form
+    public partial class ModificarJuicio : Form
     {
-        public CuadroCompetencia()
+        public ModificarJuicio()
         {
             InitializeComponent();
         }
@@ -33,6 +33,11 @@ namespace LawyerHelper.UI.Juicios
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonBuscar_Click(object sender, EventArgs e)
         {
 
         }
