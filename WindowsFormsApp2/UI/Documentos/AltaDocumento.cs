@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LawyerHelper.UI.Personas
+namespace LawyerHelper.UI.Documentos
 {
-    public partial class ModificarPersona : Form
+    public partial class AltaDocumento : Form
     {
-        public ModificarPersona()
+        public AltaDocumento()
         {
             InitializeComponent();
         }
 
-        private void LabelDomicilio2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ModificarPersona_Load(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

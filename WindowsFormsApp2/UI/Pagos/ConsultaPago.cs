@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LawyerHelper.UI.Personas
+namespace LawyerHelper.UI.Pagos
 {
-    public partial class BuscarPersona : Form
+    public partial class ConsultaPago : Form
     {
-        public BuscarPersona()
+        public ConsultaPago()
         {
             InitializeComponent();
         }
