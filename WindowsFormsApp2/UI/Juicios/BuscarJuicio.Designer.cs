@@ -30,13 +30,13 @@
         {
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonVerJuicio = new System.Windows.Forms.Button();
-            this.ListaJuiciosEncontrados = new System.Windows.Forms.ListBox();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.CuadroParametro = new System.Windows.Forms.TextBox();
             this.labelCuadroParametro = new System.Windows.Forms.Label();
             this.comboBoxParametro = new System.Windows.Forms.ComboBox();
             this.LabelComboBoxParametro = new System.Windows.Forms.Label();
             this.BotonMostrarTodos = new System.Windows.Forms.Button();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.SuspendLayout();
             // 
             // BotonCancelar
@@ -56,14 +56,6 @@
             this.BotonVerJuicio.TabIndex = 78;
             this.BotonVerJuicio.Text = "Ver Juicio";
             this.BotonVerJuicio.UseVisualStyleBackColor = true;
-            // 
-            // ListaJuiciosEncontrados
-            // 
-            this.ListaJuiciosEncontrados.FormattingEnabled = true;
-            this.ListaJuiciosEncontrados.Location = new System.Drawing.Point(37, 209);
-            this.ListaJuiciosEncontrados.Name = "ListaJuiciosEncontrados";
-            this.ListaJuiciosEncontrados.Size = new System.Drawing.Size(386, 186);
-            this.ListaJuiciosEncontrados.TabIndex = 77;
             // 
             // BotonBuscar
             // 
@@ -109,22 +101,30 @@
             // 
             // BotonMostrarTodos
             // 
-            this.BotonMostrarTodos.Location = new System.Drawing.Point(236, 162);
+            this.BotonMostrarTodos.Location = new System.Drawing.Point(236, 166);
             this.BotonMostrarTodos.Name = "BotonMostrarTodos";
             this.BotonMostrarTodos.Size = new System.Drawing.Size(163, 28);
             this.BotonMostrarTodos.TabIndex = 80;
             this.BotonMostrarTodos.Text = "Ver todos los juicios";
             this.BotonMostrarTodos.UseVisualStyleBackColor = true;
             // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(12, 218);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(507, 184);
+            this.checkedListBox1.TabIndex = 81;
+            // 
             // BuscarJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(534, 461);
+            this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonVerJuicio);
-            this.Controls.Add(this.ListaJuiciosEncontrados);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.CuadroParametro);
             this.Controls.Add(this.labelCuadroParametro);
@@ -141,12 +141,12 @@
 
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonVerJuicio;
-        private System.Windows.Forms.ListBox ListaJuiciosEncontrados;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.TextBox CuadroParametro;
         private System.Windows.Forms.Label labelCuadroParametro;
         private System.Windows.Forms.ComboBox comboBoxParametro;
         private System.Windows.Forms.Label LabelComboBoxParametro;
         private System.Windows.Forms.Button BotonMostrarTodos;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
