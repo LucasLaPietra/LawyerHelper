@@ -23,5 +23,10 @@ namespace WindowsFormsApp2
             AltaPersona iMenuNuevo = new AltaPersona();
             iMenuNuevo.ShowDialog();
         }
+
+        private void MenuPersonas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

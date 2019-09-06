@@ -27,7 +27,7 @@ namespace WindowsFormsApp2.Pagos
 
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

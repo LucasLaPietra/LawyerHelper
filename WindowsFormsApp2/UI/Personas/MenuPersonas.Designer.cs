@@ -97,6 +97,7 @@
             this.Controls.Add(this.BotonAlta);
             this.Name = "MenuPersonas";
             this.Text = "MenuPersonas";
+            this.Load += new System.EventHandler(this.MenuPersonas_Load);
             this.ResumeLayout(false);
 
         }

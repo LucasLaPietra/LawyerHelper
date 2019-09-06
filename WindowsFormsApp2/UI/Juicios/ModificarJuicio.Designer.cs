@@ -1,6 +1,6 @@
 ﻿namespace LawyerHelper.UI.Juicios
 {
-    partial class CuadroCompetencia
+    partial class ModificarJuicio
     {
         /// <summary>
         /// Required designer variable.
@@ -456,6 +456,7 @@
             this.BotonBuscar.TabIndex = 9;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // CuadroNroExpediente
             // 
@@ -514,7 +515,7 @@
             // 
             // BotonBusquedaAvanzada
             // 
-            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(385, 65);
+            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 59);
             this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
             this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
             this.BotonBusquedaAvanzada.TabIndex = 12;
@@ -551,7 +552,7 @@
             this.BotonAltaDocumentacion.Text = "Agregar documento";
             this.BotonAltaDocumentacion.UseVisualStyleBackColor = true;
             // 
-            // CuadroCompetencia
+            // ModificarJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -569,7 +570,7 @@
             this.Controls.Add(this.BotonVerDocumentacion);
             this.Controls.Add(this.BotonModificarDemandante);
             this.Controls.Add(this.BotonModificarDemandado);
-            this.Name = "CuadroCompetencia";
+            this.Name = "ModificarJuicio";
             this.Text = "Modificar Juicios";
             this.Load += new System.EventHandler(this.ModificarJuicio_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

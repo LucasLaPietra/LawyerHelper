@@ -13,6 +13,9 @@ namespace LawyerHelper.Clases
         public DateTime FechayHora { get; set; }
         public String Detalle { get; set; }
 
+        public Juicio Juicio { get; set; }
+        public Persona Persona { get; set; }
+
         public Cobro(double pImporte, DateTime pFechayHora, String pDetalle)
         {
             this.Importe = pImporte;
