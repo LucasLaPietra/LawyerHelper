@@ -10,5 +10,6 @@ namespace LawyerHelper.Clases
     {
         public Boolean Cliente { get; set; }
         public Juicio Juicio { get; set; }
+
     }
 }

@@ -4,24 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp2
+namespace LawyerHelper.Clases
 {
-    public class Controlador
+    class Controlador
     {
-
-    
-
-    //Se recuperan los recordatorios que tengan fecha actual o superior (usando LINQ)
-    public MostrarAgenda(){
-        using (var context = new Contexto())
+        //Se recuperan los recordatorios que tengan fecha actual o superior (usando LINQ)
+        public IList<Recordatorio> MostrarAgenda()
         {
-             var query = from recordatorio in context.Contexto
-                where recordatorio.FechayHora >= DateTime.Today()
-                select recordatorio;
-   
-            //el siguiente All es de dudosa procedencia
-            var agenda = query.All<Contexto>();
+            Contexto iContexto = new Contexto();
+            IList<Recordatorio> iQuery = new List<Recordatorio>();
+            foreach (Recordatorio recordatorio in iContexto.Recordatorios.Where(n => n.FechayHora >= DateTime.Today))
+            {
+                iQuery.Add(recordatorio);
+            }
+            return iQuery;
         }
-    }
     }
 }
