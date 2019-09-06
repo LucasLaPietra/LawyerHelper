@@ -9,5 +9,7 @@ namespace LawyerHelper.Clases
     class Demandante
     {
         public Boolean Cliente { get; set; }
+
+        public Juicio Juicio { get; set; }
     }
 }

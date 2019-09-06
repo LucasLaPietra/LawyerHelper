@@ -13,5 +13,7 @@ namespace LawyerHelper.Clases
         public String Tipo { get; set; }
         public String Descripcion { get; set; }
         public DateTime FechayHora { get; set; }
+
+
     }
 }
