@@ -75,7 +75,6 @@
     <Compile Include="UI\Cobros\AltaCobro.Designer.cs">
       <DependentUpon>AltaCobro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fachada.cs" />
     <Compile Include="UI\Documentos\AltaDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
