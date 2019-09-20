@@ -1,6 +1,6 @@
 ﻿namespace LawyerHelper.UI.Pagos
 {
-    partial class BajaPagos
+    partial class BajaPago
     {
         /// <summary>
         /// Required designer variable.
