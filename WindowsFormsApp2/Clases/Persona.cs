@@ -23,8 +23,8 @@ namespace LawyerHelper.Clases
         public String DomicilioLegal { get; set; }
 
         public IList<Cobro> Cobros { get; set; }
-        public Demandado Demandado { get; set; }
-        public Demandante Demandante { get; set; }
+        public IList<Demandado> Demandado { get; set; }
+        public IList<Demandante> Demandante { get; set; }
 
         public Persona(String pNombre, String pApellido, String pDni, String pDomicilio, String pTelefono, DateTime pFechaNacimiento, String pProfesion, String pLugarTrabajo, String pCuil, String pEstadoCivil, String pRepresentante, String pDomicilioLegal)
         {

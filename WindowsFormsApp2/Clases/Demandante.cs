@@ -8,6 +8,7 @@ namespace LawyerHelper.Clases
 {
     class Demandante
     {
+        public int DemandanteId { get; set; }
         public Boolean Cliente { get; set; }
 
         public Juicio Juicio { get; set; }
