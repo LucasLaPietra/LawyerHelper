@@ -69,11 +69,36 @@
     <Compile Include="UI\Agenda\AltaRecordatorio.Designer.cs">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Agenda\BajaRecordatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Agenda\BajaRecordatorio.Designer.cs">
+      <DependentUpon>BajaRecordatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Agenda\ConsultaRecordatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Agenda\ConsultaRecordatorio.Designer.cs">
+      <DependentUpon>ConsultaRecordatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Cobros\AltaCobro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Cobros\AltaCobro.Designer.cs">
       <DependentUpon>AltaCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fachada.cs" />
+    <Compile Include="UI\Cobros\BajaCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cobros\BajaCobro.Designer.cs">
+      <DependentUpon>BajaCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cobros\ConsultaCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cobros\ConsultaCobro.Designer.cs">
+      <DependentUpon>ConsultaCobro.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Documentos\AltaDocumento.cs">
       <SubType>Form</SubType>
@@ -218,8 +243,20 @@
     <EmbeddedResource Include="UI\Agenda\AltaRecordatorio.resx">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Agenda\BajaRecordatorio.resx">
+      <DependentUpon>BajaRecordatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Agenda\ConsultaRecordatorio.resx">
+      <DependentUpon>ConsultaRecordatorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Cobros\AltaCobro.resx">
       <DependentUpon>AltaCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cobros\BajaCobro.resx">
+      <DependentUpon>BajaCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cobros\ConsultaCobro.resx">
+      <DependentUpon>ConsultaCobro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Documentos\AltaDocumento.resx">
       <DependentUpon>AltaDocumento.cs</DependentUpon>
