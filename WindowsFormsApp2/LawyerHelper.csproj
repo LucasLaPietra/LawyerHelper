@@ -224,6 +224,9 @@
     <EmbeddedResource Include="UI\Documentos\AltaDocumento.resx">
       <DependentUpon>AltaDocumento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Documentos\BajaDocumento.resx">
+      <DependentUpon>BajaDocumento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Documentos\ConsultaDocumento.resx">
       <DependentUpon>ConsultaDocumento.cs</DependentUpon>
     </EmbeddedResource>
