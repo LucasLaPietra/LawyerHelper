@@ -1,6 +1,6 @@
 ﻿namespace LawyerHelper.UI.Personas
 {
-    partial class ConsultaPersona
+    partial class ModificarPersona
     {
         /// <summary>
         /// Required designer variable.
@@ -28,112 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LabelNombre = new System.Windows.Forms.Label();
-            this.LabelApellido = new System.Windows.Forms.Label();
-            this.CuadroNombre = new System.Windows.Forms.TextBox();
-            this.CuadroApellido = new System.Windows.Forms.TextBox();
             this.BotonBuscar = new System.Windows.Forms.Button();
+            this.CuadroApellido = new System.Windows.Forms.TextBox();
+            this.CuadroNombre = new System.Windows.Forms.TextBox();
+            this.LabelApellido = new System.Windows.Forms.Label();
+            this.LabelNombre = new System.Windows.Forms.Label();
+            this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.LabelDNI = new System.Windows.Forms.Label();
-            this.LabelDNI2 = new System.Windows.Forms.Label();
             this.LabelDomicilio = new System.Windows.Forms.Label();
-            this.LabelDomicilio2 = new System.Windows.Forms.Label();
             this.LabelTelefono = new System.Windows.Forms.Label();
-            this.LabelTelefono2 = new System.Windows.Forms.Label();
             this.LabelFechaNacimiento = new System.Windows.Forms.Label();
-            this.LabelFechaNacimiento2 = new System.Windows.Forms.Label();
             this.LabelProfesion = new System.Windows.Forms.Label();
-            this.LabelProfesion2 = new System.Windows.Forms.Label();
             this.LabelLugarTrabajo = new System.Windows.Forms.Label();
-            this.LabelLugarTrabajo2 = new System.Windows.Forms.Label();
             this.LabelCUIL = new System.Windows.Forms.Label();
-            this.LabelCUIL2 = new System.Windows.Forms.Label();
             this.LabelEstadoCivil = new System.Windows.Forms.Label();
-            this.LabelEstadoCivil2 = new System.Windows.Forms.Label();
             this.LabelRepresentante = new System.Windows.Forms.Label();
-            this.LabelRepresentante2 = new System.Windows.Forms.Label();
             this.LabelDomicilioLegal = new System.Windows.Forms.Label();
-            this.LabelDomicilioLegal2 = new System.Windows.Forms.Label();
             this.LabelJuiciosAsociados = new System.Windows.Forms.Label();
             this.LabelCobrosAsociados = new System.Windows.Forms.Label();
             this.BotonVerJuicios = new System.Windows.Forms.Button();
             this.BotonVerCobros = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.BotonModificarJuicio = new System.Windows.Forms.Button();
+            this.BotonModificarCobro = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
-            this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // LabelNombre
+            // BotonBuscar
             // 
-            this.LabelNombre.AutoSize = true;
-            this.LabelNombre.Location = new System.Drawing.Point(12, 28);
-            this.LabelNombre.Name = "LabelNombre";
-            this.LabelNombre.Size = new System.Drawing.Size(44, 13);
-            this.LabelNombre.TabIndex = 0;
-            this.LabelNombre.Text = "Nombre";
+            this.BotonBuscar.Location = new System.Drawing.Point(296, 50);
+            this.BotonBuscar.Name = "BotonBuscar";
+            this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
+            this.BotonBuscar.TabIndex = 9;
+            this.BotonBuscar.Text = "Buscar";
+            this.BotonBuscar.UseVisualStyleBackColor = true;
+            // 
+            // CuadroApellido
+            // 
+            this.CuadroApellido.Location = new System.Drawing.Point(61, 50);
+            this.CuadroApellido.Name = "CuadroApellido";
+            this.CuadroApellido.Size = new System.Drawing.Size(218, 20);
+            this.CuadroApellido.TabIndex = 8;
+            // 
+            // CuadroNombre
+            // 
+            this.CuadroNombre.Location = new System.Drawing.Point(61, 21);
+            this.CuadroNombre.Name = "CuadroNombre";
+            this.CuadroNombre.Size = new System.Drawing.Size(218, 20);
+            this.CuadroNombre.TabIndex = 7;
             // 
             // LabelApellido
             // 
             this.LabelApellido.AutoSize = true;
-            this.LabelApellido.Location = new System.Drawing.Point(12, 57);
+            this.LabelApellido.Location = new System.Drawing.Point(11, 57);
             this.LabelApellido.Name = "LabelApellido";
             this.LabelApellido.Size = new System.Drawing.Size(44, 13);
-            this.LabelApellido.TabIndex = 1;
+            this.LabelApellido.TabIndex = 6;
             this.LabelApellido.Text = "Apellido";
             // 
-            // CuadroNombre
+            // LabelNombre
             // 
-            this.CuadroNombre.Location = new System.Drawing.Point(62, 21);
-            this.CuadroNombre.Name = "CuadroNombre";
-            this.CuadroNombre.Size = new System.Drawing.Size(218, 20);
-            this.CuadroNombre.TabIndex = 2;
+            this.LabelNombre.AutoSize = true;
+            this.LabelNombre.Location = new System.Drawing.Point(11, 28);
+            this.LabelNombre.Name = "LabelNombre";
+            this.LabelNombre.Size = new System.Drawing.Size(44, 13);
+            this.LabelNombre.TabIndex = 5;
+            this.LabelNombre.Text = "Nombre";
             // 
-            // CuadroApellido
+            // BotonBusquedaAvanzada
             // 
-            this.CuadroApellido.Location = new System.Drawing.Point(62, 50);
-            this.CuadroApellido.Name = "CuadroApellido";
-            this.CuadroApellido.Size = new System.Drawing.Size(218, 20);
-            this.CuadroApellido.TabIndex = 3;
-            // 
-            // BotonBuscar
-            // 
-            this.BotonBuscar.Location = new System.Drawing.Point(297, 50);
-            this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.BotonBuscar.TabIndex = 4;
-            this.BotonBuscar.Text = "Buscar";
-            this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 88);
+            this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
+            this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
+            this.BotonBusquedaAvanzada.TabIndex = 43;
+            this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
+            this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.03352F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.96648F));
             this.tableLayoutPanel1.Controls.Add(this.LabelDNI, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDNI2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.LabelDomicilio, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDomicilio2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.LabelTelefono, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.LabelTelefono2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.LabelFechaNacimiento, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFechaNacimiento2, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.LabelProfesion, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.LabelProfesion2, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.LabelLugarTrabajo, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.LabelLugarTrabajo2, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.LabelCUIL, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCUIL2, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.LabelEstadoCivil, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.LabelEstadoCivil2, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.LabelRepresentante, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.LabelRepresentante2, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.LabelDomicilioLegal, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDomicilioLegal2, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.LabelJuiciosAsociados, 0, 10);
             this.tableLayoutPanel1.Controls.Add(this.LabelCobrosAsociados, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.BotonVerJuicios, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.BotonVerCobros, 1, 11);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 130);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBox6, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.textBox7, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.textBox9, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.textBox10, 1, 9);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 130);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
@@ -148,8 +160,8 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 324);
-            this.tableLayoutPanel1.TabIndex = 5;
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 316);
+            this.tableLayoutPanel1.TabIndex = 44;
             // 
             // LabelDNI
             // 
@@ -160,15 +172,6 @@
             this.LabelDNI.TabIndex = 0;
             this.LabelDNI.Text = "DNI";
             // 
-            // LabelDNI2
-            // 
-            this.LabelDNI2.AutoSize = true;
-            this.LabelDNI2.Location = new System.Drawing.Point(182, 0);
-            this.LabelDNI2.Name = "LabelDNI2";
-            this.LabelDNI2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDNI2.TabIndex = 1;
-            this.LabelDNI2.Text = "-";
-            // 
             // LabelDomicilio
             // 
             this.LabelDomicilio.AutoSize = true;
@@ -177,15 +180,6 @@
             this.LabelDomicilio.Size = new System.Drawing.Size(49, 13);
             this.LabelDomicilio.TabIndex = 2;
             this.LabelDomicilio.Text = "Domicilio";
-            // 
-            // LabelDomicilio2
-            // 
-            this.LabelDomicilio2.AutoSize = true;
-            this.LabelDomicilio2.Location = new System.Drawing.Point(182, 26);
-            this.LabelDomicilio2.Name = "LabelDomicilio2";
-            this.LabelDomicilio2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDomicilio2.TabIndex = 3;
-            this.LabelDomicilio2.Text = "-";
             // 
             // LabelTelefono
             // 
@@ -196,15 +190,6 @@
             this.LabelTelefono.TabIndex = 4;
             this.LabelTelefono.Text = "Telefono";
             // 
-            // LabelTelefono2
-            // 
-            this.LabelTelefono2.AutoSize = true;
-            this.LabelTelefono2.Location = new System.Drawing.Point(182, 52);
-            this.LabelTelefono2.Name = "LabelTelefono2";
-            this.LabelTelefono2.Size = new System.Drawing.Size(10, 13);
-            this.LabelTelefono2.TabIndex = 5;
-            this.LabelTelefono2.Text = "-";
-            // 
             // LabelFechaNacimiento
             // 
             this.LabelFechaNacimiento.AutoSize = true;
@@ -213,15 +198,6 @@
             this.LabelFechaNacimiento.Size = new System.Drawing.Size(106, 13);
             this.LabelFechaNacimiento.TabIndex = 6;
             this.LabelFechaNacimiento.Text = "Fecha de nacimiento";
-            // 
-            // LabelFechaNacimiento2
-            // 
-            this.LabelFechaNacimiento2.AutoSize = true;
-            this.LabelFechaNacimiento2.Location = new System.Drawing.Point(182, 78);
-            this.LabelFechaNacimiento2.Name = "LabelFechaNacimiento2";
-            this.LabelFechaNacimiento2.Size = new System.Drawing.Size(10, 13);
-            this.LabelFechaNacimiento2.TabIndex = 7;
-            this.LabelFechaNacimiento2.Text = "-";
             // 
             // LabelProfesion
             // 
@@ -232,15 +208,6 @@
             this.LabelProfesion.TabIndex = 8;
             this.LabelProfesion.Text = "Profesion";
             // 
-            // LabelProfesion2
-            // 
-            this.LabelProfesion2.AutoSize = true;
-            this.LabelProfesion2.Location = new System.Drawing.Point(182, 104);
-            this.LabelProfesion2.Name = "LabelProfesion2";
-            this.LabelProfesion2.Size = new System.Drawing.Size(10, 13);
-            this.LabelProfesion2.TabIndex = 9;
-            this.LabelProfesion2.Text = "-";
-            // 
             // LabelLugarTrabajo
             // 
             this.LabelLugarTrabajo.AutoSize = true;
@@ -249,15 +216,6 @@
             this.LabelLugarTrabajo.Size = new System.Drawing.Size(84, 13);
             this.LabelLugarTrabajo.TabIndex = 10;
             this.LabelLugarTrabajo.Text = "Lugar de trabajo";
-            // 
-            // LabelLugarTrabajo2
-            // 
-            this.LabelLugarTrabajo2.AutoSize = true;
-            this.LabelLugarTrabajo2.Location = new System.Drawing.Point(182, 130);
-            this.LabelLugarTrabajo2.Name = "LabelLugarTrabajo2";
-            this.LabelLugarTrabajo2.Size = new System.Drawing.Size(10, 13);
-            this.LabelLugarTrabajo2.TabIndex = 11;
-            this.LabelLugarTrabajo2.Text = "-";
             // 
             // LabelCUIL
             // 
@@ -268,15 +226,6 @@
             this.LabelCUIL.TabIndex = 12;
             this.LabelCUIL.Text = "CUIL/CUID";
             // 
-            // LabelCUIL2
-            // 
-            this.LabelCUIL2.AutoSize = true;
-            this.LabelCUIL2.Location = new System.Drawing.Point(182, 156);
-            this.LabelCUIL2.Name = "LabelCUIL2";
-            this.LabelCUIL2.Size = new System.Drawing.Size(10, 13);
-            this.LabelCUIL2.TabIndex = 13;
-            this.LabelCUIL2.Text = "-";
-            // 
             // LabelEstadoCivil
             // 
             this.LabelEstadoCivil.AutoSize = true;
@@ -285,15 +234,6 @@
             this.LabelEstadoCivil.Size = new System.Drawing.Size(61, 13);
             this.LabelEstadoCivil.TabIndex = 14;
             this.LabelEstadoCivil.Text = "Estado civil";
-            // 
-            // LabelEstadoCivil2
-            // 
-            this.LabelEstadoCivil2.AutoSize = true;
-            this.LabelEstadoCivil2.Location = new System.Drawing.Point(182, 182);
-            this.LabelEstadoCivil2.Name = "LabelEstadoCivil2";
-            this.LabelEstadoCivil2.Size = new System.Drawing.Size(10, 13);
-            this.LabelEstadoCivil2.TabIndex = 15;
-            this.LabelEstadoCivil2.Text = "-";
             // 
             // LabelRepresentante
             // 
@@ -304,15 +244,6 @@
             this.LabelRepresentante.TabIndex = 16;
             this.LabelRepresentante.Text = "Representante";
             // 
-            // LabelRepresentante2
-            // 
-            this.LabelRepresentante2.AutoSize = true;
-            this.LabelRepresentante2.Location = new System.Drawing.Point(182, 208);
-            this.LabelRepresentante2.Name = "LabelRepresentante2";
-            this.LabelRepresentante2.Size = new System.Drawing.Size(10, 13);
-            this.LabelRepresentante2.TabIndex = 17;
-            this.LabelRepresentante2.Text = "-";
-            // 
             // LabelDomicilioLegal
             // 
             this.LabelDomicilioLegal.AutoSize = true;
@@ -321,15 +252,6 @@
             this.LabelDomicilioLegal.Size = new System.Drawing.Size(74, 13);
             this.LabelDomicilioLegal.TabIndex = 18;
             this.LabelDomicilioLegal.Text = "Domicilio legal";
-            // 
-            // LabelDomicilioLegal2
-            // 
-            this.LabelDomicilioLegal2.AutoSize = true;
-            this.LabelDomicilioLegal2.Location = new System.Drawing.Point(182, 234);
-            this.LabelDomicilioLegal2.Name = "LabelDomicilioLegal2";
-            this.LabelDomicilioLegal2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDomicilioLegal2.TabIndex = 19;
-            this.LabelDomicilioLegal2.Text = "-";
             // 
             // LabelJuiciosAsociados
             // 
@@ -352,56 +274,148 @@
             // BotonVerJuicios
             // 
             this.BotonVerJuicios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BotonVerJuicios.Location = new System.Drawing.Point(231, 263);
+            this.BotonVerJuicios.Location = new System.Drawing.Point(206, 263);
             this.BotonVerJuicios.Name = "BotonVerJuicios";
             this.BotonVerJuicios.Size = new System.Drawing.Size(75, 20);
             this.BotonVerJuicios.TabIndex = 23;
-            this.BotonVerJuicios.Text = "Ver";
+            this.BotonVerJuicios.Text = "Ver ";
             this.BotonVerJuicios.UseVisualStyleBackColor = true;
             // 
             // BotonVerCobros
             // 
             this.BotonVerCobros.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BotonVerCobros.Location = new System.Drawing.Point(231, 293);
+            this.BotonVerCobros.Location = new System.Drawing.Point(206, 289);
             this.BotonVerCobros.Name = "BotonVerCobros";
             this.BotonVerCobros.Size = new System.Drawing.Size(75, 23);
             this.BotonVerCobros.TabIndex = 24;
             this.BotonVerCobros.Text = "Ver";
             this.BotonVerCobros.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(132, 3);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(223, 20);
+            this.textBox1.TabIndex = 25;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(132, 29);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(223, 20);
+            this.textBox2.TabIndex = 26;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(132, 55);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(223, 20);
+            this.textBox3.TabIndex = 27;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(132, 81);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(223, 20);
+            this.textBox4.TabIndex = 28;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(132, 107);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(223, 20);
+            this.textBox5.TabIndex = 29;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(132, 133);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(223, 20);
+            this.textBox6.TabIndex = 30;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(132, 159);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(223, 20);
+            this.textBox7.TabIndex = 31;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(132, 185);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(223, 20);
+            this.textBox8.TabIndex = 32;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(132, 211);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(223, 20);
+            this.textBox9.TabIndex = 33;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(132, 237);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(223, 20);
+            this.textBox10.TabIndex = 34;
+            // 
+            // BotonModificarJuicio
+            // 
+            this.BotonModificarJuicio.Location = new System.Drawing.Point(385, 390);
+            this.BotonModificarJuicio.Name = "BotonModificarJuicio";
+            this.BotonModificarJuicio.Size = new System.Drawing.Size(129, 23);
+            this.BotonModificarJuicio.TabIndex = 46;
+            this.BotonModificarJuicio.Text = "Modificar  juicio";
+            this.BotonModificarJuicio.UseVisualStyleBackColor = true;
+            // 
+            // BotonModificarCobro
+            // 
+            this.BotonModificarCobro.Location = new System.Drawing.Point(385, 419);
+            this.BotonModificarCobro.Name = "BotonModificarCobro";
+            this.BotonModificarCobro.Size = new System.Drawing.Size(129, 23);
+            this.BotonModificarCobro.TabIndex = 47;
+            this.BotonModificarCobro.Text = "Modificar Cobro";
+            this.BotonModificarCobro.UseVisualStyleBackColor = true;
+            // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(145, 460);
+            this.BotonCancelar.Location = new System.Drawing.Point(349, 460);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
-            this.BotonCancelar.TabIndex = 41;
+            this.BotonCancelar.TabIndex = 70;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
-            // BotonBusquedaAvanzada
+            // BotonAceptar
             // 
-            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 86);
-            this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
-            this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
-            this.BotonBusquedaAvanzada.TabIndex = 42;
-            this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
-            this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Location = new System.Drawing.Point(86, 460);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
+            this.BotonAceptar.TabIndex = 69;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
             // 
-            // ConsultaPersona
+            // ModificarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 496);
-            this.Controls.Add(this.BotonBusquedaAvanzada);
+            this.ClientSize = new System.Drawing.Size(559, 496);
             this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.BotonAceptar);
+            this.Controls.Add(this.BotonModificarCobro);
+            this.Controls.Add(this.BotonModificarJuicio);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.CuadroApellido);
             this.Controls.Add(this.CuadroNombre);
             this.Controls.Add(this.LabelApellido);
             this.Controls.Add(this.LabelNombre);
-            this.Name = "ConsultaPersona";
-            this.Text = "ConsultaPersona";
+            this.Name = "ModificarPersona";
+            this.Text = "ModificarPersona";
+            this.Load += new System.EventHandler(this.ModificarPersona_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -411,37 +425,40 @@
 
         #endregion
 
-        private System.Windows.Forms.Label LabelNombre;
-        private System.Windows.Forms.Label LabelApellido;
-        private System.Windows.Forms.TextBox CuadroNombre;
-        private System.Windows.Forms.TextBox CuadroApellido;
         private System.Windows.Forms.Button BotonBuscar;
+        private System.Windows.Forms.TextBox CuadroApellido;
+        private System.Windows.Forms.TextBox CuadroNombre;
+        private System.Windows.Forms.Label LabelApellido;
+        private System.Windows.Forms.Label LabelNombre;
+        private System.Windows.Forms.Button BotonBusquedaAvanzada;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label LabelDNI;
-        private System.Windows.Forms.Label LabelDNI2;
         private System.Windows.Forms.Label LabelDomicilio;
-        private System.Windows.Forms.Label LabelDomicilio2;
         private System.Windows.Forms.Label LabelTelefono;
-        private System.Windows.Forms.Label LabelTelefono2;
         private System.Windows.Forms.Label LabelFechaNacimiento;
-        private System.Windows.Forms.Label LabelFechaNacimiento2;
         private System.Windows.Forms.Label LabelProfesion;
-        private System.Windows.Forms.Label LabelProfesion2;
         private System.Windows.Forms.Label LabelLugarTrabajo;
-        private System.Windows.Forms.Label LabelLugarTrabajo2;
         private System.Windows.Forms.Label LabelCUIL;
-        private System.Windows.Forms.Label LabelCUIL2;
         private System.Windows.Forms.Label LabelEstadoCivil;
-        private System.Windows.Forms.Label LabelEstadoCivil2;
         private System.Windows.Forms.Label LabelRepresentante;
-        private System.Windows.Forms.Label LabelRepresentante2;
         private System.Windows.Forms.Label LabelDomicilioLegal;
-        private System.Windows.Forms.Label LabelDomicilioLegal2;
         private System.Windows.Forms.Label LabelJuiciosAsociados;
         private System.Windows.Forms.Label LabelCobrosAsociados;
         private System.Windows.Forms.Button BotonVerJuicios;
         private System.Windows.Forms.Button BotonVerCobros;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Button BotonModificarJuicio;
+        private System.Windows.Forms.Button BotonModificarCobro;
         private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.Button BotonBusquedaAvanzada;
+        private System.Windows.Forms.Button BotonAceptar;
     }
 }

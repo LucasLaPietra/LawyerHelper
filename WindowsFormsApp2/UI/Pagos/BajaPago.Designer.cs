@@ -1,6 +1,6 @@
 ﻿namespace LawyerHelper.UI.Pagos
 {
-    partial class BajaPagos
+    partial class BajaPago
     {
         /// <summary>
         /// Required designer variable.
@@ -38,12 +38,12 @@
             this.LabelHora = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelDetalle = new System.Windows.Forms.Label();
-            this.CuadroImporte = new System.Windows.Forms.TextBox();
-            this.CuadroDetalle = new System.Windows.Forms.TextBox();
-            this.CuadroAM = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.CuadroMinutos = new System.Windows.Forms.TextBox();
-            this.CuadroHora = new System.Windows.Forms.TextBox();
+            this.LabelImporte2 = new System.Windows.Forms.Label();
+            this.LabelDetalle2 = new System.Windows.Forms.Label();
+            this.LabelHora2 = new System.Windows.Forms.Label();
+            this.LabelMinutos = new System.Windows.Forms.Label();
+            this.LabelAM = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BotonBuscar
@@ -118,7 +118,7 @@
             // LabelImporte
             // 
             this.LabelImporte.AutoSize = true;
-            this.LabelImporte.Location = new System.Drawing.Point(10, 303);
+            this.LabelImporte.Location = new System.Drawing.Point(10, 305);
             this.LabelImporte.Name = "LabelImporte";
             this.LabelImporte.Size = new System.Drawing.Size(42, 13);
             this.LabelImporte.TabIndex = 98;
@@ -127,71 +127,77 @@
             // LabelDetalle
             // 
             this.LabelDetalle.AutoSize = true;
-            this.LabelDetalle.Location = new System.Drawing.Point(10, 336);
+            this.LabelDetalle.Location = new System.Drawing.Point(10, 342);
             this.LabelDetalle.Name = "LabelDetalle";
             this.LabelDetalle.Size = new System.Drawing.Size(40, 13);
             this.LabelDetalle.TabIndex = 99;
             this.LabelDetalle.Text = "Detalle";
             // 
-            // CuadroImporte
-            // 
-            this.CuadroImporte.Location = new System.Drawing.Point(56, 296);
-            this.CuadroImporte.Name = "CuadroImporte";
-            this.CuadroImporte.Size = new System.Drawing.Size(316, 20);
-            this.CuadroImporte.TabIndex = 103;
-            // 
-            // CuadroDetalle
-            // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(56, 329);
-            this.CuadroDetalle.Name = "CuadroDetalle";
-            this.CuadroDetalle.Size = new System.Drawing.Size(316, 20);
-            this.CuadroDetalle.TabIndex = 104;
-            // 
-            // CuadroAM
-            // 
-            this.CuadroAM.FormattingEnabled = true;
-            this.CuadroAM.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.CuadroAM.Location = new System.Drawing.Point(126, 262);
-            this.CuadroAM.Name = "CuadroAM";
-            this.CuadroAM.Size = new System.Drawing.Size(46, 21);
-            this.CuadroAM.TabIndex = 109;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 266);
+            this.label3.Location = new System.Drawing.Point(85, 270);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 108;
             this.label3.Text = ":";
             // 
-            // CuadroMinutos
+            // LabelImporte2
             // 
-            this.CuadroMinutos.Location = new System.Drawing.Point(96, 263);
-            this.CuadroMinutos.Name = "CuadroMinutos";
-            this.CuadroMinutos.Size = new System.Drawing.Size(24, 20);
-            this.CuadroMinutos.TabIndex = 107;
+            this.LabelImporte2.AutoSize = true;
+            this.LabelImporte2.Location = new System.Drawing.Point(67, 305);
+            this.LabelImporte2.Name = "LabelImporte2";
+            this.LabelImporte2.Size = new System.Drawing.Size(10, 13);
+            this.LabelImporte2.TabIndex = 110;
+            this.LabelImporte2.Text = "-";
             // 
-            // CuadroHora
+            // LabelDetalle2
             // 
-            this.CuadroHora.Location = new System.Drawing.Point(58, 263);
-            this.CuadroHora.Name = "CuadroHora";
-            this.CuadroHora.Size = new System.Drawing.Size(24, 20);
-            this.CuadroHora.TabIndex = 105;
+            this.LabelDetalle2.AutoSize = true;
+            this.LabelDetalle2.Location = new System.Drawing.Point(68, 342);
+            this.LabelDetalle2.Name = "LabelDetalle2";
+            this.LabelDetalle2.Size = new System.Drawing.Size(10, 13);
+            this.LabelDetalle2.TabIndex = 111;
+            this.LabelDetalle2.Text = "-";
+            // 
+            // LabelHora2
+            // 
+            this.LabelHora2.AutoSize = true;
+            this.LabelHora2.Location = new System.Drawing.Point(67, 270);
+            this.LabelHora2.Name = "LabelHora2";
+            this.LabelHora2.Size = new System.Drawing.Size(10, 13);
+            this.LabelHora2.TabIndex = 112;
+            this.LabelHora2.Text = "-";
+            // 
+            // LabelMinutos
+            // 
+            this.LabelMinutos.AutoSize = true;
+            this.LabelMinutos.Location = new System.Drawing.Point(101, 270);
+            this.LabelMinutos.Name = "LabelMinutos";
+            this.LabelMinutos.Size = new System.Drawing.Size(10, 13);
+            this.LabelMinutos.TabIndex = 113;
+            this.LabelMinutos.Text = "-";
+            // 
+            // LabelAM
+            // 
+            this.LabelAM.AutoSize = true;
+            this.LabelAM.Location = new System.Drawing.Point(117, 270);
+            this.LabelAM.Name = "LabelAM";
+            this.LabelAM.Size = new System.Drawing.Size(10, 13);
+            this.LabelAM.TabIndex = 114;
+            this.LabelAM.Text = "-";
             // 
             // BajaPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
-            this.Controls.Add(this.CuadroAM);
+            this.Controls.Add(this.LabelAM);
+            this.Controls.Add(this.LabelMinutos);
+            this.Controls.Add(this.LabelHora2);
+            this.Controls.Add(this.LabelDetalle2);
+            this.Controls.Add(this.LabelImporte2);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.CuadroMinutos);
-            this.Controls.Add(this.CuadroHora);
-            this.Controls.Add(this.CuadroDetalle);
-            this.Controls.Add(this.CuadroImporte);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
             this.Controls.Add(this.LabelHora);
@@ -222,11 +228,11 @@
         private System.Windows.Forms.Label LabelHora;
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelDetalle;
-        private System.Windows.Forms.TextBox CuadroImporte;
-        private System.Windows.Forms.TextBox CuadroDetalle;
-        private System.Windows.Forms.ComboBox CuadroAM;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox CuadroMinutos;
-        private System.Windows.Forms.TextBox CuadroHora;
+        private System.Windows.Forms.Label LabelImporte2;
+        private System.Windows.Forms.Label LabelDetalle2;
+        private System.Windows.Forms.Label LabelHora2;
+        private System.Windows.Forms.Label LabelMinutos;
+        private System.Windows.Forms.Label LabelAM;
     }
 }

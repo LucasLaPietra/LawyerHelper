@@ -8,6 +8,7 @@ namespace LawyerHelper.Clases
 {
     class Juicio
     {
+        public int JuicioId { get; set; }
         public int NroExpediente { get; set; }
         public String Juez { get; set; }
         public String Secretario { get; set; }
@@ -31,5 +32,6 @@ namespace LawyerHelper.Clases
         public IList<Demandado> Demandados { get; set; }
         public IList<Demandante> Demandantes { get; set; }
         public IList<Documento> Documentos { get; set; }
+
     }
 }

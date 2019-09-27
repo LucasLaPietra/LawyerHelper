@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Clases\Cobro.cs" />
     <Compile Include="Clases\Contexto.cs" />
+    <Compile Include="Clases\Controlador.cs" />
     <Compile Include="Clases\Demandado.cs" />
     <Compile Include="Clases\Demandante.cs" />
     <Compile Include="Clases\Documento.cs" />
@@ -74,12 +75,29 @@
     <Compile Include="UI\Cobros\AltaCobro.Designer.cs">
       <DependentUpon>AltaCobro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Fachada.cs" />
-    <Compile Include="UI\Juicios\AltaJuicios.cs">
+    <Compile Include="UI\Documentos\AltaDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Juicios\AltaJuicios.Designer.cs">
-      <DependentUpon>AltaJuicios.cs</DependentUpon>
+    <Compile Include="UI\Documentos\AltaDocumento.Designer.cs">
+      <DependentUpon>AltaDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Documentos\ConsultaDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Documentos\ConsultaDocumento.Designer.cs">
+      <DependentUpon>ConsultaDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Documentos\ModificarDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Documentos\ModificarDocumento.Designer.cs">
+      <DependentUpon>ModificarDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Juicios\AltaJuicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Juicios\AltaJuicio.Designer.cs">
+      <DependentUpon>AltaJuicio.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Agenda\MenuAgenda.cs">
       <SubType>Form</SubType>
@@ -93,11 +111,23 @@
     <Compile Include="UI\Cobros\MenuCobros.Designer.cs">
       <DependentUpon>MenuCobros.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Juicios\ConsultaJuicios.cs">
+    <Compile Include="UI\Juicios\BajaJuicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Juicios\ConsultaJuicios.Designer.cs">
-      <DependentUpon>ConsultaJuicios.cs</DependentUpon>
+    <Compile Include="UI\Juicios\BajaJuicio.Designer.cs">
+      <DependentUpon>BajaJuicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Juicios\BuscarJuicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Juicios\BuscarJuicio.Designer.cs">
+      <DependentUpon>BuscarJuicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Juicios\ConsultaJuicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Juicios\ConsultaJuicio.Designer.cs">
+      <DependentUpon>ConsultaJuicio.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Juicios\MenuJuicios.cs">
       <SubType>Form</SubType>
@@ -117,11 +147,17 @@
     <Compile Include="UI\Pagos\AltaPago.Designer.cs">
       <DependentUpon>AltaPago.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Pagos\BajaPagos.cs">
+    <Compile Include="UI\Pagos\BajaPago.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Pagos\BajaPagos.Designer.cs">
-      <DependentUpon>BajaPagos.cs</DependentUpon>
+    <Compile Include="UI\Pagos\BajaPago.Designer.cs">
+      <DependentUpon>BajaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pagos\ConsultaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Pagos\ConsultaPago.Designer.cs">
+      <DependentUpon>ConsultaPago.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Pagos\MenuPagos.cs">
       <SubType>Form</SubType>
@@ -134,6 +170,18 @@
     </Compile>
     <Compile Include="UI\Personas\AltaPersona.Designer.cs">
       <DependentUpon>AltaPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Personas\BajaPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Personas\BajaPersona.Designer.cs">
+      <DependentUpon>BajaPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Personas\BuscarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Personas\BuscarPersona.Designer.cs">
+      <DependentUpon>BuscarPersona.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Personas\ConsultaPersona.cs">
       <SubType>Form</SubType>
@@ -155,14 +203,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Personas\ModificarPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Personas\ModificarPersona.Designer.cs">
+      <DependentUpon>ModificarPersona.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UI\Agenda\AltaRecordatorio.resx">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Cobros\AltaCobro.resx">
       <DependentUpon>AltaCobro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Juicios\AltaJuicios.resx">
-      <DependentUpon>AltaJuicios.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Documentos\AltaDocumento.resx">
+      <DependentUpon>AltaDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Documentos\ConsultaDocumento.resx">
+      <DependentUpon>ConsultaDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Documentos\ModificarDocumento.resx">
+      <DependentUpon>ModificarDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Juicios\AltaJuicio.resx">
+      <DependentUpon>AltaJuicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\MenuAgenda.resx">
       <DependentUpon>MenuAgenda.cs</DependentUpon>
@@ -170,8 +233,14 @@
     <EmbeddedResource Include="UI\Cobros\MenuCobros.resx">
       <DependentUpon>MenuCobros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Juicios\ConsultaJuicios.resx">
-      <DependentUpon>ConsultaJuicios.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Juicios\BajaJuicio.resx">
+      <DependentUpon>BajaJuicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Juicios\BuscarJuicio.resx">
+      <DependentUpon>BuscarJuicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Juicios\ConsultaJuicio.resx">
+      <DependentUpon>ConsultaJuicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Juicios\MenuJuicios.resx">
       <DependentUpon>MenuJuicios.cs</DependentUpon>
@@ -182,14 +251,23 @@
     <EmbeddedResource Include="UI\Pagos\AltaPago.resx">
       <DependentUpon>AltaPago.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Pagos\BajaPagos.resx">
-      <DependentUpon>BajaPagos.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Pagos\BajaPago.resx">
+      <DependentUpon>BajaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Pagos\ConsultaPago.resx">
+      <DependentUpon>ConsultaPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Pagos\MenuPagos.resx">
       <DependentUpon>MenuPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\AltaPersona.resx">
       <DependentUpon>AltaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Personas\BajaPersona.resx">
+      <DependentUpon>BajaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Personas\BuscarPersona.resx">
+      <DependentUpon>BuscarPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\ConsultaPersona.resx">
       <DependentUpon>ConsultaPersona.cs</DependentUpon>
@@ -210,6 +288,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Personas\ModificarPersona.resx">
+      <DependentUpon>ModificarPersona.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -224,8 +305,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\Documentos\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

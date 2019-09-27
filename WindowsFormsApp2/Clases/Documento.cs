@@ -8,7 +8,7 @@ namespace LawyerHelper.Clases
 {
     class Documento
     {
-        public int IdDocumento { get; set; }
+        public int DocumentoId { get; set; }
         public String TipoDocumento { get; set; }
         public String NroFoja { get; set; }
         public Boolean EnExpediente { get; set; }

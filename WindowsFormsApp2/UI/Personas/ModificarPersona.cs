@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LawyerHelper.UI.Pagos
+namespace LawyerHelper.UI.Personas
 {
-    public partial class BajaPagos : Form
+    public partial class ModificarPersona : Form
     {
-        public BajaPagos()
+        public ModificarPersona()
         {
             InitializeComponent();
         }
 
-        private void BajaPagos_Load(object sender, EventArgs e)
+        private void LabelDomicilio2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ModificarPersona_Load(object sender, EventArgs e)
         {
 
         }
