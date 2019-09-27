@@ -30,11 +30,7 @@
         {
             this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
             this.BotonBuscar = new System.Windows.Forms.Button();
-            this.TimePickerFecha = new System.Windows.Forms.DateTimePicker();
-            this.ComboBoxTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.CuadroNumeroFoja = new System.Windows.Forms.TextBox();
-            this.CuadroNombreDocumento = new System.Windows.Forms.TextBox();
             this.CheckVuelta = new System.Windows.Forms.CheckBox();
             this.CheckEnExpediente = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -45,6 +41,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.LabelNombreDocumento2 = new System.Windows.Forms.Label();
+            this.LabelTipoDocumento2 = new System.Windows.Forms.Label();
+            this.LabelFecha2 = new System.Windows.Forms.Label();
+            this.LabelDetalle2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BotonBusquedaAvanzada
@@ -65,29 +65,6 @@
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
             // 
-            // TimePickerFecha
-            // 
-            this.TimePickerFecha.Location = new System.Drawing.Point(144, 243);
-            this.TimePickerFecha.Name = "TimePickerFecha";
-            this.TimePickerFecha.Size = new System.Drawing.Size(276, 20);
-            this.TimePickerFecha.TabIndex = 56;
-            // 
-            // ComboBoxTipoDocumento
-            // 
-            this.ComboBoxTipoDocumento.FormattingEnabled = true;
-            this.ComboBoxTipoDocumento.Location = new System.Drawing.Point(143, 164);
-            this.ComboBoxTipoDocumento.Name = "ComboBoxTipoDocumento";
-            this.ComboBoxTipoDocumento.Size = new System.Drawing.Size(277, 21);
-            this.ComboBoxTipoDocumento.TabIndex = 55;
-            // 
-            // CuadroDetalle
-            // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(145, 284);
-            this.CuadroDetalle.Multiline = true;
-            this.CuadroDetalle.Name = "CuadroDetalle";
-            this.CuadroDetalle.Size = new System.Drawing.Size(275, 93);
-            this.CuadroDetalle.TabIndex = 54;
-            // 
             // CuadroNumeroFoja
             // 
             this.CuadroNumeroFoja.Location = new System.Drawing.Point(103, 21);
@@ -95,17 +72,10 @@
             this.CuadroNumeroFoja.Size = new System.Drawing.Size(243, 20);
             this.CuadroNumeroFoja.TabIndex = 53;
             // 
-            // CuadroNombreDocumento
-            // 
-            this.CuadroNombreDocumento.Location = new System.Drawing.Point(143, 121);
-            this.CuadroNombreDocumento.Name = "CuadroNombreDocumento";
-            this.CuadroNombreDocumento.Size = new System.Drawing.Size(277, 20);
-            this.CuadroNombreDocumento.TabIndex = 52;
-            // 
             // CheckVuelta
             // 
             this.CheckVuelta.AutoSize = true;
-            this.CheckVuelta.Location = new System.Drawing.Point(144, 395);
+            this.CheckVuelta.Location = new System.Drawing.Point(149, 395);
             this.CheckVuelta.Name = "CheckVuelta";
             this.CheckVuelta.Size = new System.Drawing.Size(35, 17);
             this.CheckVuelta.TabIndex = 51;
@@ -115,7 +85,7 @@
             // CheckEnExpediente
             // 
             this.CheckEnExpediente.AutoSize = true;
-            this.CheckEnExpediente.Location = new System.Drawing.Point(143, 205);
+            this.CheckEnExpediente.Location = new System.Drawing.Point(149, 205);
             this.CheckEnExpediente.Name = "CheckEnExpediente";
             this.CheckEnExpediente.Size = new System.Drawing.Size(35, 17);
             this.CheckEnExpediente.TabIndex = 50;
@@ -143,7 +113,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 284);
+            this.label6.Location = new System.Drawing.Point(22, 282);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 46;
@@ -152,7 +122,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 242);
+            this.label5.Location = new System.Drawing.Point(22, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 45;
@@ -179,7 +149,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 168);
+            this.label2.Location = new System.Drawing.Point(18, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 42;
@@ -194,18 +164,54 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "Nombre del documento";
             // 
+            // LabelNombreDocumento2
+            // 
+            this.LabelNombreDocumento2.AutoSize = true;
+            this.LabelNombreDocumento2.Location = new System.Drawing.Point(149, 125);
+            this.LabelNombreDocumento2.Name = "LabelNombreDocumento2";
+            this.LabelNombreDocumento2.Size = new System.Drawing.Size(10, 13);
+            this.LabelNombreDocumento2.TabIndex = 59;
+            this.LabelNombreDocumento2.Text = "-";
+            // 
+            // LabelTipoDocumento2
+            // 
+            this.LabelTipoDocumento2.AutoSize = true;
+            this.LabelTipoDocumento2.Location = new System.Drawing.Point(149, 167);
+            this.LabelTipoDocumento2.Name = "LabelTipoDocumento2";
+            this.LabelTipoDocumento2.Size = new System.Drawing.Size(10, 13);
+            this.LabelTipoDocumento2.TabIndex = 60;
+            this.LabelTipoDocumento2.Text = "-";
+            // 
+            // LabelFecha2
+            // 
+            this.LabelFecha2.AutoSize = true;
+            this.LabelFecha2.Location = new System.Drawing.Point(149, 243);
+            this.LabelFecha2.Name = "LabelFecha2";
+            this.LabelFecha2.Size = new System.Drawing.Size(10, 13);
+            this.LabelFecha2.TabIndex = 61;
+            this.LabelFecha2.Text = "-";
+            // 
+            // LabelDetalle2
+            // 
+            this.LabelDetalle2.AutoSize = true;
+            this.LabelDetalle2.Location = new System.Drawing.Point(149, 282);
+            this.LabelDetalle2.Name = "LabelDetalle2";
+            this.LabelDetalle2.Size = new System.Drawing.Size(10, 13);
+            this.LabelDetalle2.TabIndex = 62;
+            this.LabelDetalle2.Text = "-";
+            // 
             // ConsultaDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(454, 496);
+            this.Controls.Add(this.LabelDetalle2);
+            this.Controls.Add(this.LabelFecha2);
+            this.Controls.Add(this.LabelTipoDocumento2);
+            this.Controls.Add(this.LabelNombreDocumento2);
             this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonBuscar);
-            this.Controls.Add(this.TimePickerFecha);
-            this.Controls.Add(this.ComboBoxTipoDocumento);
-            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.CuadroNumeroFoja);
-            this.Controls.Add(this.CuadroNombreDocumento);
             this.Controls.Add(this.CheckVuelta);
             this.Controls.Add(this.CheckEnExpediente);
             this.Controls.Add(this.label7);
@@ -227,11 +233,7 @@
 
         private System.Windows.Forms.Button BotonBusquedaAvanzada;
         private System.Windows.Forms.Button BotonBuscar;
-        private System.Windows.Forms.DateTimePicker TimePickerFecha;
-        private System.Windows.Forms.ComboBox ComboBoxTipoDocumento;
-        private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.TextBox CuadroNumeroFoja;
-        private System.Windows.Forms.TextBox CuadroNombreDocumento;
         private System.Windows.Forms.CheckBox CheckVuelta;
         private System.Windows.Forms.CheckBox CheckEnExpediente;
         private System.Windows.Forms.Label label7;
@@ -242,5 +244,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelNombreDocumento2;
+        private System.Windows.Forms.Label LabelTipoDocumento2;
+        private System.Windows.Forms.Label LabelFecha2;
+        private System.Windows.Forms.Label LabelDetalle2;
     }
 }

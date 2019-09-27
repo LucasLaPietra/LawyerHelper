@@ -81,6 +81,12 @@
     <Compile Include="UI\Agenda\ConsultaRecordatorio.Designer.cs">
       <DependentUpon>ConsultaRecordatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Agenda\ModificarRecordatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Agenda\ModificarRecordatorio.Designer.cs">
+      <DependentUpon>ModificarRecordatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Cobros\AltaCobro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\ConsultaRecordatorio.resx">
       <DependentUpon>ConsultaRecordatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Agenda\ModificarRecordatorio.resx">
+      <DependentUpon>ModificarRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Cobros\AltaCobro.resx">
       <DependentUpon>AltaCobro.cs</DependentUpon>

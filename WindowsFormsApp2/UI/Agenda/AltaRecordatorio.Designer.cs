@@ -176,7 +176,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 381);
+            this.ClientSize = new System.Drawing.Size(307, 395);
             this.Controls.Add(this.CuadroTipo);
             this.Controls.Add(this.LabelTipo);
             this.Controls.Add(this.CuadroAM);
