@@ -20,9 +20,11 @@ namespace WindowsFormsApp2.Personas
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            using (Contexto iContexto = new Contexto())
+            using (Contexto db = new Contexto())
             {
                 Persona iPersona = new Persona(CuadroNombre.Text, CuadroApellido.Text, CuadroDNI.Text, CuadroDomReal.Text, CuadroTelefono.Text, CuadroFecha.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroAbogado.Text, CuadroDomLegal.Text);
+                db.Personas.Add(iPersona);
+                db.SaveChanges();
             }               
             MessageBox.Show("Persona añadida con exito!","Exito");
         }
