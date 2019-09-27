@@ -31,5 +31,6 @@ namespace LawyerHelper.Clases
         public IList<Demandado> Demandados { get; set; }
         public IList<Demandante> Demandantes { get; set; }
         public IList<Documento> Documentos { get; set; }
+
     }
 }

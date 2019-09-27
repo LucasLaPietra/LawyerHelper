@@ -11,5 +11,22 @@ namespace LawyerHelper.Clases
         public Boolean Cliente { get; set; }
 
         public Juicio Juicio { get; set; }
+        public Persona Persona { get; set; }
+
+        public Juicio GetJuicio()
+        {
+            Contexto iContexto = new Contexto();
+            foreach (Juicio juicio in iContexto.Juicios)
+            {
+                foreach (Demandante demandante in juicio.Demandantes)
+                {
+                    if (demandante == this)
+                    {
+                        return juicio;
+                    }
+                }
+            }
+            return null;
+        }
     }
 }
