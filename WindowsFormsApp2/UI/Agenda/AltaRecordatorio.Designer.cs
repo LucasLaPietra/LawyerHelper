@@ -37,7 +37,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.CuadroLugar = new System.Windows.Forms.TextBox();
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.LabelLugar = new System.Windows.Forms.Label();
@@ -122,14 +122,14 @@
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // CuadroDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 174);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(193, 136);
-            this.textBox1.TabIndex = 22;
+            this.CuadroDescripcion.Location = new System.Drawing.Point(79, 174);
+            this.CuadroDescripcion.Multiline = true;
+            this.CuadroDescripcion.Name = "CuadroDescripcion";
+            this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDescripcion.Size = new System.Drawing.Size(193, 136);
+            this.CuadroDescripcion.TabIndex = 22;
             // 
             // CuadroLugar
             // 
@@ -188,7 +188,7 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CuadroDescripcion);
             this.Controls.Add(this.CuadroLugar);
             this.Controls.Add(this.LabelDescripcion);
             this.Controls.Add(this.LabelLugar);
@@ -210,7 +210,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CuadroDescripcion;
         private System.Windows.Forms.TextBox CuadroLugar;
         private System.Windows.Forms.Label LabelDescripcion;
         private System.Windows.Forms.Label LabelLugar;

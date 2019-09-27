@@ -8,7 +8,7 @@ namespace LawyerHelper.Clases
 {
     class Recordatorio
     {
-        public int IdRecordatorio { get; set; }
+        public int RecordatorioId { get; set; }
         public String Lugar { get; set; }
         public String Tipo { get; set; }
         public String Descripcion { get; set; }

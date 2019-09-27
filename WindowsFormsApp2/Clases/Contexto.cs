@@ -12,7 +12,7 @@ namespace LawyerHelper.Clases
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Cobro> Cobros { get; set; }
         public DbSet<Pago> Pagos { get; set; }
-        public DbSet<Pago> Documentos { get; set; }
+        public DbSet<Documento> Documentos { get; set; }
         public DbSet<Demandante> Demandantes { get; set; }
         public DbSet<Demandado> Demandados { get; set; }
         public DbSet<Juicio> Juicios { get; set; }

@@ -30,7 +30,7 @@
         {
             this.BotonBuscarPorOtroCampo = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
-            this.BotonDarDeBaja = new System.Windows.Forms.Button();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.CuadroNumeroDeExpediente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -78,7 +78,7 @@
             // 
             // BotonBuscarPorOtroCampo
             // 
-            this.BotonBuscarPorOtroCampo.Location = new System.Drawing.Point(12, 40);
+            this.BotonBuscarPorOtroCampo.Location = new System.Drawing.Point(12, 53);
             this.BotonBuscarPorOtroCampo.Name = "BotonBuscarPorOtroCampo";
             this.BotonBuscarPorOtroCampo.Size = new System.Drawing.Size(138, 24);
             this.BotonBuscarPorOtroCampo.TabIndex = 37;
@@ -94,14 +94,14 @@
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
-            // BotonDarDeBaja
+            // BotonAceptar
             // 
-            this.BotonDarDeBaja.Location = new System.Drawing.Point(12, 460);
-            this.BotonDarDeBaja.Name = "BotonDarDeBaja";
-            this.BotonDarDeBaja.Size = new System.Drawing.Size(138, 25);
-            this.BotonDarDeBaja.TabIndex = 35;
-            this.BotonDarDeBaja.Text = "Dar de baja";
-            this.BotonDarDeBaja.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Location = new System.Drawing.Point(12, 460);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(138, 25);
+            this.BotonAceptar.TabIndex = 35;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
             // 
             // CuadroNumeroDeExpediente
             // 
@@ -124,7 +124,6 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.LabelExpediente, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.LabelFecha, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.LabelFolio, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.LabelFuero, 0, 4);
@@ -162,7 +161,8 @@
             this.tableLayoutPanel1.Controls.Add(this.LabelDemandado2, 1, 18);
             this.tableLayoutPanel1.Controls.Add(this.LabelJurisdiccion, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.LabelEtapa, 0, 11);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 79);
+            this.tableLayoutPanel1.Controls.Add(this.LabelExpediente, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 104);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 21;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -549,7 +549,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.BotonBuscarPorOtroCampo);
             this.Controls.Add(this.BotonCancelar);
-            this.Controls.Add(this.BotonDarDeBaja);
+            this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.CuadroNumeroDeExpediente);
             this.Controls.Add(this.label1);
             this.Name = "BajaJuicio";
@@ -565,7 +565,7 @@
 
         private System.Windows.Forms.Button BotonBuscarPorOtroCampo;
         private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.Button BotonDarDeBaja;
+        private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.TextBox CuadroNumeroDeExpediente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
