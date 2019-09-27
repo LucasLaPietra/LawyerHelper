@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.BotonCancelar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxDescripcion = new System.Windows.Forms.TextBox();
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.BotonDarDeBaja = new System.Windows.Forms.Button();
-            this.checkedListBoxCobros = new System.Windows.Forms.CheckedListBox();
+            this.checkedListBoxRecordatorios = new System.Windows.Forms.CheckedListBox();
             this.LabelListaRecordatorios = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -45,14 +45,14 @@
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(79, 289);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(293, 136);
-            this.textBox1.TabIndex = 38;
+            this.textBoxDescripcion.Location = new System.Drawing.Point(79, 289);
+            this.textBoxDescripcion.Multiline = true;
+            this.textBoxDescripcion.Name = "textBoxDescripcion";
+            this.textBoxDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBoxDescripcion.Size = new System.Drawing.Size(293, 136);
+            this.textBoxDescripcion.TabIndex = 38;
             // 
             // LabelDescripcion
             // 
@@ -72,13 +72,13 @@
             this.BotonDarDeBaja.Text = "Dar de baja";
             this.BotonDarDeBaja.UseVisualStyleBackColor = true;
             // 
-            // checkedListBoxCobros
+            // checkedListBoxRecordatorios
             // 
-            this.checkedListBoxCobros.FormattingEnabled = true;
-            this.checkedListBoxCobros.Location = new System.Drawing.Point(12, 52);
-            this.checkedListBoxCobros.Name = "checkedListBoxCobros";
-            this.checkedListBoxCobros.Size = new System.Drawing.Size(348, 214);
-            this.checkedListBoxCobros.TabIndex = 155;
+            this.checkedListBoxRecordatorios.FormattingEnabled = true;
+            this.checkedListBoxRecordatorios.Location = new System.Drawing.Point(12, 52);
+            this.checkedListBoxRecordatorios.Name = "checkedListBoxRecordatorios";
+            this.checkedListBoxRecordatorios.Size = new System.Drawing.Size(348, 214);
+            this.checkedListBoxRecordatorios.TabIndex = 155;
             // 
             // LabelListaRecordatorios
             // 
@@ -95,10 +95,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
             this.Controls.Add(this.LabelListaRecordatorios);
-            this.Controls.Add(this.checkedListBoxCobros);
+            this.Controls.Add(this.checkedListBoxRecordatorios);
             this.Controls.Add(this.BotonDarDeBaja);
             this.Controls.Add(this.BotonCancelar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxDescripcion);
             this.Controls.Add(this.LabelDescripcion);
             this.Name = "BajaRecordatorio";
             this.Text = "BajaRecordatorio";
@@ -109,10 +109,10 @@
 
         #endregion
         private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxDescripcion;
         private System.Windows.Forms.Label LabelDescripcion;
         private System.Windows.Forms.Button BotonDarDeBaja;
-        private System.Windows.Forms.CheckedListBox checkedListBoxCobros;
+        private System.Windows.Forms.CheckedListBox checkedListBoxRecordatorios;
         private System.Windows.Forms.Label LabelListaRecordatorios;
     }
 }
