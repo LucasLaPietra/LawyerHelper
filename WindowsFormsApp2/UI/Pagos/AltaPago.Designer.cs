@@ -31,11 +31,11 @@
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.CuadroImporte = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.BotonJuicio = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
             this.CuadroHora = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -69,13 +69,13 @@
             this.CuadroImporte.Size = new System.Drawing.Size(290, 20);
             this.CuadroImporte.TabIndex = 6;
             // 
-            // textBox1
+            // CuadroDetalle
             // 
-            this.textBox1.Location = new System.Drawing.Point(67, 177);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 165);
-            this.textBox1.TabIndex = 7;
+            this.CuadroDetalle.Location = new System.Drawing.Point(67, 177);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.Size = new System.Drawing.Size(290, 165);
+            this.CuadroDetalle.TabIndex = 7;
             // 
             // BotonJuicio
             // 
@@ -105,12 +105,12 @@
             this.BotonCancelar.UseVisualStyleBackColor = true;
             this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
-            // dateTimePicker1
+            // CuadroFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(67, 24);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(290, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.CuadroFecha.Location = new System.Drawing.Point(67, 24);
+            this.CuadroFecha.Name = "CuadroFecha";
+            this.CuadroFecha.Size = new System.Drawing.Size(290, 20);
+            this.CuadroFecha.TabIndex = 11;
             // 
             // CuadroHora
             // 
@@ -176,11 +176,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CuadroHora);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.CuadroFecha);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.BotonJuicio);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.CuadroImporte);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
@@ -195,11 +195,11 @@
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.TextBox CuadroImporte;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.Button BotonJuicio;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker CuadroFecha;
         private System.Windows.Forms.TextBox CuadroHora;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

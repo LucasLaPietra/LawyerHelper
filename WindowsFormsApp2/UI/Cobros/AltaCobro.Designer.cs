@@ -38,7 +38,7 @@
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonPersona = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.CuadroImporte = new System.Windows.Forms.TextBox();
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
@@ -132,13 +132,13 @@
             this.BotonPersona.Text = "Asignar cobro a persona";
             this.BotonPersona.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // CuadroDetalle
             // 
-            this.textBox1.Location = new System.Drawing.Point(68, 130);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 108);
-            this.textBox1.TabIndex = 22;
+            this.CuadroDetalle.Location = new System.Drawing.Point(68, 130);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.Size = new System.Drawing.Size(193, 108);
+            this.CuadroDetalle.TabIndex = 22;
             // 
             // CuadroImporte
             // 
@@ -190,7 +190,7 @@
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.BotonPersona);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.CuadroImporte);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
@@ -213,7 +213,7 @@
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Button BotonPersona;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.TextBox CuadroImporte;
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label LabelImporte;

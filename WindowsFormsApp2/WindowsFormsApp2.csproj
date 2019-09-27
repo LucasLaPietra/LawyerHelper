@@ -81,6 +81,12 @@
     <Compile Include="UI\Documentos\AltaDocumento.Designer.cs">
       <DependentUpon>AltaDocumento.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Documentos\BajaDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Documentos\BajaDocumento.Designer.cs">
+      <DependentUpon>BajaDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Documentos\ConsultaDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
