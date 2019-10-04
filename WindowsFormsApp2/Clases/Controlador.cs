@@ -89,5 +89,28 @@ namespace LawyerHelper.Clases
             }
             return iQuery;
         }
+
+        //Para mostrar todos los juicios
+        public IList<Juicio> MostrarJuicios()
+        {
+            Contexto iContexto = new Contexto();
+            IList<Juicio> iQuery = new List<Juicio>();
+            foreach (Juicio juicio in iContexto.Juicios)
+            {
+                iQuery.Add(juicio);
+            }
+            return iQuery;
+        }
+
+        //Para mostrar un juicio tomando como parametro el numero de expediente
+        public IList<Juicio> BusquedaJuicio(int NroExpediente)
+        {
+            Contexto iContexto = new Contexto();
+            List<Juicio> iQuery;
+            iQuery = iContexto.Juicios.Where(n => n.NroExpediente == NroExpediente).ToList();
+            return iQuery;
+        }       
+
+
     }
 }
