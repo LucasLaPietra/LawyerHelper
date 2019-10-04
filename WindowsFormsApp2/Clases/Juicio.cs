@@ -9,7 +9,7 @@ namespace LawyerHelper.Clases
     class Juicio
     {
         public int JuicioId { get; set; }
-        public int NroExpediente { get; set; }
+        public string NroExpediente { get; set; }
         public String Juez { get; set; }
         public String Secretario { get; set; }
         public String Etapa { get; set; }

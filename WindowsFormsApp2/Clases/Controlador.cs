@@ -103,7 +103,7 @@ namespace LawyerHelper.Clases
         }
 
         //Para mostrar un juicio tomando como parametro el numero de expediente
-        public IList<Juicio> BusquedaJuicio(int NroExpediente)
+        public IList<Juicio> BusquedaJuicio(string NroExpediente)
         {
             Contexto iContexto = new Contexto();
             List<Juicio> iQuery;
