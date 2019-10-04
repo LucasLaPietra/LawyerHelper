@@ -42,6 +42,8 @@
             this.LabelFecha = new System.Windows.Forms.Label();
             this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.BotonDarDeBaja = new System.Windows.Forms.Button();
+            this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
+            this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BotonCancelar
@@ -167,11 +169,31 @@
             this.BotonDarDeBaja.Text = "Dar de baja";
             this.BotonDarDeBaja.UseVisualStyleBackColor = true;
             // 
+            // BotonJuiciosAsignados
+            // 
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 365);
+            this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
+            this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
+            this.BotonJuiciosAsignados.TabIndex = 166;
+            this.BotonJuiciosAsignados.Text = "Ver Juicio asignado";
+            this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
+            // 
+            // BotonPersonasAsociadas
+            // 
+            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(104, 406);
+            this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
+            this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
+            this.BotonPersonasAsociadas.TabIndex = 167;
+            this.BotonPersonasAsociadas.Text = "Ver Personas Asociadas";
+            this.BotonPersonasAsociadas.UseVisualStyleBackColor = true;
+            // 
             // BajaCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
+            this.Controls.Add(this.BotonPersonasAsociadas);
+            this.Controls.Add(this.BotonJuiciosAsignados);
             this.Controls.Add(this.BotonDarDeBaja);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.LabelAM);
@@ -209,5 +231,7 @@
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
         private System.Windows.Forms.Button BotonDarDeBaja;
+        private System.Windows.Forms.Button BotonJuiciosAsignados;
+        private System.Windows.Forms.Button BotonPersonasAsociadas;
     }
 }

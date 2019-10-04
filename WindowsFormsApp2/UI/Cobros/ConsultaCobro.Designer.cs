@@ -41,6 +41,8 @@
             this.checkedListBoxCobros = new System.Windows.Forms.CheckedListBox();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
+            this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
+            this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BotonCancelar
@@ -157,11 +159,31 @@
             this.dateTimePickerFecha.Size = new System.Drawing.Size(193, 20);
             this.dateTimePickerFecha.TabIndex = 139;
             // 
+            // BotonPersonasAsociadas
+            // 
+            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(104, 406);
+            this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
+            this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
+            this.BotonPersonasAsociadas.TabIndex = 169;
+            this.BotonPersonasAsociadas.Text = "Ver Personas Asociadas";
+            this.BotonPersonasAsociadas.UseVisualStyleBackColor = true;
+            // 
+            // BotonJuiciosAsignados
+            // 
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 365);
+            this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
+            this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
+            this.BotonJuiciosAsignados.TabIndex = 168;
+            this.BotonJuiciosAsignados.Text = "Ver Juicio asignado";
+            this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
+            // 
             // ConsultaCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
+            this.Controls.Add(this.BotonPersonasAsociadas);
+            this.Controls.Add(this.BotonJuiciosAsignados);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.LabelAM);
             this.Controls.Add(this.LabelMinutos);
@@ -197,5 +219,7 @@
         private System.Windows.Forms.CheckedListBox checkedListBoxCobros;
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
+        private System.Windows.Forms.Button BotonPersonasAsociadas;
+        private System.Windows.Forms.Button BotonJuiciosAsignados;
     }
 }

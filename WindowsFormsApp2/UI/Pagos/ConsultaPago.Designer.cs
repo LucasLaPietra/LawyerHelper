@@ -41,8 +41,9 @@
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelHora = new System.Windows.Forms.Label();
             this.checkedListBoxPagos = new System.Windows.Forms.CheckedListBox();
-            this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
+            this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
+            this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePickerFecha
@@ -159,29 +160,40 @@
             this.checkedListBoxPagos.Size = new System.Drawing.Size(360, 169);
             this.checkedListBoxPagos.TabIndex = 116;
             // 
-            // BotonJuiciosAsignados
-            // 
-            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(111, 382);
-            this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
-            this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
-            this.BotonJuiciosAsignados.TabIndex = 115;
-            this.BotonJuiciosAsignados.Text = "Ver Juicios asociados";
-            this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
-            // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(151, 436);
+            this.BotonCancelar.Location = new System.Drawing.Point(275, 460);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(97, 24);
             this.BotonCancelar.TabIndex = 126;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
+            // BotonPersonasAsociadas
+            // 
+            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(104, 417);
+            this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
+            this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
+            this.BotonPersonasAsociadas.TabIndex = 128;
+            this.BotonPersonasAsociadas.Text = "Ver Personas Asociadas";
+            this.BotonPersonasAsociadas.UseVisualStyleBackColor = true;
+            // 
+            // BotonJuiciosAsignados
+            // 
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 374);
+            this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
+            this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
+            this.BotonJuiciosAsignados.TabIndex = 127;
+            this.BotonJuiciosAsignados.Text = "Ver Juicios asignados";
+            this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
+            // 
             // ConsultaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
+            this.Controls.Add(this.BotonPersonasAsociadas);
+            this.Controls.Add(this.BotonJuiciosAsignados);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.LabelAM);
             this.Controls.Add(this.LabelMinutos);
@@ -193,7 +205,6 @@
             this.Controls.Add(this.LabelImporte);
             this.Controls.Add(this.LabelHora);
             this.Controls.Add(this.checkedListBoxPagos);
-            this.Controls.Add(this.BotonJuiciosAsignados);
             this.Controls.Add(this.dateTimePickerFecha);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.LabelFecha);
@@ -219,7 +230,8 @@
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelHora;
         private System.Windows.Forms.CheckedListBox checkedListBoxPagos;
-        private System.Windows.Forms.Button BotonJuiciosAsignados;
         private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.Button BotonPersonasAsociadas;
+        private System.Windows.Forms.Button BotonJuiciosAsignados;
     }
 }
