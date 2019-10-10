@@ -54,8 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Cobro.cs" />
-    <Compile Include="Clases\Contexto.cs" />
-    <Compile Include="Clases\Controlador.cs" />
+    <Compile Include="DAL\Repositorio\Contexto.cs" />
+    <Compile Include="Controladores\Controlador.cs" />
     <Compile Include="Clases\Demandado.cs" />
     <Compile Include="Clases\Demandante.cs" />
     <Compile Include="Clases\Documento.cs" />
@@ -63,6 +63,7 @@
     <Compile Include="Clases\Pago.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Recordatorio.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioGeneral.cs" />
     <Compile Include="UI\Agenda\AltaRecordatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +306,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DAL\Interfaces\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
