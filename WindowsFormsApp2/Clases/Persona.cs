@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LawyerHelper.Clases
 {
-    class Persona
+   public class Persona
     {
         public int PersonaId { get; set; }
         public String Nombre { get; set; }

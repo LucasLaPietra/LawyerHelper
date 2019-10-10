@@ -1,4 +1,6 @@
-﻿using System;
+﻿using LawyerHelper.Controladores;
+using LawyerHelper.DAL.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace WindowsFormsApp2.Pagos
 {
     public partial class AltaPago : Form
     {
+     
         public AltaPago()
         {
             InitializeComponent();
@@ -28,6 +31,11 @@ namespace WindowsFormsApp2.Pagos
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AltaPago_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

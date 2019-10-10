@@ -346,6 +346,7 @@
             this.Controls.Add(this.LabelApellido);
             this.Name = "AltaPersona";
             this.Text = "AltaPersona";
+            this.Load += new System.EventHandler(this.AltaPersona_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

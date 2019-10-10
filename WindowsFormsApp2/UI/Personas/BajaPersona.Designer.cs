@@ -187,6 +187,7 @@
             this.Controls.Add(this.LabelNombre);
             this.Name = "BajaPersona";
             this.Text = "BajaPersona";
+            this.Load += new System.EventHandler(this.BajaPersona_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

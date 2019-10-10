@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LawyerHelper.Clases
 {
-    class Demandante
+    public class Demandante
     {
         public int DemandanteId { get; set; }
         public Boolean Cliente { get; set; }

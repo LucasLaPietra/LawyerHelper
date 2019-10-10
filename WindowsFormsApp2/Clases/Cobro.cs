@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LawyerHelper.Clases
 {
-    class Cobro
+    public class Cobro
     {
         public int CobroId { get; set; }
         public double Importe { get; set; }

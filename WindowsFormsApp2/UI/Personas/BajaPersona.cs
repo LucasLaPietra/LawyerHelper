@@ -16,5 +16,10 @@ namespace LawyerHelper.UI.Personas
         {
             InitializeComponent();
         }
+
+        private void BajaPersona_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -186,6 +186,7 @@
             this.Controls.Add(this.LabelImporte);
             this.Name = "AltaPago";
             this.Text = "AltaPago";
+            this.Load += new System.EventHandler(this.AltaPago_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

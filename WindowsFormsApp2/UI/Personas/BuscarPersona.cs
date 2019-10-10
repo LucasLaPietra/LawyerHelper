@@ -16,5 +16,10 @@ namespace LawyerHelper.UI.Personas
         {
             InitializeComponent();
         }
+
+        private void BuscarPersona_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

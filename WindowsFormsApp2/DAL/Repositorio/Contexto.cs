@@ -7,8 +7,11 @@ using System.Data.Entity;
 
 namespace LawyerHelper.Clases
 {
-    class Contexto:DbContext
+  public  class Contexto:DbContext
     {
+        public Contexto():base("LawyerHelper")
+        {
+        }
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Cobro> Cobros { get; set; }
         public DbSet<Pago> Pagos { get; set; }

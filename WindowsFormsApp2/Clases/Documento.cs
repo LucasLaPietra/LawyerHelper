@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LawyerHelper.Clases
 {
-    class Documento
+    public class Documento
     {
         public int DocumentoId { get; set; }
         public String TipoDocumento { get; set; }

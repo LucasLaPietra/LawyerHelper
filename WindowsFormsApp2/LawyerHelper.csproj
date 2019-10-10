@@ -54,6 +54,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Cobro.cs" />
+    <Compile Include="Controladores\ControladorCobro.cs" />
+    <Compile Include="Controladores\ControladorDemandado.cs" />
+    <Compile Include="Controladores\ControladorDemandante.cs" />
+    <Compile Include="Controladores\ControladorDocumento.cs" />
+    <Compile Include="Controladores\ControladorJuicio.cs" />
+    <Compile Include="Controladores\ControladorPago.cs" />
+    <Compile Include="Controladores\ControladorPersona.cs" />
+    <Compile Include="Controladores\ControladorRecordatorio.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioDemandado.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioDemandante.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioDocumento.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioJuicio.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioPago.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioCobro.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioGeneral.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioPersona.cs" />
+    <Compile Include="DAL\Interfaces\IRepositorioRecordatorio.cs" />
+    <Compile Include="DAL\Interfaces\IUnidadDeTrabajo.cs" />
     <Compile Include="DAL\Repositorio\Contexto.cs" />
     <Compile Include="Controladores\Controlador.cs" />
     <Compile Include="Clases\Demandado.cs" />
@@ -63,7 +81,21 @@
     <Compile Include="Clases\Pago.cs" />
     <Compile Include="Clases\Persona.cs" />
     <Compile Include="Clases\Recordatorio.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioCobro.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioDemandado.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioDemandante.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioDocumento.cs" />
     <Compile Include="DAL\Repositorio\RepositorioGeneral.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioJuicio.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioPago.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioPersona.cs" />
+    <Compile Include="DAL\Repositorio\RepositorioRecordatorio.cs" />
+    <Compile Include="DAL\Repositorio\UnidadDeTrabajo.cs" />
+    <Compile Include="Migrations\201910102123275_prueba.cs" />
+    <Compile Include="Migrations\201910102123275_prueba.Designer.cs">
+      <DependentUpon>201910102123275_prueba.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UI\Agenda\AltaRecordatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +279,9 @@
     <Compile Include="UI\Personas\ModificarPersona.Designer.cs">
       <DependentUpon>ModificarPersona.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\201910102123275_prueba.resx">
+      <DependentUpon>201910102123275_prueba.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\AltaRecordatorio.resx">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,8 +396,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

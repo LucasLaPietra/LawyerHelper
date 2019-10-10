@@ -49,7 +49,7 @@
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 317F));
             this.tableLayoutPanel1.Controls.Add(this.LabelApellido, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.LabelDNI, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.LabelProfesion, 0, 6);
@@ -213,6 +213,7 @@
             this.Controls.Add(this.LabelComboBoxParametro);
             this.Name = "BuscarPersona";
             this.Text = "BuscarPersona";
+            this.Load += new System.EventHandler(this.BuscarPersona_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

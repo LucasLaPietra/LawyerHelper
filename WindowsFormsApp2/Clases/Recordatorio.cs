@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LawyerHelper.Clases
 {
-    class Recordatorio
+    public class Recordatorio
     {
         public int RecordatorioId { get; set; }
         public String Lugar { get; set; }
