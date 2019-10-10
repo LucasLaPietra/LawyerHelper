@@ -44,6 +44,7 @@
             this.LabelHora2 = new System.Windows.Forms.Label();
             this.LabelMinutos = new System.Windows.Forms.Label();
             this.LabelAM = new System.Windows.Forms.Label();
+            this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BotonBuscar
@@ -73,7 +74,7 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(275, 430);
+            this.BotonCancelar.Location = new System.Drawing.Point(275, 460);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(97, 24);
             this.BotonCancelar.TabIndex = 70;
@@ -82,7 +83,7 @@
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(12, 430);
+            this.BotonAceptar.Location = new System.Drawing.Point(12, 460);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 69;
@@ -91,11 +92,11 @@
             // 
             // BotonJuiciosAsignados
             // 
-            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(109, 380);
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(109, 371);
             this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
             this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
             this.BotonJuiciosAsignados.TabIndex = 94;
-            this.BotonJuiciosAsignados.Text = "Ver Juicios asociados";
+            this.BotonJuiciosAsignados.Text = "Ver Juicios asignados";
             this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
             // 
             // checkedListBoxPagos
@@ -187,11 +188,21 @@
             this.LabelAM.TabIndex = 114;
             this.LabelAM.Text = "-";
             // 
-            // BajaPagos
+            // BotonPersonasAsociadas
+            // 
+            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(109, 414);
+            this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
+            this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
+            this.BotonPersonasAsociadas.TabIndex = 115;
+            this.BotonPersonasAsociadas.Text = "Ver Personas Asociadas";
+            this.BotonPersonasAsociadas.UseVisualStyleBackColor = true;
+            // 
+            // BajaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
+            this.Controls.Add(this.BotonPersonasAsociadas);
             this.Controls.Add(this.LabelAM);
             this.Controls.Add(this.LabelMinutos);
             this.Controls.Add(this.LabelHora2);
@@ -208,7 +219,7 @@
             this.Controls.Add(this.dateTimePickerFecha);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.LabelFecha);
-            this.Name = "BajaPagos";
+            this.Name = "BajaPago";
             this.Text = "BajaPagos";
             this.Load += new System.EventHandler(this.BajaPagos_Load);
             this.ResumeLayout(false);
@@ -234,5 +245,6 @@
         private System.Windows.Forms.Label LabelHora2;
         private System.Windows.Forms.Label LabelMinutos;
         private System.Windows.Forms.Label LabelAM;
+        private System.Windows.Forms.Button BotonPersonasAsociadas;
     }
 }

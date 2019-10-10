@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6802E1E5-B229-4BC4-A0A2-A0D928322249}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LawyerHelper</RootNamespace>
+    <AssemblyName>LawyerHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cobros\AltaCobro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobros\AltaCobro.Designer.cs">
+      <DependentUpon>AltaCobro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fachada.cs" />
+    <Compile Include="Juicios\AltaJuicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juicios\AltaJuicios.Designer.cs">
+      <DependentUpon>AltaJuicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agenda\MenuAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agenda\MenuAgenda.Designer.cs">
+      <DependentUpon>MenuAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cobros\MenuCobros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cobros\MenuCobros.Designer.cs">
+      <DependentUpon>MenuCobros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Juicios\ConsultaJuicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juicios\ConsultaJuicios.Designer.cs">
+      <DependentUpon>ConsultaJuicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Juicios\MenuJuicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Juicios\MenuJuicios.Designer.cs">
+      <DependentUpon>MenuJuicios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\AltaPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos\AltaPago.Designer.cs">
+      <DependentUpon>AltaPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pagos\MenuPagos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pagos\MenuPagos.Designer.cs">
+      <DependentUpon>MenuPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\AltaPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas\AltaPersona.Designer.cs">
+      <DependentUpon>AltaPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personas\MenuPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personas\MenuPersonas.Designer.cs">
+      <DependentUpon>MenuPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cobros\AltaCobro.resx">
+      <DependentUpon>AltaCobro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juicios\AltaJuicios.resx">
+      <DependentUpon>AltaJuicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agenda\MenuAgenda.resx">
+      <DependentUpon>MenuAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cobros\MenuCobros.resx">
+      <DependentUpon>MenuCobros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juicios\ConsultaJuicios.resx">
+      <DependentUpon>ConsultaJuicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Juicios\MenuJuicios.resx">
+      <DependentUpon>MenuJuicios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos\AltaPago.resx">
+      <DependentUpon>AltaPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pagos\MenuPagos.resx">
+      <DependentUpon>MenuPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\AltaPersona.resx">
+      <DependentUpon>AltaPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Personas\MenuPersonas.resx">
+      <DependentUpon>MenuPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentos\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -49,16 +49,16 @@
             this.LabelCobrosAsociados = new System.Windows.Forms.Label();
             this.BotonVerJuicios = new System.Windows.Forms.Button();
             this.BotonVerCobros = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.CuadroDNI = new System.Windows.Forms.TextBox();
+            this.CuadroDomicilio = new System.Windows.Forms.TextBox();
+            this.CuadroTelefono = new System.Windows.Forms.TextBox();
+            this.CuadroFechaNacimiento = new System.Windows.Forms.TextBox();
+            this.CuadroProfesion = new System.Windows.Forms.TextBox();
+            this.CuadroLugarTrabajo = new System.Windows.Forms.TextBox();
+            this.CuadroCUIL = new System.Windows.Forms.TextBox();
+            this.CuadroEstadoCivil = new System.Windows.Forms.TextBox();
+            this.CuadroRepresentante = new System.Windows.Forms.TextBox();
+            this.CuadroDomicilioLegal = new System.Windows.Forms.TextBox();
             this.BotonModificarJuicio = new System.Windows.Forms.Button();
             this.BotonModificarCobro = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
@@ -135,16 +135,16 @@
             this.tableLayoutPanel1.Controls.Add(this.LabelCobrosAsociados, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.BotonVerJuicios, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.BotonVerCobros, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox3, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.textBox4, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.textBox5, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.textBox6, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.textBox7, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.textBox9, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.textBox10, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroDNI, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroDomicilio, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroTelefono, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroFechaNacimiento, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroProfesion, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroLugarTrabajo, 1, 5);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroCUIL, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroEstadoCivil, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroRepresentante, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroDomicilioLegal, 1, 9);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 130);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
@@ -291,75 +291,75 @@
             this.BotonVerCobros.Text = "Ver";
             this.BotonVerCobros.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // CuadroDNI
             // 
-            this.textBox1.Location = new System.Drawing.Point(132, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(223, 20);
-            this.textBox1.TabIndex = 25;
+            this.CuadroDNI.Location = new System.Drawing.Point(132, 3);
+            this.CuadroDNI.Name = "CuadroDNI";
+            this.CuadroDNI.Size = new System.Drawing.Size(223, 20);
+            this.CuadroDNI.TabIndex = 25;
             // 
-            // textBox2
+            // CuadroDomicilio
             // 
-            this.textBox2.Location = new System.Drawing.Point(132, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(223, 20);
-            this.textBox2.TabIndex = 26;
+            this.CuadroDomicilio.Location = new System.Drawing.Point(132, 29);
+            this.CuadroDomicilio.Name = "CuadroDomicilio";
+            this.CuadroDomicilio.Size = new System.Drawing.Size(223, 20);
+            this.CuadroDomicilio.TabIndex = 26;
             // 
-            // textBox3
+            // CuadroTelefono
             // 
-            this.textBox3.Location = new System.Drawing.Point(132, 55);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(223, 20);
-            this.textBox3.TabIndex = 27;
+            this.CuadroTelefono.Location = new System.Drawing.Point(132, 55);
+            this.CuadroTelefono.Name = "CuadroTelefono";
+            this.CuadroTelefono.Size = new System.Drawing.Size(223, 20);
+            this.CuadroTelefono.TabIndex = 27;
             // 
-            // textBox4
+            // CuadroFechaNacimiento
             // 
-            this.textBox4.Location = new System.Drawing.Point(132, 81);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(223, 20);
-            this.textBox4.TabIndex = 28;
+            this.CuadroFechaNacimiento.Location = new System.Drawing.Point(132, 81);
+            this.CuadroFechaNacimiento.Name = "CuadroFechaNacimiento";
+            this.CuadroFechaNacimiento.Size = new System.Drawing.Size(223, 20);
+            this.CuadroFechaNacimiento.TabIndex = 28;
             // 
-            // textBox5
+            // CuadroProfesion
             // 
-            this.textBox5.Location = new System.Drawing.Point(132, 107);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(223, 20);
-            this.textBox5.TabIndex = 29;
+            this.CuadroProfesion.Location = new System.Drawing.Point(132, 107);
+            this.CuadroProfesion.Name = "CuadroProfesion";
+            this.CuadroProfesion.Size = new System.Drawing.Size(223, 20);
+            this.CuadroProfesion.TabIndex = 29;
             // 
-            // textBox6
+            // CuadroLugarTrabajo
             // 
-            this.textBox6.Location = new System.Drawing.Point(132, 133);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(223, 20);
-            this.textBox6.TabIndex = 30;
+            this.CuadroLugarTrabajo.Location = new System.Drawing.Point(132, 133);
+            this.CuadroLugarTrabajo.Name = "CuadroLugarTrabajo";
+            this.CuadroLugarTrabajo.Size = new System.Drawing.Size(223, 20);
+            this.CuadroLugarTrabajo.TabIndex = 30;
             // 
-            // textBox7
+            // CuadroCUIL
             // 
-            this.textBox7.Location = new System.Drawing.Point(132, 159);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(223, 20);
-            this.textBox7.TabIndex = 31;
+            this.CuadroCUIL.Location = new System.Drawing.Point(132, 159);
+            this.CuadroCUIL.Name = "CuadroCUIL";
+            this.CuadroCUIL.Size = new System.Drawing.Size(223, 20);
+            this.CuadroCUIL.TabIndex = 31;
             // 
-            // textBox8
+            // CuadroEstadoCivil
             // 
-            this.textBox8.Location = new System.Drawing.Point(132, 185);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(223, 20);
-            this.textBox8.TabIndex = 32;
+            this.CuadroEstadoCivil.Location = new System.Drawing.Point(132, 185);
+            this.CuadroEstadoCivil.Name = "CuadroEstadoCivil";
+            this.CuadroEstadoCivil.Size = new System.Drawing.Size(223, 20);
+            this.CuadroEstadoCivil.TabIndex = 32;
             // 
-            // textBox9
+            // CuadroRepresentante
             // 
-            this.textBox9.Location = new System.Drawing.Point(132, 211);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(223, 20);
-            this.textBox9.TabIndex = 33;
+            this.CuadroRepresentante.Location = new System.Drawing.Point(132, 211);
+            this.CuadroRepresentante.Name = "CuadroRepresentante";
+            this.CuadroRepresentante.Size = new System.Drawing.Size(223, 20);
+            this.CuadroRepresentante.TabIndex = 33;
             // 
-            // textBox10
+            // CuadroDomicilioLegal
             // 
-            this.textBox10.Location = new System.Drawing.Point(132, 237);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(223, 20);
-            this.textBox10.TabIndex = 34;
+            this.CuadroDomicilioLegal.Location = new System.Drawing.Point(132, 237);
+            this.CuadroDomicilioLegal.Name = "CuadroDomicilioLegal";
+            this.CuadroDomicilioLegal.Size = new System.Drawing.Size(223, 20);
+            this.CuadroDomicilioLegal.TabIndex = 34;
             // 
             // BotonModificarJuicio
             // 
@@ -446,16 +446,16 @@
         private System.Windows.Forms.Label LabelCobrosAsociados;
         private System.Windows.Forms.Button BotonVerJuicios;
         private System.Windows.Forms.Button BotonVerCobros;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox CuadroDNI;
+        private System.Windows.Forms.TextBox CuadroDomicilio;
+        private System.Windows.Forms.TextBox CuadroTelefono;
+        private System.Windows.Forms.TextBox CuadroFechaNacimiento;
+        private System.Windows.Forms.TextBox CuadroProfesion;
+        private System.Windows.Forms.TextBox CuadroLugarTrabajo;
+        private System.Windows.Forms.TextBox CuadroCUIL;
+        private System.Windows.Forms.TextBox CuadroEstadoCivil;
+        private System.Windows.Forms.TextBox CuadroRepresentante;
+        private System.Windows.Forms.TextBox CuadroDomicilioLegal;
         private System.Windows.Forms.Button BotonModificarJuicio;
         private System.Windows.Forms.Button BotonModificarCobro;
         private System.Windows.Forms.Button BotonCancelar;

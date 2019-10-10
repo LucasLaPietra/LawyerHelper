@@ -1,6 +1,6 @@
-﻿namespace LawyerHelper.UI.Pagos
+﻿namespace LawyerHelper.UI.Cobros
 {
-    partial class ConsultaPago
+    partial class ConsultaCobro
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
-            this.BotonBuscar = new System.Windows.Forms.Button();
-            this.LabelFecha = new System.Windows.Forms.Label();
+            this.BotonCancelar = new System.Windows.Forms.Button();
             this.LabelAM = new System.Windows.Forms.Label();
             this.LabelMinutos = new System.Windows.Forms.Label();
             this.LabelHora2 = new System.Windows.Forms.Label();
@@ -40,154 +38,146 @@
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelHora = new System.Windows.Forms.Label();
-            this.checkedListBoxPagos = new System.Windows.Forms.CheckedListBox();
-            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.checkedListBoxCobros = new System.Windows.Forms.CheckedListBox();
+            this.LabelFecha = new System.Windows.Forms.Label();
+            this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
             this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dateTimePickerFecha
+            // BotonCancelar
             // 
-            this.dateTimePickerFecha.Location = new System.Drawing.Point(57, 35);
-            this.dateTimePickerFecha.Name = "dateTimePickerFecha";
-            this.dateTimePickerFecha.Size = new System.Drawing.Size(233, 20);
-            this.dateTimePickerFecha.TabIndex = 9;
-            // 
-            // BotonBuscar
-            // 
-            this.BotonBuscar.Location = new System.Drawing.Point(301, 34);
-            this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.BotonBuscar.TabIndex = 8;
-            this.BotonBuscar.Text = "Buscar";
-            this.BotonBuscar.UseVisualStyleBackColor = true;
-            // 
-            // LabelFecha
-            // 
-            this.LabelFecha.AutoSize = true;
-            this.LabelFecha.Location = new System.Drawing.Point(14, 39);
-            this.LabelFecha.Name = "LabelFecha";
-            this.LabelFecha.Size = new System.Drawing.Size(37, 13);
-            this.LabelFecha.TabIndex = 7;
-            this.LabelFecha.Text = "Fecha";
+            this.BotonCancelar.Location = new System.Drawing.Point(263, 460);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(97, 24);
+            this.BotonCancelar.TabIndex = 151;
+            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
             // LabelAM
             // 
             this.LabelAM.AutoSize = true;
-            this.LabelAM.Location = new System.Drawing.Point(117, 272);
+            this.LabelAM.Location = new System.Drawing.Point(117, 247);
             this.LabelAM.Name = "LabelAM";
             this.LabelAM.Size = new System.Drawing.Size(10, 13);
-            this.LabelAM.TabIndex = 125;
+            this.LabelAM.TabIndex = 150;
             this.LabelAM.Text = "-";
             // 
             // LabelMinutos
             // 
             this.LabelMinutos.AutoSize = true;
-            this.LabelMinutos.Location = new System.Drawing.Point(101, 272);
+            this.LabelMinutos.Location = new System.Drawing.Point(101, 247);
             this.LabelMinutos.Name = "LabelMinutos";
             this.LabelMinutos.Size = new System.Drawing.Size(10, 13);
-            this.LabelMinutos.TabIndex = 124;
+            this.LabelMinutos.TabIndex = 149;
             this.LabelMinutos.Text = "-";
             // 
             // LabelHora2
             // 
             this.LabelHora2.AutoSize = true;
-            this.LabelHora2.Location = new System.Drawing.Point(67, 272);
+            this.LabelHora2.Location = new System.Drawing.Point(67, 247);
             this.LabelHora2.Name = "LabelHora2";
             this.LabelHora2.Size = new System.Drawing.Size(10, 13);
-            this.LabelHora2.TabIndex = 123;
+            this.LabelHora2.TabIndex = 148;
             this.LabelHora2.Text = "-";
             // 
             // LabelDetalle2
             // 
             this.LabelDetalle2.AutoSize = true;
-            this.LabelDetalle2.Location = new System.Drawing.Point(68, 344);
+            this.LabelDetalle2.Location = new System.Drawing.Point(68, 319);
             this.LabelDetalle2.Name = "LabelDetalle2";
             this.LabelDetalle2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDetalle2.TabIndex = 122;
+            this.LabelDetalle2.TabIndex = 147;
             this.LabelDetalle2.Text = "-";
             // 
             // LabelImporte2
             // 
             this.LabelImporte2.AutoSize = true;
-            this.LabelImporte2.Location = new System.Drawing.Point(67, 307);
+            this.LabelImporte2.Location = new System.Drawing.Point(67, 282);
             this.LabelImporte2.Name = "LabelImporte2";
             this.LabelImporte2.Size = new System.Drawing.Size(10, 13);
-            this.LabelImporte2.TabIndex = 121;
+            this.LabelImporte2.TabIndex = 146;
             this.LabelImporte2.Text = "-";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 272);
+            this.label3.Location = new System.Drawing.Point(85, 247);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(10, 13);
-            this.label3.TabIndex = 120;
+            this.label3.TabIndex = 145;
             this.label3.Text = ":";
             // 
             // LabelDetalle
             // 
             this.LabelDetalle.AutoSize = true;
-            this.LabelDetalle.Location = new System.Drawing.Point(10, 344);
+            this.LabelDetalle.Location = new System.Drawing.Point(10, 319);
             this.LabelDetalle.Name = "LabelDetalle";
             this.LabelDetalle.Size = new System.Drawing.Size(40, 13);
-            this.LabelDetalle.TabIndex = 119;
+            this.LabelDetalle.TabIndex = 144;
             this.LabelDetalle.Text = "Detalle";
             // 
             // LabelImporte
             // 
             this.LabelImporte.AutoSize = true;
-            this.LabelImporte.Location = new System.Drawing.Point(10, 307);
+            this.LabelImporte.Location = new System.Drawing.Point(10, 282);
             this.LabelImporte.Name = "LabelImporte";
             this.LabelImporte.Size = new System.Drawing.Size(42, 13);
-            this.LabelImporte.TabIndex = 118;
+            this.LabelImporte.TabIndex = 143;
             this.LabelImporte.Text = "Importe";
             // 
             // LabelHora
             // 
             this.LabelHora.AutoSize = true;
-            this.LabelHora.Location = new System.Drawing.Point(10, 272);
+            this.LabelHora.Location = new System.Drawing.Point(10, 247);
             this.LabelHora.Name = "LabelHora";
             this.LabelHora.Size = new System.Drawing.Size(30, 13);
-            this.LabelHora.TabIndex = 117;
+            this.LabelHora.TabIndex = 142;
             this.LabelHora.Text = "Hora";
             // 
-            // checkedListBoxPagos
+            // checkedListBoxCobros
             // 
-            this.checkedListBoxPagos.FormattingEnabled = true;
-            this.checkedListBoxPagos.Location = new System.Drawing.Point(12, 77);
-            this.checkedListBoxPagos.Name = "checkedListBoxPagos";
-            this.checkedListBoxPagos.Size = new System.Drawing.Size(360, 169);
-            this.checkedListBoxPagos.TabIndex = 116;
+            this.checkedListBoxCobros.FormattingEnabled = true;
+            this.checkedListBoxCobros.Location = new System.Drawing.Point(12, 52);
+            this.checkedListBoxCobros.Name = "checkedListBoxCobros";
+            this.checkedListBoxCobros.Size = new System.Drawing.Size(348, 169);
+            this.checkedListBoxCobros.TabIndex = 141;
             // 
-            // BotonCancelar
+            // LabelFecha
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(275, 460);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(97, 24);
-            this.BotonCancelar.TabIndex = 126;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.LabelFecha.AutoSize = true;
+            this.LabelFecha.Location = new System.Drawing.Point(9, 19);
+            this.LabelFecha.Name = "LabelFecha";
+            this.LabelFecha.Size = new System.Drawing.Size(40, 13);
+            this.LabelFecha.TabIndex = 140;
+            this.LabelFecha.Text = "Fecha:";
+            // 
+            // dateTimePickerFecha
+            // 
+            this.dateTimePickerFecha.Location = new System.Drawing.Point(55, 13);
+            this.dateTimePickerFecha.Name = "dateTimePickerFecha";
+            this.dateTimePickerFecha.Size = new System.Drawing.Size(193, 20);
+            this.dateTimePickerFecha.TabIndex = 139;
             // 
             // BotonPersonasAsociadas
             // 
-            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(104, 417);
+            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(104, 406);
             this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
             this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
-            this.BotonPersonasAsociadas.TabIndex = 128;
+            this.BotonPersonasAsociadas.TabIndex = 169;
             this.BotonPersonasAsociadas.Text = "Ver Personas Asociadas";
             this.BotonPersonasAsociadas.UseVisualStyleBackColor = true;
             // 
             // BotonJuiciosAsignados
             // 
-            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 374);
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 365);
             this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
             this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
-            this.BotonJuiciosAsignados.TabIndex = 127;
-            this.BotonJuiciosAsignados.Text = "Ver Juicios asignados";
+            this.BotonJuiciosAsignados.TabIndex = 168;
+            this.BotonJuiciosAsignados.Text = "Ver Juicio asignado";
             this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
             // 
-            // ConsultaPago
+            // ConsultaCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,12 +194,11 @@
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
             this.Controls.Add(this.LabelHora);
-            this.Controls.Add(this.checkedListBoxPagos);
-            this.Controls.Add(this.dateTimePickerFecha);
-            this.Controls.Add(this.BotonBuscar);
+            this.Controls.Add(this.checkedListBoxCobros);
             this.Controls.Add(this.LabelFecha);
-            this.Name = "ConsultaPago";
-            this.Text = "ConsultaPago";
+            this.Controls.Add(this.dateTimePickerFecha);
+            this.Name = "ConsultaCobro";
+            this.Text = "ConsultaCobro";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,9 +206,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
-        private System.Windows.Forms.Button BotonBuscar;
-        private System.Windows.Forms.Label LabelFecha;
+        private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Label LabelAM;
         private System.Windows.Forms.Label LabelMinutos;
         private System.Windows.Forms.Label LabelHora2;
@@ -229,8 +216,9 @@
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelHora;
-        private System.Windows.Forms.CheckedListBox checkedListBoxPagos;
-        private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.CheckedListBox checkedListBoxCobros;
+        private System.Windows.Forms.Label LabelFecha;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
         private System.Windows.Forms.Button BotonPersonasAsociadas;
         private System.Windows.Forms.Button BotonJuiciosAsignados;
     }
