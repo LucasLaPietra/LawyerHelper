@@ -1,4 +1,5 @@
-﻿using LawyerHelper.DAL.Interfaces;
+﻿using LawyerHelper.Clases;
+using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using System;
 using System.Collections.Generic;

@@ -50,5 +50,12 @@ namespace LawyerHelper.Controladores
         {
             return iUdT.RepositorioPersona.BusquedaPersonas(pParametro,pValor);
         }
+
+        public Persona BusquedaPorNombreyAp(string pApellido, string pNombre)
+        {
+            List<Persona> ListaApellido= iUdT.RepositorioPersona.BusquedaPersonas("Apellido", pApellido).ToList();
+            Persona iResultado = ListaApellido.FirstOrDefault(n => n.Nombre == pNombre);
+            return iResultado;
+        }
     }
 }

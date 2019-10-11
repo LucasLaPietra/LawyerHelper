@@ -73,7 +73,6 @@
     <Compile Include="DAL\Interfaces\IRepositorioRecordatorio.cs" />
     <Compile Include="DAL\Interfaces\IUnidadDeTrabajo.cs" />
     <Compile Include="DAL\Repositorio\Contexto.cs" />
-    <Compile Include="Controladores\Controlador.cs" />
     <Compile Include="Clases\Demandado.cs" />
     <Compile Include="Clases\Demandante.cs" />
     <Compile Include="Clases\Documento.cs" />

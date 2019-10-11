@@ -52,7 +52,6 @@
             this.CuadroDNI = new System.Windows.Forms.TextBox();
             this.CuadroDomicilio = new System.Windows.Forms.TextBox();
             this.CuadroTelefono = new System.Windows.Forms.TextBox();
-            this.CuadroFechaNacimiento = new System.Windows.Forms.TextBox();
             this.CuadroProfesion = new System.Windows.Forms.TextBox();
             this.CuadroLugarTrabajo = new System.Windows.Forms.TextBox();
             this.CuadroCUIL = new System.Windows.Forms.TextBox();
@@ -63,6 +62,7 @@
             this.BotonModificarCobro = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
+            this.CuadroFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,6 +74,7 @@
             this.BotonBuscar.TabIndex = 9;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // CuadroApellido
             // 
@@ -138,13 +139,13 @@
             this.tableLayoutPanel1.Controls.Add(this.CuadroDNI, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.CuadroDomicilio, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.CuadroTelefono, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroFechaNacimiento, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.CuadroProfesion, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.CuadroLugarTrabajo, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.CuadroCUIL, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.CuadroEstadoCivil, 1, 7);
             this.tableLayoutPanel1.Controls.Add(this.CuadroRepresentante, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.CuadroDomicilioLegal, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroFechaNacimiento, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 130);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 12;
@@ -312,13 +313,6 @@
             this.CuadroTelefono.Size = new System.Drawing.Size(223, 20);
             this.CuadroTelefono.TabIndex = 27;
             // 
-            // CuadroFechaNacimiento
-            // 
-            this.CuadroFechaNacimiento.Location = new System.Drawing.Point(132, 81);
-            this.CuadroFechaNacimiento.Name = "CuadroFechaNacimiento";
-            this.CuadroFechaNacimiento.Size = new System.Drawing.Size(223, 20);
-            this.CuadroFechaNacimiento.TabIndex = 28;
-            // 
             // CuadroProfesion
             // 
             this.CuadroProfesion.Location = new System.Drawing.Point(132, 107);
@@ -387,6 +381,7 @@
             this.BotonCancelar.TabIndex = 70;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonAceptar
             // 
@@ -396,6 +391,14 @@
             this.BotonAceptar.TabIndex = 69;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
+            // 
+            // CuadroFechaNacimiento
+            // 
+            this.CuadroFechaNacimiento.Location = new System.Drawing.Point(132, 81);
+            this.CuadroFechaNacimiento.Name = "CuadroFechaNacimiento";
+            this.CuadroFechaNacimiento.Size = new System.Drawing.Size(223, 20);
+            this.CuadroFechaNacimiento.TabIndex = 35;
             // 
             // ModificarPersona
             // 
@@ -449,7 +452,6 @@
         private System.Windows.Forms.TextBox CuadroDNI;
         private System.Windows.Forms.TextBox CuadroDomicilio;
         private System.Windows.Forms.TextBox CuadroTelefono;
-        private System.Windows.Forms.TextBox CuadroFechaNacimiento;
         private System.Windows.Forms.TextBox CuadroProfesion;
         private System.Windows.Forms.TextBox CuadroLugarTrabajo;
         private System.Windows.Forms.TextBox CuadroCUIL;
@@ -460,5 +462,6 @@
         private System.Windows.Forms.Button BotonModificarCobro;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
+        private System.Windows.Forms.DateTimePicker CuadroFechaNacimiento;
     }
 }

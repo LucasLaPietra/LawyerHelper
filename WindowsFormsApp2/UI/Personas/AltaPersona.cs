@@ -28,23 +28,13 @@ namespace WindowsFormsApp2.Personas
         {
             try
             {
-                ////////AHORA ES ASI
                 iControladorPersona.RegistrarPersona(CuadroNombre.Text, CuadroApellido.Text, CuadroDNI.Text, CuadroDomReal.Text, CuadroTelefono.Text, CuadroFecha.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroAbogado.Text, CuadroDomLegal.Text);
-                MessageBox.Show("Persona añadida", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Persona añadida con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
             {
                 MessageBox.Show("Persona no fue añadida", "Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-           
-
-            //////using (Contexto db = new Contexto())
-            //////{
-            //////    Persona iPersona = new Persona(CuadroNombre.Text, CuadroApellido.Text, CuadroDNI.Text, CuadroDomReal.Text, CuadroTelefono.Text, CuadroFecha.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroAbogado.Text, CuadroDomLegal.Text);
-            //////    db.Personas.Add(iPersona);
-            //////    db.SaveChanges();
-            //////}               
-            //////MessageBox.Show("Persona añadida con exito!","Exito");
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)

@@ -61,6 +61,7 @@
             this.BotonBuscar.TabIndex = 47;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // CuadroApellido
             // 
@@ -102,6 +103,7 @@
             this.BotonCancelar.TabIndex = 70;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonAceptar
             // 
@@ -111,6 +113,7 @@
             this.BotonAceptar.TabIndex = 69;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // LabelNombre2
             // 
