@@ -18,15 +18,22 @@ namespace LawyerHelper.UI.Personas
     {
         ControladorPersona iControladorPersona;
         Persona iPersona;
-        public BajaPersona()
+        public BajaPersona(Persona pPreCargada)
         {
             InitializeComponent();
+            if (pPreCargada!=null)
+            {
+                iPersona = pPreCargada;
+                LabelNombre3.Text = iPersona.Nombre;
+                LabelApellido3.Text = iPersona.Apellido;
+                LabelDNI3.Text = iPersona.Dni;
+            }
             iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
         }
 
         private void BajaPersona_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void BotonBuscar_Click(object sender, EventArgs e)
@@ -72,6 +79,13 @@ namespace LawyerHelper.UI.Personas
             {
                 MessageBox.Show("Error al dar de baja la persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
+        {
+            BuscarPersona iMenuNuevo = new BuscarPersona();
+            iMenuNuevo.ShowDialog();
+            this.Close();
         }
     }
 }

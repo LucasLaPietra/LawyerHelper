@@ -51,6 +51,8 @@
             this.LabelProfesion2 = new System.Windows.Forms.Label();
             this.LabelNombre = new System.Windows.Forms.Label();
             this.LabelCUIL2 = new System.Windows.Forms.Label();
+            this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,12 +170,13 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(277, 460);
+            this.BotonCancelar.Location = new System.Drawing.Point(351, 300);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 83;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonBuscar
             // 
@@ -183,6 +186,7 @@
             this.BotonBuscar.TabIndex = 82;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // CuadroParametro
             // 
@@ -311,11 +315,31 @@
             this.LabelCUIL2.TabIndex = 86;
             this.LabelCUIL2.Text = "-";
             // 
+            // ComboBoxResultados
+            // 
+            this.ComboBoxResultados.FormattingEnabled = true;
+            this.ComboBoxResultados.Location = new System.Drawing.Point(18, 106);
+            this.ComboBoxResultados.Name = "ComboBoxResultados";
+            this.ComboBoxResultados.Size = new System.Drawing.Size(434, 21);
+            this.ComboBoxResultados.TabIndex = 85;
+            // 
+            // BotonAceptar
+            // 
+            this.BotonAceptar.Location = new System.Drawing.Point(18, 300);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
+            this.BotonAceptar.TabIndex = 86;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
+            // 
             // BuscarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 496);
+            this.ClientSize = new System.Drawing.Size(464, 342);
+            this.Controls.Add(this.BotonAceptar);
+            this.Controls.Add(this.ComboBoxResultados);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonBuscar);
@@ -358,5 +382,7 @@
         private System.Windows.Forms.Label LabelFechaDeNacimiento2;
         private System.Windows.Forms.Label LabelProfesion2;
         private System.Windows.Forms.Label LabelCUIL2;
+        private System.Windows.Forms.ComboBox ComboBoxResultados;
+        private System.Windows.Forms.Button BotonAceptar;
     }
 }

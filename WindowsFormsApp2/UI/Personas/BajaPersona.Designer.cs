@@ -52,6 +52,7 @@
             this.BotonBusquedaAvanzada.TabIndex = 48;
             this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
             // BotonBuscar
             // 

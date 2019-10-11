@@ -8,6 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp2.Personas;
+using LawyerHelper.UI.Personas;
+using LawyerHelper.Clases;
+using LawyerHelper.Controladores;
+using LawyerHelper.DAL.Interfaces;
+using LawyerHelper.DAL.Repositorio;
 
 namespace WindowsFormsApp2
 {
@@ -27,6 +32,12 @@ namespace WindowsFormsApp2
         private void MenuPersonas_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BotonBaja_Click(object sender, EventArgs e)
+        {
+            BajaPersona iMenuNuevo = new BajaPersona(null);
+            iMenuNuevo.ShowDialog();
         }
     }
 }
