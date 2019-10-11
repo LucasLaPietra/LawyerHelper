@@ -22,5 +22,10 @@ namespace LawyerHelper.Clases
             this.Detalle = pDetalle;
         }
 
+        public Pago()
+        {
+
+        }
+
     }
 }

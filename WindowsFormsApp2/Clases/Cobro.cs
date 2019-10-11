@@ -22,5 +22,9 @@ namespace LawyerHelper.Clases
             this.FechayHora = pFechayHora;
             this.Detalle = pDetalle;
         }
+
+        public Cobro()
+        {
+        }
     }
 }

@@ -42,6 +42,11 @@ namespace LawyerHelper.Clases
             this.DomicilioLegal = pDomicilioLegal;
         }
 
+        public Persona()
+        {
+
+        }
+
         public IList<Juicio> GetJuiciosPorDemandado()
         {
             Contexto iContexto = new Contexto();

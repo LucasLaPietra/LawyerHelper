@@ -23,7 +23,7 @@ namespace LawyerHelper.DAL.Repositorio
             switch (Parametro)
             {
                 case "Nombre":
-                    iQuery = iContext.Set<Persona>().Where(n => n.Nombre == Valor).ToList();
+                    iQuery = iContext.Personas.Where(n => n.Nombre == Valor).ToList();
                     break;
                 case "Apellido":
                     iQuery = iContext.Personas.Where(n => n.Apellido == Valor).ToList();

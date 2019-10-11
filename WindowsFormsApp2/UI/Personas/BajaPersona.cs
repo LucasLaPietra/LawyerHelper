@@ -38,17 +38,17 @@ namespace LawyerHelper.UI.Personas
 
         private void BotonBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
+            //try
+            //{
                 iPersona=iControladorPersona.BusquedaPorNombreyAp(CuadroApellido.Text, CuadroNombre.Text);
                 LabelNombre3.Text = iPersona.Nombre;
                 LabelApellido3.Text = iPersona.Apellido;
                 LabelDNI3.Text = iPersona.Dni;
-            }
-            catch(Exception)
-            {
-                MessageBox.Show("Error al buscar la persona, verifique que los campos sean correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            //}
+            //catch(Exception)
+            //{
+                //MessageBox.Show("Error al buscar la persona, verifique que los campos sean correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
             
         }
 
