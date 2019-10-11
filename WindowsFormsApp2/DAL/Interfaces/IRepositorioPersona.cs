@@ -9,5 +9,6 @@ namespace LawyerHelper.DAL.Interfaces
 {
     interface IRepositorioPersona : IRepositorioGeneral<Persona>
     {
+        IList<Persona> BusquedaPersonas(string Parametro, string Valor);
     }
 }

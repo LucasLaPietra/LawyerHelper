@@ -1,4 +1,5 @@
-﻿using LawyerHelper.DAL.Interfaces;
+﻿using LawyerHelper.Clases;
+using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,7 @@ namespace LawyerHelper.Controladores
 
         public IList<Pago> MostrarPagos()
         {
-            Contexto iContexto = new Contexto();
-            IList<Pago> iQuery = new List<Pago>();
-            foreach (Pago pago in iContexto.Pagos)
-            {
-                iQuery.Add(pago);
-            }
+            IList<Pago> iQuery = iUdT.RepositorioPago.ObtenerTodos();
             return iQuery;
         }
     }

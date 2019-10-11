@@ -16,7 +16,8 @@ namespace LawyerHelper.Controladores
         {
             iUdT = pUnidadTrabajo;
         }
-        public void RegistrarPersona (string pNombre, string pApellido, string pDni, string pDomicilio,
+
+        public void RegistrarPersona(string pNombre, string pApellido, string pDni, string pDomicilio,
             string pTelefono, DateTime pFecha, string pProfesion, string pLugarTrabajo, string pCuil, string pEstadoCivil, string pRepLegal, string pDomiLegal)
         {
             Persona iPersona = new Persona(pNombre, pApellido, pDni, pDomicilio,
@@ -25,53 +26,29 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-
-         public IList<Persona> BusquedaPersonas(string Parametro, string Valor)
+        public void ModificarPersona(string pNombre, string pApellido, string pDni, string pDomicilio,
+    string pTelefono, DateTime pFecha, string pProfesion, string pLugarTrabajo, string pCuil, string pEstadoCivil, string pRepLegal, string pDomiLegal)
         {
-            Contexto iContexto = new Contexto();
-            List<Persona> iQuery;
-            //No se puede utilizar variables como atributos, ya que estos deben estar definidos en tiempo de compilacion
-            //Por eso utilice el switch para cada atributo en particular
-            switch (Parametro)
-            {
-                case "Nombre":
-                    iQuery = iContexto.Personas.Where(n => n.Nombre == Valor).ToList();
-                    break;
-                case "Apellido":
-                    iQuery = iContexto.Personas.Where(n => n.Apellido == Valor).ToList();
-                    break;
-                case "Dni":
-                    iQuery = iContexto.Personas.Where(n => n.Dni == Valor).ToList();
-                    break;
-                case "Domicilio":
-                    iQuery = iContexto.Personas.Where(n => n.Domicilio == Valor).ToList();
-                    break;
-                case "Telefono":
-                    iQuery = iContexto.Personas.Where(n => n.Telefono == Valor).ToList();
-                    break;
-                case "Profesion":
-                    iQuery = iContexto.Personas.Where(n => n.Profesion == Valor).ToList();
-                    break;
-                case "LugarTrabajo":
-                    iQuery = iContexto.Personas.Where(n => n.LugarTrabajo == Valor).ToList();
-                    break;
-                case "Cuil":
-                    iQuery = iContexto.Personas.Where(n => n.Cuil == Valor).ToList();
-                    break;
-                case "EstadoCivil":
-                    iQuery = iContexto.Personas.Where(n => n.EstadoCivil == Valor).ToList();
-                    break;
-                case "Representante":
-                    iQuery = iContexto.Personas.Where(n => n.Representante == Valor).ToList();
-                    break;
-                case "DomicilioLegal":
-                    iQuery = iContexto.Personas.Where(n => n.DomicilioLegal == Valor).ToList();
-                    break;
-                default:
-                    iQuery = null;
-                    break;
-            }
-            return iQuery;
+            Persona iPersona = new Persona(pNombre, pApellido, pDni, pDomicilio,
+            pTelefono, pFecha, pProfesion, pLugarTrabajo, pCuil, pEstadoCivil, pRepLegal, pDomiLegal);
+            iUdT.RepositorioPersona.Modificar(iPersona);
+            iUdT.Guardar();
+        }
+
+        public void BajaPersona(Persona pPersona)
+        {
+            iUdT.RepositorioPersona.Eliminar(pPersona);
+            iUdT.Guardar();
+        }
+
+        public Persona ObtenerPersona(int pId)
+        {
+            return iUdT.RepositorioPersona.Obtener(pId);
+        }
+
+        public IList<Persona> BusquedaAvanzadaPersona(string pParametro, string pValor)
+        {
+            return iUdT.RepositorioPersona.BusquedaPersonas(pParametro,pValor);
         }
     }
 }

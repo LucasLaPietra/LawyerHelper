@@ -1,5 +1,6 @@
 ﻿using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
+using LawyerHelper.Clases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,12 +19,7 @@ namespace LawyerHelper.Controladores
 
         public IList<Cobro> MostrarCobros()
         {
-            Contexto iContexto = new Contexto();
-            IList<Cobro> iQuery = new List<Cobro>();
-            foreach (Cobro cobro in iContexto.Cobros)
-            {
-                iQuery.Add(cobro);
-            }
+            IList<Cobro> iQuery = iUdT.RepositorioCobro.ObtenerTodos();
             return iQuery;
         }
     }
