@@ -82,10 +82,11 @@ namespace LawyerHelper.UI.Personas
         }
 
         private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
-        {
+        {           
+            this.Hide();
             BuscarPersona iMenuNuevo = new BuscarPersona();
-            iMenuNuevo.ShowDialog();
-            this.Close();
+            iMenuNuevo.Closed += (s, args) => this.Close();
+            iMenuNuevo.Show();
         }
     }
 }

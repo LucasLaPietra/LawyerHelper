@@ -377,6 +377,7 @@
             this.BotonCancelar.TabIndex = 41;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonBusquedaAvanzada
             // 
@@ -391,7 +392,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 496);
+            this.ClientSize = new System.Drawing.Size(384, 492);
             this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.tableLayoutPanel1);

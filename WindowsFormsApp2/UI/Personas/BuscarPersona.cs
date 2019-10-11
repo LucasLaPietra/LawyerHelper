@@ -23,6 +23,7 @@ namespace LawyerHelper.UI.Personas
         public BuscarPersona()
         {
             InitializeComponent();
+            iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
         }
 
         private void BuscarPersona_Load(object sender, EventArgs e)
@@ -34,7 +35,7 @@ namespace LawyerHelper.UI.Personas
         {
             try
             {
-                iResultados = iControladorPersona.BusquedaAvanzadaPersona(comboBoxParametro.SelectedText, CuadroParametro.Text).ToList();
+                iResultados = iControladorPersona.BusquedaAvanzadaPersona(comboBoxParametro.SelectedItem.ToString(), CuadroParametro.Text).ToList();
                 ComboBoxResultados.DataSource = iResultados;
                 ComboBoxResultados.DisplayMember = "Apellido";
             }
@@ -46,10 +47,11 @@ namespace LawyerHelper.UI.Personas
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            iResultado = ComboBoxResultados.SelectedItem;
+            iResultado = ComboBoxResultados.SelectedItem;            
+            this.Hide();
             BajaPersona iMenuNuevo = new BajaPersona((Persona)iResultado);
-            iMenuNuevo.ShowDialog();
-            this.Close();
+            iMenuNuevo.Closed += (s, args) => this.Close();
+            iMenuNuevo.Show();
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)

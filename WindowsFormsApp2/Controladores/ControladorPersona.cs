@@ -26,10 +26,10 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-        public void ModificarPersona(string pNombre, string pApellido, string pDni, string pDomicilio,
+        public void ModificarPersona( string pNombre, string pApellido, string pDni, string pDomicilio,
     string pTelefono, DateTime pFecha, string pProfesion, string pLugarTrabajo, string pCuil, string pEstadoCivil, string pRepLegal, string pDomiLegal)
         {
-            Persona iPersona = new Persona(pNombre, pApellido, pDni, pDomicilio,
+            Persona iPersona = new Persona( pNombre, pApellido, pDni, pDomicilio,
             pTelefono, pFecha, pProfesion, pLugarTrabajo, pCuil, pEstadoCivil, pRepLegal, pDomiLegal);
             iUdT.RepositorioPersona.Modificar(iPersona);
             iUdT.Guardar();
