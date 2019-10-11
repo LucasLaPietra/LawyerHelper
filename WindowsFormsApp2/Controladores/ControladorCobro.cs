@@ -15,5 +15,16 @@ namespace LawyerHelper.Controladores
         {
             iUdT = pUnidadTrabajo;
         }
+
+        public IList<Cobro> MostrarCobros()
+        {
+            Contexto iContexto = new Contexto();
+            IList<Cobro> iQuery = new List<Cobro>();
+            foreach (Cobro cobro in iContexto.Cobros)
+            {
+                iQuery.Add(cobro);
+            }
+            return iQuery;
+        }
     }
 }

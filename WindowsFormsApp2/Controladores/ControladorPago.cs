@@ -15,5 +15,16 @@ namespace LawyerHelper.Controladores
         {
             iUdT = pUnidadTrabajo;
         }
+
+        public IList<Pago> MostrarPagos()
+        {
+            Contexto iContexto = new Contexto();
+            IList<Pago> iQuery = new List<Pago>();
+            foreach (Pago pago in iContexto.Pagos)
+            {
+                iQuery.Add(pago);
+            }
+            return iQuery;
+        }
     }
 }
