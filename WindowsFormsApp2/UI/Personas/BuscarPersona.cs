@@ -18,6 +18,10 @@ namespace LawyerHelper.UI.Personas
     public partial class BuscarPersona : Form
     {
         object iResultado;
+        public object PersonaEncontrada
+        { get {return iResultado;}
+            set {iResultado = value;}
+        }
         List<Persona> iResultados;
         ControladorPersona iControladorPersona;
         public BuscarPersona()
@@ -48,15 +52,24 @@ namespace LawyerHelper.UI.Personas
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
             iResultado = ComboBoxResultados.SelectedItem;            
-            this.Hide();
-            BajaPersona iMenuNuevo = new BajaPersona((Persona)iResultado);
-            iMenuNuevo.Closed += (s, args) => this.Close();
-            iMenuNuevo.Show();
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ComboBoxResultados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Persona iSeleccionado = (Persona)ComboBoxResultados.SelectedItem;
+            LabelNombre2.Text = iSeleccionado.Nombre;
+            LabelApellido2.Text = iSeleccionado.Apellido;
+            LabelDNI2.Text = iSeleccionado.Dni;
+            LabelDomicilio2.Text = iSeleccionado.Domicilio;
+            LabelTelefono2.Text = iSeleccionado.Telefono;
+            LabelFechaDeNacimiento2.Text = iSeleccionado.FechaNacimiento.ToShortDateString();
+            LabelProfesion2.Text = iSeleccionado.Profesion;
+            LabelCUIL2.Text = iSeleccionado.Cuil;
         }
     }
 }

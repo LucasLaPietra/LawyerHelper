@@ -36,7 +36,7 @@ namespace WindowsFormsApp2
 
         private void BotonBaja_Click(object sender, EventArgs e)
         {
-            BajaPersona iMenuNuevo = new BajaPersona(null);
+            BajaPersona iMenuNuevo = new BajaPersona();
             iMenuNuevo.ShowDialog();
         }
 

@@ -29,19 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.LabelApellido = new System.Windows.Forms.Label();
-            this.LabelDNI = new System.Windows.Forms.Label();
-            this.LabelProfesion = new System.Windows.Forms.Label();
-            this.LabelCUIL = new System.Windows.Forms.Label();
-            this.LabelDomicilio = new System.Windows.Forms.Label();
-            this.LabelFechaDeNacimiento = new System.Windows.Forms.Label();
-            this.LabelTelefono = new System.Windows.Forms.Label();
-            this.BotonCancelar = new System.Windows.Forms.Button();
-            this.BotonBuscar = new System.Windows.Forms.Button();
-            this.CuadroParametro = new System.Windows.Forms.TextBox();
-            this.labelCuadroParametro = new System.Windows.Forms.Label();
-            this.comboBoxParametro = new System.Windows.Forms.ComboBox();
-            this.LabelComboBoxParametro = new System.Windows.Forms.Label();
+            this.LabelNombre = new System.Windows.Forms.Label();
             this.LabelNombre2 = new System.Windows.Forms.Label();
             this.LabelApellido2 = new System.Windows.Forms.Label();
             this.LabelDNI2 = new System.Windows.Forms.Label();
@@ -49,8 +37,20 @@
             this.LabelTelefono2 = new System.Windows.Forms.Label();
             this.LabelFechaDeNacimiento2 = new System.Windows.Forms.Label();
             this.LabelProfesion2 = new System.Windows.Forms.Label();
-            this.LabelNombre = new System.Windows.Forms.Label();
+            this.LabelCUIL = new System.Windows.Forms.Label();
+            this.LabelProfesion = new System.Windows.Forms.Label();
+            this.LabelFechaDeNacimiento = new System.Windows.Forms.Label();
+            this.LabelTelefono = new System.Windows.Forms.Label();
+            this.LabelDomicilio = new System.Windows.Forms.Label();
+            this.LabelDNI = new System.Windows.Forms.Label();
+            this.LabelApellido = new System.Windows.Forms.Label();
             this.LabelCUIL2 = new System.Windows.Forms.Label();
+            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.BotonBuscar = new System.Windows.Forms.Button();
+            this.CuadroParametro = new System.Windows.Forms.TextBox();
+            this.labelCuadroParametro = new System.Windows.Forms.Label();
+            this.comboBoxParametro = new System.Windows.Forms.ComboBox();
+            this.LabelComboBoxParametro = new System.Windows.Forms.Label();
             this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
@@ -104,32 +104,77 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(434, 113);
             this.tableLayoutPanel1.TabIndex = 84;
             // 
-            // LabelApellido
+            // LabelNombre
             // 
-            this.LabelApellido.AutoSize = true;
-            this.LabelApellido.Location = new System.Drawing.Point(3, 13);
-            this.LabelApellido.Name = "LabelApellido";
-            this.LabelApellido.Size = new System.Drawing.Size(47, 13);
-            this.LabelApellido.TabIndex = 1;
-            this.LabelApellido.Text = "Apellido:";
+            this.LabelNombre.AutoSize = true;
+            this.LabelNombre.Location = new System.Drawing.Point(3, 0);
+            this.LabelNombre.Name = "LabelNombre";
+            this.LabelNombre.Size = new System.Drawing.Size(47, 13);
+            this.LabelNombre.TabIndex = 85;
+            this.LabelNombre.Text = "Nombre:";
             // 
-            // LabelDNI
+            // LabelNombre2
             // 
-            this.LabelDNI.AutoSize = true;
-            this.LabelDNI.Location = new System.Drawing.Point(3, 26);
-            this.LabelDNI.Name = "LabelDNI";
-            this.LabelDNI.Size = new System.Drawing.Size(29, 13);
-            this.LabelDNI.TabIndex = 2;
-            this.LabelDNI.Text = "DNI:";
+            this.LabelNombre2.AutoSize = true;
+            this.LabelNombre2.Location = new System.Drawing.Point(120, 0);
+            this.LabelNombre2.Name = "LabelNombre2";
+            this.LabelNombre2.Size = new System.Drawing.Size(10, 13);
+            this.LabelNombre2.TabIndex = 9;
+            this.LabelNombre2.Text = "-";
             // 
-            // LabelProfesion
+            // LabelApellido2
             // 
-            this.LabelProfesion.AutoSize = true;
-            this.LabelProfesion.Location = new System.Drawing.Point(3, 82);
-            this.LabelProfesion.Name = "LabelProfesion";
-            this.LabelProfesion.Size = new System.Drawing.Size(54, 13);
-            this.LabelProfesion.TabIndex = 7;
-            this.LabelProfesion.Text = "Profesión:";
+            this.LabelApellido2.AutoSize = true;
+            this.LabelApellido2.Location = new System.Drawing.Point(120, 13);
+            this.LabelApellido2.Name = "LabelApellido2";
+            this.LabelApellido2.Size = new System.Drawing.Size(10, 13);
+            this.LabelApellido2.TabIndex = 10;
+            this.LabelApellido2.Text = "-";
+            // 
+            // LabelDNI2
+            // 
+            this.LabelDNI2.AutoSize = true;
+            this.LabelDNI2.Location = new System.Drawing.Point(120, 26);
+            this.LabelDNI2.Name = "LabelDNI2";
+            this.LabelDNI2.Size = new System.Drawing.Size(10, 13);
+            this.LabelDNI2.TabIndex = 11;
+            this.LabelDNI2.Text = "-";
+            // 
+            // LabelDomicilio2
+            // 
+            this.LabelDomicilio2.AutoSize = true;
+            this.LabelDomicilio2.Location = new System.Drawing.Point(120, 39);
+            this.LabelDomicilio2.Name = "LabelDomicilio2";
+            this.LabelDomicilio2.Size = new System.Drawing.Size(10, 13);
+            this.LabelDomicilio2.TabIndex = 12;
+            this.LabelDomicilio2.Text = "-";
+            // 
+            // LabelTelefono2
+            // 
+            this.LabelTelefono2.AutoSize = true;
+            this.LabelTelefono2.Location = new System.Drawing.Point(120, 52);
+            this.LabelTelefono2.Name = "LabelTelefono2";
+            this.LabelTelefono2.Size = new System.Drawing.Size(10, 13);
+            this.LabelTelefono2.TabIndex = 13;
+            this.LabelTelefono2.Text = "-";
+            // 
+            // LabelFechaDeNacimiento2
+            // 
+            this.LabelFechaDeNacimiento2.AutoSize = true;
+            this.LabelFechaDeNacimiento2.Location = new System.Drawing.Point(120, 69);
+            this.LabelFechaDeNacimiento2.Name = "LabelFechaDeNacimiento2";
+            this.LabelFechaDeNacimiento2.Size = new System.Drawing.Size(10, 13);
+            this.LabelFechaDeNacimiento2.TabIndex = 14;
+            this.LabelFechaDeNacimiento2.Text = "-";
+            // 
+            // LabelProfesion2
+            // 
+            this.LabelProfesion2.AutoSize = true;
+            this.LabelProfesion2.Location = new System.Drawing.Point(120, 82);
+            this.LabelProfesion2.Name = "LabelProfesion2";
+            this.LabelProfesion2.Size = new System.Drawing.Size(10, 13);
+            this.LabelProfesion2.TabIndex = 15;
+            this.LabelProfesion2.Text = "-";
             // 
             // LabelCUIL
             // 
@@ -140,14 +185,14 @@
             this.LabelCUIL.TabIndex = 8;
             this.LabelCUIL.Text = "CUIL/CUID:";
             // 
-            // LabelDomicilio
+            // LabelProfesion
             // 
-            this.LabelDomicilio.AutoSize = true;
-            this.LabelDomicilio.Location = new System.Drawing.Point(3, 39);
-            this.LabelDomicilio.Name = "LabelDomicilio";
-            this.LabelDomicilio.Size = new System.Drawing.Size(52, 13);
-            this.LabelDomicilio.TabIndex = 3;
-            this.LabelDomicilio.Text = "Domicilio:";
+            this.LabelProfesion.AutoSize = true;
+            this.LabelProfesion.Location = new System.Drawing.Point(3, 82);
+            this.LabelProfesion.Name = "LabelProfesion";
+            this.LabelProfesion.Size = new System.Drawing.Size(54, 13);
+            this.LabelProfesion.TabIndex = 7;
+            this.LabelProfesion.Text = "Profesión:";
             // 
             // LabelFechaDeNacimiento
             // 
@@ -167,6 +212,42 @@
             this.LabelTelefono.TabIndex = 5;
             this.LabelTelefono.Text = "Teléfono:";
             this.LabelTelefono.UseCompatibleTextRendering = true;
+            // 
+            // LabelDomicilio
+            // 
+            this.LabelDomicilio.AutoSize = true;
+            this.LabelDomicilio.Location = new System.Drawing.Point(3, 39);
+            this.LabelDomicilio.Name = "LabelDomicilio";
+            this.LabelDomicilio.Size = new System.Drawing.Size(52, 13);
+            this.LabelDomicilio.TabIndex = 3;
+            this.LabelDomicilio.Text = "Domicilio:";
+            // 
+            // LabelDNI
+            // 
+            this.LabelDNI.AutoSize = true;
+            this.LabelDNI.Location = new System.Drawing.Point(3, 26);
+            this.LabelDNI.Name = "LabelDNI";
+            this.LabelDNI.Size = new System.Drawing.Size(29, 13);
+            this.LabelDNI.TabIndex = 2;
+            this.LabelDNI.Text = "DNI:";
+            // 
+            // LabelApellido
+            // 
+            this.LabelApellido.AutoSize = true;
+            this.LabelApellido.Location = new System.Drawing.Point(3, 13);
+            this.LabelApellido.Name = "LabelApellido";
+            this.LabelApellido.Size = new System.Drawing.Size(47, 13);
+            this.LabelApellido.TabIndex = 1;
+            this.LabelApellido.Text = "Apellido:";
+            // 
+            // LabelCUIL2
+            // 
+            this.LabelCUIL2.AutoSize = true;
+            this.LabelCUIL2.Location = new System.Drawing.Point(120, 95);
+            this.LabelCUIL2.Name = "LabelCUIL2";
+            this.LabelCUIL2.Size = new System.Drawing.Size(10, 13);
+            this.LabelCUIL2.TabIndex = 86;
+            this.LabelCUIL2.Text = "-";
             // 
             // BotonCancelar
             // 
@@ -234,87 +315,6 @@
             this.LabelComboBoxParametro.TabIndex = 78;
             this.LabelComboBoxParametro.Text = "Seleccionar parametro de busqueda:";
             // 
-            // LabelNombre2
-            // 
-            this.LabelNombre2.AutoSize = true;
-            this.LabelNombre2.Location = new System.Drawing.Point(120, 0);
-            this.LabelNombre2.Name = "LabelNombre2";
-            this.LabelNombre2.Size = new System.Drawing.Size(10, 13);
-            this.LabelNombre2.TabIndex = 9;
-            this.LabelNombre2.Text = "-";
-            // 
-            // LabelApellido2
-            // 
-            this.LabelApellido2.AutoSize = true;
-            this.LabelApellido2.Location = new System.Drawing.Point(120, 13);
-            this.LabelApellido2.Name = "LabelApellido2";
-            this.LabelApellido2.Size = new System.Drawing.Size(10, 13);
-            this.LabelApellido2.TabIndex = 10;
-            this.LabelApellido2.Text = "-";
-            // 
-            // LabelDNI2
-            // 
-            this.LabelDNI2.AutoSize = true;
-            this.LabelDNI2.Location = new System.Drawing.Point(120, 26);
-            this.LabelDNI2.Name = "LabelDNI2";
-            this.LabelDNI2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDNI2.TabIndex = 11;
-            this.LabelDNI2.Text = "-";
-            // 
-            // LabelDomicilio2
-            // 
-            this.LabelDomicilio2.AutoSize = true;
-            this.LabelDomicilio2.Location = new System.Drawing.Point(120, 39);
-            this.LabelDomicilio2.Name = "LabelDomicilio2";
-            this.LabelDomicilio2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDomicilio2.TabIndex = 12;
-            this.LabelDomicilio2.Text = "-";
-            // 
-            // LabelTelefono2
-            // 
-            this.LabelTelefono2.AutoSize = true;
-            this.LabelTelefono2.Location = new System.Drawing.Point(120, 52);
-            this.LabelTelefono2.Name = "LabelTelefono2";
-            this.LabelTelefono2.Size = new System.Drawing.Size(10, 13);
-            this.LabelTelefono2.TabIndex = 13;
-            this.LabelTelefono2.Text = "-";
-            // 
-            // LabelFechaDeNacimiento2
-            // 
-            this.LabelFechaDeNacimiento2.AutoSize = true;
-            this.LabelFechaDeNacimiento2.Location = new System.Drawing.Point(120, 69);
-            this.LabelFechaDeNacimiento2.Name = "LabelFechaDeNacimiento2";
-            this.LabelFechaDeNacimiento2.Size = new System.Drawing.Size(10, 13);
-            this.LabelFechaDeNacimiento2.TabIndex = 14;
-            this.LabelFechaDeNacimiento2.Text = "-";
-            // 
-            // LabelProfesion2
-            // 
-            this.LabelProfesion2.AutoSize = true;
-            this.LabelProfesion2.Location = new System.Drawing.Point(120, 82);
-            this.LabelProfesion2.Name = "LabelProfesion2";
-            this.LabelProfesion2.Size = new System.Drawing.Size(10, 13);
-            this.LabelProfesion2.TabIndex = 15;
-            this.LabelProfesion2.Text = "-";
-            // 
-            // LabelNombre
-            // 
-            this.LabelNombre.AutoSize = true;
-            this.LabelNombre.Location = new System.Drawing.Point(3, 0);
-            this.LabelNombre.Name = "LabelNombre";
-            this.LabelNombre.Size = new System.Drawing.Size(47, 13);
-            this.LabelNombre.TabIndex = 85;
-            this.LabelNombre.Text = "Nombre:";
-            // 
-            // LabelCUIL2
-            // 
-            this.LabelCUIL2.AutoSize = true;
-            this.LabelCUIL2.Location = new System.Drawing.Point(120, 95);
-            this.LabelCUIL2.Name = "LabelCUIL2";
-            this.LabelCUIL2.Size = new System.Drawing.Size(10, 13);
-            this.LabelCUIL2.TabIndex = 86;
-            this.LabelCUIL2.Text = "-";
-            // 
             // ComboBoxResultados
             // 
             this.ComboBoxResultados.FormattingEnabled = true;
@@ -322,9 +322,11 @@
             this.ComboBoxResultados.Name = "ComboBoxResultados";
             this.ComboBoxResultados.Size = new System.Drawing.Size(434, 21);
             this.ComboBoxResultados.TabIndex = 85;
+            this.ComboBoxResultados.SelectedIndexChanged += new System.EventHandler(this.ComboBoxResultados_SelectedIndexChanged);
             // 
             // BotonAceptar
             // 
+            this.BotonAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BotonAceptar.Location = new System.Drawing.Point(18, 300);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);

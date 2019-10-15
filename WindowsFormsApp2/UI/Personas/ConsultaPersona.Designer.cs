@@ -103,6 +103,7 @@
             this.BotonBuscar.TabIndex = 4;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -375,7 +376,7 @@
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 41;
-            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.Text = "Aceptar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
             this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
@@ -387,6 +388,7 @@
             this.BotonBusquedaAvanzada.TabIndex = 42;
             this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
             // ConsultaPersona
             // 

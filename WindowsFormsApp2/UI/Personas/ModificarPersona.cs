@@ -83,5 +83,23 @@ namespace LawyerHelper.UI.Personas
                 this.Close();
             }
         }
+
+        private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
+        {
+            BuscarPersona iMenuNuevo = new BuscarPersona();
+            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            {
+                iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                CuadroDNI.Text = iPersona.Dni;
+                CuadroDomicilio.Text = iPersona.Domicilio;
+                CuadroDomicilioLegal.Text = iPersona.DomicilioLegal;
+                CuadroEstadoCivil.Text = iPersona.EstadoCivil;
+                CuadroFechaNacimiento.Value = iPersona.FechaNacimiento;
+                CuadroLugarTrabajo.Text = iPersona.LugarTrabajo;
+                CuadroProfesion.Text = iPersona.Profesion;
+                CuadroRepresentante.Text = iPersona.Representante;
+                CuadroTelefono.Text = iPersona.Telefono;
+            }
+        }
     }
 }
