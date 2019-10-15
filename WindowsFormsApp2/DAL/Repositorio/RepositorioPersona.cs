@@ -61,5 +61,21 @@ namespace LawyerHelper.DAL.Repositorio
             }
             return iQuery;
         }
+
+        public void ModificarPersona(Persona pPersona)
+        {
+            Persona iQuery;
+            iQuery = iContext.Personas.First(n => n.Nombre == (pPersona.Nombre) && n.Dni == (pPersona.Dni));
+            iQuery.Dni = pPersona.Dni;
+            iQuery.Domicilio = pPersona.Domicilio;
+            iQuery.DomicilioLegal = pPersona.DomicilioLegal;
+            iQuery.EstadoCivil = pPersona.EstadoCivil;
+            iQuery.FechaNacimiento = pPersona.FechaNacimiento;
+            iQuery.LugarTrabajo = pPersona.LugarTrabajo;
+            iQuery.Profesion = pPersona.Profesion;
+            iQuery.Representante = pPersona.Representante;
+            iQuery.Telefono = pPersona.Telefono;
+            iContext.SaveChanges();
+        }
     }
 }
