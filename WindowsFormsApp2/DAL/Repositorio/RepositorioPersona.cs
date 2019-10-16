@@ -23,7 +23,7 @@ namespace LawyerHelper.DAL.Repositorio
             switch (Parametro)
             {
                 case "Nombre":
-                    iQuery = iContext.Set<Persona>().Where(n => n.Nombre == Valor).ToList();
+                    iQuery = iContext.Personas.Where(n => n.Nombre == Valor).ToList();
                     break;
                 case "Apellido":
                     iQuery = iContext.Personas.Where(n => n.Apellido == Valor).ToList();
@@ -60,6 +60,22 @@ namespace LawyerHelper.DAL.Repositorio
                     break;
             }
             return iQuery;
+        }
+
+        public void ModificarPersona(Persona pPersona)
+        {
+            Persona iQuery;
+            iQuery = iContext.Personas.First(n => n.Nombre == (pPersona.Nombre) && n.Dni == (pPersona.Dni));
+            iQuery.Dni = pPersona.Dni;
+            iQuery.Domicilio = pPersona.Domicilio;
+            iQuery.DomicilioLegal = pPersona.DomicilioLegal;
+            iQuery.EstadoCivil = pPersona.EstadoCivil;
+            iQuery.FechaNacimiento = pPersona.FechaNacimiento;
+            iQuery.LugarTrabajo = pPersona.LugarTrabajo;
+            iQuery.Profesion = pPersona.Profesion;
+            iQuery.Representante = pPersona.Representante;
+            iQuery.Telefono = pPersona.Telefono;
+            iContext.SaveChanges();
         }
     }
 }

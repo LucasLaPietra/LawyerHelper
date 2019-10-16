@@ -58,11 +58,11 @@
             this.CuadroEstadoCivil = new System.Windows.Forms.TextBox();
             this.CuadroRepresentante = new System.Windows.Forms.TextBox();
             this.CuadroDomicilioLegal = new System.Windows.Forms.TextBox();
+            this.CuadroFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.BotonModificarJuicio = new System.Windows.Forms.Button();
             this.BotonModificarCobro = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.CuadroFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,6 +116,7 @@
             this.BotonBusquedaAvanzada.TabIndex = 43;
             this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -355,6 +356,13 @@
             this.CuadroDomicilioLegal.Size = new System.Drawing.Size(223, 20);
             this.CuadroDomicilioLegal.TabIndex = 34;
             // 
+            // CuadroFechaNacimiento
+            // 
+            this.CuadroFechaNacimiento.Location = new System.Drawing.Point(132, 81);
+            this.CuadroFechaNacimiento.Name = "CuadroFechaNacimiento";
+            this.CuadroFechaNacimiento.Size = new System.Drawing.Size(223, 20);
+            this.CuadroFechaNacimiento.TabIndex = 35;
+            // 
             // BotonModificarJuicio
             // 
             this.BotonModificarJuicio.Location = new System.Drawing.Point(385, 390);
@@ -392,13 +400,6 @@
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
-            // 
-            // CuadroFechaNacimiento
-            // 
-            this.CuadroFechaNacimiento.Location = new System.Drawing.Point(132, 81);
-            this.CuadroFechaNacimiento.Name = "CuadroFechaNacimiento";
-            this.CuadroFechaNacimiento.Size = new System.Drawing.Size(223, 20);
-            this.CuadroFechaNacimiento.TabIndex = 35;
             // 
             // ModificarPersona
             // 

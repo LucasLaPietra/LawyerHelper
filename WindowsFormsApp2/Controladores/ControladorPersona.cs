@@ -26,13 +26,15 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-        public void ModificarPersona(string pNombre, string pApellido, string pDni, string pDomicilio,
+        public void ModificarPersona( string pNombre, string pApellido, string pDni, string pDomicilio,
     string pTelefono, DateTime pFecha, string pProfesion, string pLugarTrabajo, string pCuil, string pEstadoCivil, string pRepLegal, string pDomiLegal)
         {
-            Persona iPersona = new Persona(pNombre, pApellido, pDni, pDomicilio,
+            Persona iPersona = new Persona( pNombre, pApellido, pDni, pDomicilio,
             pTelefono, pFecha, pProfesion, pLugarTrabajo, pCuil, pEstadoCivil, pRepLegal, pDomiLegal);
+            iUdT.RepositorioPersona.ModificarPersona(iPersona);
             iUdT.RepositorioPersona.Modificar(iPersona);
-            iUdT.Guardar();
+            //no me deja utilizar el savechanges de la unit of work, pero si si la hago desde el repositorio
+            //iUdT.Guardar();
         }
 
         public void BajaPersona(Persona pPersona)

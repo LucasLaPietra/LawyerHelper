@@ -39,7 +39,7 @@ namespace WindowsFormsApp2.Personas
 
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
-            DialogResult iMensaje = MessageBox.Show("Seguro que dese cancelar?", "Cancelar", MessageBoxButtons.YesNoCancel);
+            DialogResult iMensaje = MessageBox.Show("Seguro que desea cancelar?", "Cancelar", MessageBoxButtons.YesNoCancel);
 
             if (iMensaje == DialogResult.Yes)
             {

@@ -42,6 +42,28 @@ namespace LawyerHelper.Clases
             this.DomicilioLegal = pDomicilioLegal;
         }
 
+        public Persona(int pId, String pNombre, String pApellido, String pDni, String pDomicilio, String pTelefono, DateTime pFechaNacimiento, String pProfesion, String pLugarTrabajo, String pCuil, String pEstadoCivil, String pRepresentante, String pDomicilioLegal)
+        {
+            this.PersonaId = pId;
+            this.Nombre = pNombre;
+            this.Apellido = pApellido;
+            this.Dni = pDni;
+            this.Domicilio = pDomicilio;
+            this.Telefono = pTelefono;
+            this.FechaNacimiento = pFechaNacimiento;
+            this.Profesion = pProfesion;
+            this.LugarTrabajo = pLugarTrabajo;
+            this.Cuil = pCuil;
+            this.EstadoCivil = pEstadoCivil;
+            this.Representante = pRepresentante;
+            this.DomicilioLegal = pDomicilioLegal;
+        }
+
+        public Persona()
+        {
+
+        }
+
         public IList<Juicio> GetJuiciosPorDemandado()
         {
             Contexto iContexto = new Contexto();

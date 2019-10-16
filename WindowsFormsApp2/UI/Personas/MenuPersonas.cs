@@ -36,7 +36,19 @@ namespace WindowsFormsApp2
 
         private void BotonBaja_Click(object sender, EventArgs e)
         {
-            BajaPersona iMenuNuevo = new BajaPersona(null);
+            BajaPersona iMenuNuevo = new BajaPersona();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonModificacion_Click(object sender, EventArgs e)
+        {
+            ModificarPersona iMenuNuevo = new ModificarPersona();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonConsulta_Click(object sender, EventArgs e)
+        {
+            ConsultaPersona iMenuNuevo = new ConsultaPersona();
             iMenuNuevo.ShowDialog();
         }
     }

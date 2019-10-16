@@ -103,6 +103,7 @@
             this.BotonBuscar.TabIndex = 4;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -375,8 +376,9 @@
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 41;
-            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.Text = "Aceptar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonBusquedaAvanzada
             // 
@@ -386,12 +388,13 @@
             this.BotonBusquedaAvanzada.TabIndex = 42;
             this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
             // ConsultaPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 496);
+            this.ClientSize = new System.Drawing.Size(384, 492);
             this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.tableLayoutPanel1);

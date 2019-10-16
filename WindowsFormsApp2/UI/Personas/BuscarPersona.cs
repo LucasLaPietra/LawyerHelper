@@ -18,11 +18,16 @@ namespace LawyerHelper.UI.Personas
     public partial class BuscarPersona : Form
     {
         object iResultado;
+        public object PersonaEncontrada
+        { get {return iResultado;}
+            set {iResultado = value;}
+        }
         List<Persona> iResultados;
         ControladorPersona iControladorPersona;
         public BuscarPersona()
         {
             InitializeComponent();
+            iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
         }
 
         private void BuscarPersona_Load(object sender, EventArgs e)
@@ -34,7 +39,7 @@ namespace LawyerHelper.UI.Personas
         {
             try
             {
-                iResultados = iControladorPersona.BusquedaAvanzadaPersona(comboBoxParametro.SelectedText, CuadroParametro.Text).ToList();
+                iResultados = iControladorPersona.BusquedaAvanzadaPersona(comboBoxParametro.SelectedItem.ToString(), CuadroParametro.Text).ToList();
                 ComboBoxResultados.DataSource = iResultados;
                 ComboBoxResultados.DisplayMember = "Apellido";
             }
@@ -46,15 +51,25 @@ namespace LawyerHelper.UI.Personas
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            iResultado = ComboBoxResultados.SelectedItem;
-            BajaPersona iMenuNuevo = new BajaPersona((Persona)iResultado);
-            iMenuNuevo.ShowDialog();
-            this.Close();
+            iResultado = ComboBoxResultados.SelectedItem;            
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ComboBoxResultados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Persona iSeleccionado = (Persona)ComboBoxResultados.SelectedItem;
+            LabelNombre2.Text = iSeleccionado.Nombre;
+            LabelApellido2.Text = iSeleccionado.Apellido;
+            LabelDNI2.Text = iSeleccionado.Dni;
+            LabelDomicilio2.Text = iSeleccionado.Domicilio;
+            LabelTelefono2.Text = iSeleccionado.Telefono;
+            LabelFechaDeNacimiento2.Text = iSeleccionado.FechaNacimiento.ToShortDateString();
+            LabelProfesion2.Text = iSeleccionado.Profesion;
+            LabelCUIL2.Text = iSeleccionado.Cuil;
         }
     }
 }

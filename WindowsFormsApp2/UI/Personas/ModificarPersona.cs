@@ -22,6 +22,7 @@ namespace LawyerHelper.UI.Personas
         public ModificarPersona()
         {
             InitializeComponent();
+            iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
         }
 
         private void LabelDomicilio2_Click(object sender, EventArgs e)
@@ -57,20 +58,20 @@ namespace LawyerHelper.UI.Personas
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DialogResult iMensaje = MessageBox.Show("Seguro que desea dar de baja a esta persona?", "Confirmacion", MessageBoxButtons.YesNoCancel);
+            //try
+            //{
+                //DialogResult iMensaje = MessageBox.Show("Seguro que desea modificar esta persona?", "Confirmacion", MessageBoxButtons.YesNoCancel);
 
-                if (iMensaje == DialogResult.Yes)
-                {
+                //if (iMensaje == DialogResult.Yes)
+               //{
                     iControladorPersona.ModificarPersona(CuadroNombre.Text, CuadroApellido.Text, CuadroDNI.Text, CuadroDomicilio.Text, CuadroTelefono.Text, CuadroFechaNacimiento.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroRepresentante.Text, CuadroDomicilioLegal.Text);
                     MessageBox.Show("Persona modificada con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al dar de baja la persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                //}
+            //}
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("Error al modificar la persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)
@@ -80,6 +81,24 @@ namespace LawyerHelper.UI.Personas
             if (iMensaje == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
+        {
+            BuscarPersona iMenuNuevo = new BuscarPersona();
+            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            {
+                iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                CuadroDNI.Text = iPersona.Dni;
+                CuadroDomicilio.Text = iPersona.Domicilio;
+                CuadroDomicilioLegal.Text = iPersona.DomicilioLegal;
+                CuadroEstadoCivil.Text = iPersona.EstadoCivil;
+                CuadroFechaNacimiento.Value = iPersona.FechaNacimiento;
+                CuadroLugarTrabajo.Text = iPersona.LugarTrabajo;
+                CuadroProfesion.Text = iPersona.Profesion;
+                CuadroRepresentante.Text = iPersona.Representante;
+                CuadroTelefono.Text = iPersona.Telefono;
             }
         }
     }

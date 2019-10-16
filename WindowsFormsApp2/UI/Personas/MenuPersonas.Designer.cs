@@ -44,6 +44,7 @@
             this.BotonConsulta.TabIndex = 7;
             this.BotonConsulta.Text = "Consulta";
             this.BotonConsulta.UseVisualStyleBackColor = true;
+            this.BotonConsulta.Click += new System.EventHandler(this.BotonConsulta_Click);
             // 
             // BotonModificacion
             // 
@@ -54,6 +55,7 @@
             this.BotonModificacion.TabIndex = 6;
             this.BotonModificacion.Text = "Modificacion";
             this.BotonModificacion.UseVisualStyleBackColor = true;
+            this.BotonModificacion.Click += new System.EventHandler(this.BotonModificacion_Click);
             // 
             // BotonBaja
             // 
