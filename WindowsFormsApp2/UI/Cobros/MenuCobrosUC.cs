@@ -12,9 +12,17 @@ namespace LawyerHelper.UI.Cobros
 {
     public partial class MenuCobrosUC : UserControl
     {
-        public MenuCobrosUC()
+        public MenuCobrosUC(Color pColorForeground)
         {
             InitializeComponent();
+            BotonAlta.ForeColor = pColorForeground;
+            BotonBaja.ForeColor = pColorForeground;
+            BotonConsulta.ForeColor = pColorForeground;
+        }
+
+        private void BotonAlta_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

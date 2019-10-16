@@ -14,9 +14,13 @@ namespace LawyerHelper.UI.Juicios
 {
     public partial class MenuJuiciosUC : UserControl
     {
-        public MenuJuiciosUC()
+        public MenuJuiciosUC(Color pColorForeground)
         {
             InitializeComponent();
+            BotonAlta.ForeColor = pColorForeground;
+            BotonBaja.ForeColor = pColorForeground;
+            BotonModificacion.ForeColor = pColorForeground;
+            BotonConsulta.ForeColor = pColorForeground;
         }
 
         private void BotonAlta_Click(object sender, EventArgs e)

@@ -18,9 +18,13 @@ namespace LawyerHelper.UI.Personas
 {
     public partial class MenuPersonasUC : UserControl
     {
-        public MenuPersonasUC()
+        public MenuPersonasUC(Color pColorForeground)
         {
             InitializeComponent();
+            BotonAlta.ForeColor = pColorForeground;
+            BotonBaja.ForeColor = pColorForeground;
+            BotonModificacion.ForeColor = pColorForeground;
+            BotonConsulta.ForeColor = pColorForeground;
         }
 
         private void BotonAlta_Click(object sender, EventArgs e)
@@ -31,7 +35,7 @@ namespace LawyerHelper.UI.Personas
 
         private void MenuPersonas_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void BotonBaja_Click(object sender, EventArgs e)

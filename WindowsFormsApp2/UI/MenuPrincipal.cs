@@ -22,6 +22,9 @@ namespace WindowsFormsApp2
 {
     public partial class MenuPrincipal : Form
     {
+        Color iColorBackground = Color.FromArgb(35, 37, 57);
+        Color iColorPresionado = Color.FromArgb(54, 57, 89);
+        Color iColorForeground = Color.FromArgb(179, 182, 208);
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -29,12 +32,19 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.BackColor = iColorBackground;
+            LabelTitulo.ForeColor = iColorForeground;
+            BotonPersonas.ForeColor = iColorForeground;
+            BotonJuicios.ForeColor = iColorForeground;
+            BotonAgenda.ForeColor = iColorForeground;
+            BotonPagos.ForeColor = iColorForeground;
+            BotonCobros.ForeColor = iColorForeground;
+            BotonDocumentos.ForeColor = iColorForeground;
         }
 
         private void BotonPersonas_Click(object sender, EventArgs e)
         {
-            if (BotonPersonas.BackColor== Color.FromArgb(35, 37, 57))
+            if (BotonPersonas.BackColor== iColorBackground)
             {
                 FlechaPersonas.Visible = true;
                 FlechaJuicios.Visible = false;
@@ -42,27 +52,27 @@ namespace WindowsFormsApp2
                 FlechaPagos.Visible = false;
                 FlechaCobros.Visible = false;
                 FlechaDocumentos.Visible = false;
-                BotonPersonas.BackColor = Color.FromArgb(54, 57, 89);
-                BotonJuicios.BackColor = Color.FromArgb(35, 37, 57);
-                BotonAgenda.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPagos.BackColor = Color.FromArgb(35, 37, 57);
-                BotonCobros.BackColor = Color.FromArgb(35, 37, 57);
-                BotonDocumentos.BackColor = Color.FromArgb(35, 37, 57);
-                MenuPersonasUC iMenuNuevo = new MenuPersonasUC();
+                BotonPersonas.BackColor = iColorPresionado;
+                BotonJuicios.BackColor = iColorBackground;
+                BotonAgenda.BackColor = iColorBackground;
+                BotonPagos.BackColor = iColorBackground;
+                BotonCobros.BackColor = iColorBackground;
+                BotonDocumentos.BackColor = iColorBackground;
+                MenuPersonasUC iMenuNuevo = new MenuPersonasUC(iColorForeground);
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
             else
             {
                 PanelOpciones.Controls.Clear();
-                BotonPersonas.BackColor = Color.FromArgb(35, 37, 57);
+                BotonPersonas.BackColor = iColorBackground;
                 FlechaPersonas.Visible = false;
             }            
         }
 
         private void BotonJuicios_Click(object sender, EventArgs e)
         {
-            if (BotonJuicios.BackColor == Color.FromArgb(35, 37, 57))
+            if (BotonJuicios.BackColor == iColorBackground)
             {
                 FlechaPersonas.Visible = false;
                 FlechaJuicios.Visible = true;
@@ -70,27 +80,27 @@ namespace WindowsFormsApp2
                 FlechaPagos.Visible = false;
                 FlechaCobros.Visible = false;
                 FlechaDocumentos.Visible = false;
-                BotonJuicios.BackColor = Color.FromArgb(54, 57, 89);
-                BotonPersonas.BackColor = Color.FromArgb(35, 37, 57);
-                BotonAgenda.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPagos.BackColor = Color.FromArgb(35, 37, 57);
-                BotonCobros.BackColor = Color.FromArgb(35, 37, 57);
-                BotonDocumentos.BackColor = Color.FromArgb(35, 37, 57);
-                MenuJuiciosUC iMenuNuevo = new MenuJuiciosUC();
+                BotonJuicios.BackColor = iColorPresionado;
+                BotonPersonas.BackColor = iColorBackground;
+                BotonAgenda.BackColor = iColorBackground;
+                BotonPagos.BackColor = iColorBackground;
+                BotonCobros.BackColor = iColorBackground;
+                BotonDocumentos.BackColor = iColorBackground;
+                MenuJuiciosUC iMenuNuevo = new MenuJuiciosUC(iColorForeground);
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
             else
             {
                 PanelOpciones.Controls.Clear();
-                BotonJuicios.BackColor = Color.FromArgb(35, 37, 57);
+                BotonJuicios.BackColor = iColorBackground;
                 FlechaJuicios.Visible = false;
             }
         }
 
         private void BotonAgenda_Click(object sender, EventArgs e)
         {
-            if (BotonAgenda.BackColor == Color.FromArgb(35, 37, 57))
+            if (BotonAgenda.BackColor == iColorBackground)
             {
                 FlechaPersonas.Visible = false;
                 FlechaJuicios.Visible = false;
@@ -98,27 +108,27 @@ namespace WindowsFormsApp2
                 FlechaPagos.Visible = false;
                 FlechaCobros.Visible = false;
                 FlechaDocumentos.Visible = false;
-                BotonAgenda.BackColor = Color.FromArgb(54, 57, 89);
-                BotonJuicios.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPersonas.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPagos.BackColor = Color.FromArgb(35, 37, 57);
-                BotonCobros.BackColor = Color.FromArgb(35, 37, 57);
-                BotonDocumentos.BackColor = Color.FromArgb(35, 37, 57);
-                MenuAgendaUC iMenuNuevo = new MenuAgendaUC();
+                BotonAgenda.BackColor = iColorPresionado;
+                BotonJuicios.BackColor = iColorBackground;
+                BotonPersonas.BackColor = iColorBackground;
+                BotonPagos.BackColor = iColorBackground;
+                BotonCobros.BackColor = iColorBackground;
+                BotonDocumentos.BackColor = iColorBackground;
+                MenuAgendaUC iMenuNuevo = new MenuAgendaUC(iColorForeground);
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
             else
             {
                 PanelOpciones.Controls.Clear();
-                BotonAgenda.BackColor = Color.FromArgb(35, 37, 57);
+                BotonAgenda.BackColor = iColorBackground;
                 FlechaAgenda.Visible = false;
             }
         }
 
         private void BotonPagos_Click(object sender, EventArgs e)
         {
-            if (BotonPagos.BackColor == Color.FromArgb(35, 37, 57))
+            if (BotonPagos.BackColor == iColorBackground)
             {
                 FlechaPersonas.Visible = false;
                 FlechaJuicios.Visible = false;
@@ -126,27 +136,27 @@ namespace WindowsFormsApp2
                 FlechaPagos.Visible = true;
                 FlechaCobros.Visible = false;
                 FlechaDocumentos.Visible = false;
-                BotonPagos.BackColor = Color.FromArgb(54, 57, 89);
-                BotonJuicios.BackColor = Color.FromArgb(35, 37, 57);
-                BotonAgenda.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPersonas.BackColor = Color.FromArgb(35, 37, 57);
-                BotonCobros.BackColor = Color.FromArgb(35, 37, 57);
-                BotonDocumentos.BackColor = Color.FromArgb(35, 37, 57);
-                MenuPagosUC iMenuNuevo = new MenuPagosUC();
+                BotonPagos.BackColor = iColorPresionado;
+                BotonJuicios.BackColor = iColorBackground;
+                BotonAgenda.BackColor = iColorBackground;
+                BotonPersonas.BackColor = iColorBackground;
+                BotonCobros.BackColor = iColorBackground;
+                BotonDocumentos.BackColor = iColorBackground;
+                MenuPagosUC iMenuNuevo = new MenuPagosUC(iColorForeground);
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
             else
             {
                 PanelOpciones.Controls.Clear();
-                BotonPagos.BackColor = Color.FromArgb(35, 37, 57);
+                BotonPagos.BackColor = iColorBackground;
                 FlechaPagos.Visible = false;
             }
         }
 
         private void BotonCobros_Click(object sender, EventArgs e)
         {
-            if (BotonCobros.BackColor == Color.FromArgb(35, 37, 57))
+            if (BotonCobros.BackColor == iColorBackground)
             {
                 FlechaPersonas.Visible = false;
                 FlechaJuicios.Visible = false;
@@ -154,27 +164,27 @@ namespace WindowsFormsApp2
                 FlechaPagos.Visible = false;
                 FlechaCobros.Visible = true;
                 FlechaDocumentos.Visible = false;
-                BotonCobros.BackColor = Color.FromArgb(54, 57, 89);
-                BotonJuicios.BackColor = Color.FromArgb(35, 37, 57);
-                BotonAgenda.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPagos.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPersonas.BackColor = Color.FromArgb(35, 37, 57);
-                BotonDocumentos.BackColor = Color.FromArgb(35, 37, 57);
-                MenuCobrosUC iMenuNuevo = new MenuCobrosUC();
+                BotonCobros.BackColor = iColorPresionado;
+                BotonJuicios.BackColor = iColorBackground;
+                BotonAgenda.BackColor = iColorBackground;
+                BotonPagos.BackColor = iColorBackground;
+                BotonPersonas.BackColor = iColorBackground;
+                BotonDocumentos.BackColor = iColorBackground;
+                MenuCobrosUC iMenuNuevo = new MenuCobrosUC(iColorForeground);
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
             else
             {
                 PanelOpciones.Controls.Clear();
-                BotonCobros.BackColor = Color.FromArgb(35, 37, 57);
+                BotonCobros.BackColor = iColorBackground;
                 FlechaCobros.Visible = false;
             }
         }
 
         private void BotonDocumentos_Click(object sender, EventArgs e)
         {
-            if (BotonDocumentos.BackColor == Color.FromArgb(35, 37, 57))
+            if (BotonDocumentos.BackColor == iColorBackground)
             {
                 FlechaPersonas.Visible = false;
                 FlechaJuicios.Visible = false;
@@ -182,20 +192,20 @@ namespace WindowsFormsApp2
                 FlechaPagos.Visible = false;
                 FlechaCobros.Visible = false;
                 FlechaDocumentos.Visible = true;
-                BotonDocumentos.BackColor = Color.FromArgb(54, 57, 89);
-                BotonJuicios.BackColor = Color.FromArgb(35, 37, 57);
-                BotonAgenda.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPagos.BackColor = Color.FromArgb(35, 37, 57);
-                BotonCobros.BackColor = Color.FromArgb(35, 37, 57);
-                BotonPersonas.BackColor = Color.FromArgb(35, 37, 57);
-                MenuDocumentosUC iMenuNuevo = new MenuDocumentosUC();
+                BotonDocumentos.BackColor = iColorPresionado;
+                BotonJuicios.BackColor = iColorBackground;
+                BotonAgenda.BackColor = iColorBackground;
+                BotonPagos.BackColor = iColorBackground;
+                BotonCobros.BackColor = iColorBackground;
+                BotonPersonas.BackColor = iColorBackground;
+                MenuDocumentosUC iMenuNuevo = new MenuDocumentosUC(iColorForeground);
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
             else
             {
                 PanelOpciones.Controls.Clear();
-                BotonDocumentos.BackColor = Color.FromArgb(35, 37, 57);
+                BotonDocumentos.BackColor = iColorBackground;
                 FlechaDocumentos.Visible = false;
             }
         }

@@ -12,9 +12,17 @@ namespace LawyerHelper.UI.Pagos
 {
     public partial class MenuPagosUC : UserControl
     {
-        public MenuPagosUC()
+        public MenuPagosUC(Color pColorForeground)
         {
             InitializeComponent();
+            BotonAlta.ForeColor = pColorForeground;
+            BotonBaja.ForeColor = pColorForeground;
+            BotonConsulta.ForeColor = pColorForeground;
+        }
+
+        private void BotonAlta_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

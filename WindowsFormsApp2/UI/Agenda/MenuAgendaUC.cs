@@ -12,9 +12,13 @@ namespace LawyerHelper.UI.Agenda
 {
     public partial class MenuAgendaUC : UserControl
     {
-        public MenuAgendaUC()
+        public MenuAgendaUC(Color pColorForeground)
         {
             InitializeComponent();
+            BotonAlta.ForeColor = pColorForeground;
+            BotonBaja.ForeColor = pColorForeground;
+            BotonModificacion.ForeColor = pColorForeground;
+            BotonConsulta.ForeColor = pColorForeground;
         }
 
         private void BotonAlta_Click(object sender, EventArgs e)

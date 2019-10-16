@@ -12,9 +12,18 @@ namespace LawyerHelper.UI.Documentos
 {
     public partial class MenuDocumentosUC : UserControl
     {
-        public MenuDocumentosUC()
+        public MenuDocumentosUC(Color pColorForeground)
         {
             InitializeComponent();
+            BotonAlta.ForeColor = pColorForeground;
+            BotonBaja.ForeColor = pColorForeground;
+            BotonModificacion.ForeColor = pColorForeground;
+            BotonConsulta.ForeColor = pColorForeground;
+        }
+
+        private void BotonAlta_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
