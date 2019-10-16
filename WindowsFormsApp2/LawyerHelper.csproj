@@ -278,6 +278,12 @@
     <Compile Include="UI\Personas\ModificarPersona.Designer.cs">
       <DependentUpon>ModificarPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Personas\MenuPersonasUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Personas\MenuPersonasUC.Designer.cs">
+      <DependentUpon>MenuPersonasUC.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Migrations\201910102123275_prueba.resx">
       <DependentUpon>201910102123275_prueba.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,14 +376,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
+    <EmbeddedResource Include="UI\Personas\MenuPersonasUC.resx">
+      <DependentUpon>MenuPersonasUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\ModificarPersona.resx">
       <DependentUpon>ModificarPersona.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +398,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\user-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
