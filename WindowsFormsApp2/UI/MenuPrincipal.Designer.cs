@@ -29,128 +29,48 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
-            this.BotonAgenda = new System.Windows.Forms.Button();
-            this.BotonPagos = new System.Windows.Forms.Button();
-            this.BotonCobros = new System.Windows.Forms.Button();
-            this.BotonJuicios = new System.Windows.Forms.Button();
-            this.BotonPersonas = new System.Windows.Forms.Button();
             this.LabelTitulo = new System.Windows.Forms.Label();
             this.LabelCreditos = new System.Windows.Forms.Label();
             this.PanelOpciones = new System.Windows.Forms.Panel();
-            this.BotonDocumentos = new System.Windows.Forms.Button();
-            this.FlechaPersonas = new System.Windows.Forms.PictureBox();
-            this.FlechaJuicios = new System.Windows.Forms.PictureBox();
-            this.FlechaAgenda = new System.Windows.Forms.PictureBox();
-            this.FlechaDocumentos = new System.Windows.Forms.PictureBox();
-            this.FlechaCobros = new System.Windows.Forms.PictureBox();
             this.FlechaPagos = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaPersonas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaJuicios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaAgenda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaDocumentos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaCobros)).BeginInit();
+            this.FlechaCobros = new System.Windows.Forms.PictureBox();
+            this.FlechaDocumentos = new System.Windows.Forms.PictureBox();
+            this.FlechaAgenda = new System.Windows.Forms.PictureBox();
+            this.FlechaJuicios = new System.Windows.Forms.PictureBox();
+            this.FlechaPersonas = new System.Windows.Forms.PictureBox();
+            this.BotonDocumentos = new System.Windows.Forms.Button();
+            this.BotonCobros = new System.Windows.Forms.Button();
+            this.BotonPagos = new System.Windows.Forms.Button();
+            this.BotonAgenda = new System.Windows.Forms.Button();
+            this.BotonJuicios = new System.Windows.Forms.Button();
+            this.BotonPersonas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaPagos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaCobros)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaDocumentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaAgenda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaJuicios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaPersonas)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BotonAgenda
-            // 
-            this.BotonAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgenda.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonAgenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonAgenda.Image = ((System.Drawing.Image)(resources.GetObject("BotonAgenda.Image")));
-            this.BotonAgenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonAgenda.Location = new System.Drawing.Point(-1, 270);
-            this.BotonAgenda.Name = "BotonAgenda";
-            this.BotonAgenda.Size = new System.Drawing.Size(210, 75);
-            this.BotonAgenda.TabIndex = 2;
-            this.BotonAgenda.Text = "Agenda";
-            this.BotonAgenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonAgenda.UseVisualStyleBackColor = true;
-            this.BotonAgenda.Click += new System.EventHandler(this.BotonAgenda_Click);
-            // 
-            // BotonPagos
-            // 
-            this.BotonPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonPagos.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonPagos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonPagos.Image = ((System.Drawing.Image)(resources.GetObject("BotonPagos.Image")));
-            this.BotonPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonPagos.Location = new System.Drawing.Point(-1, 495);
-            this.BotonPagos.Name = "BotonPagos";
-            this.BotonPagos.Size = new System.Drawing.Size(210, 75);
-            this.BotonPagos.TabIndex = 3;
-            this.BotonPagos.Text = "Pagos";
-            this.BotonPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonPagos.UseVisualStyleBackColor = true;
-            this.BotonPagos.Click += new System.EventHandler(this.BotonPagos_Click);
-            // 
-            // BotonCobros
-            // 
-            this.BotonCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCobros.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonCobros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonCobros.Image = ((System.Drawing.Image)(resources.GetObject("BotonCobros.Image")));
-            this.BotonCobros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonCobros.Location = new System.Drawing.Point(-1, 420);
-            this.BotonCobros.Name = "BotonCobros";
-            this.BotonCobros.Size = new System.Drawing.Size(210, 75);
-            this.BotonCobros.TabIndex = 4;
-            this.BotonCobros.Text = "Cobros";
-            this.BotonCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonCobros.UseVisualStyleBackColor = true;
-            this.BotonCobros.Click += new System.EventHandler(this.BotonCobros_Click);
-            // 
-            // BotonJuicios
-            // 
-            this.BotonJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonJuicios.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonJuicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonJuicios.Image = ((System.Drawing.Image)(resources.GetObject("BotonJuicios.Image")));
-            this.BotonJuicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonJuicios.Location = new System.Drawing.Point(-1, 195);
-            this.BotonJuicios.Name = "BotonJuicios";
-            this.BotonJuicios.Size = new System.Drawing.Size(210, 75);
-            this.BotonJuicios.TabIndex = 1;
-            this.BotonJuicios.Text = "Juicios";
-            this.BotonJuicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonJuicios.UseVisualStyleBackColor = true;
-            this.BotonJuicios.Click += new System.EventHandler(this.BotonJuicios_Click);
-            // 
-            // BotonPersonas
-            // 
-            this.BotonPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonPersonas.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonPersonas.Image = ((System.Drawing.Image)(resources.GetObject("BotonPersonas.Image")));
-            this.BotonPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonPersonas.Location = new System.Drawing.Point(-1, 120);
-            this.BotonPersonas.Name = "BotonPersonas";
-            this.BotonPersonas.Size = new System.Drawing.Size(210, 75);
-            this.BotonPersonas.TabIndex = 0;
-            this.BotonPersonas.Text = "Personas";
-            this.BotonPersonas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonPersonas.UseVisualStyleBackColor = true;
-            this.BotonPersonas.Click += new System.EventHandler(this.BotonPersonas_Click);
             // 
             // LabelTitulo
             // 
             this.LabelTitulo.AutoSize = true;
-            this.LabelTitulo.Font = new System.Drawing.Font("Roboto Medium", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.LabelTitulo.Location = new System.Drawing.Point(8, 55);
             this.LabelTitulo.Name = "LabelTitulo";
-            this.LabelTitulo.Size = new System.Drawing.Size(193, 33);
+            this.LabelTitulo.Size = new System.Drawing.Size(194, 31);
             this.LabelTitulo.TabIndex = 5;
             this.LabelTitulo.Text = "LawyerHelper";
             // 
             // LabelCreditos
             // 
             this.LabelCreditos.AutoSize = true;
-            this.LabelCreditos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelCreditos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.LabelCreditos.Location = new System.Drawing.Point(257, 639);
             this.LabelCreditos.Name = "LabelCreditos";
-            this.LabelCreditos.Size = new System.Drawing.Size(215, 13);
+            this.LabelCreditos.Size = new System.Drawing.Size(207, 13);
             this.LabelCreditos.TabIndex = 6;
             this.LabelCreditos.Text = "Alba, Chrispens, La Pietra, Retamar - 2019";
             // 
@@ -161,61 +81,15 @@
             this.PanelOpciones.Size = new System.Drawing.Size(230, 550);
             this.PanelOpciones.TabIndex = 7;
             // 
-            // BotonDocumentos
+            // FlechaPagos
             // 
-            this.BotonDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonDocumentos.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonDocumentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonDocumentos.Image = ((System.Drawing.Image)(resources.GetObject("BotonDocumentos.Image")));
-            this.BotonDocumentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonDocumentos.Location = new System.Drawing.Point(-1, 345);
-            this.BotonDocumentos.Name = "BotonDocumentos";
-            this.BotonDocumentos.Size = new System.Drawing.Size(210, 75);
-            this.BotonDocumentos.TabIndex = 8;
-            this.BotonDocumentos.Text = "Documentos";
-            this.BotonDocumentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonDocumentos.UseVisualStyleBackColor = true;
-            this.BotonDocumentos.Click += new System.EventHandler(this.BotonDocumentos_Click);
-            // 
-            // FlechaPersonas
-            // 
-            this.FlechaPersonas.Image = global::LawyerHelper.Properties.Resources.flechita;
-            this.FlechaPersonas.Location = new System.Drawing.Point(215, 145);
-            this.FlechaPersonas.Name = "FlechaPersonas";
-            this.FlechaPersonas.Size = new System.Drawing.Size(24, 24);
-            this.FlechaPersonas.TabIndex = 9;
-            this.FlechaPersonas.TabStop = false;
-            this.FlechaPersonas.Visible = false;
-            // 
-            // FlechaJuicios
-            // 
-            this.FlechaJuicios.Image = global::LawyerHelper.Properties.Resources.flechita;
-            this.FlechaJuicios.Location = new System.Drawing.Point(215, 221);
-            this.FlechaJuicios.Name = "FlechaJuicios";
-            this.FlechaJuicios.Size = new System.Drawing.Size(24, 24);
-            this.FlechaJuicios.TabIndex = 10;
-            this.FlechaJuicios.TabStop = false;
-            this.FlechaJuicios.Visible = false;
-            // 
-            // FlechaAgenda
-            // 
-            this.FlechaAgenda.Image = global::LawyerHelper.Properties.Resources.flechita;
-            this.FlechaAgenda.Location = new System.Drawing.Point(215, 296);
-            this.FlechaAgenda.Name = "FlechaAgenda";
-            this.FlechaAgenda.Size = new System.Drawing.Size(24, 24);
-            this.FlechaAgenda.TabIndex = 11;
-            this.FlechaAgenda.TabStop = false;
-            this.FlechaAgenda.Visible = false;
-            // 
-            // FlechaDocumentos
-            // 
-            this.FlechaDocumentos.Image = global::LawyerHelper.Properties.Resources.flechita;
-            this.FlechaDocumentos.Location = new System.Drawing.Point(215, 372);
-            this.FlechaDocumentos.Name = "FlechaDocumentos";
-            this.FlechaDocumentos.Size = new System.Drawing.Size(24, 24);
-            this.FlechaDocumentos.TabIndex = 12;
-            this.FlechaDocumentos.TabStop = false;
-            this.FlechaDocumentos.Visible = false;
+            this.FlechaPagos.Image = global::LawyerHelper.Properties.Resources.flechita;
+            this.FlechaPagos.Location = new System.Drawing.Point(215, 522);
+            this.FlechaPagos.Name = "FlechaPagos";
+            this.FlechaPagos.Size = new System.Drawing.Size(24, 24);
+            this.FlechaPagos.TabIndex = 14;
+            this.FlechaPagos.TabStop = false;
+            this.FlechaPagos.Visible = false;
             // 
             // FlechaCobros
             // 
@@ -227,15 +101,147 @@
             this.FlechaCobros.TabStop = false;
             this.FlechaCobros.Visible = false;
             // 
-            // FlechaPagos
+            // FlechaDocumentos
             // 
-            this.FlechaPagos.Image = global::LawyerHelper.Properties.Resources.flechita;
-            this.FlechaPagos.Location = new System.Drawing.Point(215, 522);
-            this.FlechaPagos.Name = "FlechaPagos";
-            this.FlechaPagos.Size = new System.Drawing.Size(24, 24);
-            this.FlechaPagos.TabIndex = 14;
-            this.FlechaPagos.TabStop = false;
-            this.FlechaPagos.Visible = false;
+            this.FlechaDocumentos.Image = global::LawyerHelper.Properties.Resources.flechita;
+            this.FlechaDocumentos.Location = new System.Drawing.Point(215, 372);
+            this.FlechaDocumentos.Name = "FlechaDocumentos";
+            this.FlechaDocumentos.Size = new System.Drawing.Size(24, 24);
+            this.FlechaDocumentos.TabIndex = 12;
+            this.FlechaDocumentos.TabStop = false;
+            this.FlechaDocumentos.Visible = false;
+            // 
+            // FlechaAgenda
+            // 
+            this.FlechaAgenda.Image = global::LawyerHelper.Properties.Resources.flechita;
+            this.FlechaAgenda.Location = new System.Drawing.Point(215, 296);
+            this.FlechaAgenda.Name = "FlechaAgenda";
+            this.FlechaAgenda.Size = new System.Drawing.Size(24, 24);
+            this.FlechaAgenda.TabIndex = 11;
+            this.FlechaAgenda.TabStop = false;
+            this.FlechaAgenda.Visible = false;
+            // 
+            // FlechaJuicios
+            // 
+            this.FlechaJuicios.Image = global::LawyerHelper.Properties.Resources.flechita;
+            this.FlechaJuicios.Location = new System.Drawing.Point(215, 221);
+            this.FlechaJuicios.Name = "FlechaJuicios";
+            this.FlechaJuicios.Size = new System.Drawing.Size(24, 24);
+            this.FlechaJuicios.TabIndex = 10;
+            this.FlechaJuicios.TabStop = false;
+            this.FlechaJuicios.Visible = false;
+            // 
+            // FlechaPersonas
+            // 
+            this.FlechaPersonas.Image = global::LawyerHelper.Properties.Resources.flechita;
+            this.FlechaPersonas.Location = new System.Drawing.Point(215, 145);
+            this.FlechaPersonas.Name = "FlechaPersonas";
+            this.FlechaPersonas.Size = new System.Drawing.Size(24, 24);
+            this.FlechaPersonas.TabIndex = 9;
+            this.FlechaPersonas.TabStop = false;
+            this.FlechaPersonas.Visible = false;
+            // 
+            // BotonDocumentos
+            // 
+            this.BotonDocumentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.BotonDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonDocumentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonDocumentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonDocumentos.Image = ((System.Drawing.Image)(resources.GetObject("BotonDocumentos.Image")));
+            this.BotonDocumentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonDocumentos.Location = new System.Drawing.Point(-1, 345);
+            this.BotonDocumentos.Name = "BotonDocumentos";
+            this.BotonDocumentos.Size = new System.Drawing.Size(210, 75);
+            this.BotonDocumentos.TabIndex = 8;
+            this.BotonDocumentos.Text = "Documentos";
+            this.BotonDocumentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonDocumentos.UseVisualStyleBackColor = false;
+            this.BotonDocumentos.Click += new System.EventHandler(this.BotonDocumentos_Click);
+            // 
+            // BotonCobros
+            // 
+            this.BotonCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.BotonCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCobros.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonCobros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonCobros.Image = ((System.Drawing.Image)(resources.GetObject("BotonCobros.Image")));
+            this.BotonCobros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonCobros.Location = new System.Drawing.Point(-1, 420);
+            this.BotonCobros.Name = "BotonCobros";
+            this.BotonCobros.Size = new System.Drawing.Size(210, 75);
+            this.BotonCobros.TabIndex = 4;
+            this.BotonCobros.Text = "Cobros";
+            this.BotonCobros.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonCobros.UseVisualStyleBackColor = false;
+            this.BotonCobros.Click += new System.EventHandler(this.BotonCobros_Click);
+            // 
+            // BotonPagos
+            // 
+            this.BotonPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.BotonPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonPagos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonPagos.Image = ((System.Drawing.Image)(resources.GetObject("BotonPagos.Image")));
+            this.BotonPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonPagos.Location = new System.Drawing.Point(-1, 495);
+            this.BotonPagos.Name = "BotonPagos";
+            this.BotonPagos.Size = new System.Drawing.Size(210, 75);
+            this.BotonPagos.TabIndex = 3;
+            this.BotonPagos.Text = "Pagos";
+            this.BotonPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonPagos.UseVisualStyleBackColor = false;
+            this.BotonPagos.Click += new System.EventHandler(this.BotonPagos_Click);
+            // 
+            // BotonAgenda
+            // 
+            this.BotonAgenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.BotonAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonAgenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonAgenda.Image = ((System.Drawing.Image)(resources.GetObject("BotonAgenda.Image")));
+            this.BotonAgenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonAgenda.Location = new System.Drawing.Point(-1, 270);
+            this.BotonAgenda.Name = "BotonAgenda";
+            this.BotonAgenda.Size = new System.Drawing.Size(210, 75);
+            this.BotonAgenda.TabIndex = 2;
+            this.BotonAgenda.Text = "Agenda";
+            this.BotonAgenda.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonAgenda.UseVisualStyleBackColor = false;
+            this.BotonAgenda.Click += new System.EventHandler(this.BotonAgenda_Click);
+            // 
+            // BotonJuicios
+            // 
+            this.BotonJuicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.BotonJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonJuicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonJuicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonJuicios.Image = ((System.Drawing.Image)(resources.GetObject("BotonJuicios.Image")));
+            this.BotonJuicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonJuicios.Location = new System.Drawing.Point(-1, 195);
+            this.BotonJuicios.Name = "BotonJuicios";
+            this.BotonJuicios.Size = new System.Drawing.Size(210, 75);
+            this.BotonJuicios.TabIndex = 1;
+            this.BotonJuicios.Text = "Juicios";
+            this.BotonJuicios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonJuicios.UseVisualStyleBackColor = false;
+            this.BotonJuicios.Click += new System.EventHandler(this.BotonJuicios_Click);
+            // 
+            // BotonPersonas
+            // 
+            this.BotonPersonas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
+            this.BotonPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonPersonas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonPersonas.Image = ((System.Drawing.Image)(resources.GetObject("BotonPersonas.Image")));
+            this.BotonPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BotonPersonas.Location = new System.Drawing.Point(-1, 120);
+            this.BotonPersonas.Name = "BotonPersonas";
+            this.BotonPersonas.Size = new System.Drawing.Size(210, 75);
+            this.BotonPersonas.TabIndex = 0;
+            this.BotonPersonas.Text = "Personas";
+            this.BotonPersonas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BotonPersonas.UseVisualStyleBackColor = false;
+            this.BotonPersonas.Click += new System.EventHandler(this.BotonPersonas_Click);
             // 
             // MenuPrincipal
             // 
@@ -261,12 +267,12 @@
             this.Name = "MenuPrincipal";
             this.Text = "Menu Principal";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaPersonas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaJuicios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaAgenda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaDocumentos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaCobros)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaPagos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaCobros)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaDocumentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaAgenda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaJuicios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FlechaPersonas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,6 +13,7 @@ using LawyerHelper.UI.Pagos;
 using LawyerHelper.UI.Cobros;
 using LawyerHelper.UI.Documentos;
 using LawyerHelper.UI.Agenda;
+using LawyerHelper.UI;
 using LawyerHelper.Clases;
 using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
@@ -209,5 +210,25 @@ namespace WindowsFormsApp2
                 FlechaDocumentos.Visible = false;
             }
         }
+
+        /*private void BotonAjustes_Click(object sender, EventArgs e)
+        {
+            
+            Ajustes iMenuNuevo = new Ajustes();
+            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            {
+                iColorBackground = iMenuNuevo.ColorBackground;
+                iColorPresionado = iMenuNuevo.ColorPresionado;
+                iColorForeground = iMenuNuevo.ColorForeground;
+                this.BackColor = iColorBackground;
+                LabelTitulo.ForeColor = iColorForeground;
+                BotonPersonas.ForeColor = iColorForeground;
+                BotonJuicios.ForeColor = iColorForeground;
+                BotonAgenda.ForeColor = iColorForeground;
+                BotonPagos.ForeColor = iColorForeground;
+                BotonCobros.ForeColor = iColorForeground;
+                BotonDocumentos.ForeColor = iColorForeground;
+            }
+        }*/
     }
 }
