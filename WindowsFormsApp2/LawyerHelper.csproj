@@ -99,6 +99,11 @@
       <DependentUpon>201910111848100_lucasp.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UI\Agenda\AltaRecordatorio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +121,12 @@
     </Compile>
     <Compile Include="UI\Agenda\ConsultaRecordatorio.Designer.cs">
       <DependentUpon>ConsultaRecordatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Agenda\MenuAgendaUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Agenda\MenuAgendaUC.Designer.cs">
+      <DependentUpon>MenuAgendaUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Agenda\ModificarRecordatorio.cs">
       <SubType>Form</SubType>
@@ -142,6 +153,12 @@
     <Compile Include="UI\Cobros\ConsultaCobro.Designer.cs">
       <DependentUpon>ConsultaCobro.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Cobros\MenuCobrosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Cobros\MenuCobrosUC.Designer.cs">
+      <DependentUpon>MenuCobrosUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Documentos\AltaDocumento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +176,12 @@
     </Compile>
     <Compile Include="UI\Documentos\ConsultaDocumento.Designer.cs">
       <DependentUpon>ConsultaDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Documentos\MenuDocumentosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Documentos\MenuDocumentosUC.Designer.cs">
+      <DependentUpon>MenuDocumentosUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Documentos\ModificarDocumento.cs">
       <SubType>Form</SubType>
@@ -208,6 +231,12 @@
     <Compile Include="UI\Juicios\MenuJuicios.Designer.cs">
       <DependentUpon>MenuJuicios.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Juicios\MenuJuiciosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Juicios\MenuJuiciosUC.Designer.cs">
+      <DependentUpon>MenuJuiciosUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Juicios\ModificarJuicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,6 +266,12 @@
     </Compile>
     <Compile Include="UI\Pagos\MenuPagos.Designer.cs">
       <DependentUpon>MenuPagos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Pagos\MenuPagosUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Pagos\MenuPagosUC.Designer.cs">
+      <DependentUpon>MenuPagosUC.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Personas\AltaPersona.cs">
       <SubType>Form</SubType>
@@ -303,6 +338,9 @@
     <EmbeddedResource Include="UI\Agenda\ConsultaRecordatorio.resx">
       <DependentUpon>ConsultaRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Agenda\MenuAgendaUC.resx">
+      <DependentUpon>MenuAgendaUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\ModificarRecordatorio.resx">
       <DependentUpon>ModificarRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +353,9 @@
     <EmbeddedResource Include="UI\Cobros\ConsultaCobro.resx">
       <DependentUpon>ConsultaCobro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cobros\MenuCobrosUC.resx">
+      <DependentUpon>MenuCobrosUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Documentos\AltaDocumento.resx">
       <DependentUpon>AltaDocumento.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +364,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Documentos\ConsultaDocumento.resx">
       <DependentUpon>ConsultaDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Documentos\MenuDocumentosUC.resx">
+      <DependentUpon>MenuDocumentosUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Documentos\ModificarDocumento.resx">
       <DependentUpon>ModificarDocumento.cs</DependentUpon>
@@ -348,6 +392,9 @@
     <EmbeddedResource Include="UI\Juicios\MenuJuicios.resx">
       <DependentUpon>MenuJuicios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\Juicios\MenuJuiciosUC.resx">
+      <DependentUpon>MenuJuiciosUC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Juicios\ModificarJuicio.resx">
       <DependentUpon>ModificarJuicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -362,6 +409,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Pagos\MenuPagos.resx">
       <DependentUpon>MenuPagos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Pagos\MenuPagosUC.resx">
+      <DependentUpon>MenuPagosUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\AltaPersona.resx">
       <DependentUpon>AltaPersona.cs</DependentUpon>
@@ -384,6 +434,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Personas\MenuPersonasUC.resx">
       <DependentUpon>MenuPersonasUC.cs</DependentUpon>
@@ -419,6 +470,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\calendar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechita.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

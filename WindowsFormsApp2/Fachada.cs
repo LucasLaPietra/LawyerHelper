@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace WindowsFormsApp2
 {
@@ -18,6 +19,22 @@ namespace WindowsFormsApp2
             }
             else return pHora;
         }
+        public static void EsconderContenidoPanel(Panel p)
+        {
+            foreach (Control c in p.Controls)
+            {
+                c.Enabled = false;
+                c.Visible = false;
+            }
+        }
 
+        public static void MostrarContenidoPanel(Panel p)
+        {
+            foreach (Control c in p.Controls)
+            {
+                c.Enabled = true;
+                c.Visible = true;
+            }
+        }
     }
 }

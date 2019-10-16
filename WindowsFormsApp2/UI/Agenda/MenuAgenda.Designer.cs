@@ -83,6 +83,7 @@
             this.BotonAlta.TabIndex = 13;
             this.BotonAlta.Text = "Alta";
             this.BotonAlta.UseVisualStyleBackColor = true;
+            this.BotonAlta.Click += new System.EventHandler(this.BotonAlta_Click);
             // 
             // MenuAgenda
             // 
