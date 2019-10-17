@@ -35,33 +35,34 @@
             this.CuadroNombre = new System.Windows.Forms.TextBox();
             this.CuadroDNI = new System.Windows.Forms.TextBox();
             this.CuadroApellido = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.LabelGrupoFamiliar = new System.Windows.Forms.Label();
+            this.LabelTelefono = new System.Windows.Forms.Label();
             this.LabelNombre = new System.Windows.Forms.Label();
             this.LabelDNI = new System.Windows.Forms.Label();
             this.LabelApellido = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LabelFecha = new System.Windows.Forms.Label();
             this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
             this.CuadroCUIL = new System.Windows.Forms.TextBox();
             this.CuadroDomLegal = new System.Windows.Forms.TextBox();
             this.CuadroProfesion = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.LabelCUIL = new System.Windows.Forms.Label();
+            this.LabelDomLegal = new System.Windows.Forms.Label();
+            this.LabelProfesion = new System.Windows.Forms.Label();
             this.CuadroDomReal = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LabelDomReal = new System.Windows.Forms.Label();
             this.CuadroEstadoCivil = new System.Windows.Forms.TextBox();
             this.CuadroLugarTrabajo = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.LabelEstadoCivil = new System.Windows.Forms.Label();
+            this.LabelLugarTrabajo = new System.Windows.Forms.Label();
             this.CuadroBienes = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.LabelBienes = new System.Windows.Forms.Label();
             this.CuadroAbogado = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.LabelAbogado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BotonCancelar
             // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonCancelar.Location = new System.Drawing.Point(277, 450);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
@@ -72,6 +73,7 @@
             // 
             // BotonAceptar
             // 
+            this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonAceptar.Location = new System.Drawing.Point(14, 450);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
@@ -82,6 +84,7 @@
             // 
             // CuadroGrupoFamiliar
             // 
+            this.CuadroGrupoFamiliar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(104, 208);
             this.CuadroGrupoFamiliar.Multiline = true;
             this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
@@ -91,6 +94,7 @@
             // 
             // CuadroTelefono
             // 
+            this.CuadroTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroTelefono.Location = new System.Drawing.Point(272, 51);
             this.CuadroTelefono.Name = "CuadroTelefono";
             this.CuadroTelefono.Size = new System.Drawing.Size(97, 20);
@@ -98,6 +102,7 @@
             // 
             // CuadroNombre
             // 
+            this.CuadroNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroNombre.Location = new System.Drawing.Point(272, 24);
             this.CuadroNombre.Name = "CuadroNombre";
             this.CuadroNombre.Size = new System.Drawing.Size(97, 20);
@@ -105,6 +110,7 @@
             // 
             // CuadroDNI
             // 
+            this.CuadroDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroDNI.Location = new System.Drawing.Point(104, 51);
             this.CuadroDNI.Name = "CuadroDNI";
             this.CuadroDNI.Size = new System.Drawing.Size(97, 20);
@@ -112,28 +118,29 @@
             // 
             // CuadroApellido
             // 
+            this.CuadroApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroApellido.Location = new System.Drawing.Point(104, 24);
             this.CuadroApellido.Name = "CuadroApellido";
             this.CuadroApellido.Size = new System.Drawing.Size(97, 20);
             this.CuadroApellido.TabIndex = 58;
             // 
-            // label5
+            // LabelGrupoFamiliar
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 211);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 13);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "Grupo familiar:";
+            this.LabelGrupoFamiliar.AutoSize = true;
+            this.LabelGrupoFamiliar.Location = new System.Drawing.Point(24, 211);
+            this.LabelGrupoFamiliar.Name = "LabelGrupoFamiliar";
+            this.LabelGrupoFamiliar.Size = new System.Drawing.Size(74, 13);
+            this.LabelGrupoFamiliar.TabIndex = 56;
+            this.LabelGrupoFamiliar.Text = "Grupo familiar:";
             // 
-            // label3
+            // LabelTelefono
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(220, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "Telefono:";
+            this.LabelTelefono.AutoSize = true;
+            this.LabelTelefono.Location = new System.Drawing.Point(220, 54);
+            this.LabelTelefono.Name = "LabelTelefono";
+            this.LabelTelefono.Size = new System.Drawing.Size(52, 13);
+            this.LabelTelefono.TabIndex = 55;
+            this.LabelTelefono.Text = "Telefono:";
             // 
             // LabelNombre
             // 
@@ -162,15 +169,15 @@
             this.LabelApellido.TabIndex = 50;
             this.LabelApellido.Text = "Apellido:";
             // 
-            // label2
+            // LabelFecha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(2, 83);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 13);
-            this.label2.TabIndex = 73;
-            this.label2.Text = "Fecha Nacimiento:";
-            this.label2.UseMnemonic = false;
+            this.LabelFecha.AutoSize = true;
+            this.LabelFecha.Location = new System.Drawing.Point(2, 83);
+            this.LabelFecha.Name = "LabelFecha";
+            this.LabelFecha.Size = new System.Drawing.Size(96, 13);
+            this.LabelFecha.TabIndex = 73;
+            this.LabelFecha.Text = "Fecha Nacimiento:";
+            this.LabelFecha.UseMnemonic = false;
             // 
             // CuadroFecha
             // 
@@ -178,9 +185,11 @@
             this.CuadroFecha.Name = "CuadroFecha";
             this.CuadroFecha.Size = new System.Drawing.Size(265, 20);
             this.CuadroFecha.TabIndex = 72;
+            this.CuadroFecha.ValueChanged += new System.EventHandler(this.CuadroFecha_ValueChanged);
             // 
             // CuadroCUIL
             // 
+            this.CuadroCUIL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroCUIL.Location = new System.Drawing.Point(272, 103);
             this.CuadroCUIL.Name = "CuadroCUIL";
             this.CuadroCUIL.Size = new System.Drawing.Size(97, 20);
@@ -188,6 +197,7 @@
             // 
             // CuadroDomLegal
             // 
+            this.CuadroDomLegal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroDomLegal.Location = new System.Drawing.Point(104, 130);
             this.CuadroDomLegal.Name = "CuadroDomLegal";
             this.CuadroDomLegal.Size = new System.Drawing.Size(265, 20);
@@ -195,56 +205,59 @@
             // 
             // CuadroProfesion
             // 
+            this.CuadroProfesion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroProfesion.Location = new System.Drawing.Point(104, 103);
             this.CuadroProfesion.Name = "CuadroProfesion";
             this.CuadroProfesion.Size = new System.Drawing.Size(97, 20);
             this.CuadroProfesion.TabIndex = 78;
             // 
-            // label4
+            // LabelCUIL
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(238, 106);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 76;
-            this.label4.Text = "CUIL:";
+            this.LabelCUIL.AutoSize = true;
+            this.LabelCUIL.Location = new System.Drawing.Point(238, 106);
+            this.LabelCUIL.Name = "LabelCUIL";
+            this.LabelCUIL.Size = new System.Drawing.Size(34, 13);
+            this.LabelCUIL.TabIndex = 76;
+            this.LabelCUIL.Text = "CUIL:";
             // 
-            // label7
+            // LabelDomLegal
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 133);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 13);
-            this.label7.TabIndex = 75;
-            this.label7.Text = "Domicilio legal:";
+            this.LabelDomLegal.AutoSize = true;
+            this.LabelDomLegal.Location = new System.Drawing.Point(21, 133);
+            this.LabelDomLegal.Name = "LabelDomLegal";
+            this.LabelDomLegal.Size = new System.Drawing.Size(77, 13);
+            this.LabelDomLegal.TabIndex = 75;
+            this.LabelDomLegal.Text = "Domicilio legal:";
             // 
-            // label8
+            // LabelProfesion
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(44, 106);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 74;
-            this.label8.Text = "Profesion:";
+            this.LabelProfesion.AutoSize = true;
+            this.LabelProfesion.Location = new System.Drawing.Point(44, 106);
+            this.LabelProfesion.Name = "LabelProfesion";
+            this.LabelProfesion.Size = new System.Drawing.Size(54, 13);
+            this.LabelProfesion.TabIndex = 74;
+            this.LabelProfesion.Text = "Profesion:";
             // 
             // CuadroDomReal
             // 
+            this.CuadroDomReal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroDomReal.Location = new System.Drawing.Point(104, 156);
             this.CuadroDomReal.Name = "CuadroDomReal";
             this.CuadroDomReal.Size = new System.Drawing.Size(265, 20);
             this.CuadroDomReal.TabIndex = 82;
             // 
-            // label1
+            // LabelDomReal
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 159);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
-            this.label1.TabIndex = 81;
-            this.label1.Text = "Domicilio real:";
+            this.LabelDomReal.AutoSize = true;
+            this.LabelDomReal.Location = new System.Drawing.Point(26, 159);
+            this.LabelDomReal.Name = "LabelDomReal";
+            this.LabelDomReal.Size = new System.Drawing.Size(72, 13);
+            this.LabelDomReal.TabIndex = 81;
+            this.LabelDomReal.Text = "Domicilio real:";
             // 
             // CuadroEstadoCivil
             // 
+            this.CuadroEstadoCivil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroEstadoCivil.Location = new System.Drawing.Point(272, 182);
             this.CuadroEstadoCivil.Name = "CuadroEstadoCivil";
             this.CuadroEstadoCivil.Size = new System.Drawing.Size(97, 20);
@@ -252,31 +265,33 @@
             // 
             // CuadroLugarTrabajo
             // 
+            this.CuadroLugarTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroLugarTrabajo.Location = new System.Drawing.Point(104, 182);
             this.CuadroLugarTrabajo.Name = "CuadroLugarTrabajo";
             this.CuadroLugarTrabajo.Size = new System.Drawing.Size(97, 20);
             this.CuadroLugarTrabajo.TabIndex = 85;
             // 
-            // label9
+            // LabelEstadoCivil
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(207, 185);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 13);
-            this.label9.TabIndex = 84;
-            this.label9.Text = "Estado Civil:";
+            this.LabelEstadoCivil.AutoSize = true;
+            this.LabelEstadoCivil.Location = new System.Drawing.Point(207, 185);
+            this.LabelEstadoCivil.Name = "LabelEstadoCivil";
+            this.LabelEstadoCivil.Size = new System.Drawing.Size(65, 13);
+            this.LabelEstadoCivil.TabIndex = 84;
+            this.LabelEstadoCivil.Text = "Estado Civil:";
             // 
-            // label10
+            // LabelLugarTrabajo
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 185);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 13);
-            this.label10.TabIndex = 83;
-            this.label10.Text = "Lugar de trabajo:";
+            this.LabelLugarTrabajo.AutoSize = true;
+            this.LabelLugarTrabajo.Location = new System.Drawing.Point(11, 185);
+            this.LabelLugarTrabajo.Name = "LabelLugarTrabajo";
+            this.LabelLugarTrabajo.Size = new System.Drawing.Size(87, 13);
+            this.LabelLugarTrabajo.TabIndex = 83;
+            this.LabelLugarTrabajo.Text = "Lugar de trabajo:";
             // 
             // CuadroBienes
             // 
+            this.CuadroBienes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroBienes.Location = new System.Drawing.Point(104, 284);
             this.CuadroBienes.Multiline = true;
             this.CuadroBienes.Name = "CuadroBienes";
@@ -284,30 +299,31 @@
             this.CuadroBienes.Size = new System.Drawing.Size(265, 70);
             this.CuadroBienes.TabIndex = 88;
             // 
-            // label6
+            // LabelBienes
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(56, 287);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 13);
-            this.label6.TabIndex = 87;
-            this.label6.Text = "Bienes:";
+            this.LabelBienes.AutoSize = true;
+            this.LabelBienes.Location = new System.Drawing.Point(56, 287);
+            this.LabelBienes.Name = "LabelBienes";
+            this.LabelBienes.Size = new System.Drawing.Size(42, 13);
+            this.LabelBienes.TabIndex = 87;
+            this.LabelBienes.Text = "Bienes:";
             // 
             // CuadroAbogado
             // 
+            this.CuadroAbogado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroAbogado.Location = new System.Drawing.Point(104, 360);
             this.CuadroAbogado.Name = "CuadroAbogado";
             this.CuadroAbogado.Size = new System.Drawing.Size(265, 20);
             this.CuadroAbogado.TabIndex = 90;
             // 
-            // label11
+            // LabelAbogado
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(45, 363);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(53, 13);
-            this.label11.TabIndex = 89;
-            this.label11.Text = "Abogado:";
+            this.LabelAbogado.AutoSize = true;
+            this.LabelAbogado.Location = new System.Drawing.Point(45, 363);
+            this.LabelAbogado.Name = "LabelAbogado";
+            this.LabelAbogado.Size = new System.Drawing.Size(53, 13);
+            this.LabelAbogado.TabIndex = 89;
+            this.LabelAbogado.Text = "Abogado:";
             // 
             // AltaPersona
             // 
@@ -315,22 +331,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
             this.Controls.Add(this.CuadroAbogado);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.LabelAbogado);
             this.Controls.Add(this.CuadroBienes);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.LabelBienes);
             this.Controls.Add(this.CuadroEstadoCivil);
             this.Controls.Add(this.CuadroLugarTrabajo);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.LabelEstadoCivil);
+            this.Controls.Add(this.LabelLugarTrabajo);
             this.Controls.Add(this.CuadroDomReal);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LabelDomReal);
             this.Controls.Add(this.CuadroCUIL);
             this.Controls.Add(this.CuadroDomLegal);
             this.Controls.Add(this.CuadroProfesion);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.LabelCUIL);
+            this.Controls.Add(this.LabelDomLegal);
+            this.Controls.Add(this.LabelProfesion);
+            this.Controls.Add(this.LabelFecha);
             this.Controls.Add(this.CuadroFecha);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
@@ -339,8 +355,8 @@
             this.Controls.Add(this.CuadroNombre);
             this.Controls.Add(this.CuadroDNI);
             this.Controls.Add(this.CuadroApellido);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.LabelGrupoFamiliar);
+            this.Controls.Add(this.LabelTelefono);
             this.Controls.Add(this.LabelNombre);
             this.Controls.Add(this.LabelDNI);
             this.Controls.Add(this.LabelApellido);
@@ -360,28 +376,28 @@
         private System.Windows.Forms.TextBox CuadroNombre;
         private System.Windows.Forms.TextBox CuadroDNI;
         private System.Windows.Forms.TextBox CuadroApellido;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label LabelGrupoFamiliar;
+        private System.Windows.Forms.Label LabelTelefono;
         private System.Windows.Forms.Label LabelNombre;
         private System.Windows.Forms.Label LabelDNI;
         private System.Windows.Forms.Label LabelApellido;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.DateTimePicker CuadroFecha;
         private System.Windows.Forms.TextBox CuadroCUIL;
         private System.Windows.Forms.TextBox CuadroDomLegal;
         private System.Windows.Forms.TextBox CuadroProfesion;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LabelCUIL;
+        private System.Windows.Forms.Label LabelDomLegal;
+        private System.Windows.Forms.Label LabelProfesion;
         private System.Windows.Forms.TextBox CuadroDomReal;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelDomReal;
         private System.Windows.Forms.TextBox CuadroEstadoCivil;
         private System.Windows.Forms.TextBox CuadroLugarTrabajo;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label LabelEstadoCivil;
+        private System.Windows.Forms.Label LabelLugarTrabajo;
         private System.Windows.Forms.TextBox CuadroBienes;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LabelBienes;
         private System.Windows.Forms.TextBox CuadroAbogado;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label LabelAbogado;
     }
 }

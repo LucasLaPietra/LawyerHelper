@@ -22,6 +22,24 @@ namespace LawyerHelper.UI.Personas
         {
             InitializeComponent();
             iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
+            //Asignacion de colores      
+            //Background
+            this.BackColor = Colores.ColorBackground;
+            //Cajas
+            foreach (TextBox t in Controls.OfType<TextBox>())
+            {
+                t.ForeColor = Colores.ColorForeground;
+                t.BackColor = Colores.ColorBackgroundCajas;
+            }
+            // Labels
+            foreach (Label l in Controls.OfType<Label>())
+                l.ForeColor = Colores.ColorForeground;
+            //Botones
+            foreach (Button b in Controls.OfType<Button>())
+            {
+                b.ForeColor = Colores.ColorForeground;
+                b.BackColor = Colores.ColorBackground;
+            }
         }
 
         private void BajaPersona_Load(object sender, EventArgs e)

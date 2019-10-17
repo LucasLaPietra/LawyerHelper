@@ -28,6 +28,47 @@ namespace LawyerHelper.UI.Personas
         {
             InitializeComponent();
             iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
+            //Asignacion de colores      
+            //Background
+            this.BackColor = Colores.ColorBackground;
+            //Cajas
+            foreach (TextBox t in Controls.OfType<TextBox>())
+            {
+                t.ForeColor = Colores.ColorForeground;
+                t.BackColor = Colores.ColorBackgroundCajas;
+            }
+            // Labels
+            foreach (Label l in Controls.OfType<Label>())
+                l.ForeColor = Colores.ColorForeground;
+            //Botones
+            foreach (Button b in Controls.OfType<Button>())
+            {
+                b.ForeColor = Colores.ColorForeground;
+                b.BackColor = Colores.ColorBackground;
+            }
+            //ListBox
+            foreach (ListBox t in Controls.OfType<ListBox>())
+            {
+                t.ForeColor = Colores.ColorForeground;
+                t.BackColor = Colores.ColorBackgroundCajas;
+            }
+            //Para los layouts
+
+            //Cajas
+            foreach (TextBox t in Layout.Controls.OfType<TextBox>())
+            {
+                t.ForeColor = Colores.ColorForeground;
+                t.BackColor = Colores.ColorBackgroundCajas;
+            }
+            // Labels
+            foreach (Label l in Layout.Controls.OfType<Label>())
+                l.ForeColor = Colores.ColorForeground;
+            //Botones
+            foreach (Button b in Layout.Controls.OfType<Button>())
+            {
+                b.ForeColor = Colores.ColorForeground;
+                b.BackColor = Colores.ColorBackground;
+            }
         }
 
         private void BuscarPersona_Load(object sender, EventArgs e)

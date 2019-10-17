@@ -46,6 +46,7 @@
             // 
             // BotonBusquedaAvanzada
             // 
+            this.BotonBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 97);
             this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
             this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
@@ -56,6 +57,7 @@
             // 
             // BotonBuscar
             // 
+            this.BotonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBuscar.Location = new System.Drawing.Point(297, 61);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
@@ -66,6 +68,7 @@
             // 
             // CuadroApellido
             // 
+            this.CuadroApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroApellido.Location = new System.Drawing.Point(62, 61);
             this.CuadroApellido.Name = "CuadroApellido";
             this.CuadroApellido.Size = new System.Drawing.Size(218, 20);
@@ -73,6 +76,7 @@
             // 
             // CuadroNombre
             // 
+            this.CuadroNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroNombre.Location = new System.Drawing.Point(62, 32);
             this.CuadroNombre.Name = "CuadroNombre";
             this.CuadroNombre.Size = new System.Drawing.Size(218, 20);
@@ -98,6 +102,7 @@
             // 
             // BotonCancelar
             // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonCancelar.Location = new System.Drawing.Point(278, 296);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
@@ -108,6 +113,7 @@
             // 
             // BotonAceptar
             // 
+            this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonAceptar.Location = new System.Drawing.Point(15, 296);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);

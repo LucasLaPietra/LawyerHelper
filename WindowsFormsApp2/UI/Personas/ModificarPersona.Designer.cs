@@ -34,7 +34,7 @@
             this.LabelApellido = new System.Windows.Forms.Label();
             this.LabelNombre = new System.Windows.Forms.Label();
             this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Layout = new System.Windows.Forms.TableLayoutPanel();
             this.LabelDNI = new System.Windows.Forms.Label();
             this.LabelDomicilio = new System.Windows.Forms.Label();
             this.LabelTelefono = new System.Windows.Forms.Label();
@@ -63,11 +63,12 @@
             this.BotonModificarCobro = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
             // BotonBuscar
             // 
+            this.BotonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBuscar.Location = new System.Drawing.Point(296, 50);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
@@ -78,6 +79,7 @@
             // 
             // CuadroApellido
             // 
+            this.CuadroApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroApellido.Location = new System.Drawing.Point(61, 50);
             this.CuadroApellido.Name = "CuadroApellido";
             this.CuadroApellido.Size = new System.Drawing.Size(218, 20);
@@ -85,6 +87,7 @@
             // 
             // CuadroNombre
             // 
+            this.CuadroNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroNombre.Location = new System.Drawing.Point(61, 21);
             this.CuadroNombre.Name = "CuadroNombre";
             this.CuadroNombre.Size = new System.Drawing.Size(218, 20);
@@ -110,6 +113,7 @@
             // 
             // BotonBusquedaAvanzada
             // 
+            this.BotonBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 88);
             this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
             this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
@@ -118,52 +122,52 @@
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
             this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
-            // tableLayoutPanel1
+            // Layout
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.03352F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.96648F));
-            this.tableLayoutPanel1.Controls.Add(this.LabelDNI, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDomicilio, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelTelefono, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFechaNacimiento, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.LabelProfesion, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.LabelLugarTrabajo, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCUIL, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.LabelEstadoCivil, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.LabelRepresentante, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDomicilioLegal, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.LabelJuiciosAsociados, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCobrosAsociados, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.BotonVerJuicios, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.BotonVerCobros, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroDNI, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroDomicilio, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroTelefono, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroProfesion, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroLugarTrabajo, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroCUIL, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroEstadoCivil, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroRepresentante, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroDomicilioLegal, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroFechaNacimiento, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 130);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 316);
-            this.tableLayoutPanel1.TabIndex = 44;
+            this.Layout.ColumnCount = 2;
+            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.03352F));
+            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.96648F));
+            this.Layout.Controls.Add(this.LabelDNI, 0, 0);
+            this.Layout.Controls.Add(this.LabelDomicilio, 0, 1);
+            this.Layout.Controls.Add(this.LabelTelefono, 0, 2);
+            this.Layout.Controls.Add(this.LabelFechaNacimiento, 0, 3);
+            this.Layout.Controls.Add(this.LabelProfesion, 0, 4);
+            this.Layout.Controls.Add(this.LabelLugarTrabajo, 0, 5);
+            this.Layout.Controls.Add(this.LabelCUIL, 0, 6);
+            this.Layout.Controls.Add(this.LabelEstadoCivil, 0, 7);
+            this.Layout.Controls.Add(this.LabelRepresentante, 0, 8);
+            this.Layout.Controls.Add(this.LabelDomicilioLegal, 0, 9);
+            this.Layout.Controls.Add(this.LabelJuiciosAsociados, 0, 10);
+            this.Layout.Controls.Add(this.LabelCobrosAsociados, 0, 11);
+            this.Layout.Controls.Add(this.BotonVerJuicios, 1, 10);
+            this.Layout.Controls.Add(this.BotonVerCobros, 1, 11);
+            this.Layout.Controls.Add(this.CuadroDNI, 1, 0);
+            this.Layout.Controls.Add(this.CuadroDomicilio, 1, 1);
+            this.Layout.Controls.Add(this.CuadroTelefono, 1, 2);
+            this.Layout.Controls.Add(this.CuadroProfesion, 1, 4);
+            this.Layout.Controls.Add(this.CuadroLugarTrabajo, 1, 5);
+            this.Layout.Controls.Add(this.CuadroCUIL, 1, 6);
+            this.Layout.Controls.Add(this.CuadroEstadoCivil, 1, 7);
+            this.Layout.Controls.Add(this.CuadroRepresentante, 1, 8);
+            this.Layout.Controls.Add(this.CuadroDomicilioLegal, 1, 9);
+            this.Layout.Controls.Add(this.CuadroFechaNacimiento, 1, 3);
+            this.Layout.Location = new System.Drawing.Point(12, 130);
+            this.Layout.Name = "Layout";
+            this.Layout.RowCount = 12;
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.Size = new System.Drawing.Size(358, 316);
+            this.Layout.TabIndex = 44;
             // 
             // LabelDNI
             // 
@@ -267,7 +271,7 @@
             // LabelCobrosAsociados
             // 
             this.LabelCobrosAsociados.AutoSize = true;
-            this.LabelCobrosAsociados.Location = new System.Drawing.Point(3, 286);
+            this.LabelCobrosAsociados.Location = new System.Drawing.Point(3, 289);
             this.LabelCobrosAsociados.Name = "LabelCobrosAsociados";
             this.LabelCobrosAsociados.Size = new System.Drawing.Size(91, 13);
             this.LabelCobrosAsociados.TabIndex = 22;
@@ -276,9 +280,10 @@
             // BotonVerJuicios
             // 
             this.BotonVerJuicios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BotonVerJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonVerJuicios.Location = new System.Drawing.Point(206, 263);
             this.BotonVerJuicios.Name = "BotonVerJuicios";
-            this.BotonVerJuicios.Size = new System.Drawing.Size(75, 20);
+            this.BotonVerJuicios.Size = new System.Drawing.Size(75, 23);
             this.BotonVerJuicios.TabIndex = 23;
             this.BotonVerJuicios.Text = "Ver ";
             this.BotonVerJuicios.UseVisualStyleBackColor = true;
@@ -286,7 +291,8 @@
             // BotonVerCobros
             // 
             this.BotonVerCobros.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BotonVerCobros.Location = new System.Drawing.Point(206, 289);
+            this.BotonVerCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonVerCobros.Location = new System.Drawing.Point(206, 292);
             this.BotonVerCobros.Name = "BotonVerCobros";
             this.BotonVerCobros.Size = new System.Drawing.Size(75, 23);
             this.BotonVerCobros.TabIndex = 24;
@@ -295,6 +301,7 @@
             // 
             // CuadroDNI
             // 
+            this.CuadroDNI.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroDNI.Location = new System.Drawing.Point(132, 3);
             this.CuadroDNI.Name = "CuadroDNI";
             this.CuadroDNI.Size = new System.Drawing.Size(223, 20);
@@ -302,6 +309,7 @@
             // 
             // CuadroDomicilio
             // 
+            this.CuadroDomicilio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroDomicilio.Location = new System.Drawing.Point(132, 29);
             this.CuadroDomicilio.Name = "CuadroDomicilio";
             this.CuadroDomicilio.Size = new System.Drawing.Size(223, 20);
@@ -309,6 +317,7 @@
             // 
             // CuadroTelefono
             // 
+            this.CuadroTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroTelefono.Location = new System.Drawing.Point(132, 55);
             this.CuadroTelefono.Name = "CuadroTelefono";
             this.CuadroTelefono.Size = new System.Drawing.Size(223, 20);
@@ -316,6 +325,7 @@
             // 
             // CuadroProfesion
             // 
+            this.CuadroProfesion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroProfesion.Location = new System.Drawing.Point(132, 107);
             this.CuadroProfesion.Name = "CuadroProfesion";
             this.CuadroProfesion.Size = new System.Drawing.Size(223, 20);
@@ -323,6 +333,7 @@
             // 
             // CuadroLugarTrabajo
             // 
+            this.CuadroLugarTrabajo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroLugarTrabajo.Location = new System.Drawing.Point(132, 133);
             this.CuadroLugarTrabajo.Name = "CuadroLugarTrabajo";
             this.CuadroLugarTrabajo.Size = new System.Drawing.Size(223, 20);
@@ -330,6 +341,7 @@
             // 
             // CuadroCUIL
             // 
+            this.CuadroCUIL.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroCUIL.Location = new System.Drawing.Point(132, 159);
             this.CuadroCUIL.Name = "CuadroCUIL";
             this.CuadroCUIL.Size = new System.Drawing.Size(223, 20);
@@ -337,6 +349,7 @@
             // 
             // CuadroEstadoCivil
             // 
+            this.CuadroEstadoCivil.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroEstadoCivil.Location = new System.Drawing.Point(132, 185);
             this.CuadroEstadoCivil.Name = "CuadroEstadoCivil";
             this.CuadroEstadoCivil.Size = new System.Drawing.Size(223, 20);
@@ -344,6 +357,7 @@
             // 
             // CuadroRepresentante
             // 
+            this.CuadroRepresentante.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroRepresentante.Location = new System.Drawing.Point(132, 211);
             this.CuadroRepresentante.Name = "CuadroRepresentante";
             this.CuadroRepresentante.Size = new System.Drawing.Size(223, 20);
@@ -351,6 +365,7 @@
             // 
             // CuadroDomicilioLegal
             // 
+            this.CuadroDomicilioLegal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroDomicilioLegal.Location = new System.Drawing.Point(132, 237);
             this.CuadroDomicilioLegal.Name = "CuadroDomicilioLegal";
             this.CuadroDomicilioLegal.Size = new System.Drawing.Size(223, 20);
@@ -365,6 +380,7 @@
             // 
             // BotonModificarJuicio
             // 
+            this.BotonModificarJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonModificarJuicio.Location = new System.Drawing.Point(385, 390);
             this.BotonModificarJuicio.Name = "BotonModificarJuicio";
             this.BotonModificarJuicio.Size = new System.Drawing.Size(129, 23);
@@ -374,6 +390,7 @@
             // 
             // BotonModificarCobro
             // 
+            this.BotonModificarCobro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonModificarCobro.Location = new System.Drawing.Point(385, 419);
             this.BotonModificarCobro.Name = "BotonModificarCobro";
             this.BotonModificarCobro.Size = new System.Drawing.Size(129, 23);
@@ -383,6 +400,7 @@
             // 
             // BotonCancelar
             // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonCancelar.Location = new System.Drawing.Point(349, 460);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
@@ -393,6 +411,7 @@
             // 
             // BotonAceptar
             // 
+            this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonAceptar.Location = new System.Drawing.Point(86, 460);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
@@ -410,7 +429,7 @@
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.BotonModificarCobro);
             this.Controls.Add(this.BotonModificarJuicio);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.CuadroApellido);
@@ -420,8 +439,8 @@
             this.Name = "ModificarPersona";
             this.Text = "ModificarPersona";
             this.Load += new System.EventHandler(this.ModificarPersona_Load);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.Layout.ResumeLayout(false);
+            this.Layout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -435,7 +454,7 @@
         private System.Windows.Forms.Label LabelApellido;
         private System.Windows.Forms.Label LabelNombre;
         private System.Windows.Forms.Button BotonBusquedaAvanzada;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel Layout;
         private System.Windows.Forms.Label LabelDNI;
         private System.Windows.Forms.Label LabelDomicilio;
         private System.Windows.Forms.Label LabelTelefono;

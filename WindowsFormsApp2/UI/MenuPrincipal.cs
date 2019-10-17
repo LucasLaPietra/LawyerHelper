@@ -42,6 +42,12 @@ namespace WindowsFormsApp2
             BotonPagos.ForeColor = iColorForeground;
             BotonCobros.ForeColor = iColorForeground;
             BotonDocumentos.ForeColor = iColorForeground;
+            BotonJuicios.BackColor = iColorBackground;
+            BotonPersonas.BackColor = iColorBackground;
+            BotonAgenda.BackColor = iColorBackground;
+            BotonPagos.BackColor = iColorBackground;
+            BotonCobros.BackColor = iColorBackground;
+            BotonDocumentos.BackColor = iColorBackground;
         }
 
         private void BotonPersonas_Click(object sender, EventArgs e)

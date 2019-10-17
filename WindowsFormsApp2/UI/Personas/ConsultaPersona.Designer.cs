@@ -33,7 +33,7 @@
             this.CuadroNombre = new System.Windows.Forms.TextBox();
             this.CuadroApellido = new System.Windows.Forms.TextBox();
             this.BotonBuscar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.Layout = new System.Windows.Forms.TableLayoutPanel();
             this.LabelDNI = new System.Windows.Forms.Label();
             this.LabelDNI2 = new System.Windows.Forms.Label();
             this.LabelDomicilio = new System.Windows.Forms.Label();
@@ -60,7 +60,7 @@
             this.BotonVerCobros = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelNombre
@@ -83,6 +83,7 @@
             // 
             // CuadroNombre
             // 
+            this.CuadroNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroNombre.Location = new System.Drawing.Point(62, 21);
             this.CuadroNombre.Name = "CuadroNombre";
             this.CuadroNombre.Size = new System.Drawing.Size(218, 20);
@@ -90,6 +91,7 @@
             // 
             // CuadroApellido
             // 
+            this.CuadroApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CuadroApellido.Location = new System.Drawing.Point(62, 50);
             this.CuadroApellido.Name = "CuadroApellido";
             this.CuadroApellido.Size = new System.Drawing.Size(218, 20);
@@ -97,6 +99,7 @@
             // 
             // BotonBuscar
             // 
+            this.BotonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBuscar.Location = new System.Drawing.Point(297, 50);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
@@ -105,52 +108,52 @@
             this.BotonBuscar.UseVisualStyleBackColor = true;
             this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
-            // tableLayoutPanel1
+            // Layout
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.LabelDNI, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDNI2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDomicilio, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDomicilio2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelTelefono, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.LabelTelefono2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFechaNacimiento, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFechaNacimiento2, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.LabelProfesion, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.LabelProfesion2, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.LabelLugarTrabajo, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.LabelLugarTrabajo2, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCUIL, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCUIL2, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.LabelEstadoCivil, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.LabelEstadoCivil2, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.LabelRepresentante, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.LabelRepresentante2, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDomicilioLegal, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDomicilioLegal2, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.LabelJuiciosAsociados, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCobrosAsociados, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.BotonVerJuicios, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.BotonVerCobros, 1, 11);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(14, 130);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 12;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(358, 324);
-            this.tableLayoutPanel1.TabIndex = 5;
+            this.Layout.ColumnCount = 2;
+            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Layout.Controls.Add(this.LabelDNI, 0, 0);
+            this.Layout.Controls.Add(this.LabelDNI2, 1, 0);
+            this.Layout.Controls.Add(this.LabelDomicilio, 0, 1);
+            this.Layout.Controls.Add(this.LabelDomicilio2, 1, 1);
+            this.Layout.Controls.Add(this.LabelTelefono, 0, 2);
+            this.Layout.Controls.Add(this.LabelTelefono2, 1, 2);
+            this.Layout.Controls.Add(this.LabelFechaNacimiento, 0, 3);
+            this.Layout.Controls.Add(this.LabelFechaNacimiento2, 1, 3);
+            this.Layout.Controls.Add(this.LabelProfesion, 0, 4);
+            this.Layout.Controls.Add(this.LabelProfesion2, 1, 4);
+            this.Layout.Controls.Add(this.LabelLugarTrabajo, 0, 5);
+            this.Layout.Controls.Add(this.LabelLugarTrabajo2, 1, 5);
+            this.Layout.Controls.Add(this.LabelCUIL, 0, 6);
+            this.Layout.Controls.Add(this.LabelCUIL2, 1, 6);
+            this.Layout.Controls.Add(this.LabelEstadoCivil, 0, 7);
+            this.Layout.Controls.Add(this.LabelEstadoCivil2, 1, 7);
+            this.Layout.Controls.Add(this.LabelRepresentante, 0, 8);
+            this.Layout.Controls.Add(this.LabelRepresentante2, 1, 8);
+            this.Layout.Controls.Add(this.LabelDomicilioLegal, 0, 9);
+            this.Layout.Controls.Add(this.LabelDomicilioLegal2, 1, 9);
+            this.Layout.Controls.Add(this.LabelJuiciosAsociados, 0, 10);
+            this.Layout.Controls.Add(this.LabelCobrosAsociados, 0, 11);
+            this.Layout.Controls.Add(this.BotonVerJuicios, 1, 10);
+            this.Layout.Controls.Add(this.BotonVerCobros, 1, 11);
+            this.Layout.Location = new System.Drawing.Point(14, 130);
+            this.Layout.Name = "Layout";
+            this.Layout.RowCount = 12;
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.Layout.Size = new System.Drawing.Size(358, 324);
+            this.Layout.TabIndex = 5;
             // 
             // LabelDNI
             // 
@@ -353,6 +356,7 @@
             // BotonVerJuicios
             // 
             this.BotonVerJuicios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BotonVerJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonVerJuicios.Location = new System.Drawing.Point(231, 263);
             this.BotonVerJuicios.Name = "BotonVerJuicios";
             this.BotonVerJuicios.Size = new System.Drawing.Size(75, 20);
@@ -363,6 +367,7 @@
             // BotonVerCobros
             // 
             this.BotonVerCobros.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BotonVerCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonVerCobros.Location = new System.Drawing.Point(231, 293);
             this.BotonVerCobros.Name = "BotonVerCobros";
             this.BotonVerCobros.Size = new System.Drawing.Size(75, 23);
@@ -372,6 +377,7 @@
             // 
             // BotonCancelar
             // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonCancelar.Location = new System.Drawing.Point(145, 460);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
@@ -382,6 +388,7 @@
             // 
             // BotonBusquedaAvanzada
             // 
+            this.BotonBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 86);
             this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
             this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
@@ -397,7 +404,7 @@
             this.ClientSize = new System.Drawing.Size(384, 492);
             this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonCancelar);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.CuadroApellido);
             this.Controls.Add(this.CuadroNombre);
@@ -405,8 +412,8 @@
             this.Controls.Add(this.LabelNombre);
             this.Name = "ConsultaPersona";
             this.Text = "ConsultaPersona";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.Layout.ResumeLayout(false);
+            this.Layout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,7 +426,7 @@
         private System.Windows.Forms.TextBox CuadroNombre;
         private System.Windows.Forms.TextBox CuadroApellido;
         private System.Windows.Forms.Button BotonBuscar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel Layout;
         private System.Windows.Forms.Label LabelDNI;
         private System.Windows.Forms.Label LabelDNI2;
         private System.Windows.Forms.Label LabelDomicilio;
