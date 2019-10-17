@@ -13,18 +13,15 @@ using LawyerHelper.Clases;
 using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
-
+using WindowsFormsApp2;
 namespace LawyerHelper.UI.Personas
 {
     public partial class MenuPersonasUC : UserControl
     {
-        public MenuPersonasUC(Color pColorForeground)
+        Color iColorForeground = Colores.ColorForeground;
+        public MenuPersonasUC()
         {
             InitializeComponent();
-            BotonAlta.ForeColor = pColorForeground;
-            BotonBaja.ForeColor = pColorForeground;
-            BotonModificacion.ForeColor = pColorForeground;
-            BotonConsulta.ForeColor = pColorForeground;
         }
 
         private void BotonAlta_Click(object sender, EventArgs e)
@@ -35,7 +32,10 @@ namespace LawyerHelper.UI.Personas
 
         private void MenuPersonas_Load(object sender, EventArgs e)
         {
-            
+            BotonAlta.ForeColor = iColorForeground;
+            BotonBaja.ForeColor = iColorForeground;
+            BotonModificacion.ForeColor = iColorForeground;
+            BotonConsulta.ForeColor = iColorForeground;
         }
 
         private void BotonBaja_Click(object sender, EventArgs e)

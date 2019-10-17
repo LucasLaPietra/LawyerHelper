@@ -23,9 +23,9 @@ namespace WindowsFormsApp2
 {
     public partial class MenuPrincipal : Form
     {
-        Color iColorBackground = Color.FromArgb(35, 37, 57);
-        Color iColorPresionado = Color.FromArgb(54, 57, 89);
-        Color iColorForeground = Color.FromArgb(179, 182, 208);
+        Color iColorBackground = Colores.ColorBackground;
+        Color iColorPresionado = Colores.ColorPresionado;
+        Color iColorForeground = Colores.ColorForeground;
         public MenuPrincipal()
         {
             InitializeComponent();
@@ -35,6 +35,7 @@ namespace WindowsFormsApp2
         {
             this.BackColor = iColorBackground;
             LabelTitulo.ForeColor = iColorForeground;
+            LabelCreditos.ForeColor = iColorForeground;
             BotonPersonas.ForeColor = iColorForeground;
             BotonJuicios.ForeColor = iColorForeground;
             BotonAgenda.ForeColor = iColorForeground;
@@ -59,7 +60,7 @@ namespace WindowsFormsApp2
                 BotonPagos.BackColor = iColorBackground;
                 BotonCobros.BackColor = iColorBackground;
                 BotonDocumentos.BackColor = iColorBackground;
-                MenuPersonasUC iMenuNuevo = new MenuPersonasUC(iColorForeground);
+                MenuPersonasUC iMenuNuevo = new MenuPersonasUC();
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
@@ -87,7 +88,7 @@ namespace WindowsFormsApp2
                 BotonPagos.BackColor = iColorBackground;
                 BotonCobros.BackColor = iColorBackground;
                 BotonDocumentos.BackColor = iColorBackground;
-                MenuJuiciosUC iMenuNuevo = new MenuJuiciosUC(iColorForeground);
+                MenuJuiciosUC iMenuNuevo = new MenuJuiciosUC();
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
@@ -115,7 +116,7 @@ namespace WindowsFormsApp2
                 BotonPagos.BackColor = iColorBackground;
                 BotonCobros.BackColor = iColorBackground;
                 BotonDocumentos.BackColor = iColorBackground;
-                MenuAgendaUC iMenuNuevo = new MenuAgendaUC(iColorForeground);
+                MenuAgendaUC iMenuNuevo = new MenuAgendaUC();
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
@@ -143,7 +144,7 @@ namespace WindowsFormsApp2
                 BotonPersonas.BackColor = iColorBackground;
                 BotonCobros.BackColor = iColorBackground;
                 BotonDocumentos.BackColor = iColorBackground;
-                MenuPagosUC iMenuNuevo = new MenuPagosUC(iColorForeground);
+                MenuPagosUC iMenuNuevo = new MenuPagosUC();
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
@@ -171,7 +172,7 @@ namespace WindowsFormsApp2
                 BotonPagos.BackColor = iColorBackground;
                 BotonPersonas.BackColor = iColorBackground;
                 BotonDocumentos.BackColor = iColorBackground;
-                MenuCobrosUC iMenuNuevo = new MenuCobrosUC(iColorForeground);
+                MenuCobrosUC iMenuNuevo = new MenuCobrosUC();
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
@@ -199,7 +200,7 @@ namespace WindowsFormsApp2
                 BotonPagos.BackColor = iColorBackground;
                 BotonCobros.BackColor = iColorBackground;
                 BotonPersonas.BackColor = iColorBackground;
-                MenuDocumentosUC iMenuNuevo = new MenuDocumentosUC(iColorForeground);
+                MenuDocumentosUC iMenuNuevo = new MenuDocumentosUC();
                 PanelOpciones.Controls.Clear();
                 PanelOpciones.Controls.Add(iMenuNuevo);
             }
@@ -211,7 +212,7 @@ namespace WindowsFormsApp2
             }
         }
 
-        /*private void BotonAjustes_Click(object sender, EventArgs e)
+       /* private void BotonAjustes_Click(object sender, EventArgs e)
         {
             
             Ajustes iMenuNuevo = new Ajustes();
@@ -220,14 +221,30 @@ namespace WindowsFormsApp2
                 iColorBackground = iMenuNuevo.ColorBackground;
                 iColorPresionado = iMenuNuevo.ColorPresionado;
                 iColorForeground = iMenuNuevo.ColorForeground;
+                PanelOpciones.Controls.Clear();
                 this.BackColor = iColorBackground;
+                FlechaPersonas.Visible = false;
+                FlechaJuicios.Visible = false;
+                FlechaAgenda.Visible = false;
+                FlechaPagos.Visible = false;
+                FlechaCobros.Visible = false;
+                FlechaDocumentos.Visible = false;
                 LabelTitulo.ForeColor = iColorForeground;
                 BotonPersonas.ForeColor = iColorForeground;
                 BotonJuicios.ForeColor = iColorForeground;
+                BotonAjustes.ForeColor = iColorForeground;
                 BotonAgenda.ForeColor = iColorForeground;
                 BotonPagos.ForeColor = iColorForeground;
                 BotonCobros.ForeColor = iColorForeground;
                 BotonDocumentos.ForeColor = iColorForeground;
+                LabelCreditos.ForeColor = iColorForeground;
+                BotonDocumentos.BackColor = iColorBackground;
+                BotonJuicios.BackColor = iColorBackground;
+                BotonAgenda.BackColor = iColorBackground;
+                BotonPagos.BackColor = iColorBackground;
+                BotonCobros.BackColor = iColorBackground;
+                BotonPersonas.BackColor = iColorBackground;
+                BotonAjustes.BackColor = iColorBackground;
             }
         }*/
     }

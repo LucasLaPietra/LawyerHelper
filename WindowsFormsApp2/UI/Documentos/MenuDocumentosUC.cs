@@ -7,18 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LawyerHelper.Clases;
 
 namespace LawyerHelper.UI.Documentos
 {
     public partial class MenuDocumentosUC : UserControl
     {
-        public MenuDocumentosUC(Color pColorForeground)
+        Color iColorForeground = Colores.ColorForeground;
+        public MenuDocumentosUC()
         {
             InitializeComponent();
-            BotonAlta.ForeColor = pColorForeground;
-            BotonBaja.ForeColor = pColorForeground;
-            BotonModificacion.ForeColor = pColorForeground;
-            BotonConsulta.ForeColor = pColorForeground;
+            BotonAlta.ForeColor = iColorForeground;
+            BotonBaja.ForeColor = iColorForeground;
+            BotonModificacion.ForeColor = iColorForeground;
+            BotonConsulta.ForeColor = iColorForeground;
         }
 
         private void BotonAlta_Click(object sender, EventArgs e)

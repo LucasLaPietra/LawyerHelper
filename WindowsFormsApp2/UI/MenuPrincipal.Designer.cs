@@ -66,11 +66,11 @@
             // LabelCreditos
             // 
             this.LabelCreditos.AutoSize = true;
-            this.LabelCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCreditos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelCreditos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.LabelCreditos.Location = new System.Drawing.Point(257, 639);
             this.LabelCreditos.Name = "LabelCreditos";
-            this.LabelCreditos.Size = new System.Drawing.Size(207, 13);
+            this.LabelCreditos.Size = new System.Drawing.Size(215, 13);
             this.LabelCreditos.TabIndex = 6;
             this.LabelCreditos.Text = "Alba, Chrispens, La Pietra, Retamar - 2019";
             // 
@@ -145,7 +145,7 @@
             // 
             this.BotonDocumentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonDocumentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonDocumentos.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonDocumentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonDocumentos.Image = ((System.Drawing.Image)(resources.GetObject("BotonDocumentos.Image")));
             this.BotonDocumentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,9 +162,9 @@
             // 
             this.BotonCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCobros.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonCobros.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonCobros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonCobros.Image = ((System.Drawing.Image)(resources.GetObject("BotonCobros.Image")));
+            this.BotonCobros.Image = global::LawyerHelper.Properties.Resources.tag;
             this.BotonCobros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonCobros.Location = new System.Drawing.Point(-1, 420);
             this.BotonCobros.Name = "BotonCobros";
@@ -179,9 +179,9 @@
             // 
             this.BotonPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonPagos.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonPagos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonPagos.Image = ((System.Drawing.Image)(resources.GetObject("BotonPagos.Image")));
+            this.BotonPagos.Image = global::LawyerHelper.Properties.Resources.tag;
             this.BotonPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonPagos.Location = new System.Drawing.Point(-1, 495);
             this.BotonPagos.Name = "BotonPagos";
@@ -196,9 +196,9 @@
             // 
             this.BotonAgenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonAgenda.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonAgenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonAgenda.Image = ((System.Drawing.Image)(resources.GetObject("BotonAgenda.Image")));
+            this.BotonAgenda.Image = global::LawyerHelper.Properties.Resources.calendar;
             this.BotonAgenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonAgenda.Location = new System.Drawing.Point(-1, 270);
             this.BotonAgenda.Name = "BotonAgenda";
@@ -213,9 +213,9 @@
             // 
             this.BotonJuicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonJuicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonJuicios.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonJuicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonJuicios.Image = ((System.Drawing.Image)(resources.GetObject("BotonJuicios.Image")));
+            this.BotonJuicios.Image = global::LawyerHelper.Properties.Resources.pencil;
             this.BotonJuicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonJuicios.Location = new System.Drawing.Point(-1, 195);
             this.BotonJuicios.Name = "BotonJuicios";
@@ -230,9 +230,9 @@
             // 
             this.BotonPersonas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonPersonas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonPersonas.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonPersonas.Image = ((System.Drawing.Image)(resources.GetObject("BotonPersonas.Image")));
+            this.BotonPersonas.Image = global::LawyerHelper.Properties.Resources.user_4;
             this.BotonPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonPersonas.Location = new System.Drawing.Point(-1, 120);
             this.BotonPersonas.Name = "BotonPersonas";

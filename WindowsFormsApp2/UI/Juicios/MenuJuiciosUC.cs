@@ -8,19 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.UI.Juicios;
+using LawyerHelper.Clases;
 using WindowsFormsApp2.Juicios;
 
 namespace LawyerHelper.UI.Juicios
 {
     public partial class MenuJuiciosUC : UserControl
     {
-        public MenuJuiciosUC(Color pColorForeground)
+        Color iColorForeground = Colores.ColorForeground;
+        public MenuJuiciosUC()
         {
             InitializeComponent();
-            BotonAlta.ForeColor = pColorForeground;
-            BotonBaja.ForeColor = pColorForeground;
-            BotonModificacion.ForeColor = pColorForeground;
-            BotonConsulta.ForeColor = pColorForeground;
+            BotonAlta.ForeColor = iColorForeground;
+            BotonBaja.ForeColor = iColorForeground;
+            BotonModificacion.ForeColor = iColorForeground;
+            BotonConsulta.ForeColor = iColorForeground;
         }
 
         private void BotonAlta_Click(object sender, EventArgs e)
