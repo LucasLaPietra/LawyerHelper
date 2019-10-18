@@ -25,6 +25,24 @@ namespace WindowsFormsApp2.Cobros
             CuadroMinutos.Text = DateTime.Now.Minute.ToString();
             CuadroAM.Text = DateTime.Now.ToString("tt");
             iControladorCobro = new ControladorCobro(UnidadDeTrabajo.Instancia);
+            //Asignacion de colores      
+            //Background
+            this.BackColor = Colores.ColorBackground;
+            //Cajas
+            foreach (TextBox t in Controls.OfType<TextBox>())
+            {
+                t.ForeColor = Colores.ColorForeground;
+                t.BackColor = Colores.ColorBackgroundCajas;
+            }
+            // Labels
+            foreach (Label l in Controls.OfType<Label>())
+                l.ForeColor = Colores.ColorForeground;
+            //Botones
+            foreach (Button b in Controls.OfType<Button>())
+            {
+                b.ForeColor = Colores.ColorForeground;
+                b.BackColor = Colores.ColorBackground;
+            }
         }
 
         private void CuadroHora_TextChanged(object sender, EventArgs e)

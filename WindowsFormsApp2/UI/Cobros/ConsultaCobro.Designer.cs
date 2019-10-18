@@ -38,11 +38,11 @@
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelHora = new System.Windows.Forms.Label();
-            this.checkedListBoxCobros = new System.Windows.Forms.CheckedListBox();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
             this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
+            this.ListBoxCobros = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // BotonCancelar
@@ -135,14 +135,6 @@
             this.LabelHora.TabIndex = 142;
             this.LabelHora.Text = "Hora";
             // 
-            // checkedListBoxCobros
-            // 
-            this.checkedListBoxCobros.FormattingEnabled = true;
-            this.checkedListBoxCobros.Location = new System.Drawing.Point(12, 52);
-            this.checkedListBoxCobros.Name = "checkedListBoxCobros";
-            this.checkedListBoxCobros.Size = new System.Drawing.Size(348, 169);
-            this.checkedListBoxCobros.TabIndex = 141;
-            // 
             // LabelFecha
             // 
             this.LabelFecha.AutoSize = true;
@@ -177,11 +169,20 @@
             this.BotonJuiciosAsignados.Text = "Ver Juicio asignado";
             this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
             // 
+            // ListBoxCobros
+            // 
+            this.ListBoxCobros.FormattingEnabled = true;
+            this.ListBoxCobros.Location = new System.Drawing.Point(12, 46);
+            this.ListBoxCobros.Name = "ListBoxCobros";
+            this.ListBoxCobros.Size = new System.Drawing.Size(347, 186);
+            this.ListBoxCobros.TabIndex = 170;
+            // 
             // ConsultaCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
+            this.Controls.Add(this.ListBoxCobros);
             this.Controls.Add(this.BotonPersonasAsociadas);
             this.Controls.Add(this.BotonJuiciosAsignados);
             this.Controls.Add(this.BotonCancelar);
@@ -194,7 +195,6 @@
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
             this.Controls.Add(this.LabelHora);
-            this.Controls.Add(this.checkedListBoxCobros);
             this.Controls.Add(this.LabelFecha);
             this.Controls.Add(this.dateTimePickerFecha);
             this.Name = "ConsultaCobro";
@@ -216,10 +216,10 @@
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelHora;
-        private System.Windows.Forms.CheckedListBox checkedListBoxCobros;
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
         private System.Windows.Forms.Button BotonPersonasAsociadas;
         private System.Windows.Forms.Button BotonJuiciosAsignados;
+        private System.Windows.Forms.ListBox ListBoxCobros;
     }
 }

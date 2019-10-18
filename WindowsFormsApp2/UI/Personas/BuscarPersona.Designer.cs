@@ -53,6 +53,7 @@
             this.LabelComboBoxParametro = new System.Windows.Forms.Label();
             this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
             this.BotonAceptar = new System.Windows.Forms.Button();
+            this.BotonMostrarTodos = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,7 @@
             this.Layout.Controls.Add(this.LabelDNI, 0, 3);
             this.Layout.Controls.Add(this.LabelApellido, 0, 2);
             this.Layout.Controls.Add(this.LabelCUIL2, 1, 20);
-            this.Layout.Location = new System.Drawing.Point(18, 143);
+            this.Layout.Location = new System.Drawing.Point(18, 186);
             this.Layout.Name = "Layout";
             this.Layout.RowCount = 21;
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -252,7 +253,7 @@
             // BotonCancelar
             // 
             this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(351, 300);
+            this.BotonCancelar.Location = new System.Drawing.Point(351, 343);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 83;
@@ -263,9 +264,9 @@
             // BotonBuscar
             // 
             this.BotonBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonBuscar.Location = new System.Drawing.Point(351, 61);
+            this.BotonBuscar.Location = new System.Drawing.Point(351, 64);
             this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(104, 28);
+            this.BotonBuscar.Size = new System.Drawing.Size(104, 23);
             this.BotonBuscar.TabIndex = 82;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
@@ -323,7 +324,7 @@
             // 
             this.ComboBoxResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ComboBoxResultados.FormattingEnabled = true;
-            this.ComboBoxResultados.Location = new System.Drawing.Point(18, 106);
+            this.ComboBoxResultados.Location = new System.Drawing.Point(18, 149);
             this.ComboBoxResultados.Name = "ComboBoxResultados";
             this.ComboBoxResultados.Size = new System.Drawing.Size(434, 21);
             this.ComboBoxResultados.TabIndex = 85;
@@ -333,7 +334,7 @@
             // 
             this.BotonAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAceptar.Location = new System.Drawing.Point(18, 300);
+            this.BotonAceptar.Location = new System.Drawing.Point(18, 343);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 86;
@@ -341,11 +342,23 @@
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
+            // BotonMostrarTodos
+            // 
+            this.BotonMostrarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonMostrarTodos.Location = new System.Drawing.Point(18, 104);
+            this.BotonMostrarTodos.Name = "BotonMostrarTodos";
+            this.BotonMostrarTodos.Size = new System.Drawing.Size(434, 30);
+            this.BotonMostrarTodos.TabIndex = 99;
+            this.BotonMostrarTodos.Text = "Mostrar todos los juicios";
+            this.BotonMostrarTodos.UseVisualStyleBackColor = true;
+            this.BotonMostrarTodos.Click += new System.EventHandler(this.BotonMostrarTodos_Click);
+            // 
             // BuscarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 342);
+            this.ClientSize = new System.Drawing.Size(464, 381);
+            this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.ComboBoxResultados);
             this.Controls.Add(this.Layout);
@@ -392,5 +405,6 @@
         private System.Windows.Forms.Label LabelCUIL2;
         private System.Windows.Forms.ComboBox ComboBoxResultados;
         private System.Windows.Forms.Button BotonAceptar;
+        private System.Windows.Forms.Button BotonMostrarTodos;
     }
 }

@@ -48,6 +48,11 @@ namespace LawyerHelper.Controladores
             return iUdT.RepositorioPersona.Obtener(pId);
         }
 
+        public IList<Persona> ObtenerTodos()
+        {
+            return iUdT.RepositorioPersona.ObtenerTodos();
+        }
+
         public IList<Persona> BusquedaAvanzadaPersona(string pParametro, string pValor)
         {
             return iUdT.RepositorioPersona.BusquedaPersonas(pParametro,pValor);

@@ -34,7 +34,6 @@
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
-            this.checkedListBoxPagos = new System.Windows.Forms.CheckedListBox();
             this.LabelHora = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelDetalle = new System.Windows.Forms.Label();
@@ -45,6 +44,7 @@
             this.LabelMinutos = new System.Windows.Forms.Label();
             this.LabelAM = new System.Windows.Forms.Label();
             this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
+            this.ListBoxPagos = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // BotonBuscar
@@ -98,14 +98,6 @@
             this.BotonJuiciosAsignados.TabIndex = 94;
             this.BotonJuiciosAsignados.Text = "Ver Juicios asignados";
             this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
-            // 
-            // checkedListBoxPagos
-            // 
-            this.checkedListBoxPagos.FormattingEnabled = true;
-            this.checkedListBoxPagos.Location = new System.Drawing.Point(12, 75);
-            this.checkedListBoxPagos.Name = "checkedListBoxPagos";
-            this.checkedListBoxPagos.Size = new System.Drawing.Size(360, 169);
-            this.checkedListBoxPagos.TabIndex = 95;
             // 
             // LabelHora
             // 
@@ -197,11 +189,20 @@
             this.BotonPersonasAsociadas.Text = "Ver Personas Asociadas";
             this.BotonPersonasAsociadas.UseVisualStyleBackColor = true;
             // 
+            // ListBoxPagos
+            // 
+            this.ListBoxPagos.FormattingEnabled = true;
+            this.ListBoxPagos.Location = new System.Drawing.Point(12, 72);
+            this.ListBoxPagos.Name = "ListBoxPagos";
+            this.ListBoxPagos.Size = new System.Drawing.Size(360, 186);
+            this.ListBoxPagos.TabIndex = 130;
+            // 
             // BajaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
+            this.Controls.Add(this.ListBoxPagos);
             this.Controls.Add(this.BotonPersonasAsociadas);
             this.Controls.Add(this.LabelAM);
             this.Controls.Add(this.LabelMinutos);
@@ -212,7 +213,6 @@
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
             this.Controls.Add(this.LabelHora);
-            this.Controls.Add(this.checkedListBoxPagos);
             this.Controls.Add(this.BotonJuiciosAsignados);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
@@ -235,7 +235,6 @@
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Button BotonJuiciosAsignados;
-        private System.Windows.Forms.CheckedListBox checkedListBoxPagos;
         private System.Windows.Forms.Label LabelHora;
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelDetalle;
@@ -246,5 +245,6 @@
         private System.Windows.Forms.Label LabelMinutos;
         private System.Windows.Forms.Label LabelAM;
         private System.Windows.Forms.Button BotonPersonasAsociadas;
+        private System.Windows.Forms.ListBox ListBoxPagos;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.LabelListaRecordatorios = new System.Windows.Forms.Label();
-            this.checkedListBoxRecordatorio = new System.Windows.Forms.CheckedListBox();
             this.CuadroTipo = new System.Windows.Forms.TextBox();
             this.LabelTipo = new System.Windows.Forms.Label();
             this.CuadroAM = new System.Windows.Forms.ComboBox();
@@ -45,6 +44,7 @@
             this.CuadroLugar = new System.Windows.Forms.TextBox();
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.LabelLugar = new System.Windows.Forms.Label();
+            this.ListBoxRecordatorios = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // LabelListaRecordatorios
@@ -55,14 +55,6 @@
             this.LabelListaRecordatorios.Size = new System.Drawing.Size(111, 13);
             this.LabelListaRecordatorios.TabIndex = 176;
             this.LabelListaRecordatorios.Text = "Lista de recordatorios:";
-            // 
-            // checkedListBoxRecordatorio
-            // 
-            this.checkedListBoxRecordatorio.FormattingEnabled = true;
-            this.checkedListBoxRecordatorio.Location = new System.Drawing.Point(25, 28);
-            this.checkedListBoxRecordatorio.Name = "checkedListBoxRecordatorio";
-            this.checkedListBoxRecordatorio.Size = new System.Drawing.Size(332, 154);
-            this.checkedListBoxRecordatorio.TabIndex = 175;
             // 
             // CuadroTipo
             // 
@@ -191,13 +183,21 @@
             this.LabelLugar.TabIndex = 160;
             this.LabelLugar.Text = "Lugar:";
             // 
+            // ListBoxRecordatorios
+            // 
+            this.ListBoxRecordatorios.FormattingEnabled = true;
+            this.ListBoxRecordatorios.Location = new System.Drawing.Point(25, 34);
+            this.ListBoxRecordatorios.Name = "ListBoxRecordatorios";
+            this.ListBoxRecordatorios.Size = new System.Drawing.Size(331, 134);
+            this.ListBoxRecordatorios.TabIndex = 177;
+            // 
             // BajaRecordatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 524);
+            this.Controls.Add(this.ListBoxRecordatorios);
             this.Controls.Add(this.LabelListaRecordatorios);
-            this.Controls.Add(this.checkedListBoxRecordatorio);
             this.Controls.Add(this.CuadroTipo);
             this.Controls.Add(this.LabelTipo);
             this.Controls.Add(this.CuadroAM);
@@ -223,7 +223,6 @@
         #endregion
 
         private System.Windows.Forms.Label LabelListaRecordatorios;
-        private System.Windows.Forms.CheckedListBox checkedListBoxRecordatorio;
         private System.Windows.Forms.TextBox CuadroTipo;
         private System.Windows.Forms.Label LabelTipo;
         private System.Windows.Forms.ComboBox CuadroAM;
@@ -239,5 +238,6 @@
         private System.Windows.Forms.TextBox CuadroLugar;
         private System.Windows.Forms.Label LabelDescripcion;
         private System.Windows.Forms.Label LabelLugar;
+        private System.Windows.Forms.ListBox ListBoxRecordatorios;
     }
 }

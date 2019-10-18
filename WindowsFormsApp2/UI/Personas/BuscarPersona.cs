@@ -69,6 +69,12 @@ namespace LawyerHelper.UI.Personas
                 b.ForeColor = Colores.ColorForeground;
                 b.BackColor = Colores.ColorBackground;
             }
+            //ComboBox
+            foreach (ComboBox c in Layout.Controls.OfType<ComboBox>())
+            {
+                c.ForeColor = Colores.ColorForeground;
+                c.BackColor = Colores.ColorBackground;
+            }
         }
 
         private void BuscarPersona_Load(object sender, EventArgs e)
@@ -111,6 +117,20 @@ namespace LawyerHelper.UI.Personas
             LabelFechaDeNacimiento2.Text = iSeleccionado.FechaNacimiento.ToShortDateString();
             LabelProfesion2.Text = iSeleccionado.Profesion;
             LabelCUIL2.Text = iSeleccionado.Cuil;
+        }
+
+        private void BotonMostrarTodos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                iResultados = iControladorPersona.ObtenerTodos().ToList();
+                ComboBoxResultados.DataSource = iResultados;
+                ComboBoxResultados.DisplayMember = "Apellido";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al mostrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
         }
     }
 }

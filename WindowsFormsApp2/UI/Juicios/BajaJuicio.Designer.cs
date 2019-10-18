@@ -33,8 +33,7 @@
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.CuadroNumeroDeExpediente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.LabelExpediente = new System.Windows.Forms.Label();
+            this.Layout = new System.Windows.Forms.TableLayoutPanel();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.LabelFolio = new System.Windows.Forms.Label();
             this.LabelFuero = new System.Windows.Forms.Label();
@@ -72,8 +71,9 @@
             this.LabelDemandado2 = new System.Windows.Forms.Label();
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
+            this.LabelExpediente = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
             // BotonBuscarPorOtroCampo
@@ -119,84 +119,75 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Nro. de expediente:";
             // 
-            // tableLayoutPanel1
+            // Layout
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.LabelFecha, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFolio, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFuero, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.LabelTipoProceso, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.LabelExpediente2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCompetencia, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.LabelRecurso, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCaratula, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.LabelLibro2, 0, 9);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDescripcion, 0, 10);
-            this.tableLayoutPanel1.Controls.Add(this.LabelBienes, 0, 12);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFecha2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFolio2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.LabelJurisdiccion2, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.LabelTipoJuicio2, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.LabelTipoProceso2, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCompetencia2, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.LabelRecurso2, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.LabelCaratula2, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.label24, 1, 9);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDescripcion2, 1, 10);
-            this.tableLayoutPanel1.Controls.Add(this.LabelEtapa2, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.LabelBienes2, 1, 12);
-            this.tableLayoutPanel1.Controls.Add(this.LabelGrupoFamiliar, 0, 13);
-            this.tableLayoutPanel1.Controls.Add(this.LabelJuez, 0, 14);
-            this.tableLayoutPanel1.Controls.Add(this.LabelSecretario, 0, 15);
-            this.tableLayoutPanel1.Controls.Add(this.LabelPrecio, 0, 16);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDemandante, 0, 17);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDemandado, 0, 18);
-            this.tableLayoutPanel1.Controls.Add(this.LabelGrupoFamiliar2, 1, 13);
-            this.tableLayoutPanel1.Controls.Add(this.LabelJuez2, 1, 14);
-            this.tableLayoutPanel1.Controls.Add(this.LabelSecretario2, 1, 15);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDemandante2, 1, 17);
-            this.tableLayoutPanel1.Controls.Add(this.LabelPrecio2, 1, 16);
-            this.tableLayoutPanel1.Controls.Add(this.LabelDemandado2, 1, 18);
-            this.tableLayoutPanel1.Controls.Add(this.LabelJurisdiccion, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.LabelEtapa, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.LabelExpediente, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 104);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 21;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(439, 249);
-            this.tableLayoutPanel1.TabIndex = 38;
-            // 
-            // LabelExpediente
-            // 
-            this.LabelExpediente.AutoSize = true;
-            this.LabelExpediente.Location = new System.Drawing.Point(3, 0);
-            this.LabelExpediente.Name = "LabelExpediente";
-            this.LabelExpediente.Size = new System.Drawing.Size(83, 13);
-            this.LabelExpediente.TabIndex = 0;
-            this.LabelExpediente.Text = "Nro Expediente:";
+            this.Layout.ColumnCount = 2;
+            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Layout.Controls.Add(this.LabelFecha, 0, 1);
+            this.Layout.Controls.Add(this.LabelFolio, 0, 2);
+            this.Layout.Controls.Add(this.LabelFuero, 0, 4);
+            this.Layout.Controls.Add(this.LabelTipoProceso, 0, 5);
+            this.Layout.Controls.Add(this.LabelExpediente2, 1, 0);
+            this.Layout.Controls.Add(this.LabelCompetencia, 0, 6);
+            this.Layout.Controls.Add(this.LabelRecurso, 0, 7);
+            this.Layout.Controls.Add(this.LabelCaratula, 0, 8);
+            this.Layout.Controls.Add(this.LabelLibro2, 0, 9);
+            this.Layout.Controls.Add(this.LabelDescripcion, 0, 10);
+            this.Layout.Controls.Add(this.LabelBienes, 0, 12);
+            this.Layout.Controls.Add(this.LabelFecha2, 1, 1);
+            this.Layout.Controls.Add(this.LabelFolio2, 1, 2);
+            this.Layout.Controls.Add(this.LabelJurisdiccion2, 1, 3);
+            this.Layout.Controls.Add(this.LabelTipoJuicio2, 1, 4);
+            this.Layout.Controls.Add(this.LabelTipoProceso2, 1, 5);
+            this.Layout.Controls.Add(this.LabelCompetencia2, 1, 6);
+            this.Layout.Controls.Add(this.LabelRecurso2, 1, 7);
+            this.Layout.Controls.Add(this.LabelCaratula2, 1, 8);
+            this.Layout.Controls.Add(this.label24, 1, 9);
+            this.Layout.Controls.Add(this.LabelDescripcion2, 1, 10);
+            this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
+            this.Layout.Controls.Add(this.LabelBienes2, 1, 12);
+            this.Layout.Controls.Add(this.LabelGrupoFamiliar, 0, 13);
+            this.Layout.Controls.Add(this.LabelJuez, 0, 14);
+            this.Layout.Controls.Add(this.LabelSecretario, 0, 15);
+            this.Layout.Controls.Add(this.LabelPrecio, 0, 16);
+            this.Layout.Controls.Add(this.LabelDemandante, 0, 17);
+            this.Layout.Controls.Add(this.LabelDemandado, 0, 18);
+            this.Layout.Controls.Add(this.LabelGrupoFamiliar2, 1, 13);
+            this.Layout.Controls.Add(this.LabelJuez2, 1, 14);
+            this.Layout.Controls.Add(this.LabelSecretario2, 1, 15);
+            this.Layout.Controls.Add(this.LabelDemandante2, 1, 17);
+            this.Layout.Controls.Add(this.LabelPrecio2, 1, 16);
+            this.Layout.Controls.Add(this.LabelDemandado2, 1, 18);
+            this.Layout.Controls.Add(this.LabelJurisdiccion, 0, 3);
+            this.Layout.Controls.Add(this.LabelEtapa, 0, 11);
+            this.Layout.Controls.Add(this.LabelExpediente, 0, 0);
+            this.Layout.Location = new System.Drawing.Point(12, 104);
+            this.Layout.Name = "Layout";
+            this.Layout.RowCount = 21;
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.Size = new System.Drawing.Size(439, 249);
+            this.Layout.TabIndex = 38;
             // 
             // LabelFecha
             // 
@@ -531,6 +522,15 @@
             this.LabelEtapa.TabIndex = 12;
             this.LabelEtapa.Text = "Etapa:";
             // 
+            // LabelExpediente
+            // 
+            this.LabelExpediente.AutoSize = true;
+            this.LabelExpediente.Location = new System.Drawing.Point(3, 0);
+            this.LabelExpediente.Name = "LabelExpediente";
+            this.LabelExpediente.Size = new System.Drawing.Size(83, 13);
+            this.LabelExpediente.TabIndex = 0;
+            this.LabelExpediente.Text = "Nro Expediente:";
+            // 
             // BotonBuscar
             // 
             this.BotonBuscar.Location = new System.Drawing.Point(335, 9);
@@ -546,7 +546,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 496);
             this.Controls.Add(this.BotonBuscar);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonBuscarPorOtroCampo);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
@@ -554,8 +554,8 @@
             this.Controls.Add(this.label1);
             this.Name = "BajaJuicio";
             this.Text = "BajaJuicio";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.Layout.ResumeLayout(false);
+            this.Layout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,7 +568,7 @@
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.TextBox CuadroNumeroDeExpediente;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel Layout;
         private System.Windows.Forms.Label LabelExpediente;
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.Label LabelFolio;
