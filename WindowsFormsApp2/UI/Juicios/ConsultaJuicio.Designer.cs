@@ -553,6 +553,7 @@
             this.BotonVerDocumentacion.TabIndex = 176;
             this.BotonVerDocumentacion.Text = "Ver";
             this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
+            this.BotonVerDocumentacion.Click += new System.EventHandler(this.BotonVerDocumentacion_Click);
             // 
             // BotonCancelar
             // 

@@ -79,5 +79,10 @@ namespace WindowsFormsApp2.Juicios
         {
 
         }
+
+        private void BotonVerDocumentacion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
