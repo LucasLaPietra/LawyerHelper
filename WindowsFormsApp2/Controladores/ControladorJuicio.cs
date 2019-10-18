@@ -42,7 +42,6 @@ namespace LawyerHelper.Controladores
         public IList<Juicio> BusquedaAvanzadaJuicio(string pParametro, string pValor)
         {
             return iUdT.RepositorioJuicio.BusquedaJuicios(pParametro,pValor);
-        //agregar el busqueda avanzada en el repositorioJuicio luego de pushear Controladores
         }
 
         public IList<Juicio> MostrarJuicios()
@@ -56,7 +55,6 @@ namespace LawyerHelper.Controladores
         {
             Juicio juicio = iUdT.RepositorioJuicio.BusquedaAvanzadaJuicio("NroExpediente", pNroExpediente);
             return juicio;
-        //agregar el busqueda avanzada en el repositorioJuicio luego de pushear Controladores
         }
 
 

@@ -22,6 +22,8 @@ namespace LawyerHelper.DAL.Repositorio
             //Por eso utilice el switch para cada atributo en particular
             switch (Parametro)
             {
+                case "NroExpediente":
+                    iQuery = iContext.Juicios.Where(n => n.NroExpediente == Valor).ToList();
                 case "Juez":
                     iQuery = iContext.Juicios.Where(n => n.Juez == Valor).ToList();
                     break;
