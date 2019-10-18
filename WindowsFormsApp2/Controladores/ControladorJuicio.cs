@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LawyerHelper.Clases;
 
 namespace LawyerHelper.Controladores
 {
@@ -16,25 +17,26 @@ namespace LawyerHelper.Controladores
             iUdT = pUnidadTrabajo;
         }
 
-        public void RegistrarJuicio(string pNroExpediente, string pJuez, string pSecretario, string pEtapa,
+        public RegistrarJuicio(string pNroExpediente, string pJuez, string pSecretario, string pEtapa,
             string pDescripcion, string pBienes, DateTime pFecha, string pGrupoFamiliar, string pTipoProceso,
             string pRecurso, string pCompetencia, string pFuero, string pCaratula, string pFolio, string pLibro,
             string pJurisdiccion, Double pPrecio)
             {
-            Recordatorio iRecordatorio = new Recordatorio(pNroExpediente, pJuez, pSecretario, pEtapa,
+            Juicio iJuicio = new Juicio(pNroExpediente, pJuez, pSecretario, pEtapa,
              pDescripcion,  pBienes,  pFecha,  pGrupoFamiliar,pTipoProceso, pRecurso, pCompetencia, 
              pFuero,  pCaratula,  pFolio,  pLibro, pJurisdiccion, pPrecio);
-            iUdT.RepositorioRecordatorio.Agregar(iRecordatorio);
+            
+            iUdT.RepositorioJuicio.Agregar(iJuicio);
             iUdT.Guardar();
         }
 
-        public void BajaJuicio(Juicio pJuicio)
+        public BajaJuicio(Juicio pJuicio)
         {
             iUdT.RepositorioJuicio.Eliminar(pJuicio);
             iUdT.Guardar();
         }
 
-        public juicio ObtenerJuicio(int pId)
+        public Juicio ObtenerJuicio(int pId)
         {
             return iUdT.RepositorioJuicio.Obtener(pId);
         }

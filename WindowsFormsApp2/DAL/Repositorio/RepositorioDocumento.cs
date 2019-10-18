@@ -13,5 +13,13 @@ namespace LawyerHelper.DAL.Repositorio
         public RepositorioDocumento(Contexto pContext) : base(pContext)
         {
         }
+
+        public IList<Documento> BusquedaPorNroFoja(string pNroFoja)
+        {
+            iQuery = iContext.Documentos.Where(n => n.NroFoja == pNroFoja).ToList();
+            return iQuery;
+        }
     }
+
+
 }

@@ -1,4 +1,5 @@
-﻿using LawyerHelper.DAL.Interfaces;
+﻿using LawyerHelper.Clases;
+using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace LawyerHelper.Controladores
             return iQuery;
         }
 
-        public RegistrarDemandado(Boolean pCliente, Juicio pJuicio, Persona pPersona)
+        public void RegistrarDemandado(Boolean pCliente, Juicio pJuicio, Persona pPersona)
             {
             Demandado iDemandado = new Demandado(pCliente, pJuicio, pPersona);
             iUdT.RepositorioDemandado.Agregar(iDemandado);
@@ -30,7 +31,7 @@ namespace LawyerHelper.Controladores
             //falta constructor de la clase
         }
 
-         public BajaDemandado(Demandado pDemandado)
+         public void BajaDemandado(Demandado pDemandado)
         {
             iUdT.RepositorioDemandado.Eliminar(pDemandado);
             iUdT.Guardar();

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LawyerHelper.Clases;
 
 namespace LawyerHelper.Controladores
 {
@@ -22,7 +23,7 @@ namespace LawyerHelper.Controladores
             return iQuery;
         }
 
-        public RegistrarDemandante(Boolean pCliente, Juicio pJuicio, Persona pPersona)
+        public void RegistrarDemandante(Boolean pCliente, Juicio pJuicio, Persona pPersona)
             {
             Demandante iDemandante = new Demandante(pCliente, pJuicio, pPersona);
             iUdT.RepositorioDemandante.Agregar(iDemandante);
@@ -30,7 +31,7 @@ namespace LawyerHelper.Controladores
             //falta constructor de la clase
         }
 
-         public BajaDemandante(Demandante pDemandante)
+         public void BajaDemandante(Demandante pDemandante)
         {
             iUdT.RepositorioDemandante.Eliminar(pDemandante);
             iUdT.Guardar();
