@@ -33,5 +33,25 @@ namespace LawyerHelper.Clases
         public IList<Demandante> Demandantes { get; set; }
         public IList<Documento> Documentos { get; set; }
 
+        public Juicio(string NroExpediente,String pJuez,String pSecretario,String pEtapa,String pDescripcion,String pBienes,DateTime pFecha,String pGrupoFamiliar,String pTipoProceso,
+         String pRecurso,String pCompetencia,String pFuero,String pCaratula,String pFolio,String pLibro,String pJurisdiccion,Double pPrecio )
+        {
+            this.Juez = pJuez;
+            this.Secretario = pSecretario;
+            this.Etapa = pEtapa;
+            this.Descripcion = pDescripcion;
+            this.Bienes = pBienes;
+            this.Fecha = pFecha;
+            this.GrupoFamiliar = pGrupoFamiliar;
+            this.TipoProceso = pTipoProceso;
+            this.Recurso = pRecurso;
+            this.Competencia = pCompetencia;
+            this.Fuero = pFuero;
+            this.Caratula = pCaratula;
+            this.Folio = pFolio;
+            this.Libro = pLibro;
+            this.Jurisdiccion = pJurisdiccion;
+            this.Precio = pPrecio;
+        }
     }
 }

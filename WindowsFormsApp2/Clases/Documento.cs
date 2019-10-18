@@ -17,5 +17,15 @@ namespace LawyerHelper.Clases
         public DateTime Fecha { get; set; }
 
         public Juicio Juicio { get; set; }
+
+        public Documento (String pTipoDocumento, String pNroFoja, Boolean pEnExpediente, String pNombre, String pDetalle, DateTime pFecha, Juicio pJuicio)
+        {
+            this.TipoDocumento = pTipoDocumento;
+            this.NroFoja = pNroFoja;
+            this.EnExpediente = pEnExpediente;
+            this.Nombre = pNombre;
+            this.Detalle = pDetalle;
+            this.Fecha = pFecha;
+        }
     }
 }

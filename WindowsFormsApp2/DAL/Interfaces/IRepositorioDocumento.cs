@@ -9,5 +9,6 @@ namespace LawyerHelper.DAL.Interfaces
 {
     interface IRepositorioDocumento : IRepositorioGeneral<Documento>
     {
+        Documento BusquedaPorNroFoja(string pNroFoja);
     }
 }

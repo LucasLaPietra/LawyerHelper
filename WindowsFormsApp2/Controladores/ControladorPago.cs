@@ -22,12 +22,7 @@ namespace LawyerHelper.Controladores
             IList<Pago> iQuery = iUdT.RepositorioPago.ObtenerTodos();
             return iQuery;
         }
-        
-        public IList<Pago> MostrarPagos()
-        {
-            IList<Pago> iQuery = iUdT.RepositorioPago.ObtenerTodos();
-            return iQuery;
-        }
+       
 
 
     }

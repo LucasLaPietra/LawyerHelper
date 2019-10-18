@@ -28,7 +28,6 @@ namespace LawyerHelper.Controladores
             Demandante iDemandante = new Demandante(pCliente, pJuicio, pPersona);
             iUdT.RepositorioDemandante.Agregar(iDemandante);
             iUdT.Guardar();
-            //falta constructor de la clase
         }
 
          public void BajaDemandante(Demandante pDemandante)

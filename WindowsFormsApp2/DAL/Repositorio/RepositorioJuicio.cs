@@ -21,11 +21,12 @@ namespace LawyerHelper.DAL.Repositorio
             //No se puede utilizar variables como atributos, ya que estos deben estar definidos en tiempo de compilacion
             //Por eso utilice el switch para cada atributo en particular
             switch (Parametro)
-            {
-                case "NroExpediente":
-                    iQuery = iContext.Juicios.Where(n => n.NroExpediente == Valor).ToList();
+            {                
                 case "Juez":
                     iQuery = iContext.Juicios.Where(n => n.Juez == Valor).ToList();
+                    break;
+                case "NroExpediente":
+                    iQuery = iContext.Juicios.Where(n => n.NroExpediente == Valor).ToList();
                     break;
                 case "Secretario":
                     iQuery = iContext.Juicios.Where(n => n.Secretario == Valor).ToList();

@@ -17,7 +17,7 @@ namespace LawyerHelper.Controladores
             iUdT = pUnidadTrabajo;
         }
 
-        public RegistrarJuicio(string pNroExpediente, string pJuez, string pSecretario, string pEtapa,
+        public void RegistrarJuicio(string pNroExpediente, string pJuez, string pSecretario, string pEtapa,
             string pDescripcion, string pBienes, DateTime pFecha, string pGrupoFamiliar, string pTipoProceso,
             string pRecurso, string pCompetencia, string pFuero, string pCaratula, string pFolio, string pLibro,
             string pJurisdiccion, Double pPrecio)
@@ -30,7 +30,7 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-        public BajaJuicio(Juicio pJuicio)
+        public void BajaJuicio(Juicio pJuicio)
         {
             iUdT.RepositorioJuicio.Eliminar(pJuicio);
             iUdT.Guardar();
@@ -55,8 +55,9 @@ namespace LawyerHelper.Controladores
         
         public Juicio BusquedaPorNroExpediente(string pNroExpediente)
         {
-            Juicio juicio = iUdT.RepositorioJuicio.BusquedaAvanzadaJuicio("NroExpediente", pNroExpediente);
-            return juicio;
+            IList<Juicio> iJuicios = iUdT.RepositorioJuicio.BusquedaJuicios("NroExpediente", pNroExpediente);
+            Juicio iJuicio = iJuicios.First();
+            return iJuicio;
         }
 
 

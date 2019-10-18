@@ -46,7 +46,7 @@ namespace LawyerHelper.Controladores
         public void ModificarRecordatorio( string pLugar, string pTipo, string pDescripcion, DateTime pFechayHora)
         {
             Recordatorio iRecordatorio = new Recordatorio( pLugar, pTipo, pDescripcion, pFechayHora);
-            iUdT.RepositorioRecordatorio.ModificarRecordatorio(iRecordatorio);
+            //iUdT.RepositorioRecordatorio.ModificarRecordatorio(iRecordatorio);
             iUdT.RepositorioRecordatorio.Modificar(iRecordatorio);
             iUdT.Guardar();
         }

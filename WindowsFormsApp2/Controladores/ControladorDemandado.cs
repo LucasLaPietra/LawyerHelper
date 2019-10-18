@@ -17,9 +17,9 @@ namespace LawyerHelper.Controladores
             iUdT = pUnidadTrabajo;
         }
 
-        public IList<Demandando> MostrarDemandados()
+        public IList<Demandado> MostrarDemandados()
         {
-            IList<Demandando> iQuery = iUdT.RepositorioDemandado.ObtenerTodos();
+            IList<Demandado> iQuery = iUdT.RepositorioDemandado.ObtenerTodos();
             return iQuery;
         }
 
@@ -28,7 +28,6 @@ namespace LawyerHelper.Controladores
             Demandado iDemandado = new Demandado(pCliente, pJuicio, pPersona);
             iUdT.RepositorioDemandado.Agregar(iDemandado);
             iUdT.Guardar();
-            //falta constructor de la clase
         }
 
          public void BajaDemandado(Demandado pDemandado)

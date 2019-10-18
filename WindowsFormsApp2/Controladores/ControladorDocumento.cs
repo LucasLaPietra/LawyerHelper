@@ -26,7 +26,7 @@ namespace LawyerHelper.Controladores
 
         public void RegistrarDocumento( String pTipoDocumento, String pNroFoja, Boolean pEnExpediente, String pNombre, String pDetalle, DateTime pFecha, Juicio pJuicio)
             {
-            Documento iDocumento = new Documento(pTipoDocumento,  pNroFoja,  pEnExpediente,  pNombre,  pDetalle, pFecha, pJuicio));
+            Documento iDocumento = new Documento(pTipoDocumento,  pNroFoja,  pEnExpediente,  pNombre,  pDetalle, pFecha, pJuicio);
             iUdT.RepositorioDocumento.Agregar(iDocumento);
             iUdT.Guardar();
         }
@@ -37,21 +37,11 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-         public IList<Documento> MostrarDocumentos()
-        {
-            IList<Documento> iQuery = iUdT.RepositorioDocumento.ObtenerTodos();
-            return iQuery;
-        }
-
-
         public Documento BusquedaPorNroFoja(string pNroFoja)
         {
             Documento iDocumento = iUdT.RepositorioDocumento.BusquedaPorNroFoja(pNroFoja);
             return iDocumento;
         }
-
-
-
 
 
     }

@@ -237,6 +237,7 @@
             this.BotonAceptar.TabIndex = 36;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // BotonDemandante
             // 
