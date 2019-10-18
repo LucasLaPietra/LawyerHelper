@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
+using WindowsFormsApp2.Cobros;
 
 namespace LawyerHelper.UI.Cobros
 {
@@ -24,7 +25,20 @@ namespace LawyerHelper.UI.Cobros
 
         private void BotonAlta_Click(object sender, EventArgs e)
         {
-            
+            AltaCobro iMenuNuevo = new AltaCobro();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonBaja_Click(object sender, EventArgs e)
+        {
+            BajaCobro iMenuNuevo = new BajaCobro();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonConsulta_Click(object sender, EventArgs e)
+        {
+            ConsultaCobro iMenuNuevo = new ConsultaCobro();
+            iMenuNuevo.ShowDialog();
         }
     }
 }

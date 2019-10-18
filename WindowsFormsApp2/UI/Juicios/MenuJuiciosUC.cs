@@ -45,7 +45,8 @@ namespace LawyerHelper.UI.Juicios
 
         private void BotonBaja_Click(object sender, EventArgs e)
         {
-
+            BajaJuicio iMenuNuevo = new BajaJuicio();
+            iMenuNuevo.ShowDialog();
         }
 
 

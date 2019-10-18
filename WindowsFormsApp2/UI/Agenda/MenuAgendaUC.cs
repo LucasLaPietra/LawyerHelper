@@ -25,22 +25,26 @@ namespace LawyerHelper.UI.Agenda
 
         private void BotonAlta_Click(object sender, EventArgs e)
         {
-
+            AltaRecordatorio iMenuNuevo = new AltaRecordatorio();
+            iMenuNuevo.ShowDialog();
         }
 
         private void BotonBaja_Click(object sender, EventArgs e)
         {
-
+            BajaRecordatorio iMenuNuevo = new BajaRecordatorio();
+            iMenuNuevo.ShowDialog();
         }
 
         private void BotonModificacion_Click(object sender, EventArgs e)
         {
-
+            ModificarRecordatorio iMenuNuevo = new ModificarRecordatorio();
+            iMenuNuevo.ShowDialog();
         }
 
         private void BotonConsulta_Click(object sender, EventArgs e)
         {
-
+            ConsultaRecordatorio iMenuNuevo = new ConsultaRecordatorio();
+            iMenuNuevo.ShowDialog();
         }
     }
 }
