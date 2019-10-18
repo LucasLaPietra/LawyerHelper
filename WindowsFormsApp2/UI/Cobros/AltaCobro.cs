@@ -43,6 +43,12 @@ namespace WindowsFormsApp2.Cobros
                 b.ForeColor = Colores.ColorForeground;
                 b.BackColor = Colores.ColorBackground;
             }
+            //ComboBox
+            foreach (ComboBox c in Controls.OfType<ComboBox>())
+            {
+                c.ForeColor = Colores.ColorForeground;
+                c.BackColor = Colores.ColorBackground;
+            }
         }
 
         private void CuadroHora_TextChanged(object sender, EventArgs e)

@@ -16,10 +16,6 @@ namespace LawyerHelper.UI.Agenda
         public AltaRecordatorio()
         {
             InitializeComponent();
-        }
-
-        private void BotonAceptar_Click(object sender, EventArgs e)
-        {
             //Asignacion de colores      
             //Background
             this.BackColor = Colores.ColorBackground;
@@ -44,6 +40,11 @@ namespace LawyerHelper.UI.Agenda
                 t.ForeColor = Colores.ColorForeground;
                 t.BackColor = Colores.ColorBackgroundCajas;
             }
+        }
+
+        private void BotonAceptar_Click(object sender, EventArgs e)
+        {
+            
            
         }
     }

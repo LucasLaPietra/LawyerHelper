@@ -45,6 +45,12 @@ namespace LawyerHelper.UI.Documentos
             {
                 c.ForeColor = Colores.ColorForeground;
             }
+            //ComboBox
+            foreach (ComboBox c in Controls.OfType<ComboBox>())
+            {
+                c.ForeColor = Colores.ColorForeground;
+                c.BackColor = Colores.ColorBackground;
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)

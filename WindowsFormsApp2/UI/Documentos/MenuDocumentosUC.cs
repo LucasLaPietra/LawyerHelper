@@ -25,7 +25,26 @@ namespace LawyerHelper.UI.Documentos
 
         private void BotonAlta_Click(object sender, EventArgs e)
         {
-            
+            AltaDocumento iMenuNuevo = new AltaDocumento();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonBaja_Click(object sender, EventArgs e)
+        {
+            BajaDocumento iMenuNuevo = new BajaDocumento();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonModificacion_Click(object sender, EventArgs e)
+        {
+            ModificarDocumento iMenuNuevo = new ModificarDocumento();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonConsulta_Click(object sender, EventArgs e)
+        {
+            ModificarDocumento iMenuNuevo = new ModificarDocumento();
+            iMenuNuevo.ShowDialog();
         }
     }
 }

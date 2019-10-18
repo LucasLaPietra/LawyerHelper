@@ -35,6 +35,12 @@ namespace LawyerHelper.UI.Pagos
                 b.ForeColor = Colores.ColorForeground;
                 b.BackColor = Colores.ColorBackground;
             }
+            //ComboBox
+            foreach (ComboBox c in Controls.OfType<ComboBox>())
+            {
+                c.ForeColor = Colores.ColorForeground;
+                c.BackColor = Colores.ColorBackground;
+            }
             ListBoxPagos.ForeColor = Colores.ColorForeground;
             ListBoxPagos.BackColor = Colores.ColorBackground;
         }

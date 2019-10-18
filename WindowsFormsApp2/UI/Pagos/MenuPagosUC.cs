@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
+using WindowsFormsApp2.Pagos;
 
 namespace LawyerHelper.UI.Pagos
 {
@@ -24,7 +25,20 @@ namespace LawyerHelper.UI.Pagos
 
         private void BotonAlta_Click(object sender, EventArgs e)
         {
-            
+            AltaPago iMenuNuevo = new AltaPago();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonBaja_Click(object sender, EventArgs e)
+        {
+            BajaPago iMenuNuevo = new BajaPago();
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonConsulta_Click(object sender, EventArgs e)
+        {
+            ConsultaPago iMenuNuevo = new ConsultaPago();
+            iMenuNuevo.ShowDialog();
         }
     }
 }
