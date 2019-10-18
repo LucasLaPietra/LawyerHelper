@@ -28,5 +28,28 @@ namespace LawyerHelper.Controladores
             }
             return iQuery;
         }
+
+        public void RegistrarRecordatorio(string pLugar, string pTipo, string pDescripcion, DateTime pFechayHora)
+            {
+            Recordatorio iRecordatorio = new Recordatorio(pLugar, pTipo, pDescripcion, pFechayHora);
+            iUdT.RepositorioRecordatorio.Agregar(iRecordatorio);
+            iUdT.Guardar();
+        }
+
+        public void BajaRecordatorio(Recordatorio pRecordatorio)
+        {
+            iUdT.RepositorioRecordatorio.Eliminar(pRecordatorio);
+            iUdT.Guardar();
+        }
+
+
+        public void ModificarRecordatorio( string pLugar, string pTipo, string pDescripcion, DateTime pFechayHora)
+        {
+            Recordatorio iRecordatorio = new Recordatorio( pLugar, pTipo, pDescripcion, pFechayHora);
+            iUdT.RepositorioRecordatorio.ModificarRecordatorio(iRecordatorio);
+            iUdT.RepositorioRecordatorio.Modificar(iRecordatorio);
+            iUdT.Guardar();
+        }
+
     }
 }

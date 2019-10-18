@@ -9,5 +9,6 @@ namespace LawyerHelper.DAL.Interfaces
 {
     interface IRepositorioJuicio : IRepositorioGeneral<Juicio>
     {
+
     }
 }

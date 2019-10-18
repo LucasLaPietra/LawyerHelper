@@ -13,5 +13,8 @@ namespace LawyerHelper.DAL.Repositorio
         public RepositorioRecordatorio(Contexto pContext) : base(pContext)
         {
         }
+
+
+
     }
 }

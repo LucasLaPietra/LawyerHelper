@@ -10,4 +10,6 @@ namespace LawyerHelper.DAL.Interfaces
     interface IRepositorioRecordatorio : IRepositorioGeneral<Recordatorio>
     {
     }
+
+
 }

@@ -39,7 +39,7 @@ namespace LawyerHelper.Controladores
             iUdT.RepositorioPersona.Modificar(iPersona);
             //no me deja utilizar el savechanges de la unit of work, pero si si la hago desde el repositorio
             //iUdT.Guardar();
-        }*/
+        } */
 
         public void BajaCobro(Cobro pCobro)
         {
@@ -50,6 +50,12 @@ namespace LawyerHelper.Controladores
         public Cobro ObtenerCobro(int pId)
         {
             return iUdT.RepositorioCobro.Obtener(pId);
+        }
+
+        public IList<Cobro> MostrarCobros()
+        {
+            IList<Cobro> iQuery = iUdT.RepositorioCobro.ObtenerTodos();
+            return iQuery;
         }
     }
 }
