@@ -36,14 +36,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.CheckEnExpediente = new System.Windows.Forms.CheckBox();
-            this.CheckVuelta = new System.Windows.Forms.CheckBox();
             this.CuadroNombreDocumento = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.ComboBoxTipoDocumento = new System.Windows.Forms.ComboBox();
             this.TimePickerFecha = new System.Windows.Forms.DateTimePicker();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.CheckVuelta = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -102,7 +102,7 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(245, 437);
+            this.BotonCancelar.Location = new System.Drawing.Point(249, 471);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 12;
@@ -111,21 +111,12 @@
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(33, 437);
+            this.BotonAceptar.Location = new System.Drawing.Point(37, 471);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 11;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(34, 376);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Vuelta";
             // 
             // CheckEnExpediente
             // 
@@ -137,16 +128,6 @@
             this.CheckEnExpediente.Text = "Si";
             this.CheckEnExpediente.UseVisualStyleBackColor = true;
             this.CheckEnExpediente.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // CheckVuelta
-            // 
-            this.CheckVuelta.AutoSize = true;
-            this.CheckVuelta.Location = new System.Drawing.Point(155, 375);
-            this.CheckVuelta.Name = "CheckVuelta";
-            this.CheckVuelta.Size = new System.Drawing.Size(35, 17);
-            this.CheckVuelta.TabIndex = 15;
-            this.CheckVuelta.Text = "Si";
-            this.CheckVuelta.UseVisualStyleBackColor = true;
             // 
             // CuadroNombreDocumento
             // 
@@ -161,14 +142,6 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(202, 20);
             this.textBox3.TabIndex = 18;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(155, 259);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(202, 93);
-            this.textBox5.TabIndex = 20;
             // 
             // ComboBoxTipoDocumento
             // 
@@ -185,14 +158,42 @@
             this.TimePickerFecha.Size = new System.Drawing.Size(202, 20);
             this.TimePickerFecha.TabIndex = 22;
             // 
+            // CuadroDetalle
+            // 
+            this.CuadroDetalle.Location = new System.Drawing.Point(155, 256);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(202, 151);
+            this.CuadroDetalle.TabIndex = 171;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(34, 427);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Vuelta";
+            // 
+            // CheckVuelta
+            // 
+            this.CheckVuelta.AutoSize = true;
+            this.CheckVuelta.Location = new System.Drawing.Point(155, 426);
+            this.CheckVuelta.Name = "CheckVuelta";
+            this.CheckVuelta.Size = new System.Drawing.Size(35, 17);
+            this.CheckVuelta.TabIndex = 15;
+            this.CheckVuelta.Text = "Si";
+            this.CheckVuelta.UseVisualStyleBackColor = true;
+            // 
             // AltaDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 496);
+            this.ClientSize = new System.Drawing.Size(384, 521);
+            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.TimePickerFecha);
             this.Controls.Add(this.ComboBoxTipoDocumento);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.CuadroNombreDocumento);
             this.Controls.Add(this.CheckVuelta);
@@ -223,13 +224,13 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox CheckEnExpediente;
-        private System.Windows.Forms.CheckBox CheckVuelta;
         private System.Windows.Forms.TextBox CuadroNombreDocumento;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.ComboBox ComboBoxTipoDocumento;
         private System.Windows.Forms.DateTimePicker TimePickerFecha;
+        private System.Windows.Forms.TextBox CuadroDetalle;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.CheckBox CheckVuelta;
     }
 }

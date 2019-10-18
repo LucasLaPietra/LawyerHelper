@@ -29,14 +29,11 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.CuadroDemandado = new System.Windows.Forms.ComboBox();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.CuadroPrecio = new System.Windows.Forms.TextBox();
             this.CuadroSecretario = new System.Windows.Forms.TextBox();
             this.CuadroJuez = new System.Windows.Forms.TextBox();
-            this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
-            this.CuadroBienes = new System.Windows.Forms.TextBox();
             this.CuadroEtapa = new System.Windows.Forms.TextBox();
-            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.CuadroLibro = new System.Windows.Forms.TextBox();
             this.CuadroCaratula = new System.Windows.Forms.TextBox();
             this.CuadroRecurso = new System.Windows.Forms.TextBox();
@@ -46,7 +43,6 @@
             this.CuadroJurisdiccion = new System.Windows.Forms.TextBox();
             this.CuadroFolio = new System.Windows.Forms.TextBox();
             this.LabelFecha = new System.Windows.Forms.Label();
-            this.LabelFolio = new System.Windows.Forms.Label();
             this.LabelFuero = new System.Windows.Forms.Label();
             this.LabelTipoProceso = new System.Windows.Forms.Label();
             this.LabelCompetencia = new System.Windows.Forms.Label();
@@ -63,8 +59,10 @@
             this.LabelDemandado = new System.Windows.Forms.Label();
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
-            this.CuadroDemandante = new System.Windows.Forms.ComboBox();
             this.dateTimeFecha = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.LabelFolio = new System.Windows.Forms.Label();
             this.BotonVerDocumentacion = new System.Windows.Forms.Button();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.CuadroNroExpediente = new System.Windows.Forms.TextBox();
@@ -77,6 +75,8 @@
             this.BotonBajaDocumentacion = new System.Windows.Forms.Button();
             this.BotonModificarDocumentacion = new System.Windows.Forms.Button();
             this.BotonAltaDocumentacion = new System.Windows.Forms.Button();
+            this.BotonVerJuicios = new System.Windows.Forms.Button();
+            this.BotonVerCobros = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,14 +85,13 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.CuadroDemandado, 1, 18);
+            this.tableLayoutPanel1.Controls.Add(this.BotonVerJuicios, 1, 18);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroDetalle, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.BotonVerCobros, 1, 17);
             this.tableLayoutPanel1.Controls.Add(this.CuadroPrecio, 1, 16);
             this.tableLayoutPanel1.Controls.Add(this.CuadroSecretario, 1, 15);
             this.tableLayoutPanel1.Controls.Add(this.CuadroJuez, 1, 14);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroGrupoFamiliar, 1, 13);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroBienes, 1, 12);
             this.tableLayoutPanel1.Controls.Add(this.CuadroEtapa, 1, 11);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroDescripcion, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.CuadroLibro, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.CuadroCaratula, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.CuadroRecurso, 1, 7);
@@ -102,7 +101,6 @@
             this.tableLayoutPanel1.Controls.Add(this.CuadroJurisdiccion, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.CuadroFolio, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.LabelFecha, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LabelFolio, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.LabelFuero, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.LabelTipoProceso, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.LabelCompetencia, 0, 6);
@@ -119,9 +117,11 @@
             this.tableLayoutPanel1.Controls.Add(this.LabelDemandado, 0, 18);
             this.tableLayoutPanel1.Controls.Add(this.LabelJurisdiccion, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.LabelEtapa, 0, 11);
-            this.tableLayoutPanel1.Controls.Add(this.CuadroDemandante, 1, 17);
             this.tableLayoutPanel1.Controls.Add(this.dateTimeFecha, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 106);
+            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 12);
+            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.LabelFolio, 0, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 93);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 19;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -144,65 +144,45 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(439, 480);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(439, 525);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // CuadroDemandado
+            // CuadroDetalle
             // 
-            this.CuadroDemandado.FormattingEnabled = true;
-            this.CuadroDemandado.Location = new System.Drawing.Point(97, 446);
-            this.CuadroDemandado.Name = "CuadroDemandado";
-            this.CuadroDemandado.Size = new System.Drawing.Size(324, 21);
-            this.CuadroDemandado.TabIndex = 61;
+            this.CuadroDetalle.Location = new System.Drawing.Point(97, 237);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(324, 35);
+            this.CuadroDetalle.TabIndex = 173;
             // 
             // CuadroPrecio
             // 
-            this.CuadroPrecio.Location = new System.Drawing.Point(97, 393);
+            this.CuadroPrecio.Location = new System.Drawing.Point(97, 438);
             this.CuadroPrecio.Name = "CuadroPrecio";
             this.CuadroPrecio.Size = new System.Drawing.Size(324, 20);
             this.CuadroPrecio.TabIndex = 44;
             // 
             // CuadroSecretario
             // 
-            this.CuadroSecretario.Location = new System.Drawing.Point(97, 367);
+            this.CuadroSecretario.Location = new System.Drawing.Point(97, 412);
             this.CuadroSecretario.Name = "CuadroSecretario";
             this.CuadroSecretario.Size = new System.Drawing.Size(324, 20);
             this.CuadroSecretario.TabIndex = 58;
             // 
             // CuadroJuez
             // 
-            this.CuadroJuez.Location = new System.Drawing.Point(97, 341);
+            this.CuadroJuez.Location = new System.Drawing.Point(97, 386);
             this.CuadroJuez.Name = "CuadroJuez";
             this.CuadroJuez.Size = new System.Drawing.Size(324, 20);
             this.CuadroJuez.TabIndex = 57;
             // 
-            // CuadroGrupoFamiliar
-            // 
-            this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(97, 315);
-            this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
-            this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(324, 20);
-            this.CuadroGrupoFamiliar.TabIndex = 56;
-            // 
-            // CuadroBienes
-            // 
-            this.CuadroBienes.Location = new System.Drawing.Point(97, 289);
-            this.CuadroBienes.Name = "CuadroBienes";
-            this.CuadroBienes.Size = new System.Drawing.Size(324, 20);
-            this.CuadroBienes.TabIndex = 55;
-            // 
             // CuadroEtapa
             // 
-            this.CuadroEtapa.Location = new System.Drawing.Point(97, 263);
+            this.CuadroEtapa.Location = new System.Drawing.Point(97, 278);
             this.CuadroEtapa.Name = "CuadroEtapa";
             this.CuadroEtapa.Size = new System.Drawing.Size(324, 20);
             this.CuadroEtapa.TabIndex = 54;
-            // 
-            // CuadroDescripcion
-            // 
-            this.CuadroDescripcion.Location = new System.Drawing.Point(97, 237);
-            this.CuadroDescripcion.Name = "CuadroDescripcion";
-            this.CuadroDescripcion.Size = new System.Drawing.Size(324, 20);
-            this.CuadroDescripcion.TabIndex = 53;
             // 
             // CuadroLibro
             // 
@@ -270,15 +250,6 @@
             this.LabelFecha.TabIndex = 1;
             this.LabelFecha.Text = "Fecha:";
             // 
-            // LabelFolio
-            // 
-            this.LabelFolio.AutoSize = true;
-            this.LabelFolio.Location = new System.Drawing.Point(3, 26);
-            this.LabelFolio.Name = "LabelFolio";
-            this.LabelFolio.Size = new System.Drawing.Size(32, 13);
-            this.LabelFolio.TabIndex = 2;
-            this.LabelFolio.Text = "Folio:";
-            // 
             // LabelFuero
             // 
             this.LabelFuero.AutoSize = true;
@@ -345,7 +316,7 @@
             // LabelBienes
             // 
             this.LabelBienes.AutoSize = true;
-            this.LabelBienes.Location = new System.Drawing.Point(3, 286);
+            this.LabelBienes.Location = new System.Drawing.Point(3, 301);
             this.LabelBienes.Name = "LabelBienes";
             this.LabelBienes.Size = new System.Drawing.Size(42, 13);
             this.LabelBienes.TabIndex = 13;
@@ -354,7 +325,7 @@
             // LabelGrupoFamiliar
             // 
             this.LabelGrupoFamiliar.AutoSize = true;
-            this.LabelGrupoFamiliar.Location = new System.Drawing.Point(3, 312);
+            this.LabelGrupoFamiliar.Location = new System.Drawing.Point(3, 342);
             this.LabelGrupoFamiliar.Name = "LabelGrupoFamiliar";
             this.LabelGrupoFamiliar.Size = new System.Drawing.Size(77, 13);
             this.LabelGrupoFamiliar.TabIndex = 26;
@@ -363,7 +334,7 @@
             // LabelJuez
             // 
             this.LabelJuez.AutoSize = true;
-            this.LabelJuez.Location = new System.Drawing.Point(3, 338);
+            this.LabelJuez.Location = new System.Drawing.Point(3, 383);
             this.LabelJuez.Name = "LabelJuez";
             this.LabelJuez.Size = new System.Drawing.Size(32, 13);
             this.LabelJuez.TabIndex = 27;
@@ -372,7 +343,7 @@
             // LabelSecretario
             // 
             this.LabelSecretario.AutoSize = true;
-            this.LabelSecretario.Location = new System.Drawing.Point(3, 364);
+            this.LabelSecretario.Location = new System.Drawing.Point(3, 409);
             this.LabelSecretario.Name = "LabelSecretario";
             this.LabelSecretario.Size = new System.Drawing.Size(58, 13);
             this.LabelSecretario.TabIndex = 28;
@@ -381,7 +352,7 @@
             // LabelPrecio
             // 
             this.LabelPrecio.AutoSize = true;
-            this.LabelPrecio.Location = new System.Drawing.Point(3, 390);
+            this.LabelPrecio.Location = new System.Drawing.Point(3, 435);
             this.LabelPrecio.Name = "LabelPrecio";
             this.LabelPrecio.Size = new System.Drawing.Size(40, 13);
             this.LabelPrecio.TabIndex = 29;
@@ -390,7 +361,7 @@
             // LabelDemandante
             // 
             this.LabelDemandante.AutoSize = true;
-            this.LabelDemandante.Location = new System.Drawing.Point(3, 416);
+            this.LabelDemandante.Location = new System.Drawing.Point(3, 461);
             this.LabelDemandante.Name = "LabelDemandante";
             this.LabelDemandante.Size = new System.Drawing.Size(71, 13);
             this.LabelDemandante.TabIndex = 30;
@@ -399,7 +370,7 @@
             // LabelDemandado
             // 
             this.LabelDemandado.AutoSize = true;
-            this.LabelDemandado.Location = new System.Drawing.Point(3, 443);
+            this.LabelDemandado.Location = new System.Drawing.Point(3, 490);
             this.LabelDemandado.Name = "LabelDemandado";
             this.LabelDemandado.Size = new System.Drawing.Size(68, 13);
             this.LabelDemandado.TabIndex = 31;
@@ -417,19 +388,11 @@
             // LabelEtapa
             // 
             this.LabelEtapa.AutoSize = true;
-            this.LabelEtapa.Location = new System.Drawing.Point(3, 260);
+            this.LabelEtapa.Location = new System.Drawing.Point(3, 275);
             this.LabelEtapa.Name = "LabelEtapa";
             this.LabelEtapa.Size = new System.Drawing.Size(38, 13);
             this.LabelEtapa.TabIndex = 12;
             this.LabelEtapa.Text = "Etapa:";
-            // 
-            // CuadroDemandante
-            // 
-            this.CuadroDemandante.FormattingEnabled = true;
-            this.CuadroDemandante.Location = new System.Drawing.Point(97, 419);
-            this.CuadroDemandante.Name = "CuadroDemandante";
-            this.CuadroDemandante.Size = new System.Drawing.Size(324, 21);
-            this.CuadroDemandante.TabIndex = 62;
             // 
             // dateTimeFecha
             // 
@@ -438,10 +401,37 @@
             this.dateTimeFecha.Size = new System.Drawing.Size(324, 20);
             this.dateTimeFecha.TabIndex = 63;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(97, 304);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(324, 35);
+            this.textBox1.TabIndex = 174;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(97, 345);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(324, 35);
+            this.textBox2.TabIndex = 175;
+            // 
+            // LabelFolio
+            // 
+            this.LabelFolio.AutoSize = true;
+            this.LabelFolio.Location = new System.Drawing.Point(3, 26);
+            this.LabelFolio.Name = "LabelFolio";
+            this.LabelFolio.Size = new System.Drawing.Size(32, 13);
+            this.LabelFolio.TabIndex = 2;
+            this.LabelFolio.Text = "Folio:";
+            // 
             // BotonVerDocumentacion
             // 
             this.BotonVerDocumentacion.Enabled = false;
-            this.BotonVerDocumentacion.Location = new System.Drawing.Point(460, 268);
+            this.BotonVerDocumentacion.Location = new System.Drawing.Point(460, 275);
             this.BotonVerDocumentacion.Name = "BotonVerDocumentacion";
             this.BotonVerDocumentacion.Size = new System.Drawing.Size(187, 26);
             this.BotonVerDocumentacion.TabIndex = 41;
@@ -476,7 +466,7 @@
             // 
             // BotonModificarDemandante
             // 
-            this.BotonModificarDemandante.Location = new System.Drawing.Point(460, 525);
+            this.BotonModificarDemandante.Location = new System.Drawing.Point(460, 557);
             this.BotonModificarDemandante.Name = "BotonModificarDemandante";
             this.BotonModificarDemandante.Size = new System.Drawing.Size(187, 24);
             this.BotonModificarDemandante.TabIndex = 59;
@@ -485,7 +475,7 @@
             // 
             // BotonModificarDemandado
             // 
-            this.BotonModificarDemandado.Location = new System.Drawing.Point(460, 555);
+            this.BotonModificarDemandado.Location = new System.Drawing.Point(460, 584);
             this.BotonModificarDemandado.Name = "BotonModificarDemandado";
             this.BotonModificarDemandado.Size = new System.Drawing.Size(187, 23);
             this.BotonModificarDemandado.TabIndex = 60;
@@ -495,7 +485,7 @@
             // BotonAceptar
             // 
             this.BotonAceptar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BotonAceptar.Location = new System.Drawing.Point(175, 615);
+            this.BotonAceptar.Location = new System.Drawing.Point(174, 624);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(103, 25);
             this.BotonAceptar.TabIndex = 10;
@@ -505,7 +495,7 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(385, 615);
+            this.BotonCancelar.Location = new System.Drawing.Point(385, 624);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(104, 25);
             this.BotonCancelar.TabIndex = 11;
@@ -525,7 +515,7 @@
             // BotonBajaDocumentacion
             // 
             this.BotonBajaDocumentacion.Enabled = false;
-            this.BotonBajaDocumentacion.Location = new System.Drawing.Point(460, 316);
+            this.BotonBajaDocumentacion.Location = new System.Drawing.Point(460, 320);
             this.BotonBajaDocumentacion.Name = "BotonBajaDocumentacion";
             this.BotonBajaDocumentacion.Size = new System.Drawing.Size(187, 26);
             this.BotonBajaDocumentacion.TabIndex = 42;
@@ -545,18 +535,40 @@
             // BotonAltaDocumentacion
             // 
             this.BotonAltaDocumentacion.Enabled = false;
-            this.BotonAltaDocumentacion.Location = new System.Drawing.Point(460, 412);
+            this.BotonAltaDocumentacion.Location = new System.Drawing.Point(460, 406);
             this.BotonAltaDocumentacion.Name = "BotonAltaDocumentacion";
             this.BotonAltaDocumentacion.Size = new System.Drawing.Size(187, 26);
             this.BotonAltaDocumentacion.TabIndex = 44;
             this.BotonAltaDocumentacion.Text = "Agregar documento";
             this.BotonAltaDocumentacion.UseVisualStyleBackColor = true;
             // 
+            // BotonVerJuicios
+            // 
+            this.BotonVerJuicios.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BotonVerJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonVerJuicios.Location = new System.Drawing.Point(229, 497);
+            this.BotonVerJuicios.Name = "BotonVerJuicios";
+            this.BotonVerJuicios.Size = new System.Drawing.Size(75, 21);
+            this.BotonVerJuicios.TabIndex = 61;
+            this.BotonVerJuicios.Text = "Ver";
+            this.BotonVerJuicios.UseVisualStyleBackColor = true;
+            // 
+            // BotonVerCobros
+            // 
+            this.BotonVerCobros.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BotonVerCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonVerCobros.Location = new System.Drawing.Point(229, 464);
+            this.BotonVerCobros.Name = "BotonVerCobros";
+            this.BotonVerCobros.Size = new System.Drawing.Size(75, 23);
+            this.BotonVerCobros.TabIndex = 62;
+            this.BotonVerCobros.Text = "Ver";
+            this.BotonVerCobros.UseVisualStyleBackColor = true;
+            // 
             // ModificarJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(659, 650);
+            this.ClientSize = new System.Drawing.Size(659, 661);
             this.Controls.Add(this.BotonAltaDocumentacion);
             this.Controls.Add(this.BotonModificarDocumentacion);
             this.Controls.Add(this.BotonBajaDocumentacion);
@@ -608,10 +620,7 @@
         private System.Windows.Forms.TextBox CuadroPrecio;
         private System.Windows.Forms.TextBox CuadroSecretario;
         private System.Windows.Forms.TextBox CuadroJuez;
-        private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
-        private System.Windows.Forms.TextBox CuadroBienes;
         private System.Windows.Forms.TextBox CuadroEtapa;
-        private System.Windows.Forms.TextBox CuadroDescripcion;
         private System.Windows.Forms.TextBox CuadroLibro;
         private System.Windows.Forms.TextBox CuadroCaratula;
         private System.Windows.Forms.TextBox CuadroRecurso;
@@ -628,8 +637,11 @@
         private System.Windows.Forms.Button BotonBajaDocumentacion;
         private System.Windows.Forms.Button BotonModificarDocumentacion;
         private System.Windows.Forms.Button BotonAltaDocumentacion;
-        private System.Windows.Forms.ComboBox CuadroDemandado;
-        private System.Windows.Forms.ComboBox CuadroDemandante;
         private System.Windows.Forms.DateTimePicker dateTimeFecha;
+        private System.Windows.Forms.TextBox CuadroDetalle;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button BotonVerJuicios;
+        private System.Windows.Forms.Button BotonVerCobros;
     }
 }

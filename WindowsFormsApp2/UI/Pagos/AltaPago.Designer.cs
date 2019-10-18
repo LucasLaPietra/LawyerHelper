@@ -31,7 +31,6 @@
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.CuadroImporte = new System.Windows.Forms.TextBox();
-            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.BotonJuicio = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
@@ -42,6 +41,7 @@
             this.CuadroMinutos = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CuadroAM = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LabelImporte
@@ -69,17 +69,9 @@
             this.CuadroImporte.Size = new System.Drawing.Size(290, 20);
             this.CuadroImporte.TabIndex = 6;
             // 
-            // CuadroDetalle
-            // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(67, 177);
-            this.CuadroDetalle.Multiline = true;
-            this.CuadroDetalle.Name = "CuadroDetalle";
-            this.CuadroDetalle.Size = new System.Drawing.Size(290, 165);
-            this.CuadroDetalle.TabIndex = 7;
-            // 
             // BotonJuicio
             // 
-            this.BotonJuicio.Location = new System.Drawing.Point(97, 372);
+            this.BotonJuicio.Location = new System.Drawing.Point(105, 323);
             this.BotonJuicio.Name = "BotonJuicio";
             this.BotonJuicio.Size = new System.Drawing.Size(180, 26);
             this.BotonJuicio.TabIndex = 8;
@@ -88,7 +80,7 @@
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(54, 433);
+            this.BotonAceptar.Location = new System.Drawing.Point(55, 383);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 9;
@@ -97,7 +89,7 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(220, 433);
+            this.BotonCancelar.Location = new System.Drawing.Point(221, 383);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 10;
@@ -165,11 +157,21 @@
             this.CuadroAM.TabIndex = 18;
             this.CuadroAM.SelectedIndexChanged += new System.EventHandler(this.CuadroAM_SelectedIndexChanged);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(67, 175);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(290, 120);
+            this.textBox1.TabIndex = 174;
+            // 
             // AltaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 496);
+            this.ClientSize = new System.Drawing.Size(384, 436);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.CuadroAM);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CuadroMinutos);
@@ -180,7 +182,6 @@
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.BotonJuicio);
-            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.CuadroImporte);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
@@ -196,7 +197,6 @@
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.TextBox CuadroImporte;
-        private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.Button BotonJuicio;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Button BotonCancelar;
@@ -207,5 +207,6 @@
         private System.Windows.Forms.TextBox CuadroMinutos;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox CuadroAM;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

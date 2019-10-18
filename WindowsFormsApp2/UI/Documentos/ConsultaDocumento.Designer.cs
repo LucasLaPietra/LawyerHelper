@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.CuadroNumeroFoja = new System.Windows.Forms.TextBox();
             this.CheckVuelta = new System.Windows.Forms.CheckBox();
             this.CheckEnExpediente = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.BotonCancelar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,21 +42,13 @@
             this.LabelNombreDocumento2 = new System.Windows.Forms.Label();
             this.LabelTipoDocumento2 = new System.Windows.Forms.Label();
             this.LabelFecha2 = new System.Windows.Forms.Label();
-            this.LabelDetalle2 = new System.Windows.Forms.Label();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
+            this.BotonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // BotonBusquedaAvanzada
-            // 
-            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(21, 67);
-            this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
-            this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
-            this.BotonBusquedaAvanzada.TabIndex = 58;
-            this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
-            this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.Location = new System.Drawing.Point(372, 20);
+            this.BotonBuscar.Location = new System.Drawing.Point(354, 19);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
             this.BotonBuscar.TabIndex = 57;
@@ -75,7 +65,7 @@
             // CheckVuelta
             // 
             this.CheckVuelta.AutoSize = true;
-            this.CheckVuelta.Location = new System.Drawing.Point(149, 395);
+            this.CheckVuelta.Location = new System.Drawing.Point(142, 409);
             this.CheckVuelta.Name = "CheckVuelta";
             this.CheckVuelta.Size = new System.Drawing.Size(35, 17);
             this.CheckVuelta.TabIndex = 51;
@@ -85,7 +75,7 @@
             // CheckEnExpediente
             // 
             this.CheckEnExpediente.AutoSize = true;
-            this.CheckEnExpediente.Location = new System.Drawing.Point(149, 205);
+            this.CheckEnExpediente.Location = new System.Drawing.Point(142, 185);
             this.CheckEnExpediente.Name = "CheckEnExpediente";
             this.CheckEnExpediente.Size = new System.Drawing.Size(35, 17);
             this.CheckEnExpediente.TabIndex = 50;
@@ -95,25 +85,16 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 397);
+            this.label7.Location = new System.Drawing.Point(23, 409);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 49;
             this.label7.Text = "Vuelta";
             // 
-            // BotonCancelar
-            // 
-            this.BotonCancelar.Location = new System.Drawing.Point(174, 446);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
-            this.BotonCancelar.TabIndex = 48;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 282);
+            this.label6.Location = new System.Drawing.Point(23, 293);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 46;
@@ -131,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(20, 207);
+            this.label4.Location = new System.Drawing.Point(23, 186);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 44;
@@ -149,7 +130,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 167);
+            this.label2.Location = new System.Drawing.Point(18, 133);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 42;
@@ -158,7 +139,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 125);
+            this.label1.Location = new System.Drawing.Point(18, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 41;
@@ -167,7 +148,7 @@
             // LabelNombreDocumento2
             // 
             this.LabelNombreDocumento2.AutoSize = true;
-            this.LabelNombreDocumento2.Location = new System.Drawing.Point(149, 125);
+            this.LabelNombreDocumento2.Location = new System.Drawing.Point(146, 84);
             this.LabelNombreDocumento2.Name = "LabelNombreDocumento2";
             this.LabelNombreDocumento2.Size = new System.Drawing.Size(10, 13);
             this.LabelNombreDocumento2.TabIndex = 59;
@@ -176,7 +157,7 @@
             // LabelTipoDocumento2
             // 
             this.LabelTipoDocumento2.AutoSize = true;
-            this.LabelTipoDocumento2.Location = new System.Drawing.Point(149, 167);
+            this.LabelTipoDocumento2.Location = new System.Drawing.Point(146, 133);
             this.LabelTipoDocumento2.Name = "LabelTipoDocumento2";
             this.LabelTipoDocumento2.Size = new System.Drawing.Size(10, 13);
             this.LabelTipoDocumento2.TabIndex = 60;
@@ -185,37 +166,46 @@
             // LabelFecha2
             // 
             this.LabelFecha2.AutoSize = true;
-            this.LabelFecha2.Location = new System.Drawing.Point(149, 243);
+            this.LabelFecha2.Location = new System.Drawing.Point(146, 243);
             this.LabelFecha2.Name = "LabelFecha2";
             this.LabelFecha2.Size = new System.Drawing.Size(10, 13);
             this.LabelFecha2.TabIndex = 61;
             this.LabelFecha2.Text = "-";
             // 
-            // LabelDetalle2
+            // CuadroDetalle
             // 
-            this.LabelDetalle2.AutoSize = true;
-            this.LabelDetalle2.Location = new System.Drawing.Point(149, 282);
-            this.LabelDetalle2.Name = "LabelDetalle2";
-            this.LabelDetalle2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDetalle2.TabIndex = 62;
-            this.LabelDetalle2.Text = "-";
+            this.CuadroDetalle.Location = new System.Drawing.Point(142, 293);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(276, 96);
+            this.CuadroDetalle.TabIndex = 170;
+            // 
+            // BotonCancelar
+            // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCancelar.Location = new System.Drawing.Point(167, 449);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
+            this.BotonCancelar.TabIndex = 171;
+            this.BotonCancelar.Text = "Aceptar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
             // ConsultaDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(454, 496);
-            this.Controls.Add(this.LabelDetalle2);
+            this.ClientSize = new System.Drawing.Size(434, 500);
+            this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.LabelFecha2);
             this.Controls.Add(this.LabelTipoDocumento2);
             this.Controls.Add(this.LabelNombreDocumento2);
-            this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.CuadroNumeroFoja);
             this.Controls.Add(this.CheckVuelta);
             this.Controls.Add(this.CheckEnExpediente);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -230,14 +220,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BotonBusquedaAvanzada;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.TextBox CuadroNumeroFoja;
         private System.Windows.Forms.CheckBox CheckVuelta;
         private System.Windows.Forms.CheckBox CheckEnExpediente;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -247,6 +234,7 @@
         private System.Windows.Forms.Label LabelNombreDocumento2;
         private System.Windows.Forms.Label LabelTipoDocumento2;
         private System.Windows.Forms.Label LabelFecha2;
-        private System.Windows.Forms.Label LabelDetalle2;
+        private System.Windows.Forms.TextBox CuadroDetalle;
+        private System.Windows.Forms.Button BotonCancelar;
     }
 }

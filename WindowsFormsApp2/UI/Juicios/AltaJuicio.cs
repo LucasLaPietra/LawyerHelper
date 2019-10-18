@@ -84,5 +84,25 @@ namespace WindowsFormsApp2.Juicios
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelBienes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelGrupoFamiliar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

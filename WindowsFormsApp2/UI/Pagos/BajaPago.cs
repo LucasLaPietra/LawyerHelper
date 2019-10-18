@@ -43,5 +43,15 @@ namespace LawyerHelper.UI.Pagos
         {
 
         }
+
+        private void BotonAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonCancelar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

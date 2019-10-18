@@ -55,16 +55,12 @@
             this.LabelRecurso2 = new System.Windows.Forms.Label();
             this.LabelCaratula2 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.LabelDescripcion2 = new System.Windows.Forms.Label();
-            this.LabelEtapa2 = new System.Windows.Forms.Label();
-            this.LabelBienes2 = new System.Windows.Forms.Label();
             this.LabelGrupoFamiliar = new System.Windows.Forms.Label();
             this.LabelJuez = new System.Windows.Forms.Label();
             this.LabelSecretario = new System.Windows.Forms.Label();
             this.LabelPrecio = new System.Windows.Forms.Label();
             this.LabelDemandante = new System.Windows.Forms.Label();
             this.LabelDemandado = new System.Windows.Forms.Label();
-            this.LabelGrupoFamiliar2 = new System.Windows.Forms.Label();
             this.LabelJuez2 = new System.Windows.Forms.Label();
             this.LabelSecretario2 = new System.Windows.Forms.Label();
             this.LabelDemandante2 = new System.Windows.Forms.Label();
@@ -73,9 +69,15 @@
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
             this.LabelExpediente = new System.Windows.Forms.Label();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LabelEtapa2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
+            this.labelDocumentos = new System.Windows.Forms.Label();
+            this.BotonVerDocumentacion = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,6 +138,7 @@
             this.Layout.ColumnCount = 2;
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Layout.Controls.Add(this.labelDocumentos, 0, 19);
             this.Layout.Controls.Add(this.LabelFecha, 0, 1);
             this.Layout.Controls.Add(this.LabelFolio, 0, 2);
             this.Layout.Controls.Add(this.LabelFuero, 0, 4);
@@ -156,16 +159,12 @@
             this.Layout.Controls.Add(this.LabelRecurso2, 1, 7);
             this.Layout.Controls.Add(this.LabelCaratula2, 1, 8);
             this.Layout.Controls.Add(this.label24, 1, 9);
-            this.Layout.Controls.Add(this.LabelDescripcion2, 1, 10);
-            this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
-            this.Layout.Controls.Add(this.LabelBienes2, 1, 12);
             this.Layout.Controls.Add(this.LabelGrupoFamiliar, 0, 13);
             this.Layout.Controls.Add(this.LabelJuez, 0, 14);
             this.Layout.Controls.Add(this.LabelSecretario, 0, 15);
             this.Layout.Controls.Add(this.LabelPrecio, 0, 16);
             this.Layout.Controls.Add(this.LabelDemandante, 0, 17);
             this.Layout.Controls.Add(this.LabelDemandado, 0, 18);
-            this.Layout.Controls.Add(this.LabelGrupoFamiliar2, 1, 13);
             this.Layout.Controls.Add(this.LabelJuez2, 1, 14);
             this.Layout.Controls.Add(this.LabelSecretario2, 1, 15);
             this.Layout.Controls.Add(this.LabelDemandante2, 1, 17);
@@ -174,9 +173,14 @@
             this.Layout.Controls.Add(this.LabelJurisdiccion, 0, 3);
             this.Layout.Controls.Add(this.LabelEtapa, 0, 11);
             this.Layout.Controls.Add(this.LabelExpediente, 0, 0);
+            this.Layout.Controls.Add(this.CuadroDetalle, 1, 12);
+            this.Layout.Controls.Add(this.textBox1, 1, 10);
+            this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
+            this.Layout.Controls.Add(this.textBox2, 1, 13);
+            this.Layout.Controls.Add(this.BotonVerDocumentacion, 1, 19);
             this.Layout.Location = new System.Drawing.Point(39, 152);
             this.Layout.Name = "Layout";
-            this.Layout.RowCount = 21;
+            this.Layout.RowCount = 20;
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -196,9 +200,9 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout.Size = new System.Drawing.Size(439, 249);
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Layout.Size = new System.Drawing.Size(439, 347);
             this.Layout.TabIndex = 99;
             // 
             // LabelFecha
@@ -294,7 +298,7 @@
             // LabelBienes
             // 
             this.LabelBienes.AutoSize = true;
-            this.LabelBienes.Location = new System.Drawing.Point(3, 156);
+            this.LabelBienes.Location = new System.Drawing.Point(3, 181);
             this.LabelBienes.Name = "LabelBienes";
             this.LabelBienes.Size = new System.Drawing.Size(42, 13);
             this.LabelBienes.TabIndex = 13;
@@ -381,37 +385,10 @@
             this.label24.TabIndex = 22;
             this.label24.Text = "-";
             // 
-            // LabelDescripcion2
-            // 
-            this.LabelDescripcion2.AutoSize = true;
-            this.LabelDescripcion2.Location = new System.Drawing.Point(97, 130);
-            this.LabelDescripcion2.Name = "LabelDescripcion2";
-            this.LabelDescripcion2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDescripcion2.TabIndex = 23;
-            this.LabelDescripcion2.Text = "-";
-            // 
-            // LabelEtapa2
-            // 
-            this.LabelEtapa2.AutoSize = true;
-            this.LabelEtapa2.Location = new System.Drawing.Point(97, 143);
-            this.LabelEtapa2.Name = "LabelEtapa2";
-            this.LabelEtapa2.Size = new System.Drawing.Size(10, 13);
-            this.LabelEtapa2.TabIndex = 24;
-            this.LabelEtapa2.Text = "-";
-            // 
-            // LabelBienes2
-            // 
-            this.LabelBienes2.AutoSize = true;
-            this.LabelBienes2.Location = new System.Drawing.Point(97, 156);
-            this.LabelBienes2.Name = "LabelBienes2";
-            this.LabelBienes2.Size = new System.Drawing.Size(10, 13);
-            this.LabelBienes2.TabIndex = 25;
-            this.LabelBienes2.Text = "-";
-            // 
             // LabelGrupoFamiliar
             // 
             this.LabelGrupoFamiliar.AutoSize = true;
-            this.LabelGrupoFamiliar.Location = new System.Drawing.Point(3, 169);
+            this.LabelGrupoFamiliar.Location = new System.Drawing.Point(3, 219);
             this.LabelGrupoFamiliar.Name = "LabelGrupoFamiliar";
             this.LabelGrupoFamiliar.Size = new System.Drawing.Size(77, 13);
             this.LabelGrupoFamiliar.TabIndex = 26;
@@ -420,7 +397,7 @@
             // LabelJuez
             // 
             this.LabelJuez.AutoSize = true;
-            this.LabelJuez.Location = new System.Drawing.Point(3, 182);
+            this.LabelJuez.Location = new System.Drawing.Point(3, 257);
             this.LabelJuez.Name = "LabelJuez";
             this.LabelJuez.Size = new System.Drawing.Size(32, 13);
             this.LabelJuez.TabIndex = 27;
@@ -429,7 +406,7 @@
             // LabelSecretario
             // 
             this.LabelSecretario.AutoSize = true;
-            this.LabelSecretario.Location = new System.Drawing.Point(3, 195);
+            this.LabelSecretario.Location = new System.Drawing.Point(3, 270);
             this.LabelSecretario.Name = "LabelSecretario";
             this.LabelSecretario.Size = new System.Drawing.Size(58, 13);
             this.LabelSecretario.TabIndex = 28;
@@ -438,7 +415,7 @@
             // LabelPrecio
             // 
             this.LabelPrecio.AutoSize = true;
-            this.LabelPrecio.Location = new System.Drawing.Point(3, 208);
+            this.LabelPrecio.Location = new System.Drawing.Point(3, 283);
             this.LabelPrecio.Name = "LabelPrecio";
             this.LabelPrecio.Size = new System.Drawing.Size(40, 13);
             this.LabelPrecio.TabIndex = 29;
@@ -447,7 +424,7 @@
             // LabelDemandante
             // 
             this.LabelDemandante.AutoSize = true;
-            this.LabelDemandante.Location = new System.Drawing.Point(3, 221);
+            this.LabelDemandante.Location = new System.Drawing.Point(3, 296);
             this.LabelDemandante.Name = "LabelDemandante";
             this.LabelDemandante.Size = new System.Drawing.Size(71, 13);
             this.LabelDemandante.TabIndex = 30;
@@ -456,25 +433,16 @@
             // LabelDemandado
             // 
             this.LabelDemandado.AutoSize = true;
-            this.LabelDemandado.Location = new System.Drawing.Point(3, 234);
+            this.LabelDemandado.Location = new System.Drawing.Point(3, 309);
             this.LabelDemandado.Name = "LabelDemandado";
             this.LabelDemandado.Size = new System.Drawing.Size(68, 13);
             this.LabelDemandado.TabIndex = 31;
             this.LabelDemandado.Text = "Demandado:";
             // 
-            // LabelGrupoFamiliar2
-            // 
-            this.LabelGrupoFamiliar2.AutoSize = true;
-            this.LabelGrupoFamiliar2.Location = new System.Drawing.Point(97, 169);
-            this.LabelGrupoFamiliar2.Name = "LabelGrupoFamiliar2";
-            this.LabelGrupoFamiliar2.Size = new System.Drawing.Size(10, 13);
-            this.LabelGrupoFamiliar2.TabIndex = 32;
-            this.LabelGrupoFamiliar2.Text = "-";
-            // 
             // LabelJuez2
             // 
             this.LabelJuez2.AutoSize = true;
-            this.LabelJuez2.Location = new System.Drawing.Point(97, 182);
+            this.LabelJuez2.Location = new System.Drawing.Point(97, 257);
             this.LabelJuez2.Name = "LabelJuez2";
             this.LabelJuez2.Size = new System.Drawing.Size(10, 13);
             this.LabelJuez2.TabIndex = 33;
@@ -483,7 +451,7 @@
             // LabelSecretario2
             // 
             this.LabelSecretario2.AutoSize = true;
-            this.LabelSecretario2.Location = new System.Drawing.Point(97, 195);
+            this.LabelSecretario2.Location = new System.Drawing.Point(97, 270);
             this.LabelSecretario2.Name = "LabelSecretario2";
             this.LabelSecretario2.Size = new System.Drawing.Size(10, 13);
             this.LabelSecretario2.TabIndex = 34;
@@ -492,7 +460,7 @@
             // LabelDemandante2
             // 
             this.LabelDemandante2.AutoSize = true;
-            this.LabelDemandante2.Location = new System.Drawing.Point(97, 221);
+            this.LabelDemandante2.Location = new System.Drawing.Point(97, 296);
             this.LabelDemandante2.Name = "LabelDemandante2";
             this.LabelDemandante2.Size = new System.Drawing.Size(10, 13);
             this.LabelDemandante2.TabIndex = 35;
@@ -501,7 +469,7 @@
             // LabelPrecio2
             // 
             this.LabelPrecio2.AutoSize = true;
-            this.LabelPrecio2.Location = new System.Drawing.Point(97, 208);
+            this.LabelPrecio2.Location = new System.Drawing.Point(97, 283);
             this.LabelPrecio2.Name = "LabelPrecio2";
             this.LabelPrecio2.Size = new System.Drawing.Size(10, 13);
             this.LabelPrecio2.TabIndex = 36;
@@ -510,7 +478,7 @@
             // LabelDemandado2
             // 
             this.LabelDemandado2.AutoSize = true;
-            this.LabelDemandado2.Location = new System.Drawing.Point(97, 234);
+            this.LabelDemandado2.Location = new System.Drawing.Point(97, 309);
             this.LabelDemandado2.Name = "LabelDemandado2";
             this.LabelDemandado2.Size = new System.Drawing.Size(10, 13);
             this.LabelDemandado2.TabIndex = 37;
@@ -528,7 +496,7 @@
             // LabelEtapa
             // 
             this.LabelEtapa.AutoSize = true;
-            this.LabelEtapa.Location = new System.Drawing.Point(3, 143);
+            this.LabelEtapa.Location = new System.Drawing.Point(3, 168);
             this.LabelEtapa.Name = "LabelEtapa";
             this.LabelEtapa.Size = new System.Drawing.Size(38, 13);
             this.LabelEtapa.TabIndex = 12;
@@ -543,20 +511,56 @@
             this.LabelExpediente.TabIndex = 0;
             this.LabelExpediente.Text = "Nro Expediente:";
             // 
+            // CuadroDetalle
+            // 
+            this.CuadroDetalle.Location = new System.Drawing.Point(97, 184);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(342, 32);
+            this.CuadroDetalle.TabIndex = 172;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(97, 133);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(342, 32);
+            this.textBox1.TabIndex = 173;
+            // 
+            // LabelEtapa2
+            // 
+            this.LabelEtapa2.AutoSize = true;
+            this.LabelEtapa2.Location = new System.Drawing.Point(97, 168);
+            this.LabelEtapa2.Name = "LabelEtapa2";
+            this.LabelEtapa2.Size = new System.Drawing.Size(10, 13);
+            this.LabelEtapa2.TabIndex = 24;
+            this.LabelEtapa2.Text = "-";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(97, 222);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox2.Size = new System.Drawing.Size(342, 32);
+            this.textBox2.TabIndex = 174;
+            // 
             // ComboBoxResultados
             // 
             this.ComboBoxResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ComboBoxResultados.FormattingEnabled = true;
-            this.ComboBoxResultados.Location = new System.Drawing.Point(45, 119);
+            this.ComboBoxResultados.Location = new System.Drawing.Point(39, 119);
             this.ComboBoxResultados.Name = "ComboBoxResultados";
-            this.ComboBoxResultados.Size = new System.Drawing.Size(434, 21);
+            this.ComboBoxResultados.Size = new System.Drawing.Size(439, 21);
             this.ComboBoxResultados.TabIndex = 100;
             // 
             // BotonAceptar
             // 
             this.BotonAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAceptar.Location = new System.Drawing.Point(39, 446);
+            this.BotonAceptar.Location = new System.Drawing.Point(45, 505);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 102;
@@ -567,18 +571,38 @@
             // BotonCancelar
             // 
             this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(372, 446);
+            this.BotonCancelar.Location = new System.Drawing.Point(383, 505);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 101;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
+            // labelDocumentos
+            // 
+            this.labelDocumentos.AutoSize = true;
+            this.labelDocumentos.Location = new System.Drawing.Point(3, 322);
+            this.labelDocumentos.Name = "labelDocumentos";
+            this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
+            this.labelDocumentos.TabIndex = 175;
+            this.labelDocumentos.Text = "Documentos:";
+            // 
+            // BotonVerDocumentacion
+            // 
+            this.BotonVerDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonVerDocumentacion.Enabled = false;
+            this.BotonVerDocumentacion.Location = new System.Drawing.Point(208, 325);
+            this.BotonVerDocumentacion.Name = "BotonVerDocumentacion";
+            this.BotonVerDocumentacion.Size = new System.Drawing.Size(120, 19);
+            this.BotonVerDocumentacion.TabIndex = 176;
+            this.BotonVerDocumentacion.Text = "Ver";
+            this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
+            // 
             // BuscarJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 498);
+            this.ClientSize = new System.Drawing.Size(518, 541);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.ComboBoxResultados);
@@ -626,16 +650,13 @@
         private System.Windows.Forms.Label LabelRecurso2;
         private System.Windows.Forms.Label LabelCaratula2;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label LabelDescripcion2;
         private System.Windows.Forms.Label LabelEtapa2;
-        private System.Windows.Forms.Label LabelBienes2;
         private System.Windows.Forms.Label LabelGrupoFamiliar;
         private System.Windows.Forms.Label LabelJuez;
         private System.Windows.Forms.Label LabelSecretario;
         private System.Windows.Forms.Label LabelPrecio;
         private System.Windows.Forms.Label LabelDemandante;
         private System.Windows.Forms.Label LabelDemandado;
-        private System.Windows.Forms.Label LabelGrupoFamiliar2;
         private System.Windows.Forms.Label LabelJuez2;
         private System.Windows.Forms.Label LabelSecretario2;
         private System.Windows.Forms.Label LabelDemandante2;
@@ -647,5 +668,10 @@
         private System.Windows.Forms.ComboBox ComboBoxResultados;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.TextBox CuadroDetalle;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label labelDocumentos;
+        private System.Windows.Forms.Button BotonVerDocumentacion;
     }
 }

@@ -45,7 +45,7 @@ namespace WindowsFormsApp2.Personas
         {
             try
             {
-                iControladorPersona.RegistrarPersona(CuadroNombre.Text, CuadroApellido.Text, CuadroDNI.Text, CuadroDomReal.Text, CuadroTelefono.Text, CuadroFecha.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroAbogado.Text, CuadroDomLegal.Text);
+                iControladorPersona.RegistrarPersona(CuadroDNI.Text, CuadroApellido.Text, CuadroNombre.Text, CuadroDomReal.Text, CuadroTelefono.Text, CuadroFecha.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroRepresentante.Text, CuadroDomLegal.Text);
                 MessageBox.Show("Persona añadida con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception)
@@ -71,6 +71,11 @@ namespace WindowsFormsApp2.Personas
         }
 
         private void CuadroFecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CuadroNombre_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -156,6 +156,12 @@
     <Compile Include="UI\Ajustes.Designer.cs">
       <DependentUpon>Ajustes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CobrosAsociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\CobrosAsociados.Designer.cs">
+      <DependentUpon>CobrosAsociados.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Cobros\AltaCobro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,12 @@
     </Compile>
     <Compile Include="UI\Cobros\MenuCobrosUC.Designer.cs">
       <DependentUpon>MenuCobrosUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DocumentosAsociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DocumentosAsociados.Designer.cs">
+      <DependentUpon>DocumentosAsociados.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Documentos\AltaDocumento.cs">
       <SubType>Form</SubType>
@@ -210,6 +222,12 @@
     </Compile>
     <Compile Include="UI\Documentos\ModificarDocumento.Designer.cs">
       <DependentUpon>ModificarDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JuiciosAsociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\JuiciosAsociados.Designer.cs">
+      <DependentUpon>JuiciosAsociados.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Juicios\AltaJuicio.cs">
       <SubType>Form</SubType>
@@ -265,6 +283,12 @@
     <Compile Include="UI\Juicios\ModificarJuicio.Designer.cs">
       <DependentUpon>ModificarJuicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\PagosAsociados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PagosAsociados.Designer.cs">
+      <DependentUpon>PagosAsociados.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Pagos\AltaPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +318,12 @@
     </Compile>
     <Compile Include="UI\Pagos\MenuPagosUC.Designer.cs">
       <DependentUpon>MenuPagosUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\PersonasAsociadas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\PersonasAsociadas.Designer.cs">
+      <DependentUpon>PersonasAsociadas.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Personas\AltaPersona.cs">
       <SubType>Form</SubType>

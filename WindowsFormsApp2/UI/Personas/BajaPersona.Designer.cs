@@ -47,7 +47,7 @@
             // BotonBusquedaAvanzada
             // 
             this.BotonBusquedaAvanzada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 97);
+            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 107);
             this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
             this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
             this.BotonBusquedaAvanzada.TabIndex = 48;

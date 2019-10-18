@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BotonCancelar = new System.Windows.Forms.Button();
             this.LabelAM = new System.Windows.Forms.Label();
             this.LabelMinutos = new System.Windows.Forms.Label();
             this.LabelHora2 = new System.Windows.Forms.Label();
-            this.LabelDetalle2 = new System.Windows.Forms.Label();
             this.LabelImporte2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LabelDetalle = new System.Windows.Forms.Label();
@@ -43,16 +41,9 @@
             this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
             this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
             this.ListBoxCobros = new System.Windows.Forms.ListBox();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
+            this.BotonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // BotonCancelar
-            // 
-            this.BotonCancelar.Location = new System.Drawing.Point(263, 460);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(97, 24);
-            this.BotonCancelar.TabIndex = 151;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
             // LabelAM
             // 
@@ -81,15 +72,6 @@
             this.LabelHora2.TabIndex = 148;
             this.LabelHora2.Text = "-";
             // 
-            // LabelDetalle2
-            // 
-            this.LabelDetalle2.AutoSize = true;
-            this.LabelDetalle2.Location = new System.Drawing.Point(68, 319);
-            this.LabelDetalle2.Name = "LabelDetalle2";
-            this.LabelDetalle2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDetalle2.TabIndex = 147;
-            this.LabelDetalle2.Text = "-";
-            // 
             // LabelImporte2
             // 
             this.LabelImporte2.AutoSize = true;
@@ -111,7 +93,7 @@
             // LabelDetalle
             // 
             this.LabelDetalle.AutoSize = true;
-            this.LabelDetalle.Location = new System.Drawing.Point(10, 319);
+            this.LabelDetalle.Location = new System.Drawing.Point(9, 316);
             this.LabelDetalle.Name = "LabelDetalle";
             this.LabelDetalle.Size = new System.Drawing.Size(40, 13);
             this.LabelDetalle.TabIndex = 144;
@@ -153,7 +135,7 @@
             // 
             // BotonPersonasAsociadas
             // 
-            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(104, 406);
+            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(104, 422);
             this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
             this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
             this.BotonPersonasAsociadas.TabIndex = 169;
@@ -162,7 +144,7 @@
             // 
             // BotonJuiciosAsignados
             // 
-            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 365);
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 393);
             this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
             this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
             this.BotonJuiciosAsignados.TabIndex = 168;
@@ -174,22 +156,41 @@
             this.ListBoxCobros.FormattingEnabled = true;
             this.ListBoxCobros.Location = new System.Drawing.Point(12, 46);
             this.ListBoxCobros.Name = "ListBoxCobros";
-            this.ListBoxCobros.Size = new System.Drawing.Size(347, 186);
+            this.ListBoxCobros.Size = new System.Drawing.Size(360, 186);
             this.ListBoxCobros.TabIndex = 170;
+            // 
+            // CuadroDetalle
+            // 
+            this.CuadroDetalle.Location = new System.Drawing.Point(59, 316);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(313, 71);
+            this.CuadroDetalle.TabIndex = 171;
+            // 
+            // BotonCancelar
+            // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCancelar.Location = new System.Drawing.Point(153, 460);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
+            this.BotonCancelar.TabIndex = 172;
+            this.BotonCancelar.Text = "Aceptar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
             // ConsultaCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 496);
+            this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.ListBoxCobros);
             this.Controls.Add(this.BotonPersonasAsociadas);
             this.Controls.Add(this.BotonJuiciosAsignados);
-            this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.LabelAM);
             this.Controls.Add(this.LabelMinutos);
             this.Controls.Add(this.LabelHora2);
-            this.Controls.Add(this.LabelDetalle2);
             this.Controls.Add(this.LabelImporte2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LabelDetalle);
@@ -205,12 +206,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Label LabelAM;
         private System.Windows.Forms.Label LabelMinutos;
         private System.Windows.Forms.Label LabelHora2;
-        private System.Windows.Forms.Label LabelDetalle2;
         private System.Windows.Forms.Label LabelImporte2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LabelDetalle;
@@ -221,5 +219,7 @@
         private System.Windows.Forms.Button BotonPersonasAsociadas;
         private System.Windows.Forms.Button BotonJuiciosAsignados;
         private System.Windows.Forms.ListBox ListBoxCobros;
+        private System.Windows.Forms.TextBox CuadroDetalle;
+        private System.Windows.Forms.Button BotonCancelar;
     }
 }

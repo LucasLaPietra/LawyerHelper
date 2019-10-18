@@ -36,7 +36,6 @@
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.LabelLugar = new System.Windows.Forms.Label();
-            this.checkedListBoxRecordatorio = new System.Windows.Forms.CheckedListBox();
             this.LabelListaRecordatorios = new System.Windows.Forms.Label();
             this.LabelFecha2 = new System.Windows.Forms.Label();
             this.LabelHora2 = new System.Windows.Forms.Label();
@@ -44,7 +43,8 @@
             this.LabelAM = new System.Windows.Forms.Label();
             this.LabelLugar2 = new System.Windows.Forms.Label();
             this.LabelTipo2 = new System.Windows.Forms.Label();
-            this.LabelDescripcion2 = new System.Windows.Forms.Label();
+            this.ListBoxRecordatorios = new System.Windows.Forms.ListBox();
+            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LabelTipo
@@ -119,14 +119,6 @@
             this.LabelLugar.TabIndex = 35;
             this.LabelLugar.Text = "Lugar:";
             // 
-            // checkedListBoxRecordatorio
-            // 
-            this.checkedListBoxRecordatorio.FormattingEnabled = true;
-            this.checkedListBoxRecordatorio.Location = new System.Drawing.Point(26, 30);
-            this.checkedListBoxRecordatorio.Name = "checkedListBoxRecordatorio";
-            this.checkedListBoxRecordatorio.Size = new System.Drawing.Size(332, 154);
-            this.checkedListBoxRecordatorio.TabIndex = 158;
-            // 
             // LabelListaRecordatorios
             // 
             this.LabelListaRecordatorios.AutoSize = true;
@@ -191,21 +183,30 @@
             this.LabelTipo2.TabIndex = 165;
             this.LabelTipo2.Text = "-";
             // 
-            // LabelDescripcion2
+            // ListBoxRecordatorios
             // 
-            this.LabelDescripcion2.AutoSize = true;
-            this.LabelDescripcion2.Location = new System.Drawing.Point(97, 354);
-            this.LabelDescripcion2.Name = "LabelDescripcion2";
-            this.LabelDescripcion2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDescripcion2.TabIndex = 166;
-            this.LabelDescripcion2.Text = "-";
+            this.ListBoxRecordatorios.FormattingEnabled = true;
+            this.ListBoxRecordatorios.Location = new System.Drawing.Point(15, 12);
+            this.ListBoxRecordatorios.Name = "ListBoxRecordatorios";
+            this.ListBoxRecordatorios.Size = new System.Drawing.Size(357, 186);
+            this.ListBoxRecordatorios.TabIndex = 171;
+            // 
+            // CuadroDescripcion
+            // 
+            this.CuadroDescripcion.Location = new System.Drawing.Point(100, 354);
+            this.CuadroDescripcion.Multiline = true;
+            this.CuadroDescripcion.Name = "CuadroDescripcion";
+            this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDescripcion.Size = new System.Drawing.Size(272, 106);
+            this.CuadroDescripcion.TabIndex = 172;
             // 
             // ModificarRecordatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 525);
-            this.Controls.Add(this.LabelDescripcion2);
+            this.ClientSize = new System.Drawing.Size(384, 521);
+            this.Controls.Add(this.CuadroDescripcion);
+            this.Controls.Add(this.ListBoxRecordatorios);
             this.Controls.Add(this.LabelTipo2);
             this.Controls.Add(this.LabelLugar2);
             this.Controls.Add(this.LabelAM);
@@ -213,7 +214,6 @@
             this.Controls.Add(this.LabelHora2);
             this.Controls.Add(this.LabelFecha2);
             this.Controls.Add(this.LabelListaRecordatorios);
-            this.Controls.Add(this.checkedListBoxRecordatorio);
             this.Controls.Add(this.LabelTipo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -239,7 +239,6 @@
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Label LabelDescripcion;
         private System.Windows.Forms.Label LabelLugar;
-        private System.Windows.Forms.CheckedListBox checkedListBoxRecordatorio;
         private System.Windows.Forms.Label LabelListaRecordatorios;
         private System.Windows.Forms.Label LabelFecha2;
         private System.Windows.Forms.Label LabelHora2;
@@ -247,6 +246,7 @@
         private System.Windows.Forms.Label LabelAM;
         private System.Windows.Forms.Label LabelLugar2;
         private System.Windows.Forms.Label LabelTipo2;
-        private System.Windows.Forms.Label LabelDescripcion2;
+        private System.Windows.Forms.ListBox ListBoxRecordatorios;
+        private System.Windows.Forms.TextBox CuadroDescripcion;
     }
 }

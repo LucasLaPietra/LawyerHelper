@@ -30,7 +30,6 @@
         {
             this.TimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.ComboBoxTipoDocumento = new System.Windows.Forms.ComboBox();
-            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.CuadroNumeroFoja = new System.Windows.Forms.TextBox();
             this.CuadroNombreDocumento = new System.Windows.Forms.TextBox();
             this.CheckVuelta = new System.Windows.Forms.CheckBox();
@@ -45,12 +44,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
-            this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // TimePickerFecha
             // 
-            this.TimePickerFecha.Location = new System.Drawing.Point(149, 247);
+            this.TimePickerFecha.Location = new System.Drawing.Point(149, 238);
             this.TimePickerFecha.Name = "TimePickerFecha";
             this.TimePickerFecha.Size = new System.Drawing.Size(276, 20);
             this.TimePickerFecha.TabIndex = 38;
@@ -58,18 +57,10 @@
             // ComboBoxTipoDocumento
             // 
             this.ComboBoxTipoDocumento.FormattingEnabled = true;
-            this.ComboBoxTipoDocumento.Location = new System.Drawing.Point(148, 168);
+            this.ComboBoxTipoDocumento.Location = new System.Drawing.Point(148, 142);
             this.ComboBoxTipoDocumento.Name = "ComboBoxTipoDocumento";
             this.ComboBoxTipoDocumento.Size = new System.Drawing.Size(277, 21);
             this.ComboBoxTipoDocumento.TabIndex = 37;
-            // 
-            // CuadroDetalle
-            // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(150, 288);
-            this.CuadroDetalle.Multiline = true;
-            this.CuadroDetalle.Name = "CuadroDetalle";
-            this.CuadroDetalle.Size = new System.Drawing.Size(275, 93);
-            this.CuadroDetalle.TabIndex = 36;
             // 
             // CuadroNumeroFoja
             // 
@@ -80,7 +71,7 @@
             // 
             // CuadroNombreDocumento
             // 
-            this.CuadroNombreDocumento.Location = new System.Drawing.Point(148, 125);
+            this.CuadroNombreDocumento.Location = new System.Drawing.Point(148, 86);
             this.CuadroNombreDocumento.Name = "CuadroNombreDocumento";
             this.CuadroNombreDocumento.Size = new System.Drawing.Size(277, 20);
             this.CuadroNombreDocumento.TabIndex = 34;
@@ -88,7 +79,7 @@
             // CheckVuelta
             // 
             this.CheckVuelta.AutoSize = true;
-            this.CheckVuelta.Location = new System.Drawing.Point(149, 399);
+            this.CheckVuelta.Location = new System.Drawing.Point(149, 412);
             this.CheckVuelta.Name = "CheckVuelta";
             this.CheckVuelta.Size = new System.Drawing.Size(35, 17);
             this.CheckVuelta.TabIndex = 33;
@@ -98,7 +89,7 @@
             // CheckEnExpediente
             // 
             this.CheckEnExpediente.AutoSize = true;
-            this.CheckEnExpediente.Location = new System.Drawing.Point(148, 209);
+            this.CheckEnExpediente.Location = new System.Drawing.Point(148, 194);
             this.CheckEnExpediente.Name = "CheckEnExpediente";
             this.CheckEnExpediente.Size = new System.Drawing.Size(35, 17);
             this.CheckEnExpediente.TabIndex = 32;
@@ -108,7 +99,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 401);
+            this.label7.Location = new System.Drawing.Point(28, 414);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 31;
@@ -144,7 +135,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 246);
+            this.label5.Location = new System.Drawing.Point(27, 237);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 27;
@@ -153,7 +144,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 211);
+            this.label4.Location = new System.Drawing.Point(25, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 26;
@@ -171,7 +162,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 172);
+            this.label2.Location = new System.Drawing.Point(23, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 24;
@@ -180,7 +171,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 129);
+            this.label1.Location = new System.Drawing.Point(25, 90);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 23;
@@ -195,25 +186,24 @@
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
             // 
-            // BotonBusquedaAvanzada
+            // CuadroDetalle
             // 
-            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(26, 71);
-            this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
-            this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(172, 23);
-            this.BotonBusquedaAvanzada.TabIndex = 40;
-            this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
-            this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.CuadroDetalle.Location = new System.Drawing.Point(148, 285);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(304, 108);
+            this.CuadroDetalle.TabIndex = 172;
             // 
             // ModificarDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 496);
-            this.Controls.Add(this.BotonBusquedaAvanzada);
+            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.TimePickerFecha);
             this.Controls.Add(this.ComboBoxTipoDocumento);
-            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.CuadroNumeroFoja);
             this.Controls.Add(this.CuadroNombreDocumento);
             this.Controls.Add(this.CheckVuelta);
@@ -239,7 +229,6 @@
 
         private System.Windows.Forms.DateTimePicker TimePickerFecha;
         private System.Windows.Forms.ComboBox ComboBoxTipoDocumento;
-        private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.TextBox CuadroNumeroFoja;
         private System.Windows.Forms.TextBox CuadroNombreDocumento;
         private System.Windows.Forms.CheckBox CheckVuelta;
@@ -254,6 +243,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BotonBuscar;
-        private System.Windows.Forms.Button BotonBusquedaAvanzada;
+        private System.Windows.Forms.TextBox CuadroDetalle;
     }
 }

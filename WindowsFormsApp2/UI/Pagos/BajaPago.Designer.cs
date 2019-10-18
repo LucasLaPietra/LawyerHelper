@@ -39,12 +39,12 @@
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LabelImporte2 = new System.Windows.Forms.Label();
-            this.LabelDetalle2 = new System.Windows.Forms.Label();
             this.LabelHora2 = new System.Windows.Forms.Label();
             this.LabelMinutos = new System.Windows.Forms.Label();
             this.LabelAM = new System.Windows.Forms.Label();
             this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
             this.ListBoxPagos = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // BotonBuscar
@@ -74,25 +74,27 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(275, 460);
+            this.BotonCancelar.Location = new System.Drawing.Point(275, 495);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(97, 24);
             this.BotonCancelar.TabIndex = 70;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(12, 460);
+            this.BotonAceptar.Location = new System.Drawing.Point(12, 495);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 69;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // BotonJuiciosAsignados
             // 
-            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(109, 371);
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(109, 419);
             this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
             this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
             this.BotonJuiciosAsignados.TabIndex = 94;
@@ -144,15 +146,6 @@
             this.LabelImporte2.TabIndex = 110;
             this.LabelImporte2.Text = "-";
             // 
-            // LabelDetalle2
-            // 
-            this.LabelDetalle2.AutoSize = true;
-            this.LabelDetalle2.Location = new System.Drawing.Point(68, 342);
-            this.LabelDetalle2.Name = "LabelDetalle2";
-            this.LabelDetalle2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDetalle2.TabIndex = 111;
-            this.LabelDetalle2.Text = "-";
-            // 
             // LabelHora2
             // 
             this.LabelHora2.AutoSize = true;
@@ -182,7 +175,7 @@
             // 
             // BotonPersonasAsociadas
             // 
-            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(109, 414);
+            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(109, 462);
             this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
             this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
             this.BotonPersonasAsociadas.TabIndex = 115;
@@ -197,17 +190,26 @@
             this.ListBoxPagos.Size = new System.Drawing.Size(360, 186);
             this.ListBoxPagos.TabIndex = 130;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(70, 342);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(302, 62);
+            this.textBox1.TabIndex = 176;
+            // 
             // BajaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 496);
+            this.ClientSize = new System.Drawing.Size(384, 531);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.ListBoxPagos);
             this.Controls.Add(this.BotonPersonasAsociadas);
             this.Controls.Add(this.LabelAM);
             this.Controls.Add(this.LabelMinutos);
             this.Controls.Add(this.LabelHora2);
-            this.Controls.Add(this.LabelDetalle2);
             this.Controls.Add(this.LabelImporte2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LabelDetalle);
@@ -240,11 +242,11 @@
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LabelImporte2;
-        private System.Windows.Forms.Label LabelDetalle2;
         private System.Windows.Forms.Label LabelHora2;
         private System.Windows.Forms.Label LabelMinutos;
         private System.Windows.Forms.Label LabelAM;
         private System.Windows.Forms.Button BotonPersonasAsociadas;
         private System.Windows.Forms.ListBox ListBoxPagos;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

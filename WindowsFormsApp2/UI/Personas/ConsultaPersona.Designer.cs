@@ -152,7 +152,7 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.Layout.Size = new System.Drawing.Size(358, 324);
+            this.Layout.Size = new System.Drawing.Size(358, 333);
             this.Layout.TabIndex = 5;
             // 
             // LabelDNI
@@ -176,7 +176,7 @@
             // LabelDomicilio
             // 
             this.LabelDomicilio.AutoSize = true;
-            this.LabelDomicilio.Location = new System.Drawing.Point(3, 26);
+            this.LabelDomicilio.Location = new System.Drawing.Point(3, 27);
             this.LabelDomicilio.Name = "LabelDomicilio";
             this.LabelDomicilio.Size = new System.Drawing.Size(49, 13);
             this.LabelDomicilio.TabIndex = 2;
@@ -185,7 +185,7 @@
             // LabelDomicilio2
             // 
             this.LabelDomicilio2.AutoSize = true;
-            this.LabelDomicilio2.Location = new System.Drawing.Point(182, 26);
+            this.LabelDomicilio2.Location = new System.Drawing.Point(182, 27);
             this.LabelDomicilio2.Name = "LabelDomicilio2";
             this.LabelDomicilio2.Size = new System.Drawing.Size(10, 13);
             this.LabelDomicilio2.TabIndex = 3;
@@ -194,7 +194,7 @@
             // LabelTelefono
             // 
             this.LabelTelefono.AutoSize = true;
-            this.LabelTelefono.Location = new System.Drawing.Point(3, 52);
+            this.LabelTelefono.Location = new System.Drawing.Point(3, 54);
             this.LabelTelefono.Name = "LabelTelefono";
             this.LabelTelefono.Size = new System.Drawing.Size(49, 13);
             this.LabelTelefono.TabIndex = 4;
@@ -203,7 +203,7 @@
             // LabelTelefono2
             // 
             this.LabelTelefono2.AutoSize = true;
-            this.LabelTelefono2.Location = new System.Drawing.Point(182, 52);
+            this.LabelTelefono2.Location = new System.Drawing.Point(182, 54);
             this.LabelTelefono2.Name = "LabelTelefono2";
             this.LabelTelefono2.Size = new System.Drawing.Size(10, 13);
             this.LabelTelefono2.TabIndex = 5;
@@ -212,7 +212,7 @@
             // LabelFechaNacimiento
             // 
             this.LabelFechaNacimiento.AutoSize = true;
-            this.LabelFechaNacimiento.Location = new System.Drawing.Point(3, 78);
+            this.LabelFechaNacimiento.Location = new System.Drawing.Point(3, 81);
             this.LabelFechaNacimiento.Name = "LabelFechaNacimiento";
             this.LabelFechaNacimiento.Size = new System.Drawing.Size(106, 13);
             this.LabelFechaNacimiento.TabIndex = 6;
@@ -221,7 +221,7 @@
             // LabelFechaNacimiento2
             // 
             this.LabelFechaNacimiento2.AutoSize = true;
-            this.LabelFechaNacimiento2.Location = new System.Drawing.Point(182, 78);
+            this.LabelFechaNacimiento2.Location = new System.Drawing.Point(182, 81);
             this.LabelFechaNacimiento2.Name = "LabelFechaNacimiento2";
             this.LabelFechaNacimiento2.Size = new System.Drawing.Size(10, 13);
             this.LabelFechaNacimiento2.TabIndex = 7;
@@ -230,7 +230,7 @@
             // LabelProfesion
             // 
             this.LabelProfesion.AutoSize = true;
-            this.LabelProfesion.Location = new System.Drawing.Point(3, 104);
+            this.LabelProfesion.Location = new System.Drawing.Point(3, 108);
             this.LabelProfesion.Name = "LabelProfesion";
             this.LabelProfesion.Size = new System.Drawing.Size(51, 13);
             this.LabelProfesion.TabIndex = 8;
@@ -239,7 +239,7 @@
             // LabelProfesion2
             // 
             this.LabelProfesion2.AutoSize = true;
-            this.LabelProfesion2.Location = new System.Drawing.Point(182, 104);
+            this.LabelProfesion2.Location = new System.Drawing.Point(182, 108);
             this.LabelProfesion2.Name = "LabelProfesion2";
             this.LabelProfesion2.Size = new System.Drawing.Size(10, 13);
             this.LabelProfesion2.TabIndex = 9;
@@ -248,7 +248,7 @@
             // LabelLugarTrabajo
             // 
             this.LabelLugarTrabajo.AutoSize = true;
-            this.LabelLugarTrabajo.Location = new System.Drawing.Point(3, 130);
+            this.LabelLugarTrabajo.Location = new System.Drawing.Point(3, 135);
             this.LabelLugarTrabajo.Name = "LabelLugarTrabajo";
             this.LabelLugarTrabajo.Size = new System.Drawing.Size(84, 13);
             this.LabelLugarTrabajo.TabIndex = 10;
@@ -257,7 +257,7 @@
             // LabelLugarTrabajo2
             // 
             this.LabelLugarTrabajo2.AutoSize = true;
-            this.LabelLugarTrabajo2.Location = new System.Drawing.Point(182, 130);
+            this.LabelLugarTrabajo2.Location = new System.Drawing.Point(182, 135);
             this.LabelLugarTrabajo2.Name = "LabelLugarTrabajo2";
             this.LabelLugarTrabajo2.Size = new System.Drawing.Size(10, 13);
             this.LabelLugarTrabajo2.TabIndex = 11;
@@ -266,7 +266,7 @@
             // LabelCUIL
             // 
             this.LabelCUIL.AutoSize = true;
-            this.LabelCUIL.Location = new System.Drawing.Point(3, 156);
+            this.LabelCUIL.Location = new System.Drawing.Point(3, 162);
             this.LabelCUIL.Name = "LabelCUIL";
             this.LabelCUIL.Size = new System.Drawing.Size(62, 13);
             this.LabelCUIL.TabIndex = 12;
@@ -275,7 +275,7 @@
             // LabelCUIL2
             // 
             this.LabelCUIL2.AutoSize = true;
-            this.LabelCUIL2.Location = new System.Drawing.Point(182, 156);
+            this.LabelCUIL2.Location = new System.Drawing.Point(182, 162);
             this.LabelCUIL2.Name = "LabelCUIL2";
             this.LabelCUIL2.Size = new System.Drawing.Size(10, 13);
             this.LabelCUIL2.TabIndex = 13;
@@ -284,7 +284,7 @@
             // LabelEstadoCivil
             // 
             this.LabelEstadoCivil.AutoSize = true;
-            this.LabelEstadoCivil.Location = new System.Drawing.Point(3, 182);
+            this.LabelEstadoCivil.Location = new System.Drawing.Point(3, 189);
             this.LabelEstadoCivil.Name = "LabelEstadoCivil";
             this.LabelEstadoCivil.Size = new System.Drawing.Size(61, 13);
             this.LabelEstadoCivil.TabIndex = 14;
@@ -293,7 +293,7 @@
             // LabelEstadoCivil2
             // 
             this.LabelEstadoCivil2.AutoSize = true;
-            this.LabelEstadoCivil2.Location = new System.Drawing.Point(182, 182);
+            this.LabelEstadoCivil2.Location = new System.Drawing.Point(182, 189);
             this.LabelEstadoCivil2.Name = "LabelEstadoCivil2";
             this.LabelEstadoCivil2.Size = new System.Drawing.Size(10, 13);
             this.LabelEstadoCivil2.TabIndex = 15;
@@ -302,7 +302,7 @@
             // LabelRepresentante
             // 
             this.LabelRepresentante.AutoSize = true;
-            this.LabelRepresentante.Location = new System.Drawing.Point(3, 208);
+            this.LabelRepresentante.Location = new System.Drawing.Point(3, 216);
             this.LabelRepresentante.Name = "LabelRepresentante";
             this.LabelRepresentante.Size = new System.Drawing.Size(77, 13);
             this.LabelRepresentante.TabIndex = 16;
@@ -311,7 +311,7 @@
             // LabelRepresentante2
             // 
             this.LabelRepresentante2.AutoSize = true;
-            this.LabelRepresentante2.Location = new System.Drawing.Point(182, 208);
+            this.LabelRepresentante2.Location = new System.Drawing.Point(182, 216);
             this.LabelRepresentante2.Name = "LabelRepresentante2";
             this.LabelRepresentante2.Size = new System.Drawing.Size(10, 13);
             this.LabelRepresentante2.TabIndex = 17;
@@ -320,7 +320,7 @@
             // LabelDomicilioLegal
             // 
             this.LabelDomicilioLegal.AutoSize = true;
-            this.LabelDomicilioLegal.Location = new System.Drawing.Point(3, 234);
+            this.LabelDomicilioLegal.Location = new System.Drawing.Point(3, 243);
             this.LabelDomicilioLegal.Name = "LabelDomicilioLegal";
             this.LabelDomicilioLegal.Size = new System.Drawing.Size(74, 13);
             this.LabelDomicilioLegal.TabIndex = 18;
@@ -329,7 +329,7 @@
             // LabelDomicilioLegal2
             // 
             this.LabelDomicilioLegal2.AutoSize = true;
-            this.LabelDomicilioLegal2.Location = new System.Drawing.Point(182, 234);
+            this.LabelDomicilioLegal2.Location = new System.Drawing.Point(182, 243);
             this.LabelDomicilioLegal2.Name = "LabelDomicilioLegal2";
             this.LabelDomicilioLegal2.Size = new System.Drawing.Size(10, 13);
             this.LabelDomicilioLegal2.TabIndex = 19;
@@ -338,7 +338,7 @@
             // LabelJuiciosAsociados
             // 
             this.LabelJuiciosAsociados.AutoSize = true;
-            this.LabelJuiciosAsociados.Location = new System.Drawing.Point(3, 260);
+            this.LabelJuiciosAsociados.Location = new System.Drawing.Point(3, 270);
             this.LabelJuiciosAsociados.Name = "LabelJuiciosAsociados";
             this.LabelJuiciosAsociados.Size = new System.Drawing.Size(90, 13);
             this.LabelJuiciosAsociados.TabIndex = 20;
@@ -347,7 +347,7 @@
             // LabelCobrosAsociados
             // 
             this.LabelCobrosAsociados.AutoSize = true;
-            this.LabelCobrosAsociados.Location = new System.Drawing.Point(3, 286);
+            this.LabelCobrosAsociados.Location = new System.Drawing.Point(3, 297);
             this.LabelCobrosAsociados.Name = "LabelCobrosAsociados";
             this.LabelCobrosAsociados.Size = new System.Drawing.Size(91, 13);
             this.LabelCobrosAsociados.TabIndex = 22;
@@ -357,9 +357,9 @@
             // 
             this.BotonVerJuicios.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BotonVerJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonVerJuicios.Location = new System.Drawing.Point(231, 263);
+            this.BotonVerJuicios.Location = new System.Drawing.Point(231, 273);
             this.BotonVerJuicios.Name = "BotonVerJuicios";
-            this.BotonVerJuicios.Size = new System.Drawing.Size(75, 20);
+            this.BotonVerJuicios.Size = new System.Drawing.Size(75, 21);
             this.BotonVerJuicios.TabIndex = 23;
             this.BotonVerJuicios.Text = "Ver";
             this.BotonVerJuicios.UseVisualStyleBackColor = true;
@@ -368,7 +368,7 @@
             // 
             this.BotonVerCobros.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BotonVerCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonVerCobros.Location = new System.Drawing.Point(231, 293);
+            this.BotonVerCobros.Location = new System.Drawing.Point(231, 303);
             this.BotonVerCobros.Name = "BotonVerCobros";
             this.BotonVerCobros.Size = new System.Drawing.Size(75, 23);
             this.BotonVerCobros.TabIndex = 24;
@@ -378,7 +378,7 @@
             // BotonCancelar
             // 
             this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(145, 460);
+            this.BotonCancelar.Location = new System.Drawing.Point(145, 469);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 41;
@@ -401,7 +401,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 492);
+            this.ClientSize = new System.Drawing.Size(384, 499);
             this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.Layout);

@@ -46,5 +46,10 @@ namespace LawyerHelper.UI.Agenda
             }
            
         }
+
+        private void AltaRecordatorio_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

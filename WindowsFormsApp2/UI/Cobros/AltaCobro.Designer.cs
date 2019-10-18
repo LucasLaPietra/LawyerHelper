@@ -37,12 +37,12 @@
             this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.BotonPersona = new System.Windows.Forms.Button();
-            this.CuadroDetalle = new System.Windows.Forms.TextBox();
+            this.BotonAsignarPersona = new System.Windows.Forms.Button();
             this.CuadroImporte = new System.Windows.Forms.TextBox();
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
-            this.BotonJuicio = new System.Windows.Forms.Button();
+            this.BotonAsignarJuicio = new System.Windows.Forms.Button();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CuadroAM
@@ -125,22 +125,14 @@
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
-            // BotonPersona
+            // BotonAsignarPersona
             // 
-            this.BotonPersona.Location = new System.Drawing.Point(53, 254);
-            this.BotonPersona.Name = "BotonPersona";
-            this.BotonPersona.Size = new System.Drawing.Size(180, 26);
-            this.BotonPersona.TabIndex = 23;
-            this.BotonPersona.Text = "Asignar cobro a persona";
-            this.BotonPersona.UseVisualStyleBackColor = true;
-            // 
-            // CuadroDetalle
-            // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(68, 130);
-            this.CuadroDetalle.Multiline = true;
-            this.CuadroDetalle.Name = "CuadroDetalle";
-            this.CuadroDetalle.Size = new System.Drawing.Size(193, 108);
-            this.CuadroDetalle.TabIndex = 22;
+            this.BotonAsignarPersona.Location = new System.Drawing.Point(53, 254);
+            this.BotonAsignarPersona.Name = "BotonAsignarPersona";
+            this.BotonAsignarPersona.Size = new System.Drawing.Size(180, 26);
+            this.BotonAsignarPersona.TabIndex = 23;
+            this.BotonAsignarPersona.Text = "Asignar cobro a persona";
+            this.BotonAsignarPersona.UseVisualStyleBackColor = true;
             // 
             // CuadroImporte
             // 
@@ -167,21 +159,31 @@
             this.LabelImporte.TabIndex = 19;
             this.LabelImporte.Text = "Importe:";
             // 
-            // BotonJuicio
+            // BotonAsignarJuicio
             // 
-            this.BotonJuicio.Location = new System.Drawing.Point(53, 286);
-            this.BotonJuicio.Name = "BotonJuicio";
-            this.BotonJuicio.Size = new System.Drawing.Size(180, 26);
-            this.BotonJuicio.TabIndex = 33;
-            this.BotonJuicio.Text = "Asignar cobro a juicio";
-            this.BotonJuicio.UseVisualStyleBackColor = true;
+            this.BotonAsignarJuicio.Location = new System.Drawing.Point(53, 286);
+            this.BotonAsignarJuicio.Name = "BotonAsignarJuicio";
+            this.BotonAsignarJuicio.Size = new System.Drawing.Size(180, 26);
+            this.BotonAsignarJuicio.TabIndex = 33;
+            this.BotonAsignarJuicio.Text = "Asignar cobro a juicio";
+            this.BotonAsignarJuicio.UseVisualStyleBackColor = true;
+            // 
+            // CuadroDetalle
+            // 
+            this.CuadroDetalle.Location = new System.Drawing.Point(68, 130);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(193, 108);
+            this.CuadroDetalle.TabIndex = 164;
             // 
             // AltaCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 381);
-            this.Controls.Add(this.BotonJuicio);
+            this.Controls.Add(this.CuadroDetalle);
+            this.Controls.Add(this.BotonAsignarJuicio);
             this.Controls.Add(this.CuadroAM);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CuadroMinutos);
@@ -191,8 +193,7 @@
             this.Controls.Add(this.CuadroFecha);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
-            this.Controls.Add(this.BotonPersona);
-            this.Controls.Add(this.CuadroDetalle);
+            this.Controls.Add(this.BotonAsignarPersona);
             this.Controls.Add(this.CuadroImporte);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
@@ -214,11 +215,11 @@
         private System.Windows.Forms.DateTimePicker CuadroFecha;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.Button BotonPersona;
-        private System.Windows.Forms.TextBox CuadroDetalle;
+        private System.Windows.Forms.Button BotonAsignarPersona;
         private System.Windows.Forms.TextBox CuadroImporte;
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label LabelImporte;
-        private System.Windows.Forms.Button BotonJuicio;
+        private System.Windows.Forms.Button BotonAsignarJuicio;
+        private System.Windows.Forms.TextBox CuadroDetalle;
     }
 }

@@ -195,6 +195,7 @@
             this.Controls.Add(this.LabelLugar);
             this.Name = "AltaRecordatorio";
             this.Text = "AltaRecordatorio";
+            this.Load += new System.EventHandler(this.AltaRecordatorio_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

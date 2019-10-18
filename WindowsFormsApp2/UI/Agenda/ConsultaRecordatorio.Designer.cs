@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.LabelListaRecordatorios = new System.Windows.Forms.Label();
-            this.BotonCancelar = new System.Windows.Forms.Button();
-            this.LabelDescripcion2 = new System.Windows.Forms.Label();
             this.LabelTipo2 = new System.Windows.Forms.Label();
             this.LabelLugar2 = new System.Windows.Forms.Label();
             this.LabelAM = new System.Windows.Forms.Label();
@@ -44,6 +42,8 @@
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.LabelLugar = new System.Windows.Forms.Label();
             this.ListBoxRecordatorios = new System.Windows.Forms.ListBox();
+            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
+            this.BotonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelListaRecordatorios
@@ -55,29 +55,10 @@
             this.LabelListaRecordatorios.TabIndex = 176;
             this.LabelListaRecordatorios.Text = "Lista de recordatorios:";
             // 
-            // BotonCancelar
-            // 
-            this.BotonCancelar.Location = new System.Drawing.Point(137, 470);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
-            this.BotonCancelar.TabIndex = 165;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
-            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
-            // 
-            // LabelDescripcion2
-            // 
-            this.LabelDescripcion2.AutoSize = true;
-            this.LabelDescripcion2.Location = new System.Drawing.Point(107, 370);
-            this.LabelDescripcion2.Name = "LabelDescripcion2";
-            this.LabelDescripcion2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDescripcion2.TabIndex = 189;
-            this.LabelDescripcion2.Text = "-";
-            // 
             // LabelTipo2
             // 
             this.LabelTipo2.AutoSize = true;
-            this.LabelTipo2.Location = new System.Drawing.Point(107, 331);
+            this.LabelTipo2.Location = new System.Drawing.Point(94, 316);
             this.LabelTipo2.Name = "LabelTipo2";
             this.LabelTipo2.Size = new System.Drawing.Size(10, 13);
             this.LabelTipo2.TabIndex = 188;
@@ -86,7 +67,7 @@
             // LabelLugar2
             // 
             this.LabelLugar2.AutoSize = true;
-            this.LabelLugar2.Location = new System.Drawing.Point(107, 292);
+            this.LabelLugar2.Location = new System.Drawing.Point(94, 277);
             this.LabelLugar2.Name = "LabelLugar2";
             this.LabelLugar2.Size = new System.Drawing.Size(10, 13);
             this.LabelLugar2.TabIndex = 187;
@@ -95,7 +76,7 @@
             // LabelAM
             // 
             this.LabelAM.AutoSize = true;
-            this.LabelAM.Location = new System.Drawing.Point(200, 252);
+            this.LabelAM.Location = new System.Drawing.Point(187, 237);
             this.LabelAM.Name = "LabelAM";
             this.LabelAM.Size = new System.Drawing.Size(10, 13);
             this.LabelAM.TabIndex = 186;
@@ -104,7 +85,7 @@
             // LabelMinutos
             // 
             this.LabelMinutos.AutoSize = true;
-            this.LabelMinutos.Location = new System.Drawing.Point(161, 252);
+            this.LabelMinutos.Location = new System.Drawing.Point(148, 237);
             this.LabelMinutos.Name = "LabelMinutos";
             this.LabelMinutos.Size = new System.Drawing.Size(10, 13);
             this.LabelMinutos.TabIndex = 185;
@@ -113,7 +94,7 @@
             // LabelHora2
             // 
             this.LabelHora2.AutoSize = true;
-            this.LabelHora2.Location = new System.Drawing.Point(107, 252);
+            this.LabelHora2.Location = new System.Drawing.Point(94, 237);
             this.LabelHora2.Name = "LabelHora2";
             this.LabelHora2.Size = new System.Drawing.Size(10, 13);
             this.LabelHora2.TabIndex = 184;
@@ -122,7 +103,7 @@
             // LabelFecha2
             // 
             this.LabelFecha2.AutoSize = true;
-            this.LabelFecha2.Location = new System.Drawing.Point(107, 214);
+            this.LabelFecha2.Location = new System.Drawing.Point(94, 199);
             this.LabelFecha2.Name = "LabelFecha2";
             this.LabelFecha2.Size = new System.Drawing.Size(10, 13);
             this.LabelFecha2.TabIndex = 183;
@@ -131,7 +112,7 @@
             // LabelTipo
             // 
             this.LabelTipo.AutoSize = true;
-            this.LabelTipo.Location = new System.Drawing.Point(32, 331);
+            this.LabelTipo.Location = new System.Drawing.Point(19, 316);
             this.LabelTipo.Name = "LabelTipo";
             this.LabelTipo.Size = new System.Drawing.Size(31, 13);
             this.LabelTipo.TabIndex = 182;
@@ -140,7 +121,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(134, 252);
+            this.label3.Location = new System.Drawing.Point(121, 237);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(10, 13);
             this.label3.TabIndex = 181;
@@ -149,7 +130,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 214);
+            this.label2.Location = new System.Drawing.Point(19, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(40, 13);
             this.label2.TabIndex = 180;
@@ -158,7 +139,7 @@
             // LabelHora
             // 
             this.LabelHora.AutoSize = true;
-            this.LabelHora.Location = new System.Drawing.Point(32, 252);
+            this.LabelHora.Location = new System.Drawing.Point(19, 237);
             this.LabelHora.Name = "LabelHora";
             this.LabelHora.Size = new System.Drawing.Size(33, 13);
             this.LabelHora.TabIndex = 179;
@@ -167,7 +148,7 @@
             // LabelDescripcion
             // 
             this.LabelDescripcion.AutoSize = true;
-            this.LabelDescripcion.Location = new System.Drawing.Point(32, 370);
+            this.LabelDescripcion.Location = new System.Drawing.Point(19, 355);
             this.LabelDescripcion.Name = "LabelDescripcion";
             this.LabelDescripcion.Size = new System.Drawing.Size(66, 13);
             this.LabelDescripcion.TabIndex = 178;
@@ -176,7 +157,7 @@
             // LabelLugar
             // 
             this.LabelLugar.AutoSize = true;
-            this.LabelLugar.Location = new System.Drawing.Point(32, 292);
+            this.LabelLugar.Location = new System.Drawing.Point(19, 277);
             this.LabelLugar.Name = "LabelLugar";
             this.LabelLugar.Size = new System.Drawing.Size(37, 13);
             this.LabelLugar.TabIndex = 177;
@@ -185,18 +166,38 @@
             // ListBoxRecordatorios
             // 
             this.ListBoxRecordatorios.FormattingEnabled = true;
-            this.ListBoxRecordatorios.Location = new System.Drawing.Point(14, 48);
+            this.ListBoxRecordatorios.Location = new System.Drawing.Point(14, 41);
             this.ListBoxRecordatorios.Name = "ListBoxRecordatorios";
             this.ListBoxRecordatorios.Size = new System.Drawing.Size(358, 134);
             this.ListBoxRecordatorios.TabIndex = 190;
+            // 
+            // CuadroDescripcion
+            // 
+            this.CuadroDescripcion.Location = new System.Drawing.Point(91, 355);
+            this.CuadroDescripcion.Multiline = true;
+            this.CuadroDescripcion.Name = "CuadroDescripcion";
+            this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDescripcion.Size = new System.Drawing.Size(281, 96);
+            this.CuadroDescripcion.TabIndex = 191;
+            // 
+            // BotonCancelar
+            // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCancelar.Location = new System.Drawing.Point(151, 485);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
+            this.BotonCancelar.TabIndex = 192;
+            this.BotonCancelar.Text = "Aceptar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
             // ConsultaRecordatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 515);
+            this.ClientSize = new System.Drawing.Size(384, 521);
+            this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.CuadroDescripcion);
             this.Controls.Add(this.ListBoxRecordatorios);
-            this.Controls.Add(this.LabelDescripcion2);
             this.Controls.Add(this.LabelTipo2);
             this.Controls.Add(this.LabelLugar2);
             this.Controls.Add(this.LabelAM);
@@ -210,7 +211,6 @@
             this.Controls.Add(this.LabelDescripcion);
             this.Controls.Add(this.LabelLugar);
             this.Controls.Add(this.LabelListaRecordatorios);
-            this.Controls.Add(this.BotonCancelar);
             this.Name = "ConsultaRecordatorio";
             this.Text = "ConsultaRecordatorio";
             this.ResumeLayout(false);
@@ -221,8 +221,6 @@
         #endregion
 
         private System.Windows.Forms.Label LabelListaRecordatorios;
-        private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.Label LabelDescripcion2;
         private System.Windows.Forms.Label LabelTipo2;
         private System.Windows.Forms.Label LabelLugar2;
         private System.Windows.Forms.Label LabelAM;
@@ -236,5 +234,7 @@
         private System.Windows.Forms.Label LabelDescripcion;
         private System.Windows.Forms.Label LabelLugar;
         private System.Windows.Forms.ListBox ListBoxRecordatorios;
+        private System.Windows.Forms.TextBox CuadroDescripcion;
+        private System.Windows.Forms.Button BotonCancelar;
     }
 }
