@@ -21,11 +21,11 @@ namespace LawyerHelper.Controladores
             string pDescripcion, string pBienes, DateTime pFecha, string pGrupoFamiliar, string pTipoProceso,
             string pRecurso, string pCompetencia, string pFuero, string pCaratula, string pFolio, string pLibro,
             string pJurisdiccion, Double pPrecio)
-            {
+        {
             Juicio iJuicio = new Juicio(pNroExpediente, pJuez, pSecretario, pEtapa,
              pDescripcion,  pBienes,  pFecha,  pGrupoFamiliar,pTipoProceso, pRecurso, pCompetencia, 
              pFuero,  pCaratula,  pFolio,  pLibro, pJurisdiccion, pPrecio);
-            
+            iUdT.RepositorioJuicio.JuicioIgualExpediente(pNroExpediente);
             iUdT.RepositorioJuicio.Agregar(iJuicio);
             iUdT.Guardar();
         }

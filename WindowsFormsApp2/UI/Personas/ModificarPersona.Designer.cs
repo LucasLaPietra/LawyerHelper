@@ -47,8 +47,6 @@
             this.LabelDomicilioLegal = new System.Windows.Forms.Label();
             this.LabelJuiciosAsociados = new System.Windows.Forms.Label();
             this.LabelCobrosAsociados = new System.Windows.Forms.Label();
-            this.BotonVerJuicios = new System.Windows.Forms.Button();
-            this.BotonVerCobros = new System.Windows.Forms.Button();
             this.CuadroDNI = new System.Windows.Forms.TextBox();
             this.CuadroDomicilio = new System.Windows.Forms.TextBox();
             this.CuadroTelefono = new System.Windows.Forms.TextBox();
@@ -60,9 +58,11 @@
             this.CuadroDomicilioLegal = new System.Windows.Forms.TextBox();
             this.CuadroFechaNacimiento = new System.Windows.Forms.DateTimePicker();
             this.BotonModificarJuicio = new System.Windows.Forms.Button();
-            this.BotonModificarCobro = new System.Windows.Forms.Button();
+            this.BotonVerCobro = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
+            this.ComboBoxJuiciosAsociados = new System.Windows.Forms.ComboBox();
+            this.ComboBoxCobrosAsociados = new System.Windows.Forms.ComboBox();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,8 +139,6 @@
             this.Layout.Controls.Add(this.LabelDomicilioLegal, 0, 9);
             this.Layout.Controls.Add(this.LabelJuiciosAsociados, 0, 10);
             this.Layout.Controls.Add(this.LabelCobrosAsociados, 0, 11);
-            this.Layout.Controls.Add(this.BotonVerJuicios, 1, 10);
-            this.Layout.Controls.Add(this.BotonVerCobros, 1, 11);
             this.Layout.Controls.Add(this.CuadroDNI, 1, 0);
             this.Layout.Controls.Add(this.CuadroDomicilio, 1, 1);
             this.Layout.Controls.Add(this.CuadroTelefono, 1, 2);
@@ -151,6 +149,8 @@
             this.Layout.Controls.Add(this.CuadroRepresentante, 1, 8);
             this.Layout.Controls.Add(this.CuadroDomicilioLegal, 1, 9);
             this.Layout.Controls.Add(this.CuadroFechaNacimiento, 1, 3);
+            this.Layout.Controls.Add(this.ComboBoxJuiciosAsociados, 1, 10);
+            this.Layout.Controls.Add(this.ComboBoxCobrosAsociados, 1, 11);
             this.Layout.Location = new System.Drawing.Point(12, 130);
             this.Layout.Name = "Layout";
             this.Layout.RowCount = 12;
@@ -271,33 +271,11 @@
             // LabelCobrosAsociados
             // 
             this.LabelCobrosAsociados.AutoSize = true;
-            this.LabelCobrosAsociados.Location = new System.Drawing.Point(3, 289);
+            this.LabelCobrosAsociados.Location = new System.Drawing.Point(3, 287);
             this.LabelCobrosAsociados.Name = "LabelCobrosAsociados";
             this.LabelCobrosAsociados.Size = new System.Drawing.Size(91, 13);
             this.LabelCobrosAsociados.TabIndex = 22;
             this.LabelCobrosAsociados.Text = "Cobros asociados";
-            // 
-            // BotonVerJuicios
-            // 
-            this.BotonVerJuicios.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BotonVerJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonVerJuicios.Location = new System.Drawing.Point(206, 263);
-            this.BotonVerJuicios.Name = "BotonVerJuicios";
-            this.BotonVerJuicios.Size = new System.Drawing.Size(75, 23);
-            this.BotonVerJuicios.TabIndex = 23;
-            this.BotonVerJuicios.Text = "Ver ";
-            this.BotonVerJuicios.UseVisualStyleBackColor = true;
-            // 
-            // BotonVerCobros
-            // 
-            this.BotonVerCobros.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.BotonVerCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonVerCobros.Location = new System.Drawing.Point(206, 292);
-            this.BotonVerCobros.Name = "BotonVerCobros";
-            this.BotonVerCobros.Size = new System.Drawing.Size(75, 23);
-            this.BotonVerCobros.TabIndex = 24;
-            this.BotonVerCobros.Text = "Ver";
-            this.BotonVerCobros.UseVisualStyleBackColor = true;
             // 
             // CuadroDNI
             // 
@@ -388,15 +366,15 @@
             this.BotonModificarJuicio.Text = "Modificar  juicio";
             this.BotonModificarJuicio.UseVisualStyleBackColor = true;
             // 
-            // BotonModificarCobro
+            // BotonVerCobro
             // 
-            this.BotonModificarCobro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonModificarCobro.Location = new System.Drawing.Point(385, 419);
-            this.BotonModificarCobro.Name = "BotonModificarCobro";
-            this.BotonModificarCobro.Size = new System.Drawing.Size(129, 23);
-            this.BotonModificarCobro.TabIndex = 47;
-            this.BotonModificarCobro.Text = "Modificar Cobro";
-            this.BotonModificarCobro.UseVisualStyleBackColor = true;
+            this.BotonVerCobro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonVerCobro.Location = new System.Drawing.Point(385, 419);
+            this.BotonVerCobro.Name = "BotonVerCobro";
+            this.BotonVerCobro.Size = new System.Drawing.Size(129, 23);
+            this.BotonVerCobro.TabIndex = 47;
+            this.BotonVerCobro.Text = "Ver Cobro";
+            this.BotonVerCobro.UseVisualStyleBackColor = true;
             // 
             // BotonCancelar
             // 
@@ -420,6 +398,24 @@
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
+            // ComboBoxJuiciosAsociados
+            // 
+            this.ComboBoxJuiciosAsociados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxJuiciosAsociados.FormattingEnabled = true;
+            this.ComboBoxJuiciosAsociados.Location = new System.Drawing.Point(132, 263);
+            this.ComboBoxJuiciosAsociados.Name = "ComboBoxJuiciosAsociados";
+            this.ComboBoxJuiciosAsociados.Size = new System.Drawing.Size(223, 21);
+            this.ComboBoxJuiciosAsociados.TabIndex = 36;
+            // 
+            // ComboBoxCobrosAsociados
+            // 
+            this.ComboBoxCobrosAsociados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxCobrosAsociados.FormattingEnabled = true;
+            this.ComboBoxCobrosAsociados.Location = new System.Drawing.Point(132, 290);
+            this.ComboBoxCobrosAsociados.Name = "ComboBoxCobrosAsociados";
+            this.ComboBoxCobrosAsociados.Size = new System.Drawing.Size(223, 21);
+            this.ComboBoxCobrosAsociados.TabIndex = 37;
+            // 
             // ModificarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,7 +423,7 @@
             this.ClientSize = new System.Drawing.Size(559, 496);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
-            this.Controls.Add(this.BotonModificarCobro);
+            this.Controls.Add(this.BotonVerCobro);
             this.Controls.Add(this.BotonModificarJuicio);
             this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonBusquedaAvanzada);
@@ -467,8 +463,6 @@
         private System.Windows.Forms.Label LabelDomicilioLegal;
         private System.Windows.Forms.Label LabelJuiciosAsociados;
         private System.Windows.Forms.Label LabelCobrosAsociados;
-        private System.Windows.Forms.Button BotonVerJuicios;
-        private System.Windows.Forms.Button BotonVerCobros;
         private System.Windows.Forms.TextBox CuadroDNI;
         private System.Windows.Forms.TextBox CuadroDomicilio;
         private System.Windows.Forms.TextBox CuadroTelefono;
@@ -479,9 +473,11 @@
         private System.Windows.Forms.TextBox CuadroRepresentante;
         private System.Windows.Forms.TextBox CuadroDomicilioLegal;
         private System.Windows.Forms.Button BotonModificarJuicio;
-        private System.Windows.Forms.Button BotonModificarCobro;
+        private System.Windows.Forms.Button BotonVerCobro;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.DateTimePicker CuadroFechaNacimiento;
+        private System.Windows.Forms.ComboBox ComboBoxJuiciosAsociados;
+        private System.Windows.Forms.ComboBox ComboBoxCobrosAsociados;
     }
 }

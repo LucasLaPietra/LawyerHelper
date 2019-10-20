@@ -58,6 +58,12 @@ namespace LawyerHelper.UI.Personas
                 b.ForeColor = Colores.ColorForeground;
                 b.BackColor = Colores.ColorBackground;
             }
+            foreach (ComboBox c in Layout.Controls.OfType<ComboBox>())
+            {
+                c.ForeColor = Colores.ColorForeground;
+                c.BackColor = Colores.ColorBackground;
+            }
+            
         }
 
         private void LabelDomicilio2_Click(object sender, EventArgs e)

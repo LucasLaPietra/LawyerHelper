@@ -67,5 +67,12 @@ namespace LawyerHelper.DAL.Repositorio
             }
             return iQuery;
         }
-}
+
+        public void JuicioIgualExpediente(String pNroExpediente)
+        {
+            Juicio iQuery;
+            iQuery = iContext.Juicios.First(n => n.NroExpediente == pNroExpediente);
+            if (iQuery != null) throw new InvalidOperationException();
+        }
+    }
 }

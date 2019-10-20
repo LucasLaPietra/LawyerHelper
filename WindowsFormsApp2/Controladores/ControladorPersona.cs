@@ -22,6 +22,7 @@ namespace LawyerHelper.Controladores
         {
             Persona iPersona = new Persona(pNombre, pApellido, pDni, pDomicilio,
             pTelefono, pFecha, pProfesion, pLugarTrabajo, pCuil, pEstadoCivil, pRepLegal, pDomiLegal);
+            iUdT.RepositorioPersona.PersonaIgualDni(pDni);
             iUdT.RepositorioPersona.Agregar(iPersona);
             iUdT.Guardar();
         }

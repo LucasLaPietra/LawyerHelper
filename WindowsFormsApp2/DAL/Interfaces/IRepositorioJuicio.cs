@@ -10,5 +10,6 @@ namespace LawyerHelper.DAL.Interfaces
     interface IRepositorioJuicio : IRepositorioGeneral<Juicio>
     {
         IList<Juicio> BusquedaJuicios(string Parametro, string Valor);
+        void JuicioIgualExpediente(String pNroExpediente);
     }
 }

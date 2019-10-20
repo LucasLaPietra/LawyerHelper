@@ -77,5 +77,12 @@ namespace LawyerHelper.DAL.Repositorio
             iQuery.Telefono = pPersona.Telefono;
             iContext.SaveChanges();
         }
+
+        public void PersonaIgualDni(String pDni)
+        {
+            Persona iQuery;
+            iQuery = iContext.Personas.First(n => n.Dni ==pDni);
+            if (iQuery != null) throw new InvalidOperationException();          
+        }
     }
 }
