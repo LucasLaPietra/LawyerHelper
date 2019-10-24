@@ -9,49 +9,27 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
 using LawyerHelper.UI.Personas;
+using LawyerHelper.Controladores;
+using LawyerHelper.DAL.Interfaces;
+using LawyerHelper.DAL.Repositorio;
 
 namespace WindowsFormsApp2.Juicios
 {
     public partial class AltaJuicios : Form
     {
+        ControladorJuicio iControladorJuicio;
+        Fachada iFachada=new Fachada();
         List<Persona> iListaDemandados = new List<Persona>();
         List<Persona> iListaDemandantes = new List<Persona>();
         public AltaJuicios()
         {
             InitializeComponent();
-            //Asignacion de colores      
-            //Background
-            this.BackColor = Colores.ColorBackground;
-            //Cajas
-            foreach (TextBox t in Controls.OfType<TextBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
-            // Labels
-            foreach (Label l in Controls.OfType<Label>())
-                l.ForeColor = Colores.ColorForeground;
-            //Botones
-            foreach (Button b in Controls.OfType<Button>())
-            {
-                b.ForeColor = Colores.ColorForeground;
-                b.BackColor = Colores.ColorBackground;
-            }
-            foreach (RadioButton b in Controls.OfType<RadioButton>())
-            {
-                b.ForeColor = Colores.ColorForeground;
-            }
-            //ListBox
-            foreach (ListBox t in Controls.OfType<ListBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
-
+            iControladorJuicio = new ControladorJuicio(UnidadDeTrabajo.Instancia);
+            iFachada.AsignarColores(this);               
             ListBoxDemandados.DataSource = iListaDemandados;
-            ListBoxDemandados.DisplayMember = "Apellido"+" "+"Nombre";
+            ListBoxDemandados.DisplayMember = "Apellido";
             ListBoxDemandantes.DataSource = iListaDemandantes;
-            ListBoxDemandantes.DisplayMember = "Apellido" + " " + "Nombre";
+            ListBoxDemandantes.DisplayMember = "Apellido";
         }
 
         private void AltaJuicios_Load(object sender, EventArgs e)
@@ -63,7 +41,22 @@ namespace WindowsFormsApp2.Juicios
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                iControladorJuicio.RegistrarJuicio(CuadroExpediente.Text, CuadroJuez.Text, CuadroSecretario.Text, CuadroEtapa.Text, CuadroDescripcion.Text, CuadroBienes.Text,
+                    dateTimeFecha.Value, CuadroGrupoFamiliar.Text, CuadroTipoDeProceso.Text, CuadroRecurso.Text, CuadroCompetencia.Text, CuadroFuero.Text, CuadroCaratula.Text,
+                    CuadroFolio.Text, CuadroLibro.Text, CuadroJurisdiccion.Text, Convert.ToDouble(CuadroPrecio.Text));
+                iFachada.AltaDemandadosyDemandantes(CuadroExpediente.Text, iListaDemandados, iListaDemandantes, RadioButtonDemandados.Checked, RadioButtonDemandantes.Checked);
+                MessageBox.Show("Juicio añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Ya existe un juicio con ese mismo numero de expediente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //catch (Exception)
+            //{
+            //    MessageBox.Show("juicio no fue añadido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
 
         private void BotonAgregarDemandante_Click(object sender, EventArgs e)
@@ -73,12 +66,23 @@ namespace WindowsFormsApp2.Juicios
             {
                 Persona iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
                 iListaDemandantes.Add(iPersona);
+                ListBoxDemandantes.DataSource = null;
+                ListBoxDemandantes.DataSource = iListaDemandantes;
+                ListBoxDemandantes.DisplayMember = "Apellido";
             }
         }
 
         private void BotonEliminarDemandante_Click(object sender, EventArgs e)
         {
-            iListaDemandantes.Remove((Persona)ListBoxDemandantes.SelectedItem);
+            int selectedIndex = ListBoxDemandantes.SelectedIndex;
+            iListaDemandantes.RemoveAt(selectedIndex);
+            ListBoxDemandantes.DataSource = null;
+            ListBoxDemandantes.DataSource = iListaDemandantes;
+            ListBoxDemandantes.DisplayMember = "Apellido";
+            if (ListBoxDemandantes.Items.Count == 0)
+            {
+                BotonEliminarDemandante.Enabled = false;
+            }
         }
 
         private void BotonAgregarDemandado_Click(object sender, EventArgs e)
@@ -88,12 +92,37 @@ namespace WindowsFormsApp2.Juicios
             {
                 Persona iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
                 iListaDemandados.Add(iPersona);
+                ListBoxDemandados.DataSource = null;
+                ListBoxDemandados.DataSource = iListaDemandados;
+                ListBoxDemandados.DisplayMember = "Apellido";
             }
         }
 
         private void BotonEliminarDemandado_Click(object sender, EventArgs e)
         {
             iListaDemandados.Remove((Persona)ListBoxDemandados.SelectedItem);
+            ListBoxDemandados.DataSource = null;
+            ListBoxDemandados.DataSource = iListaDemandados;
+            ListBoxDemandados.DisplayMember = "Apellido";
+            if (ListBoxDemandados.Items.Count == 0)
+            {
+                BotonEliminarDemandado.Enabled = false;
+            }
+        }
+
+        private void BotonAgregarDocumentos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonEliminarDocumentos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonModificarDocumentos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

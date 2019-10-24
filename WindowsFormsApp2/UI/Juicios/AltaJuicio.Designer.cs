@@ -48,10 +48,9 @@
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.BotonDocumentacion = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CuadroBienes = new System.Windows.Forms.TextBox();
             this.labelBienes = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
             this.labelGrupoFamiliar = new System.Windows.Forms.Label();
             this.LabelFuero = new System.Windows.Forms.Label();
             this.CuadroTipoDeProceso = new System.Windows.Forms.TextBox();
@@ -69,16 +68,23 @@
             this.LabelTipoDeProceso = new System.Windows.Forms.Label();
             this.labelLibro = new System.Windows.Forms.Label();
             this.CuadroLibro = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ListBoxDemandantes = new System.Windows.Forms.ListBox();
+            this.BotonModificarDocumentos = new System.Windows.Forms.Button();
+            this.BotonEliminarDocumentos = new System.Windows.Forms.Button();
+            this.BotonAgregarDocumentos = new System.Windows.Forms.Button();
+            this.Layout2 = new System.Windows.Forms.TableLayoutPanel();
+            this.ListBoxDocumentos = new System.Windows.Forms.ListBox();
             this.ListBoxDemandados = new System.Windows.Forms.ListBox();
-            this.BotonAgregarDemandante = new System.Windows.Forms.Button();
-            this.BotonEliminarDemandante = new System.Windows.Forms.Button();
+            this.LabelDemandante = new System.Windows.Forms.Label();
+            this.ListBoxDemandantes = new System.Windows.Forms.ListBox();
+            this.LabelDemandado = new System.Windows.Forms.Label();
+            this.LabelDocumentos = new System.Windows.Forms.Label();
+            this.RadioButtonDemandados = new System.Windows.Forms.RadioButton();
+            this.RadioButtonDemandantes = new System.Windows.Forms.RadioButton();
             this.BotonEliminarDemandado = new System.Windows.Forms.Button();
             this.BotonAgregarDemandado = new System.Windows.Forms.Button();
-            this.RadioButtonCliente1 = new System.Windows.Forms.RadioButton();
-            this.RadioButtonCliente2 = new System.Windows.Forms.RadioButton();
+            this.BotonEliminarDemandante = new System.Windows.Forms.Button();
+            this.BotonAgregarDemandante = new System.Windows.Forms.Button();
+            this.Layout2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -238,7 +244,7 @@
             // BotonCancelar
             // 
             this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(383, 750);
+            this.BotonCancelar.Location = new System.Drawing.Point(590, 556);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 37;
@@ -248,7 +254,7 @@
             // BotonAceptar
             // 
             this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAceptar.Location = new System.Drawing.Point(9, 750);
+            this.BotonAceptar.Location = new System.Drawing.Point(382, 556);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 36;
@@ -256,25 +262,15 @@
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
-            // BotonDocumentacion
+            // CuadroBienes
             // 
-            this.BotonDocumentacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonDocumentacion.Location = new System.Drawing.Point(155, 705);
-            this.BotonDocumentacion.Name = "BotonDocumentacion";
-            this.BotonDocumentacion.Size = new System.Drawing.Size(180, 26);
-            this.BotonDocumentacion.TabIndex = 39;
-            this.BotonDocumentacion.Text = "Asignar Documentacion";
-            this.BotonDocumentacion.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(93, 305);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(384, 35);
-            this.textBox1.TabIndex = 49;
+            this.CuadroBienes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CuadroBienes.Location = new System.Drawing.Point(93, 305);
+            this.CuadroBienes.Multiline = true;
+            this.CuadroBienes.Name = "CuadroBienes";
+            this.CuadroBienes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroBienes.Size = new System.Drawing.Size(384, 35);
+            this.CuadroBienes.TabIndex = 49;
             // 
             // labelBienes
             // 
@@ -285,15 +281,15 @@
             this.labelBienes.TabIndex = 48;
             this.labelBienes.Text = "Bienes:";
             // 
-            // textBox2
+            // CuadroGrupoFamiliar
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(93, 356);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(384, 35);
-            this.textBox2.TabIndex = 50;
+            this.CuadroGrupoFamiliar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(93, 356);
+            this.CuadroGrupoFamiliar.Multiline = true;
+            this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
+            this.CuadroGrupoFamiliar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(384, 35);
+            this.CuadroGrupoFamiliar.TabIndex = 50;
             // 
             // labelGrupoFamiliar
             // 
@@ -448,69 +444,139 @@
             this.CuadroLibro.Size = new System.Drawing.Size(165, 20);
             this.CuadroLibro.TabIndex = 68;
             // 
-            // label4
+            // BotonModificarDocumentos
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(8, 530);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 13);
-            this.label4.TabIndex = 70;
-            this.label4.Text = "Demandantes:";
+            this.BotonModificarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonModificarDocumentos.Location = new System.Drawing.Point(922, 249);
+            this.BotonModificarDocumentos.Name = "BotonModificarDocumentos";
+            this.BotonModificarDocumentos.Size = new System.Drawing.Size(75, 23);
+            this.BotonModificarDocumentos.TabIndex = 97;
+            this.BotonModificarDocumentos.Text = "Modificar";
+            this.BotonModificarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonModificarDocumentos.Click += new System.EventHandler(this.BotonModificarDocumentos_Click);
             // 
-            // label5
+            // BotonEliminarDocumentos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 614);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
-            this.label5.TabIndex = 71;
-            this.label5.Text = "Demandados:";
+            this.BotonEliminarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonEliminarDocumentos.Location = new System.Drawing.Point(922, 220);
+            this.BotonEliminarDocumentos.Name = "BotonEliminarDocumentos";
+            this.BotonEliminarDocumentos.Size = new System.Drawing.Size(75, 23);
+            this.BotonEliminarDocumentos.TabIndex = 96;
+            this.BotonEliminarDocumentos.Text = "Eliminar";
+            this.BotonEliminarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonEliminarDocumentos.Click += new System.EventHandler(this.BotonEliminarDocumentos_Click);
             // 
-            // ListBoxDemandantes
+            // BotonAgregarDocumentos
             // 
-            this.ListBoxDemandantes.FormattingEnabled = true;
-            this.ListBoxDemandantes.Location = new System.Drawing.Point(93, 530);
-            this.ListBoxDemandantes.Name = "ListBoxDemandantes";
-            this.ListBoxDemandantes.Size = new System.Drawing.Size(303, 69);
-            this.ListBoxDemandantes.TabIndex = 72;
+            this.BotonAgregarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAgregarDocumentos.Location = new System.Drawing.Point(922, 191);
+            this.BotonAgregarDocumentos.Name = "BotonAgregarDocumentos";
+            this.BotonAgregarDocumentos.Size = new System.Drawing.Size(75, 23);
+            this.BotonAgregarDocumentos.TabIndex = 95;
+            this.BotonAgregarDocumentos.Text = "Agregar";
+            this.BotonAgregarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonAgregarDocumentos.Click += new System.EventHandler(this.BotonAgregarDocumentos_Click);
+            // 
+            // Layout2
+            // 
+            this.Layout2.ColumnCount = 2;
+            this.Layout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Layout2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Layout2.Controls.Add(this.ListBoxDocumentos, 1, 2);
+            this.Layout2.Controls.Add(this.ListBoxDemandados, 1, 1);
+            this.Layout2.Controls.Add(this.LabelDemandante, 0, 0);
+            this.Layout2.Controls.Add(this.ListBoxDemandantes, 1, 0);
+            this.Layout2.Controls.Add(this.LabelDemandado, 0, 1);
+            this.Layout2.Controls.Add(this.LabelDocumentos, 0, 2);
+            this.Layout2.Location = new System.Drawing.Point(505, 20);
+            this.Layout2.Name = "Layout2";
+            this.Layout2.RowCount = 3;
+            this.Layout2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout2.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout2.Size = new System.Drawing.Size(411, 271);
+            this.Layout2.TabIndex = 94;
+            // 
+            // ListBoxDocumentos
+            // 
+            this.ListBoxDocumentos.FormattingEnabled = true;
+            this.ListBoxDocumentos.Location = new System.Drawing.Point(85, 153);
+            this.ListBoxDocumentos.Name = "ListBoxDocumentos";
+            this.ListBoxDocumentos.Size = new System.Drawing.Size(324, 108);
+            this.ListBoxDocumentos.TabIndex = 85;
             // 
             // ListBoxDemandados
             // 
             this.ListBoxDemandados.FormattingEnabled = true;
-            this.ListBoxDemandados.Location = new System.Drawing.Point(93, 614);
+            this.ListBoxDemandados.Location = new System.Drawing.Point(85, 78);
             this.ListBoxDemandados.Name = "ListBoxDemandados";
-            this.ListBoxDemandados.Size = new System.Drawing.Size(303, 69);
-            this.ListBoxDemandados.TabIndex = 73;
+            this.ListBoxDemandados.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandados.TabIndex = 74;
             // 
-            // BotonAgregarDemandante
+            // LabelDemandante
             // 
-            this.BotonAgregarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgregarDemandante.Location = new System.Drawing.Point(402, 530);
-            this.BotonAgregarDemandante.Name = "BotonAgregarDemandante";
-            this.BotonAgregarDemandante.Size = new System.Drawing.Size(75, 23);
-            this.BotonAgregarDemandante.TabIndex = 74;
-            this.BotonAgregarDemandante.Text = "Agregar";
-            this.BotonAgregarDemandante.UseVisualStyleBackColor = true;
-            this.BotonAgregarDemandante.Click += new System.EventHandler(this.BotonAgregarDemandante_Click);
+            this.LabelDemandante.AutoSize = true;
+            this.LabelDemandante.Location = new System.Drawing.Point(3, 0);
+            this.LabelDemandante.Name = "LabelDemandante";
+            this.LabelDemandante.Size = new System.Drawing.Size(76, 13);
+            this.LabelDemandante.TabIndex = 30;
+            this.LabelDemandante.Text = "Demandantes:";
             // 
-            // BotonEliminarDemandante
+            // ListBoxDemandantes
             // 
-            this.BotonEliminarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonEliminarDemandante.Location = new System.Drawing.Point(402, 559);
-            this.BotonEliminarDemandante.Name = "BotonEliminarDemandante";
-            this.BotonEliminarDemandante.Size = new System.Drawing.Size(75, 23);
-            this.BotonEliminarDemandante.TabIndex = 75;
-            this.BotonEliminarDemandante.Text = "Eliminar";
-            this.BotonEliminarDemandante.UseVisualStyleBackColor = true;
-            this.BotonEliminarDemandante.Click += new System.EventHandler(this.BotonEliminarDemandante_Click);
+            this.ListBoxDemandantes.FormattingEnabled = true;
+            this.ListBoxDemandantes.Location = new System.Drawing.Point(85, 3);
+            this.ListBoxDemandantes.Name = "ListBoxDemandantes";
+            this.ListBoxDemandantes.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandantes.TabIndex = 73;
+            // 
+            // LabelDemandado
+            // 
+            this.LabelDemandado.AutoSize = true;
+            this.LabelDemandado.Location = new System.Drawing.Point(3, 75);
+            this.LabelDemandado.Name = "LabelDemandado";
+            this.LabelDemandado.Size = new System.Drawing.Size(73, 13);
+            this.LabelDemandado.TabIndex = 31;
+            this.LabelDemandado.Text = "Demandados:";
+            // 
+            // LabelDocumentos
+            // 
+            this.LabelDocumentos.AutoSize = true;
+            this.LabelDocumentos.Location = new System.Drawing.Point(3, 150);
+            this.LabelDocumentos.Name = "LabelDocumentos";
+            this.LabelDocumentos.Size = new System.Drawing.Size(70, 13);
+            this.LabelDocumentos.TabIndex = 32;
+            this.LabelDocumentos.Text = "Documentos:";
+            // 
+            // RadioButtonDemandados
+            // 
+            this.RadioButtonDemandados.AutoSize = true;
+            this.RadioButtonDemandados.Location = new System.Drawing.Point(1003, 122);
+            this.RadioButtonDemandados.Name = "RadioButtonDemandados";
+            this.RadioButtonDemandados.Size = new System.Drawing.Size(57, 17);
+            this.RadioButtonDemandados.TabIndex = 93;
+            this.RadioButtonDemandados.TabStop = true;
+            this.RadioButtonDemandados.Text = "Cliente";
+            this.RadioButtonDemandados.UseVisualStyleBackColor = true;
+            // 
+            // RadioButtonDemandantes
+            // 
+            this.RadioButtonDemandantes.AutoSize = true;
+            this.RadioButtonDemandantes.Location = new System.Drawing.Point(1003, 49);
+            this.RadioButtonDemandantes.Name = "RadioButtonDemandantes";
+            this.RadioButtonDemandantes.Size = new System.Drawing.Size(57, 17);
+            this.RadioButtonDemandantes.TabIndex = 92;
+            this.RadioButtonDemandantes.TabStop = true;
+            this.RadioButtonDemandantes.Text = "Cliente";
+            this.RadioButtonDemandantes.UseVisualStyleBackColor = true;
             // 
             // BotonEliminarDemandado
             // 
             this.BotonEliminarDemandado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonEliminarDemandado.Location = new System.Drawing.Point(402, 644);
+            this.BotonEliminarDemandado.Location = new System.Drawing.Point(922, 135);
             this.BotonEliminarDemandado.Name = "BotonEliminarDemandado";
             this.BotonEliminarDemandado.Size = new System.Drawing.Size(75, 23);
-            this.BotonEliminarDemandado.TabIndex = 77;
+            this.BotonEliminarDemandado.TabIndex = 91;
             this.BotonEliminarDemandado.Text = "Eliminar";
             this.BotonEliminarDemandado.UseVisualStyleBackColor = true;
             this.BotonEliminarDemandado.Click += new System.EventHandler(this.BotonEliminarDemandado_Click);
@@ -518,51 +584,51 @@
             // BotonAgregarDemandado
             // 
             this.BotonAgregarDemandado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgregarDemandado.Location = new System.Drawing.Point(402, 615);
+            this.BotonAgregarDemandado.Location = new System.Drawing.Point(922, 106);
             this.BotonAgregarDemandado.Name = "BotonAgregarDemandado";
             this.BotonAgregarDemandado.Size = new System.Drawing.Size(75, 23);
-            this.BotonAgregarDemandado.TabIndex = 76;
+            this.BotonAgregarDemandado.TabIndex = 90;
             this.BotonAgregarDemandado.Text = "Agregar";
             this.BotonAgregarDemandado.UseVisualStyleBackColor = true;
             this.BotonAgregarDemandado.Click += new System.EventHandler(this.BotonAgregarDemandado_Click);
             // 
-            // RadioButtonCliente1
+            // BotonEliminarDemandante
             // 
-            this.RadioButtonCliente1.AutoSize = true;
-            this.RadioButtonCliente1.Location = new System.Drawing.Point(21, 546);
-            this.RadioButtonCliente1.Name = "RadioButtonCliente1";
-            this.RadioButtonCliente1.Size = new System.Drawing.Size(57, 17);
-            this.RadioButtonCliente1.TabIndex = 78;
-            this.RadioButtonCliente1.TabStop = true;
-            this.RadioButtonCliente1.Text = "Cliente";
-            this.RadioButtonCliente1.UseVisualStyleBackColor = true;
+            this.BotonEliminarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonEliminarDemandante.Location = new System.Drawing.Point(922, 61);
+            this.BotonEliminarDemandante.Name = "BotonEliminarDemandante";
+            this.BotonEliminarDemandante.Size = new System.Drawing.Size(75, 23);
+            this.BotonEliminarDemandante.TabIndex = 89;
+            this.BotonEliminarDemandante.Text = "Eliminar";
+            this.BotonEliminarDemandante.UseVisualStyleBackColor = true;
+            this.BotonEliminarDemandante.Click += new System.EventHandler(this.BotonEliminarDemandante_Click);
             // 
-            // RadioButtonCliente2
+            // BotonAgregarDemandante
             // 
-            this.RadioButtonCliente2.AutoSize = true;
-            this.RadioButtonCliente2.Location = new System.Drawing.Point(21, 630);
-            this.RadioButtonCliente2.Name = "RadioButtonCliente2";
-            this.RadioButtonCliente2.Size = new System.Drawing.Size(57, 17);
-            this.RadioButtonCliente2.TabIndex = 79;
-            this.RadioButtonCliente2.TabStop = true;
-            this.RadioButtonCliente2.Text = "Cliente";
-            this.RadioButtonCliente2.UseVisualStyleBackColor = true;
+            this.BotonAgregarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAgregarDemandante.Location = new System.Drawing.Point(922, 32);
+            this.BotonAgregarDemandante.Name = "BotonAgregarDemandante";
+            this.BotonAgregarDemandante.Size = new System.Drawing.Size(75, 23);
+            this.BotonAgregarDemandante.TabIndex = 88;
+            this.BotonAgregarDemandante.Text = "Agregar";
+            this.BotonAgregarDemandante.UseVisualStyleBackColor = true;
+            this.BotonAgregarDemandante.Click += new System.EventHandler(this.BotonAgregarDemandante_Click);
             // 
             // AltaJuicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 786);
-            this.Controls.Add(this.RadioButtonCliente2);
-            this.Controls.Add(this.RadioButtonCliente1);
+            this.ClientSize = new System.Drawing.Size(1062, 589);
+            this.Controls.Add(this.BotonModificarDocumentos);
+            this.Controls.Add(this.BotonEliminarDocumentos);
+            this.Controls.Add(this.BotonAgregarDocumentos);
+            this.Controls.Add(this.Layout2);
+            this.Controls.Add(this.RadioButtonDemandados);
+            this.Controls.Add(this.RadioButtonDemandantes);
             this.Controls.Add(this.BotonEliminarDemandado);
             this.Controls.Add(this.BotonAgregarDemandado);
             this.Controls.Add(this.BotonEliminarDemandante);
             this.Controls.Add(this.BotonAgregarDemandante);
-            this.Controls.Add(this.ListBoxDemandados);
-            this.Controls.Add(this.ListBoxDemandantes);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.labelLibro);
             this.Controls.Add(this.CuadroLibro);
             this.Controls.Add(this.LabelTipoDeProceso);
@@ -580,10 +646,9 @@
             this.Controls.Add(this.labelTramite);
             this.Controls.Add(this.labelJurisdiccion);
             this.Controls.Add(this.labelGrupoFamiliar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CuadroGrupoFamiliar);
+            this.Controls.Add(this.CuadroBienes);
             this.Controls.Add(this.labelBienes);
-            this.Controls.Add(this.BotonDocumentacion);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.CuadroDescripcion);
@@ -607,6 +672,8 @@
             this.Name = "AltaJuicios";
             this.Text = "AltaJuicios";
             this.Load += new System.EventHandler(this.AltaJuicios_Load);
+            this.Layout2.ResumeLayout(false);
+            this.Layout2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -634,10 +701,9 @@
         private System.Windows.Forms.TextBox CuadroDescripcion;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.Button BotonDocumentacion;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CuadroBienes;
         private System.Windows.Forms.Label labelBienes;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
         private System.Windows.Forms.Label labelGrupoFamiliar;
         private System.Windows.Forms.Label LabelFuero;
         private System.Windows.Forms.TextBox CuadroTipoDeProceso;
@@ -655,15 +721,21 @@
         private System.Windows.Forms.Label LabelTipoDeProceso;
         private System.Windows.Forms.Label labelLibro;
         private System.Windows.Forms.TextBox CuadroLibro;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox ListBoxDemandantes;
+        private System.Windows.Forms.Button BotonModificarDocumentos;
+        private System.Windows.Forms.Button BotonEliminarDocumentos;
+        private System.Windows.Forms.Button BotonAgregarDocumentos;
+        private System.Windows.Forms.TableLayoutPanel Layout2;
+        private System.Windows.Forms.ListBox ListBoxDocumentos;
         private System.Windows.Forms.ListBox ListBoxDemandados;
-        private System.Windows.Forms.Button BotonAgregarDemandante;
-        private System.Windows.Forms.Button BotonEliminarDemandante;
+        private System.Windows.Forms.Label LabelDemandante;
+        private System.Windows.Forms.ListBox ListBoxDemandantes;
+        private System.Windows.Forms.Label LabelDemandado;
+        private System.Windows.Forms.Label LabelDocumentos;
+        private System.Windows.Forms.RadioButton RadioButtonDemandados;
+        private System.Windows.Forms.RadioButton RadioButtonDemandantes;
         private System.Windows.Forms.Button BotonEliminarDemandado;
         private System.Windows.Forms.Button BotonAgregarDemandado;
-        private System.Windows.Forms.RadioButton RadioButtonCliente1;
-        private System.Windows.Forms.RadioButton RadioButtonCliente2;
+        private System.Windows.Forms.Button BotonEliminarDemandante;
+        private System.Windows.Forms.Button BotonAgregarDemandante;
     }
 }

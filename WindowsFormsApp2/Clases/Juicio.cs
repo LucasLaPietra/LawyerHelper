@@ -53,5 +53,10 @@ namespace LawyerHelper.Clases
             this.Jurisdiccion = pJurisdiccion;
             this.Precio = pPrecio;
         }
+
+        public Juicio()
+        {
+
+        }
     }
 }

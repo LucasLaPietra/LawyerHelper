@@ -63,9 +63,7 @@
             this.LabelDemandado = new System.Windows.Forms.Label();
             this.LabelJuez2 = new System.Windows.Forms.Label();
             this.LabelSecretario2 = new System.Windows.Forms.Label();
-            this.LabelDemandante2 = new System.Windows.Forms.Label();
             this.LabelPrecio2 = new System.Windows.Forms.Label();
-            this.LabelDemandado2 = new System.Windows.Forms.Label();
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
             this.LabelExpediente = new System.Windows.Forms.Label();
@@ -73,8 +71,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LabelEtapa2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.BotonVerDocumentacion = new System.Windows.Forms.Button();
+            this.BotonConsultarDemandante = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
+            this.ListBoxDemandantes = new System.Windows.Forms.ListBox();
+            this.ListBoxDemandados = new System.Windows.Forms.ListBox();
+            this.ListBoxDocumentos = new System.Windows.Forms.ListBox();
+            this.BotonConsultarDemandados = new System.Windows.Forms.Button();
+            this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,12 +94,12 @@
             // 
             this.CuadroNroExpediente.Location = new System.Drawing.Point(100, 27);
             this.CuadroNroExpediente.Name = "CuadroNroExpediente";
-            this.CuadroNroExpediente.Size = new System.Drawing.Size(257, 20);
+            this.CuadroNroExpediente.Size = new System.Drawing.Size(336, 20);
             this.CuadroNroExpediente.TabIndex = 1;
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.Location = new System.Drawing.Point(379, 25);
+            this.BotonBuscar.Location = new System.Drawing.Point(456, 25);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
             this.BotonBuscar.TabIndex = 2;
@@ -114,7 +117,7 @@
             // 
             // BotonMostrarTodo
             // 
-            this.BotonMostrarTodo.Location = new System.Drawing.Point(282, 64);
+            this.BotonMostrarTodo.Location = new System.Drawing.Point(359, 64);
             this.BotonMostrarTodo.Name = "BotonMostrarTodo";
             this.BotonMostrarTodo.Size = new System.Drawing.Size(172, 23);
             this.BotonMostrarTodo.TabIndex = 4;
@@ -126,6 +129,9 @@
             this.Layout.ColumnCount = 2;
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.Layout.Controls.Add(this.ListBoxDocumentos, 1, 19);
+            this.Layout.Controls.Add(this.ListBoxDemandados, 1, 18);
+            this.Layout.Controls.Add(this.ListBoxDemandantes, 1, 17);
             this.Layout.Controls.Add(this.labelDocumentos, 0, 19);
             this.Layout.Controls.Add(this.LabelFecha, 0, 1);
             this.Layout.Controls.Add(this.LabelFolio, 0, 2);
@@ -155,9 +161,7 @@
             this.Layout.Controls.Add(this.LabelDemandado, 0, 18);
             this.Layout.Controls.Add(this.LabelJuez2, 1, 14);
             this.Layout.Controls.Add(this.LabelSecretario2, 1, 15);
-            this.Layout.Controls.Add(this.LabelDemandante2, 1, 17);
             this.Layout.Controls.Add(this.LabelPrecio2, 1, 16);
-            this.Layout.Controls.Add(this.LabelDemandado2, 1, 18);
             this.Layout.Controls.Add(this.LabelJurisdiccion, 0, 3);
             this.Layout.Controls.Add(this.LabelEtapa, 0, 11);
             this.Layout.Controls.Add(this.LabelExpediente, 0, 0);
@@ -165,7 +169,6 @@
             this.Layout.Controls.Add(this.textBox1, 1, 10);
             this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
             this.Layout.Controls.Add(this.textBox2, 1, 13);
-            this.Layout.Controls.Add(this.BotonVerDocumentacion, 1, 19);
             this.Layout.Location = new System.Drawing.Point(15, 110);
             this.Layout.Name = "Layout";
             this.Layout.RowCount = 20;
@@ -189,13 +192,13 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.Layout.Size = new System.Drawing.Size(439, 357);
+            this.Layout.Size = new System.Drawing.Size(439, 529);
             this.Layout.TabIndex = 100;
             // 
             // labelDocumentos
             // 
             this.labelDocumentos.AutoSize = true;
-            this.labelDocumentos.Location = new System.Drawing.Point(3, 322);
+            this.labelDocumentos.Location = new System.Drawing.Point(3, 446);
             this.labelDocumentos.Name = "labelDocumentos";
             this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
             this.labelDocumentos.TabIndex = 175;
@@ -422,18 +425,18 @@
             this.LabelDemandante.AutoSize = true;
             this.LabelDemandante.Location = new System.Drawing.Point(3, 296);
             this.LabelDemandante.Name = "LabelDemandante";
-            this.LabelDemandante.Size = new System.Drawing.Size(71, 13);
+            this.LabelDemandante.Size = new System.Drawing.Size(76, 13);
             this.LabelDemandante.TabIndex = 30;
-            this.LabelDemandante.Text = "Demandante:";
+            this.LabelDemandante.Text = "Demandantes:";
             // 
             // LabelDemandado
             // 
             this.LabelDemandado.AutoSize = true;
-            this.LabelDemandado.Location = new System.Drawing.Point(3, 309);
+            this.LabelDemandado.Location = new System.Drawing.Point(3, 371);
             this.LabelDemandado.Name = "LabelDemandado";
-            this.LabelDemandado.Size = new System.Drawing.Size(68, 13);
+            this.LabelDemandado.Size = new System.Drawing.Size(73, 13);
             this.LabelDemandado.TabIndex = 31;
-            this.LabelDemandado.Text = "Demandado:";
+            this.LabelDemandado.Text = "Demandados:";
             // 
             // LabelJuez2
             // 
@@ -453,15 +456,6 @@
             this.LabelSecretario2.TabIndex = 34;
             this.LabelSecretario2.Text = "-";
             // 
-            // LabelDemandante2
-            // 
-            this.LabelDemandante2.AutoSize = true;
-            this.LabelDemandante2.Location = new System.Drawing.Point(97, 296);
-            this.LabelDemandante2.Name = "LabelDemandante2";
-            this.LabelDemandante2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDemandante2.TabIndex = 35;
-            this.LabelDemandante2.Text = "-";
-            // 
             // LabelPrecio2
             // 
             this.LabelPrecio2.AutoSize = true;
@@ -470,15 +464,6 @@
             this.LabelPrecio2.Size = new System.Drawing.Size(10, 13);
             this.LabelPrecio2.TabIndex = 36;
             this.LabelPrecio2.Text = "-";
-            // 
-            // LabelDemandado2
-            // 
-            this.LabelDemandado2.AutoSize = true;
-            this.LabelDemandado2.Location = new System.Drawing.Point(97, 309);
-            this.LabelDemandado2.Name = "LabelDemandado2";
-            this.LabelDemandado2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDemandado2.TabIndex = 37;
-            this.LabelDemandado2.Text = "-";
             // 
             // LabelJurisdiccion
             // 
@@ -543,33 +528,84 @@
             this.textBox2.Size = new System.Drawing.Size(342, 32);
             this.textBox2.TabIndex = 174;
             // 
-            // BotonVerDocumentacion
+            // BotonConsultarDemandante
             // 
-            this.BotonVerDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BotonVerDocumentacion.Enabled = false;
-            this.BotonVerDocumentacion.Location = new System.Drawing.Point(208, 325);
-            this.BotonVerDocumentacion.Name = "BotonVerDocumentacion";
-            this.BotonVerDocumentacion.Size = new System.Drawing.Size(120, 19);
-            this.BotonVerDocumentacion.TabIndex = 176;
-            this.BotonVerDocumentacion.Text = "Ver";
-            this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
-            this.BotonVerDocumentacion.Click += new System.EventHandler(this.BotonVerDocumentacion_Click);
+            this.BotonConsultarDemandante.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDemandante.Enabled = false;
+            this.BotonConsultarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonConsultarDemandante.Location = new System.Drawing.Point(460, 409);
+            this.BotonConsultarDemandante.Name = "BotonConsultarDemandante";
+            this.BotonConsultarDemandante.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarDemandante.TabIndex = 176;
+            this.BotonConsultarDemandante.Text = "Consultar";
+            this.BotonConsultarDemandante.UseVisualStyleBackColor = true;
+            this.BotonConsultarDemandante.Click += new System.EventHandler(this.BotonVerDocumentacion_Click);
             // 
             // BotonCancelar
             // 
             this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(188, 487);
+            this.BotonCancelar.Location = new System.Drawing.Point(228, 645);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 22);
             this.BotonCancelar.TabIndex = 177;
             this.BotonCancelar.Text = "Aceptar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
+            // ListBoxDemandantes
+            // 
+            this.ListBoxDemandantes.FormattingEnabled = true;
+            this.ListBoxDemandantes.Location = new System.Drawing.Point(97, 299);
+            this.ListBoxDemandantes.Name = "ListBoxDemandantes";
+            this.ListBoxDemandantes.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandantes.TabIndex = 178;
+            // 
+            // ListBoxDemandados
+            // 
+            this.ListBoxDemandados.FormattingEnabled = true;
+            this.ListBoxDemandados.Location = new System.Drawing.Point(97, 374);
+            this.ListBoxDemandados.Name = "ListBoxDemandados";
+            this.ListBoxDemandados.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandados.TabIndex = 178;
+            // 
+            // ListBoxDocumentos
+            // 
+            this.ListBoxDocumentos.FormattingEnabled = true;
+            this.ListBoxDocumentos.Location = new System.Drawing.Point(97, 449);
+            this.ListBoxDocumentos.Name = "ListBoxDocumentos";
+            this.ListBoxDocumentos.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDocumentos.TabIndex = 178;
+            // 
+            // BotonConsultarDemandados
+            // 
+            this.BotonConsultarDemandados.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDemandados.Enabled = false;
+            this.BotonConsultarDemandados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonConsultarDemandados.Location = new System.Drawing.Point(460, 484);
+            this.BotonConsultarDemandados.Name = "BotonConsultarDemandados";
+            this.BotonConsultarDemandados.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarDemandados.TabIndex = 178;
+            this.BotonConsultarDemandados.Text = "Consultar";
+            this.BotonConsultarDemandados.UseVisualStyleBackColor = true;
+            // 
+            // BotonConsultarDocumentos
+            // 
+            this.BotonConsultarDocumentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDocumentos.Enabled = false;
+            this.BotonConsultarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(460, 559);
+            this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
+            this.BotonConsultarDocumentos.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarDocumentos.TabIndex = 179;
+            this.BotonConsultarDocumentos.Text = "Consultar";
+            this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
+            // 
             // ConsultaJuicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 528);
+            this.ClientSize = new System.Drawing.Size(543, 679);
+            this.Controls.Add(this.BotonConsultarDocumentos);
+            this.Controls.Add(this.BotonConsultarDemandados);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonMostrarTodo);
@@ -577,6 +613,7 @@
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.CuadroNroExpediente);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.BotonConsultarDemandante);
             this.Name = "ConsultaJuicios";
             this.Text = "ConsultaJuicios";
             this.Layout.ResumeLayout(false);
@@ -623,9 +660,7 @@
         private System.Windows.Forms.Label LabelDemandado;
         private System.Windows.Forms.Label LabelJuez2;
         private System.Windows.Forms.Label LabelSecretario2;
-        private System.Windows.Forms.Label LabelDemandante2;
         private System.Windows.Forms.Label LabelPrecio2;
-        private System.Windows.Forms.Label LabelDemandado2;
         private System.Windows.Forms.Label LabelJurisdiccion;
         private System.Windows.Forms.Label LabelEtapa;
         private System.Windows.Forms.Label LabelExpediente;
@@ -633,7 +668,12 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label LabelEtapa2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button BotonVerDocumentacion;
+        private System.Windows.Forms.Button BotonConsultarDemandante;
         private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.ListBox ListBoxDemandantes;
+        private System.Windows.Forms.ListBox ListBoxDemandados;
+        private System.Windows.Forms.ListBox ListBoxDocumentos;
+        private System.Windows.Forms.Button BotonConsultarDemandados;
+        private System.Windows.Forms.Button BotonConsultarDocumentos;
     }
 }
