@@ -29,6 +29,7 @@ namespace LawyerHelper.Clases
             this.Nombre = pNombre;
             this.Detalle = pDetalle;
             this.Fecha = pFecha;
+            this.Activo = true;
         }
     }
 }

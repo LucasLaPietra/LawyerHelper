@@ -43,6 +43,7 @@ namespace LawyerHelper.Clases
             this.EstadoCivil = pEstadoCivil;
             this.Representante = pRepresentante;
             this.DomicilioLegal = pDomicilioLegal;
+            this.Activo = true;
         }
 
         

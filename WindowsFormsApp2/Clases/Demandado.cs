@@ -21,7 +21,8 @@ namespace LawyerHelper.Clases
         {
             this.Cliente = pCliente;
             this.Juicio = pJuicio;
-            this.Persona = pPersona;            
+            this.Persona = pPersona;
+            this.Activo = true;          
         }
     }
 }

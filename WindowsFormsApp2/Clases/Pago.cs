@@ -23,6 +23,7 @@ namespace LawyerHelper.Clases
             this.Importe = pImporte;
             this.FechayHora = pFechayHora;
             this.Detalle = pDetalle;
+            this.Activo = true;
         }
 
         public Pago()

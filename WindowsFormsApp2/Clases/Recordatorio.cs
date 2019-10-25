@@ -23,6 +23,7 @@ namespace LawyerHelper.Clases
             this.Tipo = pTipo;
             this.Descripcion = pDescripcion;
             this.FechayHora = pFechayHora;
+            this.Activo = true;
         }
     }
 }
