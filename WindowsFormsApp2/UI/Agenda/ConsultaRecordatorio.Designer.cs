@@ -42,7 +42,7 @@
             this.LabelLugar = new System.Windows.Forms.Label();
             this.ListBoxRecordatorios = new System.Windows.Forms.ListBox();
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
-            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelTipo2
@@ -160,6 +160,7 @@
             this.ListBoxRecordatorios.Name = "ListBoxRecordatorios";
             this.ListBoxRecordatorios.Size = new System.Drawing.Size(358, 160);
             this.ListBoxRecordatorios.TabIndex = 190;
+            this.ListBoxRecordatorios.SelectedIndexChanged += new System.EventHandler(this.ListBoxRecordatorios_SelectedIndexChanged);
             // 
             // CuadroDescripcion
             // 
@@ -171,22 +172,22 @@
             this.CuadroDescripcion.Size = new System.Drawing.Size(281, 96);
             this.CuadroDescripcion.TabIndex = 191;
             // 
-            // BotonCancelar
+            // BotonAceptar
             // 
-            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(151, 485);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
-            this.BotonCancelar.TabIndex = 192;
-            this.BotonCancelar.Text = "Aceptar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAceptar.Location = new System.Drawing.Point(151, 485);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
+            this.BotonAceptar.TabIndex = 192;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
             // 
             // ConsultaRecordatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 521);
-            this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.CuadroDescripcion);
             this.Controls.Add(this.ListBoxRecordatorios);
             this.Controls.Add(this.LabelTipo2);
@@ -223,6 +224,6 @@
         private System.Windows.Forms.Label LabelLugar;
         private System.Windows.Forms.ListBox ListBoxRecordatorios;
         private System.Windows.Forms.TextBox CuadroDescripcion;
-        private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.Button BotonAceptar;
     }
 }

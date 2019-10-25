@@ -37,8 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CuadroHora = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
+            this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.CuadroLugar = new System.Windows.Forms.TextBox();
@@ -124,21 +124,22 @@
             this.CuadroHora.Size = new System.Drawing.Size(24, 20);
             this.CuadroHora.TabIndex = 167;
             // 
-            // dateTimePicker1
+            // CuadroFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(135, 188);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(222, 20);
-            this.dateTimePicker1.TabIndex = 166;
+            this.CuadroFecha.Location = new System.Drawing.Point(135, 188);
+            this.CuadroFecha.Name = "CuadroFecha";
+            this.CuadroFecha.Size = new System.Drawing.Size(222, 20);
+            this.CuadroFecha.TabIndex = 166;
             // 
-            // button1
+            // BotonCancelar
             // 
-            this.button1.Location = new System.Drawing.Point(262, 491);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 24);
-            this.button1.TabIndex = 165;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Location = new System.Drawing.Point(262, 491);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
+            this.BotonCancelar.TabIndex = 165;
+            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonAceptar
             // 
@@ -148,6 +149,7 @@
             this.BotonAceptar.TabIndex = 164;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // CuadroDescripcion
             // 
@@ -190,8 +192,9 @@
             this.ListBoxRecordatorios.Name = "ListBoxRecordatorios";
             this.ListBoxRecordatorios.Size = new System.Drawing.Size(331, 134);
             this.ListBoxRecordatorios.TabIndex = 177;
+            this.ListBoxRecordatorios.SelectedIndexChanged += new System.EventHandler(this.ListBoxRecordatorios_SelectedIndexChanged);
             // 
-            // BajaRecordatorio
+            // ModificarRecordatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -206,14 +209,14 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CuadroHora);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CuadroFecha);
+            this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.CuadroDescripcion);
             this.Controls.Add(this.CuadroLugar);
             this.Controls.Add(this.LabelDescripcion);
             this.Controls.Add(this.LabelLugar);
-            this.Name = "BajaRecordatorio";
+            this.Name = "ModificarRecordatorio";
             this.Text = "BajaRecordatorio";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,8 +234,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox CuadroHora;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker CuadroFecha;
+        private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.TextBox CuadroDescripcion;
         private System.Windows.Forms.TextBox CuadroLugar;
