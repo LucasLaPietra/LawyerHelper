@@ -19,7 +19,7 @@ namespace WindowsFormsApp2.Cobros
     public partial class AltaCobro : Form
     {
         ControladorCobro iControladorCobro;
-        Fachada iFachada;
+        Fachada iFachada=new Fachada();
         Persona iPersona;
         Juicio iJuicio;
         public AltaCobro()

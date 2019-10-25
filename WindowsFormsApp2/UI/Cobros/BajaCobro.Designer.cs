@@ -38,7 +38,7 @@
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelHora = new System.Windows.Forms.Label();
             this.LabelFecha = new System.Windows.Forms.Label();
-            this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
+            this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
             this.ListBoxCobros = new System.Windows.Forms.ListBox();
             this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.BotonAceptar = new System.Windows.Forms.Button();
@@ -140,12 +140,13 @@
             this.LabelFecha.TabIndex = 153;
             this.LabelFecha.Text = "Fecha:";
             // 
-            // dateTimePickerFecha
+            // CuadroFecha
             // 
-            this.dateTimePickerFecha.Location = new System.Drawing.Point(55, 12);
-            this.dateTimePickerFecha.Name = "dateTimePickerFecha";
-            this.dateTimePickerFecha.Size = new System.Drawing.Size(193, 20);
-            this.dateTimePickerFecha.TabIndex = 152;
+            this.CuadroFecha.Location = new System.Drawing.Point(55, 12);
+            this.CuadroFecha.Name = "CuadroFecha";
+            this.CuadroFecha.Size = new System.Drawing.Size(193, 20);
+            this.CuadroFecha.TabIndex = 152;
+            this.CuadroFecha.ValueChanged += new System.EventHandler(this.CuadroFecha_ValueChanged);
             // 
             // ListBoxCobros
             // 
@@ -154,6 +155,7 @@
             this.ListBoxCobros.Name = "ListBoxCobros";
             this.ListBoxCobros.Size = new System.Drawing.Size(361, 186);
             this.ListBoxCobros.TabIndex = 168;
+            this.ListBoxCobros.SelectedIndexChanged += new System.EventHandler(this.ListBoxCobros_SelectedIndexChanged);
             // 
             // CuadroDetalle
             // 
@@ -172,6 +174,7 @@
             this.BotonAceptar.TabIndex = 170;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // BotonVerJuicio
             // 
@@ -249,7 +252,7 @@
             this.Controls.Add(this.LabelImporte);
             this.Controls.Add(this.LabelHora);
             this.Controls.Add(this.LabelFecha);
-            this.Controls.Add(this.dateTimePickerFecha);
+            this.Controls.Add(this.CuadroFecha);
             this.Name = "BajaCobro";
             this.Text = "BajaCobro";
             this.ResumeLayout(false);
@@ -269,7 +272,7 @@
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelHora;
         private System.Windows.Forms.Label LabelFecha;
-        private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
+        private System.Windows.Forms.DateTimePicker CuadroFecha;
         private System.Windows.Forms.ListBox ListBoxCobros;
         private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.Button BotonAceptar;

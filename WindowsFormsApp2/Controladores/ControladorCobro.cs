@@ -41,5 +41,10 @@ namespace LawyerHelper.Controladores
             return iUdT.RepositorioCobro.Obtener(pId);
         }
 
+        public List<Cobro> ObtenerCobrosPorFecha(DateTime pFecha)
+        {
+            return iUdT.RepositorioCobro.BusquedaCobroPorFecha(pFecha).ToList();
+        }
+
     }
 }

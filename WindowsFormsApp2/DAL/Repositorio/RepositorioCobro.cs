@@ -12,7 +12,13 @@ namespace LawyerHelper.DAL.Repositorio
     {
         public RepositorioCobro(Contexto pContext) : base(pContext)
         {
+            
         }
-    
+
+        public IList<Cobro> BusquedaCobroPorFecha(DateTime pFecha)
+        {
+            List<Cobro> iQuery = iContext.Cobros.Where(n => n.FechayHora.Date == pFecha.Date).ToList();
+            return iQuery;
+        }
     }
 }
