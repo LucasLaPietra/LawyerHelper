@@ -18,6 +18,9 @@ namespace LawyerHelper.Clases
 
         public Juicio Juicio { get; set; }
 
+        public bool Activo {get;  set;}
+
+
         public Documento (String pTipoDocumento, String pNroFoja, Boolean pEnExpediente, String pNombre, String pDetalle, DateTime pFecha, Juicio pJuicio)
         {
             this.TipoDocumento = pTipoDocumento;

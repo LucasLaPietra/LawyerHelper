@@ -16,6 +16,8 @@ namespace LawyerHelper.Clases
         public Juicio Juicio { get; set; }
         public Persona Persona { get; set; }
 
+        public bool Activo {get;  set;}
+
         public Cobro(double pImporte, DateTime pFechayHora, String pDetalle)
         {
             this.Importe = pImporte;

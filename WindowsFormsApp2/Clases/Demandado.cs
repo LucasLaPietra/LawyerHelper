@@ -14,6 +14,9 @@ namespace LawyerHelper.Clases
         public Juicio Juicio { get; set; }
         public Persona Persona { get; set; }
 
+        public bool Activo {get;  set;}
+
+
         public Demandado(Boolean pCliente, Juicio pJuicio, Persona pPersona)
         {
             this.Cliente = pCliente;

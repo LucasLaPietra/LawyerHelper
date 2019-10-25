@@ -26,6 +26,9 @@ namespace LawyerHelper.Clases
         public IList<Demandado> Demandado { get; set; }
         public IList<Demandante> Demandante { get; set; }
 
+        public bool Activo {get;  set;}
+
+
         public Persona(String pNombre, String pApellido, String pDni, String pDomicilio, String pTelefono, DateTime pFechaNacimiento, String pProfesion, String pLugarTrabajo, String pCuil, String pEstadoCivil, String pRepresentante, String pDomicilioLegal)
         {
             this.Nombre = pNombre;
