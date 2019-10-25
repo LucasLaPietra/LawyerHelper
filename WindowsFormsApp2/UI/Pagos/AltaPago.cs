@@ -25,7 +25,6 @@ namespace WindowsFormsApp2.Pagos
             CuadroAM.Text = DateTime.Now.ToString("tt");
             //Asignacion de colores      
             iFachada.AsignarColores(this);
-            }
         }
 
         private void CuadroAM_SelectedIndexChanged(object sender, EventArgs e)

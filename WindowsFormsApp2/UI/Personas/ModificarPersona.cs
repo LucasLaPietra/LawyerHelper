@@ -28,7 +28,7 @@ namespace LawyerHelper.UI.Personas
             iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
             //Asignacion de colores  
             iFachada.AsignarColores(this);    
-            }
+            
             
         }
 

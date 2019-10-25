@@ -22,7 +22,7 @@ namespace WindowsFormsApp2.Juicios
 
             iFachada.AsignarColores(this);
         }
-        }
+        
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
