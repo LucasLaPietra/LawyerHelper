@@ -227,7 +227,6 @@
             this.CuadroFuero.Name = "CuadroFuero";
             this.CuadroFuero.Size = new System.Drawing.Size(324, 20);
             this.CuadroFuero.TabIndex = 47;
-            this.CuadroFuero.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // CuadroJurisdiccion
             // 
@@ -438,7 +437,6 @@
             this.BotonBuscar.TabIndex = 9;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
-            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // CuadroNroExpediente
             // 
@@ -466,7 +464,6 @@
             this.BotonAceptar.TabIndex = 10;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
-            this.BotonAceptar.Click += new System.EventHandler(this.button3_Click);
             // 
             // BotonCancelar
             // 
@@ -477,7 +474,7 @@
             this.BotonCancelar.TabIndex = 11;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
-            this.BotonCancelar.Click += new System.EventHandler(this.button4_Click);
+
             // 
             // BotonBusquedaAvanzada
             // 
@@ -657,7 +654,6 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ModificarJuicio";
             this.Text = "Modificar Juicios";
-            this.Load += new System.EventHandler(this.ModificarJuicio_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.Layout1.ResumeLayout(false);
