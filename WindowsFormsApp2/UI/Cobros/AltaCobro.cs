@@ -13,6 +13,7 @@ using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using LawyerHelper.UI.Personas;
 using LawyerHelper.UI.Juicios;
+using WindowsFormsApp2;
 
 namespace WindowsFormsApp2.Cobros
 {

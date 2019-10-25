@@ -22,8 +22,8 @@ namespace LawyerHelper.UI.Cobros
         ControladorCobro iControladorCobro;
         Fachada iFachada=new Fachada();
         List<Cobro> iListaCobros;
-        Persona iPersona;
-        Juicio iJuicio;
+        Persona iPersona = new Persona();
+        Juicio iJuicio = new Juicio();
         public BajaCobro()
         {
             InitializeComponent();

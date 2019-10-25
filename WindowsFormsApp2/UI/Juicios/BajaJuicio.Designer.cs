@@ -34,6 +34,10 @@
             this.CuadroNumeroDeExpediente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
+            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
+            this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
+            this.CuadroBienes = new System.Windows.Forms.TextBox();
+            this.labelDocumentos = new System.Windows.Forms.Label();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.LabelFolio = new System.Windows.Forms.Label();
             this.LabelFuero = new System.Windows.Forms.Label();
@@ -69,12 +73,8 @@
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
             this.LabelExpediente = new System.Windows.Forms.Label();
-            this.BotonBuscar = new System.Windows.Forms.Button();
-            this.labelDocumentos = new System.Windows.Forms.Label();
             this.BotonVerDocumentacion = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.BotonBuscar = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,9 +126,9 @@
             this.Layout.ColumnCount = 2;
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.Layout.Controls.Add(this.textBox3, 1, 10);
-            this.Layout.Controls.Add(this.textBox2, 1, 13);
-            this.Layout.Controls.Add(this.textBox1, 1, 12);
+            this.Layout.Controls.Add(this.CuadroDescripcion, 1, 10);
+            this.Layout.Controls.Add(this.CuadroGrupoFamiliar, 1, 13);
+            this.Layout.Controls.Add(this.CuadroBienes, 1, 12);
             this.Layout.Controls.Add(this.labelDocumentos, 0, 20);
             this.Layout.Controls.Add(this.LabelFecha, 0, 1);
             this.Layout.Controls.Add(this.LabelFolio, 0, 2);
@@ -193,6 +193,42 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.Layout.Size = new System.Drawing.Size(439, 359);
             this.Layout.TabIndex = 38;
+            // 
+            // CuadroDescripcion
+            // 
+            this.CuadroDescripcion.Location = new System.Drawing.Point(97, 133);
+            this.CuadroDescripcion.Multiline = true;
+            this.CuadroDescripcion.Name = "CuadroDescripcion";
+            this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDescripcion.Size = new System.Drawing.Size(342, 32);
+            this.CuadroDescripcion.TabIndex = 174;
+            // 
+            // CuadroGrupoFamiliar
+            // 
+            this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(97, 222);
+            this.CuadroGrupoFamiliar.Multiline = true;
+            this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
+            this.CuadroGrupoFamiliar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(342, 32);
+            this.CuadroGrupoFamiliar.TabIndex = 174;
+            // 
+            // CuadroBienes
+            // 
+            this.CuadroBienes.Location = new System.Drawing.Point(97, 184);
+            this.CuadroBienes.Multiline = true;
+            this.CuadroBienes.Name = "CuadroBienes";
+            this.CuadroBienes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroBienes.Size = new System.Drawing.Size(342, 32);
+            this.CuadroBienes.TabIndex = 178;
+            // 
+            // labelDocumentos
+            // 
+            this.labelDocumentos.AutoSize = true;
+            this.labelDocumentos.Location = new System.Drawing.Point(3, 322);
+            this.labelDocumentos.Name = "labelDocumentos";
+            this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
+            this.labelDocumentos.TabIndex = 39;
+            this.labelDocumentos.Text = "Documentos:";
             // 
             // LabelFecha
             // 
@@ -509,24 +545,6 @@
             this.LabelExpediente.TabIndex = 0;
             this.LabelExpediente.Text = "Nro Expediente:";
             // 
-            // BotonBuscar
-            // 
-            this.BotonBuscar.Location = new System.Drawing.Point(335, 9);
-            this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(90, 28);
-            this.BotonBuscar.TabIndex = 96;
-            this.BotonBuscar.Text = "Buscar";
-            this.BotonBuscar.UseVisualStyleBackColor = true;
-            // 
-            // labelDocumentos
-            // 
-            this.labelDocumentos.AutoSize = true;
-            this.labelDocumentos.Location = new System.Drawing.Point(3, 322);
-            this.labelDocumentos.Name = "labelDocumentos";
-            this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
-            this.labelDocumentos.TabIndex = 39;
-            this.labelDocumentos.Text = "Documentos:";
-            // 
             // BotonVerDocumentacion
             // 
             this.BotonVerDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -538,32 +556,14 @@
             this.BotonVerDocumentacion.Text = "Ver";
             this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // BotonBuscar
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 184);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(342, 32);
-            this.textBox1.TabIndex = 178;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(97, 222);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(342, 32);
-            this.textBox2.TabIndex = 174;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(97, 133);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox3.Size = new System.Drawing.Size(342, 32);
-            this.textBox3.TabIndex = 174;
+            this.BotonBuscar.Location = new System.Drawing.Point(335, 9);
+            this.BotonBuscar.Name = "BotonBuscar";
+            this.BotonBuscar.Size = new System.Drawing.Size(90, 28);
+            this.BotonBuscar.TabIndex = 96;
+            this.BotonBuscar.Text = "Buscar";
+            this.BotonBuscar.UseVisualStyleBackColor = true;
             // 
             // BajaJuicio
             // 
@@ -632,8 +632,8 @@
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.Label labelDocumentos;
         private System.Windows.Forms.Button BotonVerDocumentacion;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CuadroDescripcion;
+        private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
+        private System.Windows.Forms.TextBox CuadroBienes;
     }
 }

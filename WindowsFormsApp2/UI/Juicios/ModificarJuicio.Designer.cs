@@ -37,7 +37,7 @@
             this.CuadroLibro = new System.Windows.Forms.TextBox();
             this.CuadroCaratula = new System.Windows.Forms.TextBox();
             this.CuadroRecurso = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.CuadroCompetencia = new System.Windows.Forms.TextBox();
             this.CuadroTipoDeProceso = new System.Windows.Forms.TextBox();
             this.CuadroFuero = new System.Windows.Forms.TextBox();
             this.CuadroJurisdiccion = new System.Windows.Forms.TextBox();
@@ -55,14 +55,14 @@
             this.LabelJuez = new System.Windows.Forms.Label();
             this.LabelSecretario = new System.Windows.Forms.Label();
             this.LabelPrecio = new System.Windows.Forms.Label();
-            this.LabelDemandante = new System.Windows.Forms.Label();
-            this.LabelDemandado = new System.Windows.Forms.Label();
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
             this.dateTimeFecha = new System.Windows.Forms.DateTimePicker();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CuadroBienes = new System.Windows.Forms.TextBox();
+            this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
             this.LabelFolio = new System.Windows.Forms.Label();
+            this.LabelDemandante = new System.Windows.Forms.Label();
+            this.LabelDemandado = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.CuadroNroExpediente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -78,8 +78,8 @@
             this.RadioButtonCliente2 = new System.Windows.Forms.RadioButton();
             this.RadioButtonCliente1 = new System.Windows.Forms.RadioButton();
             this.Layout1 = new System.Windows.Forms.TableLayoutPanel();
-            this.LabelDocumentos = new System.Windows.Forms.Label();
             this.ListBoxDocumentos = new System.Windows.Forms.ListBox();
+            this.LabelDocumentos = new System.Windows.Forms.Label();
             this.BotonEliminarDocumentos = new System.Windows.Forms.Button();
             this.BotonAgregarDocumentos = new System.Windows.Forms.Button();
             this.BotonModificarDocumentos = new System.Windows.Forms.Button();
@@ -100,7 +100,7 @@
             this.tableLayoutPanel1.Controls.Add(this.CuadroLibro, 1, 9);
             this.tableLayoutPanel1.Controls.Add(this.CuadroCaratula, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.CuadroRecurso, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.textBox8, 1, 6);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroCompetencia, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.CuadroTipoDeProceso, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.CuadroFuero, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.CuadroJurisdiccion, 1, 3);
@@ -121,8 +121,8 @@
             this.tableLayoutPanel1.Controls.Add(this.LabelJurisdiccion, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.LabelEtapa, 0, 11);
             this.tableLayoutPanel1.Controls.Add(this.dateTimeFecha, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 12);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 13);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroBienes, 1, 12);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroGrupoFamiliar, 1, 13);
             this.tableLayoutPanel1.Controls.Add(this.LabelFolio, 0, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(21, 93);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -207,12 +207,12 @@
             this.CuadroRecurso.Size = new System.Drawing.Size(324, 20);
             this.CuadroRecurso.TabIndex = 50;
             // 
-            // textBox8
+            // CuadroCompetencia
             // 
-            this.textBox8.Location = new System.Drawing.Point(97, 133);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(324, 20);
-            this.textBox8.TabIndex = 49;
+            this.CuadroCompetencia.Location = new System.Drawing.Point(97, 133);
+            this.CuadroCompetencia.Name = "CuadroCompetencia";
+            this.CuadroCompetencia.Size = new System.Drawing.Size(324, 20);
+            this.CuadroCompetencia.TabIndex = 49;
             // 
             // CuadroTipoDeProceso
             // 
@@ -359,24 +359,6 @@
             this.LabelPrecio.TabIndex = 29;
             this.LabelPrecio.Text = "Precio:";
             // 
-            // LabelDemandante
-            // 
-            this.LabelDemandante.AutoSize = true;
-            this.LabelDemandante.Location = new System.Drawing.Point(3, 0);
-            this.LabelDemandante.Name = "LabelDemandante";
-            this.LabelDemandante.Size = new System.Drawing.Size(76, 13);
-            this.LabelDemandante.TabIndex = 30;
-            this.LabelDemandante.Text = "Demandantes:";
-            // 
-            // LabelDemandado
-            // 
-            this.LabelDemandado.AutoSize = true;
-            this.LabelDemandado.Location = new System.Drawing.Point(3, 75);
-            this.LabelDemandado.Name = "LabelDemandado";
-            this.LabelDemandado.Size = new System.Drawing.Size(73, 13);
-            this.LabelDemandado.TabIndex = 31;
-            this.LabelDemandado.Text = "Demandados:";
-            // 
             // LabelJurisdiccion
             // 
             this.LabelJurisdiccion.AutoSize = true;
@@ -402,23 +384,23 @@
             this.dateTimeFecha.Size = new System.Drawing.Size(324, 20);
             this.dateTimeFecha.TabIndex = 63;
             // 
-            // textBox1
+            // CuadroBienes
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 304);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(324, 35);
-            this.textBox1.TabIndex = 174;
+            this.CuadroBienes.Location = new System.Drawing.Point(97, 304);
+            this.CuadroBienes.Multiline = true;
+            this.CuadroBienes.Name = "CuadroBienes";
+            this.CuadroBienes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroBienes.Size = new System.Drawing.Size(324, 35);
+            this.CuadroBienes.TabIndex = 174;
             // 
-            // textBox2
+            // CuadroGrupoFamiliar
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 345);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(324, 35);
-            this.textBox2.TabIndex = 175;
+            this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(97, 345);
+            this.CuadroGrupoFamiliar.Multiline = true;
+            this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
+            this.CuadroGrupoFamiliar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(324, 35);
+            this.CuadroGrupoFamiliar.TabIndex = 175;
             // 
             // LabelFolio
             // 
@@ -428,6 +410,24 @@
             this.LabelFolio.Size = new System.Drawing.Size(32, 13);
             this.LabelFolio.TabIndex = 2;
             this.LabelFolio.Text = "Folio:";
+            // 
+            // LabelDemandante
+            // 
+            this.LabelDemandante.AutoSize = true;
+            this.LabelDemandante.Location = new System.Drawing.Point(3, 0);
+            this.LabelDemandante.Name = "LabelDemandante";
+            this.LabelDemandante.Size = new System.Drawing.Size(76, 13);
+            this.LabelDemandante.TabIndex = 30;
+            this.LabelDemandante.Text = "Demandantes:";
+            // 
+            // LabelDemandado
+            // 
+            this.LabelDemandado.AutoSize = true;
+            this.LabelDemandado.Location = new System.Drawing.Point(3, 75);
+            this.LabelDemandado.Name = "LabelDemandado";
+            this.LabelDemandado.Size = new System.Drawing.Size(73, 13);
+            this.LabelDemandado.TabIndex = 31;
+            this.LabelDemandado.Text = "Demandados:";
             // 
             // BotonBuscar
             // 
@@ -474,7 +474,6 @@
             this.BotonCancelar.TabIndex = 11;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
-
             // 
             // BotonBusquedaAvanzada
             // 
@@ -583,6 +582,14 @@
             this.Layout1.Size = new System.Drawing.Size(411, 271);
             this.Layout1.TabIndex = 84;
             // 
+            // ListBoxDocumentos
+            // 
+            this.ListBoxDocumentos.FormattingEnabled = true;
+            this.ListBoxDocumentos.Location = new System.Drawing.Point(85, 153);
+            this.ListBoxDocumentos.Name = "ListBoxDocumentos";
+            this.ListBoxDocumentos.Size = new System.Drawing.Size(324, 108);
+            this.ListBoxDocumentos.TabIndex = 85;
+            // 
             // LabelDocumentos
             // 
             this.LabelDocumentos.AutoSize = true;
@@ -591,14 +598,6 @@
             this.LabelDocumentos.Size = new System.Drawing.Size(70, 13);
             this.LabelDocumentos.TabIndex = 32;
             this.LabelDocumentos.Text = "Documentos:";
-            // 
-            // ListBoxDocumentos
-            // 
-            this.ListBoxDocumentos.FormattingEnabled = true;
-            this.ListBoxDocumentos.Location = new System.Drawing.Point(85, 153);
-            this.ListBoxDocumentos.Name = "ListBoxDocumentos";
-            this.ListBoxDocumentos.Size = new System.Drawing.Size(324, 108);
-            this.ListBoxDocumentos.TabIndex = 85;
             // 
             // BotonEliminarDocumentos
             // 
@@ -694,7 +693,7 @@
         private System.Windows.Forms.TextBox CuadroLibro;
         private System.Windows.Forms.TextBox CuadroCaratula;
         private System.Windows.Forms.TextBox CuadroRecurso;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox CuadroCompetencia;
         private System.Windows.Forms.TextBox CuadroTipoDeProceso;
         private System.Windows.Forms.TextBox CuadroFuero;
         private System.Windows.Forms.TextBox CuadroJurisdiccion;
@@ -704,8 +703,8 @@
         private System.Windows.Forms.Button BotonBusquedaAvanzada;
         private System.Windows.Forms.DateTimePicker dateTimeFecha;
         private System.Windows.Forms.TextBox CuadroDetalle;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox CuadroBienes;
+        private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
         private System.Windows.Forms.ListBox ListBoxDemandantes;
         private System.Windows.Forms.ListBox ListBoxDemandados;
         private System.Windows.Forms.Button BotonEliminarDemandado;

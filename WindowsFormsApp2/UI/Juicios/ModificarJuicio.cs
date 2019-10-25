@@ -19,9 +19,11 @@ namespace LawyerHelper.UI.Juicios
     public partial class ModificarJuicio : Form
     {
         Fachada iFachada = new Fachada();
+        ControladorJuicio iControladorJuicio;
         public ModificarJuicio()
         {
             InitializeComponent();
+            iControladorJuicio = new ControladorJuicio(UnidadDeTrabajo.Instancia);
             //Asignacion de colores      
             iFachada.AsignarColores(this);
         }

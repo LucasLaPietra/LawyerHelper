@@ -18,7 +18,7 @@ namespace LawyerHelper.UI.Pagos
     public partial class BajaPago : Form
     {
         Fachada iFachada = new Fachada();
-        ControladorPago iControladorRecordatorio;
+        ControladorPago iControladorPago;
 
         public BajaPago()
         {

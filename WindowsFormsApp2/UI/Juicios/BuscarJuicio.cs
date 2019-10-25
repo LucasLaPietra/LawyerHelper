@@ -25,9 +25,11 @@ namespace LawyerHelper.UI.Juicios
             set { iResultado = value; }
         }
         Fachada iFachada = new Fachada();
+        ControladorJuicio iControladorJuicio;
         public BuscarJuicio()
         {
             InitializeComponent();
+            iControladorJuicio = new ControladorJuicio(UnidadDeTrabajo.Instancia);
             iFachada.AsignarColores(this);
         }
 

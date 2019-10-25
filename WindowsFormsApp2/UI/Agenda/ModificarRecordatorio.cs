@@ -24,6 +24,7 @@ namespace LawyerHelper.UI.Agenda
         public ModificarRecordatorio()
         {
             InitializeComponent();
+            iFachada.AsignarColores(this);
             iControladorRecordatorio = new ControladorRecordatorio(UnidadDeTrabajo.Instancia);
             iListaRecordatorios = iControladorRecordatorio.MostrarAgenda().ToList();
             ListBoxRecordatorios.DataSource = iListaRecordatorios;

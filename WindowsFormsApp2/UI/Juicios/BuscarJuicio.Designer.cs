@@ -70,10 +70,10 @@
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
             this.LabelExpediente = new System.Windows.Forms.Label();
-            this.CuadroDetalle = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CuadroBienes = new System.Windows.Forms.TextBox();
+            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.LabelEtapa2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
             this.BotonVerDocumentacion = new System.Windows.Forms.Button();
             this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
             this.BotonAceptar = new System.Windows.Forms.Button();
@@ -173,10 +173,10 @@
             this.Layout.Controls.Add(this.LabelJurisdiccion, 0, 3);
             this.Layout.Controls.Add(this.LabelEtapa, 0, 11);
             this.Layout.Controls.Add(this.LabelExpediente, 0, 0);
-            this.Layout.Controls.Add(this.CuadroDetalle, 1, 12);
-            this.Layout.Controls.Add(this.textBox1, 1, 10);
+            this.Layout.Controls.Add(this.CuadroBienes, 1, 12);
+            this.Layout.Controls.Add(this.CuadroDescripcion, 1, 10);
             this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
-            this.Layout.Controls.Add(this.textBox2, 1, 13);
+            this.Layout.Controls.Add(this.CuadroGrupoFamiliar, 1, 13);
             this.Layout.Controls.Add(this.BotonVerDocumentacion, 1, 19);
             this.Layout.Location = new System.Drawing.Point(39, 152);
             this.Layout.Name = "Layout";
@@ -520,25 +520,25 @@
             this.LabelExpediente.TabIndex = 0;
             this.LabelExpediente.Text = "Nro Expediente:";
             // 
-            // CuadroDetalle
+            // CuadroBienes
             // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(97, 184);
-            this.CuadroDetalle.Multiline = true;
-            this.CuadroDetalle.Name = "CuadroDetalle";
-            this.CuadroDetalle.ReadOnly = true;
-            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.CuadroDetalle.Size = new System.Drawing.Size(342, 32);
-            this.CuadroDetalle.TabIndex = 172;
+            this.CuadroBienes.Location = new System.Drawing.Point(97, 184);
+            this.CuadroBienes.Multiline = true;
+            this.CuadroBienes.Name = "CuadroBienes";
+            this.CuadroBienes.ReadOnly = true;
+            this.CuadroBienes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroBienes.Size = new System.Drawing.Size(342, 32);
+            this.CuadroBienes.TabIndex = 172;
             // 
-            // textBox1
+            // CuadroDescripcion
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 133);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(342, 32);
-            this.textBox1.TabIndex = 173;
+            this.CuadroDescripcion.Location = new System.Drawing.Point(97, 133);
+            this.CuadroDescripcion.Multiline = true;
+            this.CuadroDescripcion.Name = "CuadroDescripcion";
+            this.CuadroDescripcion.ReadOnly = true;
+            this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDescripcion.Size = new System.Drawing.Size(342, 32);
+            this.CuadroDescripcion.TabIndex = 173;
             // 
             // LabelEtapa2
             // 
@@ -549,15 +549,15 @@
             this.LabelEtapa2.TabIndex = 24;
             this.LabelEtapa2.Text = "-";
             // 
-            // textBox2
+            // CuadroGrupoFamiliar
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 222);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(342, 32);
-            this.textBox2.TabIndex = 174;
+            this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(97, 222);
+            this.CuadroGrupoFamiliar.Multiline = true;
+            this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
+            this.CuadroGrupoFamiliar.ReadOnly = true;
+            this.CuadroGrupoFamiliar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(342, 32);
+            this.CuadroGrupoFamiliar.TabIndex = 174;
             // 
             // BotonVerDocumentacion
             // 
@@ -671,9 +671,9 @@
         private System.Windows.Forms.ComboBox ComboBoxResultados;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.TextBox CuadroDetalle;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox CuadroBienes;
+        private System.Windows.Forms.TextBox CuadroDescripcion;
+        private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
         private System.Windows.Forms.Label labelDocumentos;
         private System.Windows.Forms.Button BotonVerDocumentacion;
     }
