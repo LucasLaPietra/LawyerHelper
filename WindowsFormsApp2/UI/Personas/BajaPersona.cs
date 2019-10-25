@@ -18,8 +18,8 @@ namespace LawyerHelper.UI.Personas
     public partial class BajaPersona : Form
     {
         ControladorPersona iControladorPersona;
-        Persona iPersona;
-        Fachada iFachada;
+        Persona iPersona = new Persona();
+        Fachada iFachada = new Fachada();
         public BajaPersona()
         {
             InitializeComponent();

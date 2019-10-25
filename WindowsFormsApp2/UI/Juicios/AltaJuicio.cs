@@ -12,6 +12,7 @@ using LawyerHelper.UI.Personas;
 using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
+using WindowsFormsApp2;
 
 
 namespace WindowsFormsApp2.Juicios
