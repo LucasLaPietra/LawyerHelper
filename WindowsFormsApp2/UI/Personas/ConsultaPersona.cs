@@ -29,7 +29,7 @@ namespace LawyerHelper.UI.Personas
 
         }
 
-     }
+     
 
         private void BotonCancelar_Click(object sender, EventArgs e)
         {

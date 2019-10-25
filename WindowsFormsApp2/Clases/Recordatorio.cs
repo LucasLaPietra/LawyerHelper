@@ -14,12 +14,16 @@ namespace LawyerHelper.Clases
         public String Descripcion { get; set; }
         public DateTime FechayHora { get; set; }
 
+        public bool Activo {get;  set;}
+
+
         public Recordatorio(string pLugar, string pTipo, string pDescripcion, DateTime pFechayHora)
         {
             this.Lugar = pLugar;
             this.Tipo = pTipo;
             this.Descripcion = pDescripcion;
             this.FechayHora = pFechayHora;
+            this.Activo = true;
         }
     }
 }

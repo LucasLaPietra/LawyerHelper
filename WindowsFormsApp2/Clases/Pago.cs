@@ -15,11 +15,15 @@ namespace LawyerHelper.Clases
 
         public Juicio Juicio { get; set; }
 
+        public bool Activo {get;  set;}
+
+
         public Pago(double pImporte, DateTime pFechayHora, String pDetalle)
         {
             this.Importe = pImporte;
             this.FechayHora = pFechayHora;
             this.Detalle = pDetalle;
+            this.Activo = true;
         }
 
         public Pago()

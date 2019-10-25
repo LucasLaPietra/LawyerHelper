@@ -22,6 +22,6 @@ namespace LawyerHelper.UI.Juicios
 
             iFachada.AsignarColores(this);
         }
-        }
+        
     }
 }

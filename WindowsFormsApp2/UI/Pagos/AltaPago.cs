@@ -28,7 +28,6 @@ namespace WindowsFormsApp2.Pagos
             iControladorPagos = new ControladorPago(UnidadDeTrabajo.Instancia);
             //Asignacion de colores      
             iFachada.AsignarColores(this);
-            }
         }
 
         private void CuadroAM_SelectedIndexChanged(object sender, EventArgs e)
