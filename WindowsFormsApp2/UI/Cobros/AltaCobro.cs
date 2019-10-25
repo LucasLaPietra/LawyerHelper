@@ -46,10 +46,6 @@ namespace WindowsFormsApp2.Cobros
                 iControladorCobro.RegistrarCobro((Convert.ToDouble(CuadroImporte.Text)),iFechayHora,CuadroDetalle.Text,iJuicio,iPersona);
                 MessageBox.Show("Cobro añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Se debe añadir una persona y un juicio al cobro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             catch (Exception)
             {
                 MessageBox.Show("Cobro no fue añadido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
