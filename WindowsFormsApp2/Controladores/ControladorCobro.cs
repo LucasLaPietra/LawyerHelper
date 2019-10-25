@@ -25,10 +25,6 @@ namespace LawyerHelper.Controladores
 
         public void RegistrarCobro(double pImporte, DateTime pFechayHora, string pDetalle, Juicio pJuicio, Persona pPersona)
         {
-            if ((pJuicio == null) || (pPersona == null))
-            {
-                throw new NullReferenceException();
-            }
             Cobro iCobro = new Cobro(pImporte, pFechayHora, pDetalle, pJuicio,pPersona);
             iUdT.RepositorioCobro.Agregar(iCobro);
             iUdT.Guardar();
@@ -43,6 +39,11 @@ namespace LawyerHelper.Controladores
         public Cobro ObtenerCobro(int pId)
         {
             return iUdT.RepositorioCobro.Obtener(pId);
+        }
+
+        public List<Cobro> ObtenerCobrosPorFecha(DateTime pFecha)
+        {
+            return iUdT.RepositorioCobro.BusquedaCobroPorFecha(pFecha).ToList();
         }
 
     }

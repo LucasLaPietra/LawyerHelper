@@ -8,39 +8,44 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
+using LawyerHelper.UI.Personas;
+using LawyerHelper.Controladores;
+using LawyerHelper.DAL.Interfaces;
+using LawyerHelper.DAL.Repositorio;
+using WindowsFormsApp2;
 
 namespace LawyerHelper.UI.Agenda
 {
     public partial class ConsultaRecordatorio : Form
     {
+        Fachada iFachada = new Fachada();
+        List<Recordatorio> iListaRecordatorios;
+        ControladorRecordatorio iControladorRecordatorio;
         public ConsultaRecordatorio()
         {
             InitializeComponent();
-            //Asignacion de colores      
-            //Background
-            this.BackColor = Colores.ColorBackground;
-            //Cajas
-            foreach (TextBox t in Controls.OfType<TextBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
-            // Labels
-            foreach (Label l in Controls.OfType<Label>())
-                l.ForeColor = Colores.ColorForeground;
-            //Botones
-            foreach (Button b in Controls.OfType<Button>())
-            {
-                b.ForeColor = Colores.ColorForeground;
-                b.BackColor = Colores.ColorBackground;
-            }
-            ListBoxRecordatorios.ForeColor = Colores.ColorForeground;
-            ListBoxRecordatorios.BackColor = Colores.ColorBackground;
+            iFachada.AsignarColores(this);
+            iControladorRecordatorio = new ControladorRecordatorio(UnidadDeTrabajo.Instancia);
+            iListaRecordatorios = iControladorRecordatorio.MostrarAgenda().ToList();
+            ListBoxRecordatorios.DataSource = iListaRecordatorios;
+            ListBoxRecordatorios.DisplayMember = "FechayHora";
         }
 
-        private void BotonCancelar_Click(object sender, EventArgs e)
+        private void BotonAceptar_Click1(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+        private void ListBoxRecordatorios_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int iSelectedIndex = ListBoxRecordatorios.SelectedIndex;
+            Recordatorio iRecordatorio = iListaRecordatorios[iSelectedIndex];
+            LabelHora2.Text = iRecordatorio.FechayHora.Hour.ToString();
+            LabelMinutos.Text = iRecordatorio.FechayHora.Minute.ToString();
+            LabelAM.Text = iRecordatorio.FechayHora.ToString("tt");
+            CuadroDescripcion.Text = iRecordatorio.Descripcion;
+            LabelLugar2.Text = iRecordatorio.Lugar;
+            LabelTipo2.Text = iRecordatorio.Tipo;
         }
     }
 }

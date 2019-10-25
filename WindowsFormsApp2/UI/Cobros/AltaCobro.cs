@@ -19,7 +19,7 @@ namespace WindowsFormsApp2.Cobros
     public partial class AltaCobro : Form
     {
         ControladorCobro iControladorCobro;
-        Fachada iFachada;
+        Fachada iFachada=new Fachada();
         Persona iPersona;
         Juicio iJuicio;
         public AltaCobro()
@@ -45,10 +45,6 @@ namespace WindowsFormsApp2.Cobros
                 DateTime iFechayHora = new DateTime(CuadroFecha.Value.Year, CuadroFecha.Value.Month, CuadroFecha.Value.Day, iHora, (Convert.ToInt32(CuadroMinutos.Text)),0);                
                 iControladorCobro.RegistrarCobro((Convert.ToDouble(CuadroImporte.Text)),iFechayHora,CuadroDetalle.Text,iJuicio,iPersona);
                 MessageBox.Show("Cobro añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Se debe añadir una persona y un juicio al cobro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception)
             {

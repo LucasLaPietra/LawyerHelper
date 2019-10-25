@@ -8,40 +8,42 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
+using LawyerHelper.Controladores;
+using LawyerHelper.DAL.Interfaces;
+using LawyerHelper.DAL.Repositorio;
+using LawyerHelper.UI.Personas;
+using LawyerHelper.UI.Juicios;
+using WindowsFormsApp2;
 
 namespace LawyerHelper.UI.Cobros
 {
     public partial class BajaCobro : Form
     {
+        ControladorCobro iControladorCobro;
+        Fachada iFachada=new Fachada();
+        List<Cobro> iListaCobros;
+        Persona iPersona;
+        Juicio iJuicio;
         public BajaCobro()
         {
             InitializeComponent();
-            //Asignacion de colores      
-            //Background
-            this.BackColor = Colores.ColorBackground;
-            //Cajas
-            foreach (TextBox t in Controls.OfType<TextBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
-            // Labels
-            foreach (Label l in Controls.OfType<Label>())
-                l.ForeColor = Colores.ColorForeground;
-            //Botones
-            foreach (Button b in Controls.OfType<Button>())
-            {
-                b.ForeColor = Colores.ColorForeground;
-                b.BackColor = Colores.ColorBackground;
-            }
-            //ComboBox
-            foreach (ComboBox c in Controls.OfType<ComboBox>())
-            {
-                c.ForeColor = Colores.ColorForeground;
-                c.BackColor = Colores.ColorBackground;
-            }
-            ListBoxCobros.ForeColor = Colores.ColorForeground;
-            ListBoxCobros.BackColor = Colores.ColorBackground;
+            iControladorCobro = new ControladorCobro(UnidadDeTrabajo.Instancia);
+            iFachada.AsignarColores(this);
+        }
+
+        private void BotonAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ListBoxCobros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CuadroFecha_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
