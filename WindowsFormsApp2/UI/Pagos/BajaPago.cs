@@ -9,17 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
 using WindowsFormsApp2;
+using LawyerHelper.Controladores;
+using LawyerHelper.DAL.Interfaces;
+using LawyerHelper.DAL.Repositorio;
 
 namespace LawyerHelper.UI.Pagos
 {
     public partial class BajaPago : Form
     {
         Fachada iFachada = new Fachada();
+        ControladorPago iControladorRecordatorio;
+
         public BajaPago()
         {
             InitializeComponent();
             //Asignacion de colores      
             iFachada.AsignarColores(this);
+            iControladorPago = new ControladorPago(UnidadDeTrabajo.Instancia);
         }
 
         private void BajaPagos_Load(object sender, EventArgs e)

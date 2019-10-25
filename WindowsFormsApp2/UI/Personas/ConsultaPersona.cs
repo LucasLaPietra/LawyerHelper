@@ -19,7 +19,7 @@ namespace LawyerHelper.UI.Personas
     {
         Fachada iFachada = new Fachada();
         ControladorPersona iControladorPersona;
-        Persona iPersona;
+        Persona iPersona= new Persona();
         public ConsultaPersona()
         {
             InitializeComponent();
