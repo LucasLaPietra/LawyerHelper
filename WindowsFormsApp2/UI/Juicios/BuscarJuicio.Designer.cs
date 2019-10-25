@@ -35,6 +35,7 @@
             this.comboBoxParametro = new System.Windows.Forms.ComboBox();
             this.LabelComboBoxParametro = new System.Windows.Forms.Label();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
+            this.labelDocumentos = new System.Windows.Forms.Label();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.LabelFolio = new System.Windows.Forms.Label();
             this.LabelFuero = new System.Windows.Forms.Label();
@@ -73,11 +74,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LabelEtapa2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.BotonVerDocumentacion = new System.Windows.Forms.Button();
             this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
-            this.labelDocumentos = new System.Windows.Forms.Label();
-            this.BotonVerDocumentacion = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -204,6 +204,15 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.Layout.Size = new System.Drawing.Size(439, 347);
             this.Layout.TabIndex = 99;
+            // 
+            // labelDocumentos
+            // 
+            this.labelDocumentos.AutoSize = true;
+            this.labelDocumentos.Location = new System.Drawing.Point(3, 322);
+            this.labelDocumentos.Name = "labelDocumentos";
+            this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
+            this.labelDocumentos.TabIndex = 175;
+            this.labelDocumentos.Text = "Documentos:";
             // 
             // LabelFecha
             // 
@@ -516,6 +525,7 @@
             this.CuadroDetalle.Location = new System.Drawing.Point(97, 184);
             this.CuadroDetalle.Multiline = true;
             this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ReadOnly = true;
             this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CuadroDetalle.Size = new System.Drawing.Size(342, 32);
             this.CuadroDetalle.TabIndex = 172;
@@ -525,6 +535,7 @@
             this.textBox1.Location = new System.Drawing.Point(97, 133);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(342, 32);
             this.textBox1.TabIndex = 173;
@@ -543,9 +554,21 @@
             this.textBox2.Location = new System.Drawing.Point(97, 222);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox2.Size = new System.Drawing.Size(342, 32);
             this.textBox2.TabIndex = 174;
+            // 
+            // BotonVerDocumentacion
+            // 
+            this.BotonVerDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonVerDocumentacion.Enabled = false;
+            this.BotonVerDocumentacion.Location = new System.Drawing.Point(208, 325);
+            this.BotonVerDocumentacion.Name = "BotonVerDocumentacion";
+            this.BotonVerDocumentacion.Size = new System.Drawing.Size(120, 19);
+            this.BotonVerDocumentacion.TabIndex = 176;
+            this.BotonVerDocumentacion.Text = "Ver";
+            this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
             // 
             // ComboBoxResultados
             // 
@@ -577,26 +600,6 @@
             this.BotonCancelar.TabIndex = 101;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
-            // 
-            // labelDocumentos
-            // 
-            this.labelDocumentos.AutoSize = true;
-            this.labelDocumentos.Location = new System.Drawing.Point(3, 322);
-            this.labelDocumentos.Name = "labelDocumentos";
-            this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
-            this.labelDocumentos.TabIndex = 175;
-            this.labelDocumentos.Text = "Documentos:";
-            // 
-            // BotonVerDocumentacion
-            // 
-            this.BotonVerDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BotonVerDocumentacion.Enabled = false;
-            this.BotonVerDocumentacion.Location = new System.Drawing.Point(208, 325);
-            this.BotonVerDocumentacion.Name = "BotonVerDocumentacion";
-            this.BotonVerDocumentacion.Size = new System.Drawing.Size(120, 19);
-            this.BotonVerDocumentacion.TabIndex = 176;
-            this.BotonVerDocumentacion.Text = "Ver";
-            this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
             // 
             // BuscarJuicio
             // 

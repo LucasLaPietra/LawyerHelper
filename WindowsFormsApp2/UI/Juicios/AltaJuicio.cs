@@ -13,6 +13,7 @@ using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 
+
 namespace WindowsFormsApp2.Juicios
 {
     public partial class AltaJuicios : Form

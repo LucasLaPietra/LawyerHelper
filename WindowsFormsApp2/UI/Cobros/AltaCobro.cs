@@ -11,6 +11,8 @@ using LawyerHelper.Clases;
 using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
+using LawyerHelper.UI.Personas;
+using LawyerHelper.UI.Juicios;
 
 namespace WindowsFormsApp2.Cobros
 {
@@ -18,6 +20,8 @@ namespace WindowsFormsApp2.Cobros
     {
         ControladorCobro iControladorCobro;
         Fachada iFachada;
+        Persona iPersona;
+        Juicio iJuicio;
         public AltaCobro()
         {
             InitializeComponent();
@@ -25,30 +29,7 @@ namespace WindowsFormsApp2.Cobros
             CuadroMinutos.Text = DateTime.Now.Minute.ToString();
             CuadroAM.Text = DateTime.Now.ToString("tt");
             iControladorCobro = new ControladorCobro(UnidadDeTrabajo.Instancia);
-            //Asignacion de colores      
-            //Background
-            this.BackColor = Colores.ColorBackground;
-            //Cajas
-            foreach (TextBox t in Controls.OfType<TextBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
-            // Labels
-            foreach (Label l in Controls.OfType<Label>())
-                l.ForeColor = Colores.ColorForeground;
-            //Botones
-            foreach (Button b in Controls.OfType<Button>())
-            {
-                b.ForeColor = Colores.ColorForeground;
-                b.BackColor = Colores.ColorBackground;
-            }
-            //ComboBox
-            foreach (ComboBox c in Controls.OfType<ComboBox>())
-            {
-                c.ForeColor = Colores.ColorForeground;
-                c.BackColor = Colores.ColorBackground;
-            }
+            iFachada.AsignarColores(this);
         }
 
         private void CuadroHora_TextChanged(object sender, EventArgs e)
@@ -62,8 +43,12 @@ namespace WindowsFormsApp2.Cobros
             {
                 int iHora = iFachada.Convertir24Hs((Convert.ToInt32(CuadroHora.Text)), CuadroAM.Text);
                 DateTime iFechayHora = new DateTime(CuadroFecha.Value.Year, CuadroFecha.Value.Month, CuadroFecha.Value.Day, iHora, (Convert.ToInt32(CuadroMinutos.Text)),0);                
-                iControladorCobro.RegistrarCobro((Convert.ToDouble(CuadroImporte.Text)),iFechayHora,CuadroDetalle.Text);
+                iControladorCobro.RegistrarCobro((Convert.ToDouble(CuadroImporte.Text)),iFechayHora,CuadroDetalle.Text,iJuicio,iPersona);
                 MessageBox.Show("Cobro añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Se debe añadir una persona y un juicio al cobro", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception)
             {
@@ -78,6 +63,26 @@ namespace WindowsFormsApp2.Cobros
             if (iMensaje == DialogResult.Yes)
             {
                 this.Close();
+            }
+        }
+
+        private void BotonAgregarPersona_Click(object sender, EventArgs e)
+        {
+            BuscarPersona iMenuNuevo = new BuscarPersona();
+            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            {
+                iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                CuadroPersona.Text = iPersona.Apellido+" "+iPersona.Nombre;
+            }
+        }
+
+        private void BotonAgregarJuicio_Click(object sender, EventArgs e)
+        {
+            BuscarJuicio iMenuNuevo = new BuscarJuicio();
+            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            {
+                iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
+                CuadroPersona.Text = iJuicio.NroExpediente;
             }
         }
     }

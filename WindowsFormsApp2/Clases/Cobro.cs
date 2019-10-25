@@ -23,6 +23,15 @@ namespace LawyerHelper.Clases
             this.Detalle = pDetalle;
         }
 
+        public Cobro(double pImporte, DateTime pFechayHora, String pDetalle, Juicio pJuicio, Persona pPersona)
+        {
+            this.Importe = pImporte;
+            this.FechayHora = pFechayHora;
+            this.Detalle = pDetalle;
+            this.Juicio = pJuicio;
+            this.Persona = pPersona;
+        }
+
         public Cobro()
         {
         }

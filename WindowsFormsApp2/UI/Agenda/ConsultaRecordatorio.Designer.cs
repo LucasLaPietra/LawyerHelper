@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LabelListaRecordatorios = new System.Windows.Forms.Label();
             this.LabelTipo2 = new System.Windows.Forms.Label();
             this.LabelLugar2 = new System.Windows.Forms.Label();
             this.LabelAM = new System.Windows.Forms.Label();
@@ -45,15 +44,6 @@
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // LabelListaRecordatorios
-            // 
-            this.LabelListaRecordatorios.AutoSize = true;
-            this.LabelListaRecordatorios.Location = new System.Drawing.Point(11, 12);
-            this.LabelListaRecordatorios.Name = "LabelListaRecordatorios";
-            this.LabelListaRecordatorios.Size = new System.Drawing.Size(111, 13);
-            this.LabelListaRecordatorios.TabIndex = 176;
-            this.LabelListaRecordatorios.Text = "Lista de recordatorios:";
             // 
             // LabelTipo2
             // 
@@ -166,9 +156,9 @@
             // ListBoxRecordatorios
             // 
             this.ListBoxRecordatorios.FormattingEnabled = true;
-            this.ListBoxRecordatorios.Location = new System.Drawing.Point(14, 41);
+            this.ListBoxRecordatorios.Location = new System.Drawing.Point(14, 15);
             this.ListBoxRecordatorios.Name = "ListBoxRecordatorios";
-            this.ListBoxRecordatorios.Size = new System.Drawing.Size(358, 134);
+            this.ListBoxRecordatorios.Size = new System.Drawing.Size(358, 160);
             this.ListBoxRecordatorios.TabIndex = 190;
             // 
             // CuadroDescripcion
@@ -176,6 +166,7 @@
             this.CuadroDescripcion.Location = new System.Drawing.Point(91, 355);
             this.CuadroDescripcion.Multiline = true;
             this.CuadroDescripcion.Name = "CuadroDescripcion";
+            this.CuadroDescripcion.ReadOnly = true;
             this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CuadroDescripcion.Size = new System.Drawing.Size(281, 96);
             this.CuadroDescripcion.TabIndex = 191;
@@ -210,7 +201,6 @@
             this.Controls.Add(this.LabelHora);
             this.Controls.Add(this.LabelDescripcion);
             this.Controls.Add(this.LabelLugar);
-            this.Controls.Add(this.LabelListaRecordatorios);
             this.Name = "ConsultaRecordatorio";
             this.Text = "ConsultaRecordatorio";
             this.ResumeLayout(false);
@@ -219,8 +209,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label LabelListaRecordatorios;
         private System.Windows.Forms.Label LabelTipo2;
         private System.Windows.Forms.Label LabelLugar2;
         private System.Windows.Forms.Label LabelAM;

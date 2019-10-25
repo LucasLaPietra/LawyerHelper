@@ -126,11 +126,11 @@
     <Compile Include="UI\Agenda\AltaRecordatorio.Designer.cs">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Agenda\BajaRecordatorio.cs">
+    <Compile Include="UI\Agenda\ModificarRecordatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Agenda\BajaRecordatorio.Designer.cs">
-      <DependentUpon>BajaRecordatorio.cs</DependentUpon>
+    <Compile Include="UI\Agenda\ModificarRecordatorio.Designer.cs">
+      <DependentUpon>ModificarRecordatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Agenda\ConsultaRecordatorio.cs">
       <SubType>Form</SubType>
@@ -144,11 +144,11 @@
     <Compile Include="UI\Agenda\MenuAgendaUC.Designer.cs">
       <DependentUpon>MenuAgendaUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Agenda\ModificarRecordatorio.cs">
+    <Compile Include="UI\Agenda\BajaRecordatorio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Agenda\ModificarRecordatorio.Designer.cs">
-      <DependentUpon>ModificarRecordatorio.cs</DependentUpon>
+    <Compile Include="UI\Agenda\BajaRecordatorio.Designer.cs">
+      <DependentUpon>BajaRecordatorio.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Ajustes.cs">
       <SubType>Form</SubType>
@@ -384,8 +384,8 @@
     <EmbeddedResource Include="UI\Agenda\AltaRecordatorio.resx">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Agenda\BajaRecordatorio.resx">
-      <DependentUpon>BajaRecordatorio.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Agenda\ModificarRecordatorio.resx">
+      <DependentUpon>ModificarRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\ConsultaRecordatorio.resx">
       <DependentUpon>ConsultaRecordatorio.cs</DependentUpon>
@@ -393,8 +393,8 @@
     <EmbeddedResource Include="UI\Agenda\MenuAgendaUC.resx">
       <DependentUpon>MenuAgendaUC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Agenda\ModificarRecordatorio.resx">
-      <DependentUpon>ModificarRecordatorio.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Agenda\BajaRecordatorio.resx">
+      <DependentUpon>BajaRecordatorio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Ajustes.resx">
       <DependentUpon>Ajustes.cs</DependentUpon>

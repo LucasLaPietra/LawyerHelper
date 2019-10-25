@@ -34,22 +34,8 @@ namespace LawyerHelper.UI.Agenda
                 b.ForeColor = Colores.ColorForeground;
                 b.BackColor = Colores.ColorBackground;
             }
-            //ListBox
-            foreach (ListBox t in Controls.OfType<ListBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
-        }
-
-        private void ModificarRecordatorio_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
+            ListBoxRecordatorios.ForeColor = Colores.ColorForeground;
+            ListBoxRecordatorios.BackColor = Colores.ColorBackground;
         }
     }
 }

@@ -11,6 +11,7 @@ using LawyerHelper.Clases;
 using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
+using WindowsFormsApp2;
 
 namespace LawyerHelper.UI.Personas
 {
@@ -18,28 +19,12 @@ namespace LawyerHelper.UI.Personas
     {
         ControladorPersona iControladorPersona;
         Persona iPersona;
+        Fachada iFachada;
         public BajaPersona()
         {
             InitializeComponent();
             iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
-            //Asignacion de colores      
-            //Background
-            this.BackColor = Colores.ColorBackground;
-            //Cajas
-            foreach (TextBox t in Controls.OfType<TextBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
-            // Labels
-            foreach (Label l in Controls.OfType<Label>())
-                l.ForeColor = Colores.ColorForeground;
-            //Botones
-            foreach (Button b in Controls.OfType<Button>())
-            {
-                b.ForeColor = Colores.ColorForeground;
-                b.BackColor = Colores.ColorBackground;
-            }
+            iFachada.AsignarColores(this);
         }
 
         private void BajaPersona_Load(object sender, EventArgs e)

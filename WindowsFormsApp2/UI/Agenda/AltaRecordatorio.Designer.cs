@@ -34,7 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CuadroHora = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
@@ -97,21 +97,22 @@
             this.CuadroHora.Size = new System.Drawing.Size(24, 20);
             this.CuadroHora.TabIndex = 27;
             // 
-            // dateTimePicker1
+            // CuadroFecha
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(79, 27);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(193, 20);
-            this.dateTimePicker1.TabIndex = 26;
+            this.CuadroFecha.Location = new System.Drawing.Point(79, 27);
+            this.CuadroFecha.Name = "CuadroFecha";
+            this.CuadroFecha.Size = new System.Drawing.Size(193, 20);
+            this.CuadroFecha.TabIndex = 26;
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(178, 330);
+            this.BotonCancelar.Location = new System.Drawing.Point(200, 330);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 25;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonAceptar
             // 
@@ -177,7 +178,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 395);
+            this.ClientSize = new System.Drawing.Size(307, 366);
             this.Controls.Add(this.CuadroTipo);
             this.Controls.Add(this.LabelTipo);
             this.Controls.Add(this.CuadroAM);
@@ -186,7 +187,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CuadroHora);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.CuadroFecha);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.CuadroDescripcion);
@@ -209,7 +210,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox CuadroHora;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker CuadroFecha;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.TextBox CuadroDescripcion;

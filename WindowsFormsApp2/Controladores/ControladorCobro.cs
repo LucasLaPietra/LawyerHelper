@@ -23,9 +23,13 @@ namespace LawyerHelper.Controladores
             return iQuery;
         }
 
-        public void RegistrarCobro(double pImporte, DateTime pFechayHora, string pDetalle)
+        public void RegistrarCobro(double pImporte, DateTime pFechayHora, string pDetalle, Juicio pJuicio, Persona pPersona)
         {
-            Cobro iCobro = new Cobro(pImporte, pFechayHora, pDetalle);
+            if ((pJuicio == null) || (pPersona == null))
+            {
+                throw new NullReferenceException();
+            }
+            Cobro iCobro = new Cobro(pImporte, pFechayHora, pDetalle, pJuicio,pPersona);
             iUdT.RepositorioCobro.Agregar(iCobro);
             iUdT.Guardar();
         }

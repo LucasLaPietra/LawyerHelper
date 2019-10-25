@@ -8,49 +8,55 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
+using LawyerHelper.Controladores;
+using LawyerHelper.DAL.Interfaces;
+using LawyerHelper.DAL.Repositorio;
+using WindowsFormsApp2;
 
 namespace LawyerHelper.UI.Agenda
 {
     public partial class AltaRecordatorio : Form
     {
+        Fachada iFachada=new Fachada();
+        ControladorRecordatorio iControladorRecordatorio;
         public AltaRecordatorio()
         {
             InitializeComponent();
-            //Asignacion de colores      
-            //Background
-            this.BackColor = Colores.ColorBackground;
-            //Cajas
-            foreach (TextBox t in Controls.OfType<TextBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
-            // Labels
-            foreach (Label l in Controls.OfType<Label>())
-                l.ForeColor = Colores.ColorForeground;
-            //Botones
-            foreach (Button b in Controls.OfType<Button>())
-            {
-                b.ForeColor = Colores.ColorForeground;
-                b.BackColor = Colores.ColorBackground;
-            }
-            //ListBox
-            foreach (ListBox t in Controls.OfType<ListBox>())
-            {
-                t.ForeColor = Colores.ColorForeground;
-                t.BackColor = Colores.ColorBackgroundCajas;
-            }
+            iFachada.AsignarColores(this);
+            CuadroHora.Text = DateTime.Now.Hour.ToString();
+            CuadroMinutos.Text = DateTime.Now.Minute.ToString();
+            CuadroAM.Text = DateTime.Now.ToString("tt");
+            iControladorRecordatorio = new ControladorRecordatorio(UnidadDeTrabajo.Instancia);
         }
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            
-           
+            try
+            {
+                int iHora = iFachada.Convertir24Hs((Convert.ToInt32(CuadroHora.Text)), CuadroAM.Text);
+                DateTime iFechayHora = new DateTime(CuadroFecha.Value.Year, CuadroFecha.Value.Month, CuadroFecha.Value.Day, iHora, (Convert.ToInt32(CuadroMinutos.Text)), 0);
+                iControladorRecordatorio.RegistrarRecordatorio(CuadroLugar.Text, CuadroTipo.Text, CuadroDescripcion.Text, iFechayHora);
+                MessageBox.Show("Recordatorio añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Recordatorio no fue añadido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void AltaRecordatorio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BotonCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult iMensaje = MessageBox.Show("Seguro que desea cancelar?", "Cancelar", MessageBoxButtons.YesNoCancel);
+
+            if (iMensaje == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

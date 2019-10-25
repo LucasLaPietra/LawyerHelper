@@ -31,13 +31,13 @@ namespace LawyerHelper.UI.Agenda
 
         private void BotonBaja_Click(object sender, EventArgs e)
         {
-            BajaRecordatorio iMenuNuevo = new BajaRecordatorio();
+            ModificarRecordatorio iMenuNuevo = new ModificarRecordatorio();
             iMenuNuevo.ShowDialog();
         }
 
         private void BotonModificacion_Click(object sender, EventArgs e)
         {
-            ModificarRecordatorio iMenuNuevo = new ModificarRecordatorio();
+            BajaRecordatorio iMenuNuevo = new BajaRecordatorio();
             iMenuNuevo.ShowDialog();
         }
 
