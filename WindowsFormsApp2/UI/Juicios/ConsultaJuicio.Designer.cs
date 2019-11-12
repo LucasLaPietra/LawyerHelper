@@ -32,7 +32,6 @@
             this.CuadroNroExpediente = new System.Windows.Forms.TextBox();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
-            this.BotonMostrarTodo = new System.Windows.Forms.Button();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
             this.ListBoxDocumentos = new System.Windows.Forms.ListBox();
             this.ListBoxDemandados = new System.Windows.Forms.ListBox();
@@ -52,7 +51,7 @@
             this.LabelFecha2 = new System.Windows.Forms.Label();
             this.LabelFolio2 = new System.Windows.Forms.Label();
             this.LabelJurisdiccion2 = new System.Windows.Forms.Label();
-            this.LabelTipoJuicio2 = new System.Windows.Forms.Label();
+            this.LabelFuero2 = new System.Windows.Forms.Label();
             this.LabelTipoProceso2 = new System.Windows.Forms.Label();
             this.LabelCompetencia2 = new System.Windows.Forms.Label();
             this.LabelRecurso2 = new System.Windows.Forms.Label();
@@ -75,9 +74,10 @@
             this.LabelEtapa2 = new System.Windows.Forms.Label();
             this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
             this.BotonConsultarDemandante = new System.Windows.Forms.Button();
-            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonConsultarDemandados = new System.Windows.Forms.Button();
             this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
+            this.BotonMostrarTodo = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,6 +105,7 @@
             this.BotonBuscar.TabIndex = 2;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // BotonBusquedaAvanzada
             // 
@@ -114,15 +115,7 @@
             this.BotonBusquedaAvanzada.TabIndex = 3;
             this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
-            // 
-            // BotonMostrarTodo
-            // 
-            this.BotonMostrarTodo.Location = new System.Drawing.Point(359, 64);
-            this.BotonMostrarTodo.Name = "BotonMostrarTodo";
-            this.BotonMostrarTodo.Size = new System.Drawing.Size(172, 23);
-            this.BotonMostrarTodo.TabIndex = 4;
-            this.BotonMostrarTodo.Text = "Mostrar todos los juicios";
-            this.BotonMostrarTodo.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
             // Layout
             // 
@@ -147,7 +140,7 @@
             this.Layout.Controls.Add(this.LabelFecha2, 1, 1);
             this.Layout.Controls.Add(this.LabelFolio2, 1, 2);
             this.Layout.Controls.Add(this.LabelJurisdiccion2, 1, 3);
-            this.Layout.Controls.Add(this.LabelTipoJuicio2, 1, 4);
+            this.Layout.Controls.Add(this.LabelFuero2, 1, 4);
             this.Layout.Controls.Add(this.LabelTipoProceso2, 1, 5);
             this.Layout.Controls.Add(this.LabelCompetencia2, 1, 6);
             this.Layout.Controls.Add(this.LabelRecurso2, 1, 7);
@@ -354,14 +347,14 @@
             this.LabelJurisdiccion2.TabIndex = 16;
             this.LabelJurisdiccion2.Text = "-";
             // 
-            // LabelTipoJuicio2
+            // LabelFuero2
             // 
-            this.LabelTipoJuicio2.AutoSize = true;
-            this.LabelTipoJuicio2.Location = new System.Drawing.Point(97, 52);
-            this.LabelTipoJuicio2.Name = "LabelTipoJuicio2";
-            this.LabelTipoJuicio2.Size = new System.Drawing.Size(10, 13);
-            this.LabelTipoJuicio2.TabIndex = 17;
-            this.LabelTipoJuicio2.Text = "-";
+            this.LabelFuero2.AutoSize = true;
+            this.LabelFuero2.Location = new System.Drawing.Point(97, 52);
+            this.LabelFuero2.Name = "LabelFuero2";
+            this.LabelFuero2.Size = new System.Drawing.Size(10, 13);
+            this.LabelFuero2.TabIndex = 17;
+            this.LabelFuero2.Text = "-";
             // 
             // LabelTipoProceso2
             // 
@@ -556,7 +549,6 @@
             // 
             this.BotonConsultarDemandante.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BotonConsultarDemandante.Enabled = false;
-            this.BotonConsultarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonConsultarDemandante.Location = new System.Drawing.Point(460, 409);
             this.BotonConsultarDemandante.Name = "BotonConsultarDemandante";
             this.BotonConsultarDemandante.Size = new System.Drawing.Size(73, 25);
@@ -565,21 +557,21 @@
             this.BotonConsultarDemandante.UseVisualStyleBackColor = true;
             this.BotonConsultarDemandante.Click += new System.EventHandler(this.BotonVerDocumentacion_Click);
             // 
-            // BotonCancelar
+            // BotonAceptar
             // 
-            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(228, 645);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(95, 22);
-            this.BotonCancelar.TabIndex = 177;
-            this.BotonCancelar.Text = "Aceptar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAceptar.Location = new System.Drawing.Point(228, 645);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(95, 22);
+            this.BotonAceptar.TabIndex = 177;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // BotonConsultarDemandados
             // 
             this.BotonConsultarDemandados.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BotonConsultarDemandados.Enabled = false;
-            this.BotonConsultarDemandados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonConsultarDemandados.Location = new System.Drawing.Point(460, 484);
             this.BotonConsultarDemandados.Name = "BotonConsultarDemandados";
             this.BotonConsultarDemandados.Size = new System.Drawing.Size(73, 25);
@@ -591,13 +583,21 @@
             // 
             this.BotonConsultarDocumentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BotonConsultarDocumentos.Enabled = false;
-            this.BotonConsultarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonConsultarDocumentos.Location = new System.Drawing.Point(460, 559);
             this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
             this.BotonConsultarDocumentos.Size = new System.Drawing.Size(73, 25);
             this.BotonConsultarDocumentos.TabIndex = 179;
             this.BotonConsultarDocumentos.Text = "Consultar";
             this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
+            // 
+            // BotonMostrarTodo
+            // 
+            this.BotonMostrarTodo.Location = new System.Drawing.Point(359, 64);
+            this.BotonMostrarTodo.Name = "BotonMostrarTodo";
+            this.BotonMostrarTodo.Size = new System.Drawing.Size(172, 23);
+            this.BotonMostrarTodo.TabIndex = 4;
+            this.BotonMostrarTodo.Text = "Mostrar todos los juicios";
+            this.BotonMostrarTodo.UseVisualStyleBackColor = true;
             // 
             // ConsultaJuicios
             // 
@@ -606,7 +606,7 @@
             this.ClientSize = new System.Drawing.Size(543, 679);
             this.Controls.Add(this.BotonConsultarDocumentos);
             this.Controls.Add(this.BotonConsultarDemandados);
-            this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonMostrarTodo);
             this.Controls.Add(this.BotonBusquedaAvanzada);
@@ -629,8 +629,6 @@
         private System.Windows.Forms.TextBox CuadroNroExpediente;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.Button BotonBusquedaAvanzada;
-        private System.Windows.Forms.Button BotonMostrarTodo;
-        private System.Windows.Forms.TableLayoutPanel Layout;
         private System.Windows.Forms.Label labelDocumentos;
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.Label LabelFolio;
@@ -646,7 +644,7 @@
         private System.Windows.Forms.Label LabelFecha2;
         private System.Windows.Forms.Label LabelFolio2;
         private System.Windows.Forms.Label LabelJurisdiccion2;
-        private System.Windows.Forms.Label LabelTipoJuicio2;
+        private System.Windows.Forms.Label LabelFuero2;
         private System.Windows.Forms.Label LabelTipoProceso2;
         private System.Windows.Forms.Label LabelCompetencia2;
         private System.Windows.Forms.Label LabelRecurso2;
@@ -669,11 +667,13 @@
         private System.Windows.Forms.Label LabelEtapa2;
         private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
         private System.Windows.Forms.Button BotonConsultarDemandante;
-        private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.ListBox ListBoxDemandantes;
         private System.Windows.Forms.ListBox ListBoxDemandados;
         private System.Windows.Forms.ListBox ListBoxDocumentos;
         private System.Windows.Forms.Button BotonConsultarDemandados;
         private System.Windows.Forms.Button BotonConsultarDocumentos;
+        private System.Windows.Forms.Button BotonMostrarTodo;
+        private System.Windows.Forms.TableLayoutPanel Layout;
     }
 }

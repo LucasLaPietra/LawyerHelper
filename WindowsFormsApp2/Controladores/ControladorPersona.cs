@@ -65,5 +65,21 @@ namespace LawyerHelper.Controladores
             Persona iResultado = ListaApellido.FirstOrDefault(n => n.Nombre == pNombre);
             return iResultado;
         }
+
+        public IList<Juicio> ObtenerJuicios(int pId)
+        {
+            List<Juicio> iQuery = new List<Juicio>();
+            List<Demandado> iLista = iUdT.RepositorioDemandado.BuscarDemandadosDeUnaPersona(pId).ToList();
+            List<Demandante> iLista2 = iUdT.RepositorioDemandante.BuscarDemandantesDeUnaPersona(pId).ToList();
+            foreach (Demandado d in iLista)
+            {
+                iQuery.Add(d.Juicio);
+            }
+            foreach (Demandante d in iLista2)
+            {
+                iQuery.Add(d.Juicio);
+            }
+            return iQuery;
+        }
     }
 }

@@ -80,9 +80,12 @@ namespace LawyerHelper.DAL.Repositorio
 
         public void PersonaIgualDni(String pDni)
         {
-            Persona iQuery;
-            iQuery = iContext.Personas.First(n => n.Dni ==pDni);
-            if (iQuery != null) throw new InvalidOperationException();          
+            bool Resultado;
+            Resultado = iContext.Personas.Any(n => n.Dni == pDni);
+            if (Resultado == true)
+            {
+                throw new InvalidOperationException();
+            }
         }
     }
 }

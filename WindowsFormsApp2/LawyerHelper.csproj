@@ -114,6 +114,14 @@
     <Compile Include="Migrations\201910111848100_lucasp.Designer.cs">
       <DependentUpon>201910111848100_lucasp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911011500561_Nueva.cs" />
+    <Compile Include="Migrations\201911011500561_Nueva.Designer.cs">
+      <DependentUpon>201911011500561_Nueva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911022238579_Nueva1.cs" />
+    <Compile Include="Migrations\201911022238579_Nueva1.Designer.cs">
+      <DependentUpon>201911022238579_Nueva1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -380,6 +388,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201910111848100_lucasp.resx">
       <DependentUpon>201910111848100_lucasp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911011500561_Nueva.resx">
+      <DependentUpon>201911011500561_Nueva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911022238579_Nueva1.resx">
+      <DependentUpon>201911022238579_Nueva1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\AltaRecordatorio.resx">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>

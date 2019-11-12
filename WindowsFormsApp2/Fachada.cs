@@ -20,14 +20,15 @@ namespace WindowsFormsApp2
            ControladorDemandado iControladorDemandado = new ControladorDemandado(UnidadDeTrabajo.Instancia);
            ControladorDemandante iControladorDemandante = new ControladorDemandante(UnidadDeTrabajo.Instancia);
            ControladorJuicio iControladorJuicio = new ControladorJuicio(UnidadDeTrabajo.Instancia);
-           Juicio iJuicio = iControladorJuicio.BusquedaPorNroExpediente(pNroExpediente);
+            ControladorPersona iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
+            Juicio iJuicio = iControladorJuicio.BusquedaPorNroExpediente(pNroExpediente);
             foreach(Persona iPersona in pListaDemandados)
-            {
+            {               
                 iControladorDemandado.RegistrarDemandado(pDemandadosClientes, iJuicio, iPersona);
             }
             foreach (Persona iPersona in pListaDemandantes)
             {
-                iControladorDemandante.RegistrarDemandante(pDemandantesClientes, iJuicio, iPersona);
+                iControladorDemandante.RegistrarDemandante(pDemandantesClientes, iJuicio, iPersona.PersonaId);
             }
         }
 
@@ -98,6 +99,13 @@ namespace WindowsFormsApp2
                 c.BackColor = Colores.ColorBackgroundCajas;
                 c.FlatStyle = FlatStyle.Flat;
             }
+            //NumericUpDown
+            foreach (NumericUpDown n in iForm.Controls.OfType<NumericUpDown>())
+            {
+                n.ForeColor = Colores.ColorForeground;
+                n.BackColor = Colores.ColorBackgroundCajas;
+                n.BorderStyle = BorderStyle.FixedSingle;
+            }
             //Layouts
             foreach (TableLayoutPanel l in iForm.Controls.OfType<TableLayoutPanel>())
             {
@@ -135,6 +143,13 @@ namespace WindowsFormsApp2
                     c.ForeColor = Colores.ColorForeground;
                     c.BackColor = Colores.ColorBackgroundCajas;
                     c.FlatStyle = FlatStyle.Flat;
+                }
+                //NumericUpDown
+                foreach (NumericUpDown n in iForm.Controls.OfType<NumericUpDown>())
+                {
+                    n.ForeColor = Colores.ColorForeground;
+                    n.BackColor = Colores.ColorBackgroundCajas;
+                    n.BorderStyle = BorderStyle.FixedSingle;
                 }
             }
         }

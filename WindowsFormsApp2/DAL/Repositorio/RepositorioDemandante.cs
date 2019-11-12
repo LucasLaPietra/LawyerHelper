@@ -13,5 +13,17 @@ namespace LawyerHelper.DAL.Repositorio
         public RepositorioDemandante(Contexto pContext) : base(pContext)
         {
         }
+
+        public IList<Demandante> BuscarDemandantesDeUnJuicio(int pId)
+        {
+            List<Demandante> iQuery = iContext.Demandantes.Where(n => n.Juicio.JuicioId == pId).ToList();
+            return iQuery;
+        }
+
+        public IList<Demandante> BuscarDemandantesDeUnaPersona(int pId)
+        {
+            List<Demandante> iQuery = iContext.Demandantes.Where(n => n.Persona.PersonaId == pId).ToList();
+            return iQuery;
+        }
     }
 }

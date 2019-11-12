@@ -24,7 +24,7 @@ namespace LawyerHelper.Controladores
         }
 
         public void RegistrarDemandado(Boolean pCliente, Juicio pJuicio, Persona pPersona)
-            {
+        {
             Demandado iDemandado = new Demandado(pCliente, pJuicio, pPersona);
             iUdT.RepositorioDemandado.Agregar(iDemandado);
             iUdT.Guardar();

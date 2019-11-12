@@ -68,12 +68,14 @@ namespace LawyerHelper.DAL.Repositorio
             return iQuery;
         }
 
-        public void JuicioIgualExpediente(String pNroExpediente)
+        public void JuicioIgualExpediente(string pNroExpediente)
         {
             bool Resultado;
-            Resultado = iContext.Juicios.Any(n => n.NroExpediente == pNroExpediente);
-            if (Resultado == true)
-            { throw new InvalidOperationException(); }
+            Resultado = iContext.Juicios.Any(n => n.NroExpediente == pNroExpediente);       
+            if (Resultado==true)
+            {
+                throw new InvalidOperationException();
+            }
         }
     }
 }

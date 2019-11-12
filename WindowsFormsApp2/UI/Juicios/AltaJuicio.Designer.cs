@@ -44,7 +44,6 @@
             this.CuadroSecretario = new System.Windows.Forms.TextBox();
             this.CuadroEtapa = new System.Windows.Forms.TextBox();
             this.CuadroLugar = new System.Windows.Forms.TextBox();
-            this.CuadroPrecio = new System.Windows.Forms.TextBox();
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
@@ -84,7 +83,9 @@
             this.BotonAgregarDemandado = new System.Windows.Forms.Button();
             this.BotonEliminarDemandante = new System.Windows.Forms.Button();
             this.BotonAgregarDemandante = new System.Windows.Forms.Button();
+            this.CuadroPrecio = new System.Windows.Forms.NumericUpDown();
             this.Layout2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CuadroPrecio)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -222,14 +223,6 @@
             this.CuadroLugar.Name = "CuadroLugar";
             this.CuadroLugar.Size = new System.Drawing.Size(168, 20);
             this.CuadroLugar.TabIndex = 31;
-            // 
-            // CuadroPrecio
-            // 
-            this.CuadroPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CuadroPrecio.Location = new System.Drawing.Point(93, 408);
-            this.CuadroPrecio.Name = "CuadroPrecio";
-            this.CuadroPrecio.Size = new System.Drawing.Size(384, 20);
-            this.CuadroPrecio.TabIndex = 32;
             // 
             // CuadroDescripcion
             // 
@@ -614,11 +607,21 @@
             this.BotonAgregarDemandante.UseVisualStyleBackColor = true;
             this.BotonAgregarDemandante.Click += new System.EventHandler(this.BotonAgregarDemandante_Click);
             // 
+            // CuadroPrecio
+            // 
+            this.CuadroPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CuadroPrecio.DecimalPlaces = 2;
+            this.CuadroPrecio.Location = new System.Drawing.Point(92, 409);
+            this.CuadroPrecio.Name = "CuadroPrecio";
+            this.CuadroPrecio.Size = new System.Drawing.Size(385, 20);
+            this.CuadroPrecio.TabIndex = 99;
+            // 
             // AltaJuicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 589);
+            this.Controls.Add(this.CuadroPrecio);
             this.Controls.Add(this.BotonModificarDocumentos);
             this.Controls.Add(this.BotonEliminarDocumentos);
             this.Controls.Add(this.BotonAgregarDocumentos);
@@ -652,7 +655,6 @@
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.CuadroDescripcion);
-            this.Controls.Add(this.CuadroPrecio);
             this.Controls.Add(this.CuadroLugar);
             this.Controls.Add(this.CuadroEtapa);
             this.Controls.Add(this.CuadroSecretario);
@@ -674,6 +676,7 @@
             this.Load += new System.EventHandler(this.AltaJuicios_Load);
             this.Layout2.ResumeLayout(false);
             this.Layout2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CuadroPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -697,7 +700,6 @@
         private System.Windows.Forms.TextBox CuadroSecretario;
         private System.Windows.Forms.TextBox CuadroEtapa;
         private System.Windows.Forms.TextBox CuadroLugar;
-        private System.Windows.Forms.TextBox CuadroPrecio;
         private System.Windows.Forms.TextBox CuadroDescripcion;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
@@ -737,5 +739,6 @@
         private System.Windows.Forms.Button BotonAgregarDemandado;
         private System.Windows.Forms.Button BotonEliminarDemandante;
         private System.Windows.Forms.Button BotonAgregarDemandante;
+        private System.Windows.Forms.NumericUpDown CuadroPrecio;
     }
 }
