@@ -22,12 +22,12 @@ namespace LawyerHelper.Controladores
             string pRecurso, string pCompetencia, string pFuero, string pCaratula, string pFolio, string pLibro,
             string pJurisdiccion, Double pPrecio)
         {
-            iUdT.RepositorioJuicio.JuicioIgualExpediente(pNroExpediente);
-            Juicio iJuicio = new Juicio(pNroExpediente, pJuez, pSecretario, pEtapa,
-             pDescripcion,  pBienes,  pFecha,  pGrupoFamiliar,pTipoProceso, pRecurso, pCompetencia, 
-             pFuero,  pCaratula,  pFolio,  pLibro, pJurisdiccion, pPrecio);           
-            iUdT.RepositorioJuicio.Agregar(iJuicio);
-            iUdT.Guardar();
+             iUdT.RepositorioJuicio.JuicioIgualExpediente(pNroExpediente);
+             Juicio iJuicio = new Juicio(pNroExpediente, pJuez, pSecretario, pEtapa,
+             pDescripcion, pBienes, pFecha, pGrupoFamiliar, pTipoProceso, pRecurso, pCompetencia,
+             pFuero, pCaratula, pFolio, pLibro, pJurisdiccion, pPrecio);
+             iUdT.RepositorioJuicio.Agregar(iJuicio);
+             iUdT.Guardar();           
         }
 
         public void BajaJuicio(Juicio pJuicio)
@@ -46,6 +46,24 @@ namespace LawyerHelper.Controladores
             return iUdT.RepositorioJuicio.BusquedaJuicios(pParametro,pValor);
         }
 
+        public IList<Demandante> ObtenerDemandantes(int pId)
+        {
+
+            return iUdT.RepositorioDemandante.BuscarDemandantesDeUnJuicio(pId).ToList();
+
+        }
+
+        public IList<Persona> ObtenerDemandados(int pId)
+        {
+            List<Persona> iQuery = new List<Persona>();
+            List<Demandado> iLista = iUdT.RepositorioDemandado.BuscarDemandadosDeUnJuicio(pId).ToList();
+            foreach (Demandado d in iLista)
+            {
+                iQuery.Add(d.Persona);
+            }
+            return iQuery;
+        }
+
         public IList<Juicio> MostrarJuicios()
         {
             IList<Juicio> iQuery = iUdT.RepositorioJuicio.ObtenerTodos();
@@ -56,7 +74,7 @@ namespace LawyerHelper.Controladores
         public Juicio BusquedaPorNroExpediente(string pNroExpediente)
         {
             IList<Juicio> iJuicios = iUdT.RepositorioJuicio.BusquedaJuicios("NroExpediente", pNroExpediente);
-            Juicio iJuicio = iJuicios.First();
+            Juicio iJuicio = iJuicios.FirstOrDefault();
             return iJuicio;
         }
 

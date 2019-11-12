@@ -18,6 +18,8 @@ namespace LawyerHelper.UI.Personas
     public partial class ConsultaPersona : Form
     {
         Fachada iFachada = new Fachada();
+        List<Juicio> iJuicios;
+        List<Cobro> iCobros;
         ControladorPersona iControladorPersona;
         Persona iPersona= new Persona();
         public ConsultaPersona()
@@ -73,6 +75,13 @@ namespace LawyerHelper.UI.Personas
                 LabelProfesion2.Text = iPersona.Profesion;
                 LabelRepresentante2.Text = iPersona.Representante;
                 LabelTelefono2.Text = iPersona.Telefono;
+
+                iJuicios = iControladorPersona.ObtenerJuicios(iPersona.PersonaId).ToList();
+                iCobros = iPersona.Cobros.ToList();
+                ListBoxJuicios.DataSource = iJuicios;
+                ListBoxJuicios.DisplayMember = "NumeroDeExpediente";
+                ListBoxCobros.DataSource = iCobros;
+                ListBoxCobros.DisplayMember = "Descripcion";
             }
             catch (Exception)
             {

@@ -36,9 +36,10 @@ namespace LawyerHelper.Clases
         public bool Activo {get;  set;}
 
 
-        public Juicio(string NroExpediente,String pJuez,String pSecretario,String pEtapa,String pDescripcion,String pBienes,DateTime pFecha,String pGrupoFamiliar,String pTipoProceso,
+        public Juicio(string pNroExpediente,String pJuez,String pSecretario,String pEtapa,String pDescripcion,String pBienes,DateTime pFecha,String pGrupoFamiliar,String pTipoProceso,
          String pRecurso,String pCompetencia,String pFuero,String pCaratula,String pFolio,String pLibro,String pJurisdiccion,Double pPrecio )
         {
+            this.NroExpediente = pNroExpediente;
             this.Juez = pJuez;
             this.Secretario = pSecretario;
             this.Etapa = pEtapa;

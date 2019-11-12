@@ -23,9 +23,11 @@ namespace LawyerHelper.Controladores
             return iQuery;
         }
 
-        public void RegistrarDemandante(Boolean pCliente, Juicio pJuicio, Persona pPersona)
+        public void RegistrarDemandante(Boolean pCliente, Juicio pJuicio, int pIdPersona)
             {
-            Demandante iDemandante = new Demandante(pCliente, pJuicio, pPersona);
+            ControladorPersona iControladorPersona = new ControladorPersona(iUdT);
+            Persona iPersona = iControladorPersona.ObtenerPersona(pIdPersona);
+            Demandante iDemandante = new Demandante(pCliente, pJuicio, iPersona);
             iUdT.RepositorioDemandante.Agregar(iDemandante);
             iUdT.Guardar();
         }

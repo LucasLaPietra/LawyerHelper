@@ -9,5 +9,7 @@ namespace LawyerHelper.DAL.Interfaces
 {
     interface IRepositorioDemandante : IRepositorioGeneral<Demandante>
     {
+        IList<Demandante> BuscarDemandantesDeUnJuicio(int pId);
+        IList<Demandante> BuscarDemandantesDeUnaPersona(int pId);
     }
 }

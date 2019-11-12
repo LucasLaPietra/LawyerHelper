@@ -16,6 +16,21 @@ namespace LawyerHelper.Clases
 
         public bool Activo {get;  set;}
 
+        public string Descripcion
+        {
+            get
+            {
+                if (Cliente==true)
+                {
+                    return Persona.Nombre + " " + Persona.Apellido + "-Cliente";
+                }
+                else
+                {
+                    return Persona.Nombre + " " + Persona.Apellido;
+                }
+                 
+            }
+        }
 
         public Demandado(Boolean pCliente, Juicio pJuicio, Persona pPersona)
         {
@@ -23,6 +38,10 @@ namespace LawyerHelper.Clases
             this.Juicio = pJuicio;
             this.Persona = pPersona;
             this.Activo = true;          
+        }
+
+        public Demandado()
+        {
         }
     }
 }

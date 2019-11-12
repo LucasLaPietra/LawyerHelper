@@ -44,7 +44,7 @@ namespace LawyerHelper.UI.Personas
             {
                 iResultados = iControladorPersona.BusquedaAvanzadaPersona(comboBoxParametro.SelectedItem.ToString(), CuadroParametro.Text).ToList();
                 ComboBoxResultados.DataSource = iResultados;
-                ComboBoxResultados.DisplayMember = "Apellido";
+                ComboBoxResultados.DisplayMember = "NombreyAp";
             }
             catch (Exception)
             {
@@ -81,7 +81,7 @@ namespace LawyerHelper.UI.Personas
             {
                 iResultados = iControladorPersona.ObtenerTodos().ToList();
                 ComboBoxResultados.DataSource = iResultados;
-                ComboBoxResultados.DisplayMember = "Apellido";
+                ComboBoxResultados.DisplayMember = "NombreyAp";
             }
             catch (Exception)
             {
