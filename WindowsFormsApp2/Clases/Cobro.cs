@@ -13,8 +13,8 @@ namespace LawyerHelper.Clases
         public DateTime FechayHora { get; set; }
         public String Detalle { get; set; }
 
-        public Juicio Juicio { get; set; }
-        public Persona Persona { get; set; }
+        public virtual Juicio Juicio { get; set; }
+        public virtual Persona Persona { get; set; }
 
         public bool Activo {get;  set;}
 

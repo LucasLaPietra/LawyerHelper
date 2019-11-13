@@ -27,11 +27,11 @@ namespace LawyerHelper.Clases
         public String Jurisdiccion { get; set; }
         public Double Precio { get; set; }
 
-        public IList<Cobro> Cobros { get; set; }
-        public IList<Pago> Pagos { get; set; }
-        public IList<Demandado> Demandados { get; set; }
-        public IList<Demandante> Demandantes { get; set; }
-        public IList<Documento> Documentos { get; set; }
+        public virtual IList<Cobro> Cobros { get; set; }
+        public virtual IList<Pago> Pagos { get; set; }
+        public virtual IList<Demandado> Demandados { get; set; }
+        public virtual IList<Demandante> Demandantes { get; set; }
+        public virtual IList<Documento> Documentos { get; set; }
 
         public bool Activo {get;  set;}
 

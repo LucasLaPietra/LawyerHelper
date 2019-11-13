@@ -16,7 +16,7 @@ namespace LawyerHelper.Clases
         public String Detalle { get; set; }
         public DateTime Fecha { get; set; }
 
-        public Juicio Juicio { get; set; }
+        public virtual Juicio Juicio { get; set; }
 
         public bool Activo {get;  set;}
 

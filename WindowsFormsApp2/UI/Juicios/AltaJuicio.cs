@@ -58,7 +58,7 @@ namespace WindowsFormsApp2.Juicios
             catch (Exception)
             {
                 MessageBox.Show("juicio no fue añadido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }          
+            }  
         }
 
         private void BotonAgregarDemandante_Click(object sender, EventArgs e)

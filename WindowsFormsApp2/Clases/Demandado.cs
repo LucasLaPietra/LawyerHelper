@@ -11,8 +11,8 @@ namespace LawyerHelper.Clases
         public int DemandadoId { get; set; }
         public Boolean Cliente { get; set; }
 
-        public Juicio Juicio { get; set; }
-        public Persona Persona { get; set; }
+        public virtual Juicio Juicio { get; set; }
+        public virtual Persona Persona { get; set; }
 
         public bool Activo {get;  set;}
 

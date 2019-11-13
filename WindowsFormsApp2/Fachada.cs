@@ -20,7 +20,7 @@ namespace WindowsFormsApp2
            ControladorDemandado iControladorDemandado = new ControladorDemandado(UnidadDeTrabajo.Instancia);
            ControladorDemandante iControladorDemandante = new ControladorDemandante(UnidadDeTrabajo.Instancia);
            ControladorJuicio iControladorJuicio = new ControladorJuicio(UnidadDeTrabajo.Instancia);
-            ControladorPersona iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
+           ControladorPersona iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
             Juicio iJuicio = iControladorJuicio.BusquedaPorNroExpediente(pNroExpediente);
             foreach(Persona iPersona in pListaDemandados)
             {               

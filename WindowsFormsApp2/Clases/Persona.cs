@@ -22,9 +22,9 @@ namespace LawyerHelper.Clases
         public String Representante { get; set; }
         public String DomicilioLegal { get; set; }
 
-        public IList<Cobro> Cobros { get; set; }
-        public IList<Demandado> Demandados { get; set; }
-        public IList<Demandante> Demandantes { get; set; }
+        public virtual IList<Cobro> Cobros { get; set; }
+        public virtual IList<Demandado> Demandados { get; set; }
+        public virtual IList<Demandante> Demandantes { get; set; }
 
         public bool Activo {get;  set;}
 
