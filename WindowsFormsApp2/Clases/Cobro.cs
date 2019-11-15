@@ -16,8 +16,6 @@ namespace LawyerHelper.Clases
         public virtual Juicio Juicio { get; set; }
         public virtual Persona Persona { get; set; }
 
-        public bool Activo {get;  set;}
-
         public string Descripcion
         {
             get { return FechayHora.ToShortDateString() + "- Juicio:" + Juicio.NroExpediente + "-Persona:" + Persona.NombreyAp; }
@@ -30,7 +28,6 @@ namespace LawyerHelper.Clases
             this.Detalle = pDetalle;
             this.Juicio = pJuicio;
             this.Persona = pPersona;
-            this.Activo = true;
         }
 
         public Cobro()

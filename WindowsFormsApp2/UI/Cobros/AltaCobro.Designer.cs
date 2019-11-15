@@ -37,7 +37,6 @@
             this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.CuadroImporte = new System.Windows.Forms.TextBox();
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
             this.CuadroDetalle = new System.Windows.Forms.TextBox();
@@ -47,6 +46,8 @@
             this.CuadroJuicio = new System.Windows.Forms.TextBox();
             this.BotonAgregarPersona = new System.Windows.Forms.Button();
             this.BotonAgregarJuicio = new System.Windows.Forms.Button();
+            this.CuadroImporte = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.CuadroImporte)).BeginInit();
             this.SuspendLayout();
             // 
             // CuadroAM
@@ -128,13 +129,6 @@
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
-            // 
-            // CuadroImporte
-            // 
-            this.CuadroImporte.Location = new System.Drawing.Point(68, 98);
-            this.CuadroImporte.Name = "CuadroImporte";
-            this.CuadroImporte.Size = new System.Drawing.Size(221, 20);
-            this.CuadroImporte.TabIndex = 21;
             // 
             // LabelDetalle
             // 
@@ -219,11 +213,19 @@
             this.BotonAgregarJuicio.UseVisualStyleBackColor = true;
             this.BotonAgregarJuicio.Click += new System.EventHandler(this.BotonAgregarJuicio_Click);
             // 
+            // CuadroImporte
+            // 
+            this.CuadroImporte.Location = new System.Drawing.Point(68, 99);
+            this.CuadroImporte.Name = "CuadroImporte";
+            this.CuadroImporte.Size = new System.Drawing.Size(221, 20);
+            this.CuadroImporte.TabIndex = 171;
+            // 
             // AltaCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(301, 381);
+            this.Controls.Add(this.CuadroImporte);
             this.Controls.Add(this.BotonAgregarJuicio);
             this.Controls.Add(this.BotonAgregarPersona);
             this.Controls.Add(this.CuadroJuicio);
@@ -240,11 +242,11 @@
             this.Controls.Add(this.CuadroFecha);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
-            this.Controls.Add(this.CuadroImporte);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
             this.Name = "AltaCobro";
             this.Text = "AltaCobro";
+            ((System.ComponentModel.ISupportInitialize)(this.CuadroImporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +263,6 @@
         private System.Windows.Forms.DateTimePicker CuadroFecha;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.TextBox CuadroImporte;
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.TextBox CuadroDetalle;
@@ -271,5 +272,6 @@
         private System.Windows.Forms.TextBox CuadroJuicio;
         private System.Windows.Forms.Button BotonAgregarPersona;
         private System.Windows.Forms.Button BotonAgregarJuicio;
+        private System.Windows.Forms.NumericUpDown CuadroImporte;
     }
 }

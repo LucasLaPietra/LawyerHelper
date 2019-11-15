@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             this.BotonCancelar = new System.Windows.Forms.Button();
-            this.LabelAM = new System.Windows.Forms.Label();
-            this.LabelMinutos = new System.Windows.Forms.Label();
             this.LabelHora2 = new System.Windows.Forms.Label();
             this.LabelImporte2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelHora = new System.Windows.Forms.Label();
@@ -42,12 +39,8 @@
             this.ListBoxCobros = new System.Windows.Forms.ListBox();
             this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.BotonVerJuicio = new System.Windows.Forms.Button();
-            this.BotonVerPersona = new System.Windows.Forms.Button();
-            this.CuadroJuicio = new System.Windows.Forms.TextBox();
-            this.CuadroPersona = new System.Windows.Forms.TextBox();
-            this.LabelJuicio = new System.Windows.Forms.Label();
-            this.LabelPersona = new System.Windows.Forms.Label();
+            this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
+            this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BotonCancelar
@@ -58,24 +51,6 @@
             this.BotonCancelar.TabIndex = 164;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
-            // 
-            // LabelAM
-            // 
-            this.LabelAM.AutoSize = true;
-            this.LabelAM.Location = new System.Drawing.Point(117, 246);
-            this.LabelAM.Name = "LabelAM";
-            this.LabelAM.Size = new System.Drawing.Size(10, 13);
-            this.LabelAM.TabIndex = 163;
-            this.LabelAM.Text = "-";
-            // 
-            // LabelMinutos
-            // 
-            this.LabelMinutos.AutoSize = true;
-            this.LabelMinutos.Location = new System.Drawing.Point(101, 246);
-            this.LabelMinutos.Name = "LabelMinutos";
-            this.LabelMinutos.Size = new System.Drawing.Size(10, 13);
-            this.LabelMinutos.TabIndex = 162;
-            this.LabelMinutos.Text = "-";
             // 
             // LabelHora2
             // 
@@ -94,15 +69,6 @@
             this.LabelImporte2.Size = new System.Drawing.Size(10, 13);
             this.LabelImporte2.TabIndex = 159;
             this.LabelImporte2.Text = "-";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 246);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(10, 13);
-            this.label3.TabIndex = 158;
-            this.label3.Text = ":";
             // 
             // LabelDetalle
             // 
@@ -176,78 +142,39 @@
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
-            // BotonVerJuicio
+            // BotonPersonasAsociadas
             // 
-            this.BotonVerJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonVerJuicio.Location = new System.Drawing.Point(297, 430);
-            this.BotonVerJuicio.Name = "BotonVerJuicio";
-            this.BotonVerJuicio.Size = new System.Drawing.Size(75, 23);
-            this.BotonVerJuicio.TabIndex = 176;
-            this.BotonVerJuicio.Text = "Ver";
-            this.BotonVerJuicio.UseVisualStyleBackColor = true;
+            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(104, 431);
+            this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
+            this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
+            this.BotonPersonasAsociadas.TabIndex = 172;
+            this.BotonPersonasAsociadas.Text = "Ver Persona asociada";
+            this.BotonPersonasAsociadas.UseVisualStyleBackColor = true;
+            this.BotonPersonasAsociadas.Click += new System.EventHandler(this.BotonPersonasAsociadas_Click);
             // 
-            // BotonVerPersona
+            // BotonJuiciosAsignados
             // 
-            this.BotonVerPersona.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonVerPersona.Location = new System.Drawing.Point(297, 398);
-            this.BotonVerPersona.Name = "BotonVerPersona";
-            this.BotonVerPersona.Size = new System.Drawing.Size(75, 23);
-            this.BotonVerPersona.TabIndex = 175;
-            this.BotonVerPersona.Text = "Ver";
-            this.BotonVerPersona.UseVisualStyleBackColor = true;
-            // 
-            // CuadroJuicio
-            // 
-            this.CuadroJuicio.Location = new System.Drawing.Point(58, 432);
-            this.CuadroJuicio.Name = "CuadroJuicio";
-            this.CuadroJuicio.Size = new System.Drawing.Size(233, 20);
-            this.CuadroJuicio.TabIndex = 174;
-            // 
-            // CuadroPersona
-            // 
-            this.CuadroPersona.Location = new System.Drawing.Point(58, 400);
-            this.CuadroPersona.Name = "CuadroPersona";
-            this.CuadroPersona.Size = new System.Drawing.Size(233, 20);
-            this.CuadroPersona.TabIndex = 173;
-            // 
-            // LabelJuicio
-            // 
-            this.LabelJuicio.AutoSize = true;
-            this.LabelJuicio.Location = new System.Drawing.Point(15, 435);
-            this.LabelJuicio.Name = "LabelJuicio";
-            this.LabelJuicio.Size = new System.Drawing.Size(37, 13);
-            this.LabelJuicio.TabIndex = 172;
-            this.LabelJuicio.Text = "Juicio:";
-            // 
-            // LabelPersona
-            // 
-            this.LabelPersona.AutoSize = true;
-            this.LabelPersona.Location = new System.Drawing.Point(3, 403);
-            this.LabelPersona.Name = "LabelPersona";
-            this.LabelPersona.Size = new System.Drawing.Size(49, 13);
-            this.LabelPersona.TabIndex = 171;
-            this.LabelPersona.Text = "Persona:";
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 402);
+            this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
+            this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
+            this.BotonJuiciosAsignados.TabIndex = 171;
+            this.BotonJuiciosAsignados.Text = "Ver Juicio asociado";
+            this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
+            this.BotonJuiciosAsignados.Click += new System.EventHandler(this.BotonJuiciosAsignados_Click);
             // 
             // BajaCobro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 503);
-            this.Controls.Add(this.BotonVerJuicio);
-            this.Controls.Add(this.BotonVerPersona);
-            this.Controls.Add(this.CuadroJuicio);
-            this.Controls.Add(this.CuadroPersona);
-            this.Controls.Add(this.LabelJuicio);
-            this.Controls.Add(this.LabelPersona);
+            this.Controls.Add(this.BotonPersonasAsociadas);
+            this.Controls.Add(this.BotonJuiciosAsignados);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.ListBoxCobros);
             this.Controls.Add(this.BotonCancelar);
-            this.Controls.Add(this.LabelAM);
-            this.Controls.Add(this.LabelMinutos);
             this.Controls.Add(this.LabelHora2);
             this.Controls.Add(this.LabelImporte2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
             this.Controls.Add(this.LabelHora);
@@ -255,6 +182,7 @@
             this.Controls.Add(this.CuadroFecha);
             this.Name = "BajaCobro";
             this.Text = "BajaCobro";
+            this.Load += new System.EventHandler(this.BajaCobro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,11 +191,8 @@
         #endregion
 
         private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.Label LabelAM;
-        private System.Windows.Forms.Label LabelMinutos;
         private System.Windows.Forms.Label LabelHora2;
         private System.Windows.Forms.Label LabelImporte2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelHora;
@@ -276,11 +201,7 @@
         private System.Windows.Forms.ListBox ListBoxCobros;
         private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.Button BotonVerJuicio;
-        private System.Windows.Forms.Button BotonVerPersona;
-        private System.Windows.Forms.TextBox CuadroJuicio;
-        private System.Windows.Forms.TextBox CuadroPersona;
-        private System.Windows.Forms.Label LabelJuicio;
-        private System.Windows.Forms.Label LabelPersona;
+        private System.Windows.Forms.Button BotonPersonasAsociadas;
+        private System.Windows.Forms.Button BotonJuiciosAsignados;
     }
 }

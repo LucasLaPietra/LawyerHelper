@@ -41,7 +41,9 @@ namespace LawyerHelper.UI.Cobros
 
         private void DateTimePickerFecha_ValueChanged(object sender, EventArgs e)
         {
-
+            iCobros = iControladorCobro.ObtenerCobrosPorFecha(DateTimePickerFecha.Value);
+            ListBoxCobros.DataSource = iCobros;
+            ListBoxCobros.DisplayMember = "Descripcion";
         }
 
         private void ListBoxCobros_SelectedIndexChanged(object sender, EventArgs e)

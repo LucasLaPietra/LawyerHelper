@@ -21,8 +21,8 @@ namespace WindowsFormsApp2.Cobros
     {
         ControladorCobro iControladorCobro;
         Fachada iFachada=new Fachada();
-        Persona iPersona;
-        Juicio iJuicio;
+        Persona iPersona=null;
+        Juicio iJuicio=null;
         public AltaCobro()
         {
             InitializeComponent();
@@ -43,9 +43,17 @@ namespace WindowsFormsApp2.Cobros
             try
             {
                 int iHora = iFachada.Convertir24Hs((Convert.ToInt32(CuadroHora.Text)), CuadroAM.Text);
-                DateTime iFechayHora = new DateTime(CuadroFecha.Value.Year, CuadroFecha.Value.Month, CuadroFecha.Value.Day, iHora, (Convert.ToInt32(CuadroMinutos.Text)),0);                
+                DateTime iFechayHora = new DateTime(CuadroFecha.Value.Year, CuadroFecha.Value.Month, CuadroFecha.Value.Day, iHora, (Convert.ToInt32(CuadroMinutos.Text)),0);            
+                if(iJuicio==null||iPersona==null)
+                {
+                    throw new InvalidOperationException();
+                }
                 iControladorCobro.RegistrarCobro((Convert.ToDouble(CuadroImporte.Text)),iFechayHora,CuadroDetalle.Text,iJuicio,iPersona);
                 MessageBox.Show("Cobro añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch(InvalidOperationException)
+            {
+                MessageBox.Show("No se asociaron cobros o juicios ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception)
             {
