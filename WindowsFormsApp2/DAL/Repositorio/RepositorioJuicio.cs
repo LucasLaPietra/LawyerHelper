@@ -68,6 +68,37 @@ namespace LawyerHelper.DAL.Repositorio
             return iQuery;
         }
 
+        public void ModificarJuicio(Juicio pJuicio)
+        {
+            Juicio iQuery = iContext.Juicios.First(n => n.NroExpediente == pJuicio.NroExpediente);
+            iQuery.Bienes = pJuicio.Bienes;
+            iQuery.Descripcion = pJuicio.Descripcion;
+            iQuery.GrupoFamiliar = pJuicio.GrupoFamiliar;
+            iQuery.Caratula = pJuicio.Caratula;
+            iQuery.Competencia = pJuicio.Competencia;
+            iQuery.Etapa = pJuicio.Etapa;
+            iQuery.NroExpediente = pJuicio.NroExpediente;
+            iQuery.Fecha = pJuicio.Fecha;
+            iQuery.Folio = pJuicio.Folio;
+            iQuery.Juez = pJuicio.Juez;
+            iQuery.Jurisdiccion = pJuicio.Jurisdiccion;
+            iQuery.Libro = pJuicio.Libro;
+            iQuery.Precio = pJuicio.Precio;
+            iQuery.Recurso = pJuicio.Recurso;
+            iQuery.Secretario = pJuicio.Secretario;
+            iQuery.TipoProceso = pJuicio.TipoProceso;
+            iQuery.Fuero = pJuicio.Fuero;
+            iQuery.Demandados = pJuicio.Demandados;
+            iQuery.Demandantes = pJuicio.Demandantes;
+            iContext.SaveChanges();
+        }
+
+        public void BajaLogicaJuicio(Juicio pJuicio)
+        {
+            Juicio iQuery = iContext.Juicios.First(n => n.NroExpediente == pJuicio.NroExpediente);
+            iQuery.Activo = false;
+            iContext.SaveChanges();             
+        }
         public void JuicioIgualExpediente(string pNroExpediente)
         {
             bool Resultado;

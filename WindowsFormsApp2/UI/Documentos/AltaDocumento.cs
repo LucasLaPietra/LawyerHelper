@@ -12,6 +12,7 @@ using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using WindowsFormsApp2;
+using LawyerHelper.UI.Juicios;
 
 namespace LawyerHelper.UI.Documentos
 {
@@ -19,7 +20,7 @@ namespace LawyerHelper.UI.Documentos
     {
         ControladorDocumento iControladorDocumento;
         Fachada iFachada = new Fachada();
-
+        Juicio iJuicio = null;
         public AltaDocumento()
         {
             InitializeComponent();
@@ -32,6 +33,47 @@ namespace LawyerHelper.UI.Documentos
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void BotonAceptar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (iJuicio == null)
+                {
+                    throw new InvalidOperationException();
+                }
+                iControladorDocumento.RegistrarDocumento(CuadroTipoDocumento.Text, CuadroFoja.Text, CheckEnExpediente.Checked, CuadroNombreDocumento.Text, CuadroDetalle.Text, TimePickerFecha.Value, iJuicio);
+                MessageBox.Show("Documento añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("No se asociaron juicios ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Documento no fue añadido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BotonCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult iMensaje = MessageBox.Show("Seguro que desea cancelar?", "Cancelar", MessageBoxButtons.YesNoCancel);
+
+            if (iMensaje == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void BotonAgregarJuicio_Click(object sender, EventArgs e)
+        {
+            BuscarJuicio iMenuNuevo = new BuscarJuicio();
+            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            {
+                iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
+                CuadroJuicio.Text = iJuicio.NroExpediente;
+            }
         }
     }
 }

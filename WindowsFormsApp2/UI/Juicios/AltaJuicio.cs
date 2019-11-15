@@ -126,5 +126,15 @@ namespace WindowsFormsApp2.Juicios
         {
 
         }
+
+        private void BotonCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult iMensaje = MessageBox.Show("Seguro que desea cancelar?", "Cancelar", MessageBoxButtons.YesNoCancel);
+
+            if (iMensaje == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

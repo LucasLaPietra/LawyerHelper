@@ -65,7 +65,7 @@ namespace LawyerHelper.DAL.Repositorio
         public void ModificarPersona(Persona pPersona)
         {
             Persona iQuery;
-            iQuery = iContext.Personas.First(n => n.Nombre == (pPersona.Nombre) && n.Dni == (pPersona.Dni));
+            iQuery = iContext.Personas.First(n => n.Dni == (pPersona.Dni));
             iQuery.Dni = pPersona.Dni;
             iQuery.Domicilio = pPersona.Domicilio;
             iQuery.DomicilioLegal = pPersona.DomicilioLegal;
@@ -75,6 +75,14 @@ namespace LawyerHelper.DAL.Repositorio
             iQuery.Profesion = pPersona.Profesion;
             iQuery.Representante = pPersona.Representante;
             iQuery.Telefono = pPersona.Telefono;
+            iContext.SaveChanges();
+        }
+
+        public void BajaLogicaPersona(Persona pPersona)
+        {
+            Persona iQuery;
+            iQuery = iContext.Personas.First(n =>  n.Dni == (pPersona.Dni));
+            iQuery.Activo = false;
             iContext.SaveChanges();
         }
 
