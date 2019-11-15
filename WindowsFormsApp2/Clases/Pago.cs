@@ -15,12 +15,17 @@ namespace LawyerHelper.Clases
 
         public virtual Juicio Juicio { get; set; }
 
+        public string Descripcion
+        {
+            get { return FechayHora.ToShortDateString() + "- Juicio:" + Juicio.NroExpediente; }
+        }
 
-        public Pago(double pImporte, DateTime pFechayHora, String pDetalle)
+        public Pago(double pImporte, DateTime pFechayHora, String pDetalle, Juicio pJuicio)
         {
             this.Importe = pImporte;
             this.FechayHora = pFechayHora;
             this.Detalle = pDetalle;
+            this.Juicio = pJuicio;
         }
 
         public Pago()

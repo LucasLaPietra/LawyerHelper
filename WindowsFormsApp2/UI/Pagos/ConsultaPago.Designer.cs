@@ -29,20 +29,15 @@
         private void InitializeComponent()
         {
             this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
-            this.BotonBuscar = new System.Windows.Forms.Button();
             this.LabelFecha = new System.Windows.Forms.Label();
-            this.LabelAM = new System.Windows.Forms.Label();
-            this.LabelMinutos = new System.Windows.Forms.Label();
             this.LabelHora2 = new System.Windows.Forms.Label();
             this.LabelImporte2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.LabelImporte = new System.Windows.Forms.Label();
             this.LabelHora = new System.Windows.Forms.Label();
-            this.BotonPersonasAsociadas = new System.Windows.Forms.Button();
             this.BotonJuiciosAsignados = new System.Windows.Forms.Button();
             this.ListBoxPagos = new System.Windows.Forms.ListBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -50,17 +45,9 @@
             // 
             this.dateTimePickerFecha.Location = new System.Drawing.Point(57, 35);
             this.dateTimePickerFecha.Name = "dateTimePickerFecha";
-            this.dateTimePickerFecha.Size = new System.Drawing.Size(233, 20);
+            this.dateTimePickerFecha.Size = new System.Drawing.Size(314, 20);
             this.dateTimePickerFecha.TabIndex = 9;
-            // 
-            // BotonBuscar
-            // 
-            this.BotonBuscar.Location = new System.Drawing.Point(301, 34);
-            this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
-            this.BotonBuscar.TabIndex = 8;
-            this.BotonBuscar.Text = "Buscar";
-            this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.dateTimePickerFecha.ValueChanged += new System.EventHandler(this.dateTimePickerFecha_ValueChanged);
             // 
             // LabelFecha
             // 
@@ -70,24 +57,6 @@
             this.LabelFecha.Size = new System.Drawing.Size(37, 13);
             this.LabelFecha.TabIndex = 7;
             this.LabelFecha.Text = "Fecha";
-            // 
-            // LabelAM
-            // 
-            this.LabelAM.AutoSize = true;
-            this.LabelAM.Location = new System.Drawing.Point(117, 272);
-            this.LabelAM.Name = "LabelAM";
-            this.LabelAM.Size = new System.Drawing.Size(10, 13);
-            this.LabelAM.TabIndex = 125;
-            this.LabelAM.Text = "-";
-            // 
-            // LabelMinutos
-            // 
-            this.LabelMinutos.AutoSize = true;
-            this.LabelMinutos.Location = new System.Drawing.Point(101, 272);
-            this.LabelMinutos.Name = "LabelMinutos";
-            this.LabelMinutos.Size = new System.Drawing.Size(10, 13);
-            this.LabelMinutos.TabIndex = 124;
-            this.LabelMinutos.Text = "-";
             // 
             // LabelHora2
             // 
@@ -106,15 +75,6 @@
             this.LabelImporte2.Size = new System.Drawing.Size(10, 13);
             this.LabelImporte2.TabIndex = 121;
             this.LabelImporte2.Text = "-";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(85, 272);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(10, 13);
-            this.label3.TabIndex = 120;
-            this.label3.Text = ":";
             // 
             // LabelDetalle
             // 
@@ -143,23 +103,15 @@
             this.LabelHora.TabIndex = 117;
             this.LabelHora.Text = "Hora";
             // 
-            // BotonPersonasAsociadas
-            // 
-            this.BotonPersonasAsociadas.Location = new System.Drawing.Point(108, 452);
-            this.BotonPersonasAsociadas.Name = "BotonPersonasAsociadas";
-            this.BotonPersonasAsociadas.Size = new System.Drawing.Size(177, 23);
-            this.BotonPersonasAsociadas.TabIndex = 128;
-            this.BotonPersonasAsociadas.Text = "Ver Personas Asociadas";
-            this.BotonPersonasAsociadas.UseVisualStyleBackColor = true;
-            // 
             // BotonJuiciosAsignados
             // 
-            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(108, 409);
+            this.BotonJuiciosAsignados.Location = new System.Drawing.Point(104, 442);
             this.BotonJuiciosAsignados.Name = "BotonJuiciosAsignados";
             this.BotonJuiciosAsignados.Size = new System.Drawing.Size(177, 23);
             this.BotonJuiciosAsignados.TabIndex = 127;
             this.BotonJuiciosAsignados.Text = "Ver Juicios asignados";
             this.BotonJuiciosAsignados.UseVisualStyleBackColor = true;
+            this.BotonJuiciosAsignados.Click += new System.EventHandler(this.BotonJuiciosAsignados_Click);
             // 
             // ListBoxPagos
             // 
@@ -168,15 +120,17 @@
             this.ListBoxPagos.Name = "ListBoxPagos";
             this.ListBoxPagos.Size = new System.Drawing.Size(360, 186);
             this.ListBoxPagos.TabIndex = 129;
+            this.ListBoxPagos.SelectedIndexChanged += new System.EventHandler(this.ListBoxPagos_SelectedIndexChanged);
             // 
-            // textBox1
+            // CuadroDetalle
             // 
-            this.textBox1.Location = new System.Drawing.Point(70, 341);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(302, 62);
-            this.textBox1.TabIndex = 175;
+            this.CuadroDetalle.Location = new System.Drawing.Point(70, 341);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ReadOnly = true;
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(302, 62);
+            this.CuadroDetalle.TabIndex = 175;
             // 
             // BotonCancelar
             // 
@@ -187,6 +141,7 @@
             this.BotonCancelar.TabIndex = 176;
             this.BotonCancelar.Text = "Aceptar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click_1);
             // 
             // ConsultaPago
             // 
@@ -194,23 +149,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 531);
             this.Controls.Add(this.BotonCancelar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.ListBoxPagos);
-            this.Controls.Add(this.BotonPersonasAsociadas);
             this.Controls.Add(this.BotonJuiciosAsignados);
-            this.Controls.Add(this.LabelAM);
-            this.Controls.Add(this.LabelMinutos);
             this.Controls.Add(this.LabelHora2);
             this.Controls.Add(this.LabelImporte2);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
             this.Controls.Add(this.LabelHora);
             this.Controls.Add(this.dateTimePickerFecha);
-            this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.LabelFecha);
             this.Name = "ConsultaPago";
             this.Text = "ConsultaPago";
+            this.Load += new System.EventHandler(this.ConsultaPago_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,20 +170,15 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
-        private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.Label LabelFecha;
-        private System.Windows.Forms.Label LabelAM;
-        private System.Windows.Forms.Label LabelMinutos;
         private System.Windows.Forms.Label LabelHora2;
         private System.Windows.Forms.Label LabelImporte2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label LabelImporte;
         private System.Windows.Forms.Label LabelHora;
-        private System.Windows.Forms.Button BotonPersonasAsociadas;
         private System.Windows.Forms.Button BotonJuiciosAsignados;
         private System.Windows.Forms.ListBox ListBoxPagos;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.Button BotonCancelar;
     }
 }

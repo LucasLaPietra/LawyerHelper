@@ -28,55 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LabelImporte = new System.Windows.Forms.Label();
-            this.LabelDetalle = new System.Windows.Forms.Label();
-            this.CuadroImporte = new System.Windows.Forms.TextBox();
-            this.BotonJuicio = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonCancelar = new System.Windows.Forms.Button();
-            this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
-            this.CuadroHora = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CuadroMinutos = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.CuadroImporte = new System.Windows.Forms.NumericUpDown();
+            this.BotonAgregarJuicio = new System.Windows.Forms.Button();
+            this.CuadroJuicio = new System.Windows.Forms.TextBox();
+            this.LabelJuicio = new System.Windows.Forms.Label();
+            this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.CuadroAM = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.CuadroMinutos = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CuadroHora = new System.Windows.Forms.TextBox();
+            this.CuadroFecha = new System.Windows.Forms.DateTimePicker();
+            this.BotonCancelar1 = new System.Windows.Forms.Button();
+            this.BotonAceptar1 = new System.Windows.Forms.Button();
+            this.LabelDetalle = new System.Windows.Forms.Label();
+            this.LabelImporte = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.CuadroImporte)).BeginInit();
             this.SuspendLayout();
-            // 
-            // LabelImporte
-            // 
-            this.LabelImporte.AutoSize = true;
-            this.LabelImporte.Location = new System.Drawing.Point(21, 126);
-            this.LabelImporte.Name = "LabelImporte";
-            this.LabelImporte.Size = new System.Drawing.Size(45, 13);
-            this.LabelImporte.TabIndex = 2;
-            this.LabelImporte.Text = "Importe:";
-            // 
-            // LabelDetalle
-            // 
-            this.LabelDetalle.AutoSize = true;
-            this.LabelDetalle.Location = new System.Drawing.Point(21, 175);
-            this.LabelDetalle.Name = "LabelDetalle";
-            this.LabelDetalle.Size = new System.Drawing.Size(43, 13);
-            this.LabelDetalle.TabIndex = 3;
-            this.LabelDetalle.Text = "Detalle:";
-            // 
-            // CuadroImporte
-            // 
-            this.CuadroImporte.Location = new System.Drawing.Point(67, 122);
-            this.CuadroImporte.Name = "CuadroImporte";
-            this.CuadroImporte.Size = new System.Drawing.Size(290, 20);
-            this.CuadroImporte.TabIndex = 6;
-            // 
-            // BotonJuicio
-            // 
-            this.BotonJuicio.Location = new System.Drawing.Point(105, 323);
-            this.BotonJuicio.Name = "BotonJuicio";
-            this.BotonJuicio.Size = new System.Drawing.Size(180, 26);
-            this.BotonJuicio.TabIndex = 8;
-            this.BotonJuicio.Text = "Asignar pago a juicio";
-            this.BotonJuicio.UseVisualStyleBackColor = true;
             // 
             // BotonAceptar
             // 
@@ -95,55 +66,51 @@
             this.BotonCancelar.TabIndex = 10;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
-            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
+            
             // 
-            // CuadroFecha
+            // CuadroImporte
             // 
-            this.CuadroFecha.Location = new System.Drawing.Point(67, 24);
-            this.CuadroFecha.Name = "CuadroFecha";
-            this.CuadroFecha.Size = new System.Drawing.Size(290, 20);
-            this.CuadroFecha.TabIndex = 11;
+            this.CuadroImporte.Location = new System.Drawing.Point(68, 92);
+            this.CuadroImporte.Name = "CuadroImporte";
+            this.CuadroImporte.Size = new System.Drawing.Size(221, 20);
+            this.CuadroImporte.TabIndex = 190;
             // 
-            // CuadroHora
+            // BotonAgregarJuicio
             // 
-            this.CuadroHora.Location = new System.Drawing.Point(67, 73);
-            this.CuadroHora.Name = "CuadroHora";
-            this.CuadroHora.Size = new System.Drawing.Size(24, 20);
-            this.CuadroHora.TabIndex = 12;
+            this.BotonAgregarJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAgregarJuicio.Location = new System.Drawing.Point(214, 275);
+            this.BotonAgregarJuicio.Name = "BotonAgregarJuicio";
+            this.BotonAgregarJuicio.Size = new System.Drawing.Size(75, 23);
+            this.BotonAgregarJuicio.TabIndex = 189;
+            this.BotonAgregarJuicio.Text = "Agregar";
+            this.BotonAgregarJuicio.UseVisualStyleBackColor = true;
+            this.BotonAgregarJuicio.Click += new System.EventHandler(this.BotonAgregarJuicio_Click);
             // 
-            // label1
+            // CuadroJuicio
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Hora:";
+            this.CuadroJuicio.Location = new System.Drawing.Point(68, 277);
+            this.CuadroJuicio.Name = "CuadroJuicio";
+            this.CuadroJuicio.Size = new System.Drawing.Size(140, 20);
+            this.CuadroJuicio.TabIndex = 187;
+            this.CuadroJuicio.Text = "Ninguno";
             // 
-            // label2
+            // LabelJuicio
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Fecha:";
+            this.LabelJuicio.AutoSize = true;
+            this.LabelJuicio.Location = new System.Drawing.Point(25, 280);
+            this.LabelJuicio.Name = "LabelJuicio";
+            this.LabelJuicio.Size = new System.Drawing.Size(37, 13);
+            this.LabelJuicio.TabIndex = 185;
+            this.LabelJuicio.Text = "Juicio:";
             // 
-            // CuadroMinutos
+            // CuadroDetalle
             // 
-            this.CuadroMinutos.Location = new System.Drawing.Point(105, 73);
-            this.CuadroMinutos.Name = "CuadroMinutos";
-            this.CuadroMinutos.Size = new System.Drawing.Size(24, 20);
-            this.CuadroMinutos.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(10, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = ":";
+            this.CuadroDetalle.Location = new System.Drawing.Point(68, 123);
+            this.CuadroDetalle.Multiline = true;
+            this.CuadroDetalle.Name = "CuadroDetalle";
+            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDetalle.Size = new System.Drawing.Size(221, 108);
+            this.CuadroDetalle.TabIndex = 183;
             // 
             // CuadroAM
             // 
@@ -151,27 +118,108 @@
             this.CuadroAM.Items.AddRange(new object[] {
             "AM",
             "PM"});
-            this.CuadroAM.Location = new System.Drawing.Point(135, 73);
+            this.CuadroAM.Location = new System.Drawing.Point(136, 53);
             this.CuadroAM.Name = "CuadroAM";
             this.CuadroAM.Size = new System.Drawing.Size(46, 21);
-            this.CuadroAM.TabIndex = 18;
-            this.CuadroAM.SelectedIndexChanged += new System.EventHandler(this.CuadroAM_SelectedIndexChanged);
+            this.CuadroAM.TabIndex = 182;
             // 
-            // textBox1
+            // label3
             // 
-            this.textBox1.Location = new System.Drawing.Point(67, 175);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(290, 120);
-            this.textBox1.TabIndex = 174;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(95, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(10, 13);
+            this.label3.TabIndex = 181;
+            this.label3.Text = ":";
+            // 
+            // CuadroMinutos
+            // 
+            this.CuadroMinutos.Location = new System.Drawing.Point(106, 54);
+            this.CuadroMinutos.Name = "CuadroMinutos";
+            this.CuadroMinutos.Size = new System.Drawing.Size(24, 20);
+            this.CuadroMinutos.TabIndex = 180;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 13);
+            this.label2.TabIndex = 179;
+            this.label2.Text = "Fecha:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(29, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 178;
+            this.label1.Text = "Hora:";
+            // 
+            // CuadroHora
+            // 
+            this.CuadroHora.Location = new System.Drawing.Point(68, 54);
+            this.CuadroHora.Name = "CuadroHora";
+            this.CuadroHora.Size = new System.Drawing.Size(24, 20);
+            this.CuadroHora.TabIndex = 177;
+            // 
+            // CuadroFecha
+            // 
+            this.CuadroFecha.Location = new System.Drawing.Point(68, 19);
+            this.CuadroFecha.Name = "CuadroFecha";
+            this.CuadroFecha.Size = new System.Drawing.Size(221, 20);
+            this.CuadroFecha.TabIndex = 176;
+            this.CuadroFecha.ValueChanged += new System.EventHandler(this.CuadroFecha_ValueChanged);
+            // 
+            // BotonCancelar1
+            // 
+            this.BotonCancelar1.Location = new System.Drawing.Point(194, 338);
+            this.BotonCancelar1.Name = "BotonCancelar1";
+            this.BotonCancelar1.Size = new System.Drawing.Size(95, 24);
+            this.BotonCancelar1.TabIndex = 175;
+            this.BotonCancelar1.Text = "Cancelar";
+            this.BotonCancelar1.UseVisualStyleBackColor = true;
+            this.BotonCancelar1.Click += new System.EventHandler(this.BotonCancelar1_Click);
+            // 
+            // BotonAceptar1
+            // 
+            this.BotonAceptar1.Location = new System.Drawing.Point(12, 338);
+            this.BotonAceptar1.Name = "BotonAceptar1";
+            this.BotonAceptar1.Size = new System.Drawing.Size(95, 24);
+            this.BotonAceptar1.TabIndex = 174;
+            this.BotonAceptar1.Text = "Aceptar";
+            this.BotonAceptar1.UseVisualStyleBackColor = true;
+            this.BotonAceptar1.Click += new System.EventHandler(this.BotonAceptar1_Click);
+            // 
+            // LabelDetalle
+            // 
+            this.LabelDetalle.AutoSize = true;
+            this.LabelDetalle.Location = new System.Drawing.Point(19, 123);
+            this.LabelDetalle.Name = "LabelDetalle";
+            this.LabelDetalle.Size = new System.Drawing.Size(43, 13);
+            this.LabelDetalle.TabIndex = 173;
+            this.LabelDetalle.Text = "Detalle:";
+            // 
+            // LabelImporte
+            // 
+            this.LabelImporte.AutoSize = true;
+            this.LabelImporte.Location = new System.Drawing.Point(17, 94);
+            this.LabelImporte.Name = "LabelImporte";
+            this.LabelImporte.Size = new System.Drawing.Size(45, 13);
+            this.LabelImporte.TabIndex = 172;
+            this.LabelImporte.Text = "Importe:";
             // 
             // AltaPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 436);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(301, 381);
+            this.Controls.Add(this.CuadroImporte);
+            this.Controls.Add(this.BotonAgregarJuicio);
+            this.Controls.Add(this.CuadroJuicio);
+            this.Controls.Add(this.LabelJuicio);
+            this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.CuadroAM);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CuadroMinutos);
@@ -179,34 +227,39 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CuadroHora);
             this.Controls.Add(this.CuadroFecha);
-            this.Controls.Add(this.BotonCancelar);
-            this.Controls.Add(this.BotonAceptar);
-            this.Controls.Add(this.BotonJuicio);
-            this.Controls.Add(this.CuadroImporte);
+            this.Controls.Add(this.BotonCancelar1);
+            this.Controls.Add(this.BotonAceptar1);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelImporte);
+            this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.BotonAceptar);
             this.Name = "AltaPago";
             this.Text = "AltaPago";
             this.Load += new System.EventHandler(this.AltaPago_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.CuadroImporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label LabelImporte;
-        private System.Windows.Forms.Label LabelDetalle;
-        private System.Windows.Forms.TextBox CuadroImporte;
-        private System.Windows.Forms.Button BotonJuicio;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.DateTimePicker CuadroFecha;
-        private System.Windows.Forms.TextBox CuadroHora;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox CuadroMinutos;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown CuadroImporte;
+        private System.Windows.Forms.Button BotonAgregarJuicio;
+        private System.Windows.Forms.TextBox CuadroJuicio;
+        private System.Windows.Forms.Label LabelJuicio;
+        private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.ComboBox CuadroAM;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox CuadroMinutos;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox CuadroHora;
+        private System.Windows.Forms.DateTimePicker CuadroFecha;
+        private System.Windows.Forms.Button BotonCancelar1;
+        private System.Windows.Forms.Button BotonAceptar1;
+        private System.Windows.Forms.Label LabelDetalle;
+        private System.Windows.Forms.Label LabelImporte;
     }
 }

@@ -51,6 +51,7 @@
             this.BotonCancelar.TabIndex = 164;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // LabelHora2
             // 
@@ -110,7 +111,7 @@
             // 
             this.CuadroFecha.Location = new System.Drawing.Point(55, 12);
             this.CuadroFecha.Name = "CuadroFecha";
-            this.CuadroFecha.Size = new System.Drawing.Size(193, 20);
+            this.CuadroFecha.Size = new System.Drawing.Size(317, 20);
             this.CuadroFecha.TabIndex = 152;
             this.CuadroFecha.ValueChanged += new System.EventHandler(this.CuadroFecha_ValueChanged);
             // 

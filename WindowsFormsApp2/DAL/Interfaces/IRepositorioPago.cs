@@ -9,5 +9,6 @@ namespace LawyerHelper.DAL.Interfaces
 {
     interface IRepositorioPago : IRepositorioGeneral<Pago>
     {
+        IList<Pago> BusquedaPagoPorFecha(DateTime pFecha);
     }
 }

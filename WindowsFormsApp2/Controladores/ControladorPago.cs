@@ -22,7 +22,30 @@ namespace LawyerHelper.Controladores
             IList<Pago> iQuery = iUdT.RepositorioPago.ObtenerTodos();
             return iQuery;
         }
-       
+
+        public void RegistrarPago(double pImporte, DateTime pFechayHora, string pDetalle, Juicio pJuicio)
+        {
+            Pago iPago = new Pago(pImporte, pFechayHora, pDetalle, pJuicio);
+            iUdT.RepositorioPago.Agregar(iPago);
+            iUdT.Guardar();
+        }
+
+        public void BajaPago(Pago pPago)
+        {
+            iUdT.RepositorioPago.Eliminar(pPago);
+            iUdT.Guardar();
+        }
+
+        public Pago ObtenerPago(int pId)
+        {
+            return iUdT.RepositorioPago.Obtener(pId);
+        }
+
+        public List<Pago> ObtenerPagosPorFecha(DateTime pFecha)
+        {
+            return iUdT.RepositorioPago.BusquedaPagoPorFecha(pFecha).ToList();
+        }
+
 
 
     }

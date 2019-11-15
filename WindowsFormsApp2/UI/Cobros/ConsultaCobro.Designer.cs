@@ -91,7 +91,7 @@
             // 
             this.DateTimePickerFecha.Location = new System.Drawing.Point(55, 13);
             this.DateTimePickerFecha.Name = "DateTimePickerFecha";
-            this.DateTimePickerFecha.Size = new System.Drawing.Size(193, 20);
+            this.DateTimePickerFecha.Size = new System.Drawing.Size(317, 20);
             this.DateTimePickerFecha.TabIndex = 139;
             this.DateTimePickerFecha.ValueChanged += new System.EventHandler(this.DateTimePickerFecha_ValueChanged);
             // 

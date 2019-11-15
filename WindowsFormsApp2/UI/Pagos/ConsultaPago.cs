@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
 using WindowsFormsApp2;
+using WindowsFormsApp2.Juicios;
 using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
@@ -19,6 +20,8 @@ namespace LawyerHelper.UI.Pagos
     {
         Fachada iFachada = new Fachada();
         ControladorPago iControladorPago;
+        List<Pago> iPagos;
+        Pago iPago;
 
         public ConsultaPago()
         {
@@ -26,11 +29,44 @@ namespace LawyerHelper.UI.Pagos
             iControladorPago =new ControladorPago(UnidadDeTrabajo.Instancia);
             //Asignacion de colores      
             iFachada.AsignarColores(this);
+        }       
+
+        private void dateTimePickerFecha_ValueChanged(object sender, EventArgs e)
+        {
+            iPagos = iControladorPago.ObtenerPagosPorFecha(dateTimePickerFecha.Value);
+            ListBoxPagos.DataSource = iPagos;
+            ListBoxPagos.DisplayMember = "Descripcion";
         }
 
-        private void BotonCancelar_Click(object sender, EventArgs e)
+        private void ListBoxPagos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            iPago = iPagos[ListBoxPagos.SelectedIndex];
+            LabelHora2.Text = iPago.FechayHora.ToShortTimeString();
+            LabelImporte2.Text = iPago.Importe.ToString();
+            CuadroDetalle.Text = iPago.Detalle;
+        }
 
+        private void BotonJuiciosAsignados_Click(object sender, EventArgs e)
+        {
+            ConsultaJuicios iMenuNuevo = new ConsultaJuicios(iPago.Juicio);
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonCancelar_Click_1(object sender, EventArgs e)
+        {
+            DialogResult iMensaje = MessageBox.Show("Seguro que desea cancelar?", "Cancelar", MessageBoxButtons.YesNoCancel);
+
+            if (iMensaje == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void ConsultaPago_Load(object sender, EventArgs e)
+        {
+            iPagos = iControladorPago.ObtenerPagosPorFecha(dateTimePickerFecha.Value);
+            ListBoxPagos.DataSource = iPagos;
+            ListBoxPagos.DisplayMember = "Descripcion";
         }
     }
 }
