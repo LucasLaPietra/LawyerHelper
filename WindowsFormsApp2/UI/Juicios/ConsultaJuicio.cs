@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LawyerHelper.Clases;
 using WindowsFormsApp2;
+using WindowsFormsApp2.Personas;
 using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using LawyerHelper.UI.Juicios;
+using LawyerHelper.UI.Personas;
 
 namespace WindowsFormsApp2.Juicios
 {
@@ -78,11 +80,6 @@ namespace WindowsFormsApp2.Juicios
         }
 
         private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void BotonVerDocumentacion_Click(object sender, EventArgs e)
         {
 
         }
@@ -166,6 +163,23 @@ namespace WindowsFormsApp2.Juicios
                 ListBoxDocumentos.DataSource = iJuicio.Documentos;
                 ListBoxDocumentos.DisplayMember = "Nombre";
             }
+        }
+
+        private void BotonConsultarDemandantes_Click(object sender, EventArgs e)
+        {
+            ConsultaPersona iMenuNuevo = new ConsultaPersona(iDemandantes[ListBoxDemandantes.SelectedIndex].Persona);
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonConsultarDemandados_Click(object sender, EventArgs e)
+        {
+            ConsultaPersona iMenuNuevo = new ConsultaPersona(iDemandados[ListBoxDemandados.SelectedIndex].Persona);
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonConsultarDocumentos_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

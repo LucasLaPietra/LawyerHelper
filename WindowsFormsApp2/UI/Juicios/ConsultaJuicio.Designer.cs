@@ -554,7 +554,7 @@
             this.BotonConsultarDemandante.TabIndex = 176;
             this.BotonConsultarDemandante.Text = "Consultar";
             this.BotonConsultarDemandante.UseVisualStyleBackColor = true;
-            this.BotonConsultarDemandante.Click += new System.EventHandler(this.BotonVerDocumentacion_Click);
+            this.BotonConsultarDemandante.Click += new System.EventHandler(this.BotonConsultarDemandantes_Click);
             // 
             // BotonAceptar
             // 
@@ -577,6 +577,7 @@
             this.BotonConsultarDemandados.TabIndex = 178;
             this.BotonConsultarDemandados.Text = "Consultar";
             this.BotonConsultarDemandados.UseVisualStyleBackColor = true;
+            this.BotonConsultarDemandados.Click += new System.EventHandler(this.BotonConsultarDemandados_Click);
             // 
             // BotonConsultarDocumentos
             // 
@@ -588,6 +589,7 @@
             this.BotonConsultarDocumentos.TabIndex = 179;
             this.BotonConsultarDocumentos.Text = "Consultar";
             this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click);
             // 
             // ConsultaJuicios
             // 

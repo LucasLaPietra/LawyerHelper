@@ -36,6 +36,12 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
+        public void BajaLogicaJuicio(Juicio pJuicio)
+        {
+            iUdT.RepositorioJuicio.BajaLogicaJuicio(pJuicio);
+            //iUdT.Guardar();
+        }
+
         public Juicio ObtenerJuicio(int pId)
         {
             return iUdT.RepositorioJuicio.Obtener(pId);

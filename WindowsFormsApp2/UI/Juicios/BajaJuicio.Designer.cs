@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BotonBuscarPorOtroCampo = new System.Windows.Forms.Button();
-            this.BotonCancelar = new System.Windows.Forms.Button();
-            this.BotonAceptar = new System.Windows.Forms.Button();
-            this.CuadroNumeroDeExpediente = new System.Windows.Forms.TextBox();
+            this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
+            this.CuadroNroExpediente = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.BotonBuscar = new System.Windows.Forms.Button();
+            this.BotonAceptar = new System.Windows.Forms.Button();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
-            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
-            this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
-            this.CuadroBienes = new System.Windows.Forms.TextBox();
+            this.ListBoxDocumentos = new System.Windows.Forms.ListBox();
+            this.ListBoxDemandados = new System.Windows.Forms.ListBox();
+            this.ListBoxDemandantes = new System.Windows.Forms.ListBox();
             this.labelDocumentos = new System.Windows.Forms.Label();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.LabelFolio = new System.Windows.Forms.Label();
@@ -46,19 +46,18 @@
             this.LabelCompetencia = new System.Windows.Forms.Label();
             this.LabelRecurso = new System.Windows.Forms.Label();
             this.LabelCaratula = new System.Windows.Forms.Label();
-            this.LabelLibro2 = new System.Windows.Forms.Label();
+            this.LabelLibro = new System.Windows.Forms.Label();
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.LabelBienes = new System.Windows.Forms.Label();
             this.LabelFecha2 = new System.Windows.Forms.Label();
             this.LabelFolio2 = new System.Windows.Forms.Label();
             this.LabelJurisdiccion2 = new System.Windows.Forms.Label();
-            this.LabelTipoJuicio2 = new System.Windows.Forms.Label();
+            this.LabelFuero2 = new System.Windows.Forms.Label();
             this.LabelTipoProceso2 = new System.Windows.Forms.Label();
             this.LabelCompetencia2 = new System.Windows.Forms.Label();
             this.LabelRecurso2 = new System.Windows.Forms.Label();
             this.LabelCaratula2 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.LabelEtapa2 = new System.Windows.Forms.Label();
+            this.labelLibro2 = new System.Windows.Forms.Label();
             this.LabelGrupoFamiliar = new System.Windows.Forms.Label();
             this.LabelJuez = new System.Windows.Forms.Label();
             this.LabelSecretario = new System.Windows.Forms.Label();
@@ -67,50 +66,37 @@
             this.LabelDemandado = new System.Windows.Forms.Label();
             this.LabelJuez2 = new System.Windows.Forms.Label();
             this.LabelSecretario2 = new System.Windows.Forms.Label();
-            this.LabelDemandante2 = new System.Windows.Forms.Label();
             this.LabelPrecio2 = new System.Windows.Forms.Label();
-            this.LabelDemandado2 = new System.Windows.Forms.Label();
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
             this.LabelExpediente = new System.Windows.Forms.Label();
-            this.BotonVerDocumentacion = new System.Windows.Forms.Button();
-            this.BotonBuscar = new System.Windows.Forms.Button();
+            this.CuadroBienes = new System.Windows.Forms.TextBox();
+            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
+            this.LabelEtapa2 = new System.Windows.Forms.Label();
+            this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
+            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.BotonConsultarDemandante = new System.Windows.Forms.Button();
+            this.BotonConsultarDemandados = new System.Windows.Forms.Button();
+            this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
-            // BotonBuscarPorOtroCampo
+            // BotonBusquedaAvanzada
             // 
-            this.BotonBuscarPorOtroCampo.Location = new System.Drawing.Point(12, 53);
-            this.BotonBuscarPorOtroCampo.Name = "BotonBuscarPorOtroCampo";
-            this.BotonBuscarPorOtroCampo.Size = new System.Drawing.Size(138, 24);
-            this.BotonBuscarPorOtroCampo.TabIndex = 37;
-            this.BotonBuscarPorOtroCampo.Text = "Buscar por otro campo";
-            this.BotonBuscarPorOtroCampo.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Location = new System.Drawing.Point(12, 53);
+            this.BotonBusquedaAvanzada.Name = "BotonBusquedaAvanzada";
+            this.BotonBusquedaAvanzada.Size = new System.Drawing.Size(138, 24);
+            this.BotonBusquedaAvanzada.TabIndex = 37;
+            this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
+            this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
-            // BotonCancelar
+            // CuadroNroExpediente
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(357, 469);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
-            this.BotonCancelar.TabIndex = 36;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
-            // 
-            // BotonAceptar
-            // 
-            this.BotonAceptar.Location = new System.Drawing.Point(12, 469);
-            this.BotonAceptar.Name = "BotonAceptar";
-            this.BotonAceptar.Size = new System.Drawing.Size(138, 25);
-            this.BotonAceptar.TabIndex = 35;
-            this.BotonAceptar.Text = "Aceptar";
-            this.BotonAceptar.UseVisualStyleBackColor = true;
-            // 
-            // CuadroNumeroDeExpediente
-            // 
-            this.CuadroNumeroDeExpediente.Location = new System.Drawing.Point(118, 14);
-            this.CuadroNumeroDeExpediente.Name = "CuadroNumeroDeExpediente";
-            this.CuadroNumeroDeExpediente.Size = new System.Drawing.Size(193, 20);
-            this.CuadroNumeroDeExpediente.TabIndex = 34;
+            this.CuadroNroExpediente.Location = new System.Drawing.Point(118, 14);
+            this.CuadroNroExpediente.Name = "CuadroNroExpediente";
+            this.CuadroNroExpediente.Size = new System.Drawing.Size(315, 20);
+            this.CuadroNroExpediente.TabIndex = 34;
             // 
             // label1
             // 
@@ -121,15 +107,36 @@
             this.label1.TabIndex = 33;
             this.label1.Text = "Nro. de expediente:";
             // 
+            // BotonBuscar
+            // 
+            this.BotonBuscar.Location = new System.Drawing.Point(440, 9);
+            this.BotonBuscar.Name = "BotonBuscar";
+            this.BotonBuscar.Size = new System.Drawing.Size(90, 28);
+            this.BotonBuscar.TabIndex = 96;
+            this.BotonBuscar.Text = "Buscar";
+            this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
+            // 
+            // BotonAceptar
+            // 
+            this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAceptar.Location = new System.Drawing.Point(100, 645);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(95, 22);
+            this.BotonAceptar.TabIndex = 182;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
+            // 
             // Layout
             // 
             this.Layout.ColumnCount = 2;
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.Layout.Controls.Add(this.CuadroDescripcion, 1, 10);
-            this.Layout.Controls.Add(this.CuadroGrupoFamiliar, 1, 13);
-            this.Layout.Controls.Add(this.CuadroBienes, 1, 12);
-            this.Layout.Controls.Add(this.labelDocumentos, 0, 20);
+            this.Layout.Controls.Add(this.ListBoxDocumentos, 1, 19);
+            this.Layout.Controls.Add(this.ListBoxDemandados, 1, 18);
+            this.Layout.Controls.Add(this.ListBoxDemandantes, 1, 17);
+            this.Layout.Controls.Add(this.labelDocumentos, 0, 19);
             this.Layout.Controls.Add(this.LabelFecha, 0, 1);
             this.Layout.Controls.Add(this.LabelFolio, 0, 2);
             this.Layout.Controls.Add(this.LabelFuero, 0, 4);
@@ -138,19 +145,18 @@
             this.Layout.Controls.Add(this.LabelCompetencia, 0, 6);
             this.Layout.Controls.Add(this.LabelRecurso, 0, 7);
             this.Layout.Controls.Add(this.LabelCaratula, 0, 8);
-            this.Layout.Controls.Add(this.LabelLibro2, 0, 9);
+            this.Layout.Controls.Add(this.LabelLibro, 0, 9);
             this.Layout.Controls.Add(this.LabelDescripcion, 0, 10);
             this.Layout.Controls.Add(this.LabelBienes, 0, 12);
             this.Layout.Controls.Add(this.LabelFecha2, 1, 1);
             this.Layout.Controls.Add(this.LabelFolio2, 1, 2);
             this.Layout.Controls.Add(this.LabelJurisdiccion2, 1, 3);
-            this.Layout.Controls.Add(this.LabelTipoJuicio2, 1, 4);
+            this.Layout.Controls.Add(this.LabelFuero2, 1, 4);
             this.Layout.Controls.Add(this.LabelTipoProceso2, 1, 5);
             this.Layout.Controls.Add(this.LabelCompetencia2, 1, 6);
             this.Layout.Controls.Add(this.LabelRecurso2, 1, 7);
             this.Layout.Controls.Add(this.LabelCaratula2, 1, 8);
-            this.Layout.Controls.Add(this.label24, 1, 9);
-            this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
+            this.Layout.Controls.Add(this.labelLibro2, 1, 9);
             this.Layout.Controls.Add(this.LabelGrupoFamiliar, 0, 13);
             this.Layout.Controls.Add(this.LabelJuez, 0, 14);
             this.Layout.Controls.Add(this.LabelSecretario, 0, 15);
@@ -159,16 +165,17 @@
             this.Layout.Controls.Add(this.LabelDemandado, 0, 18);
             this.Layout.Controls.Add(this.LabelJuez2, 1, 14);
             this.Layout.Controls.Add(this.LabelSecretario2, 1, 15);
-            this.Layout.Controls.Add(this.LabelDemandante2, 1, 17);
             this.Layout.Controls.Add(this.LabelPrecio2, 1, 16);
-            this.Layout.Controls.Add(this.LabelDemandado2, 1, 18);
             this.Layout.Controls.Add(this.LabelJurisdiccion, 0, 3);
             this.Layout.Controls.Add(this.LabelEtapa, 0, 11);
             this.Layout.Controls.Add(this.LabelExpediente, 0, 0);
-            this.Layout.Controls.Add(this.BotonVerDocumentacion, 1, 20);
-            this.Layout.Location = new System.Drawing.Point(12, 104);
+            this.Layout.Controls.Add(this.CuadroBienes, 1, 12);
+            this.Layout.Controls.Add(this.CuadroDescripcion, 1, 10);
+            this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
+            this.Layout.Controls.Add(this.CuadroGrupoFamiliar, 1, 13);
+            this.Layout.Location = new System.Drawing.Point(12, 83);
             this.Layout.Name = "Layout";
-            this.Layout.RowCount = 21;
+            this.Layout.RowCount = 20;
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -188,46 +195,41 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Layout.Size = new System.Drawing.Size(439, 359);
-            this.Layout.TabIndex = 38;
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.Layout.Size = new System.Drawing.Size(439, 529);
+            this.Layout.TabIndex = 180;
             // 
-            // CuadroDescripcion
+            // ListBoxDocumentos
             // 
-            this.CuadroDescripcion.Location = new System.Drawing.Point(97, 133);
-            this.CuadroDescripcion.Multiline = true;
-            this.CuadroDescripcion.Name = "CuadroDescripcion";
-            this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.CuadroDescripcion.Size = new System.Drawing.Size(342, 32);
-            this.CuadroDescripcion.TabIndex = 174;
+            this.ListBoxDocumentos.FormattingEnabled = true;
+            this.ListBoxDocumentos.Location = new System.Drawing.Point(97, 449);
+            this.ListBoxDocumentos.Name = "ListBoxDocumentos";
+            this.ListBoxDocumentos.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDocumentos.TabIndex = 178;
             // 
-            // CuadroGrupoFamiliar
+            // ListBoxDemandados
             // 
-            this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(97, 222);
-            this.CuadroGrupoFamiliar.Multiline = true;
-            this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
-            this.CuadroGrupoFamiliar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(342, 32);
-            this.CuadroGrupoFamiliar.TabIndex = 174;
+            this.ListBoxDemandados.FormattingEnabled = true;
+            this.ListBoxDemandados.Location = new System.Drawing.Point(97, 374);
+            this.ListBoxDemandados.Name = "ListBoxDemandados";
+            this.ListBoxDemandados.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandados.TabIndex = 178;
             // 
-            // CuadroBienes
+            // ListBoxDemandantes
             // 
-            this.CuadroBienes.Location = new System.Drawing.Point(97, 184);
-            this.CuadroBienes.Multiline = true;
-            this.CuadroBienes.Name = "CuadroBienes";
-            this.CuadroBienes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.CuadroBienes.Size = new System.Drawing.Size(342, 32);
-            this.CuadroBienes.TabIndex = 178;
+            this.ListBoxDemandantes.FormattingEnabled = true;
+            this.ListBoxDemandantes.Location = new System.Drawing.Point(97, 299);
+            this.ListBoxDemandantes.Name = "ListBoxDemandantes";
+            this.ListBoxDemandantes.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandantes.TabIndex = 178;
             // 
             // labelDocumentos
             // 
             this.labelDocumentos.AutoSize = true;
-            this.labelDocumentos.Location = new System.Drawing.Point(3, 322);
+            this.labelDocumentos.Location = new System.Drawing.Point(3, 446);
             this.labelDocumentos.Name = "labelDocumentos";
             this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
-            this.labelDocumentos.TabIndex = 39;
+            this.labelDocumentos.TabIndex = 175;
             this.labelDocumentos.Text = "Documentos:";
             // 
             // LabelFecha
@@ -302,14 +304,14 @@
             this.LabelCaratula.TabIndex = 9;
             this.LabelCaratula.Text = "Caratula:";
             // 
-            // LabelLibro2
+            // LabelLibro
             // 
-            this.LabelLibro2.AutoSize = true;
-            this.LabelLibro2.Location = new System.Drawing.Point(3, 117);
-            this.LabelLibro2.Name = "LabelLibro2";
-            this.LabelLibro2.Size = new System.Drawing.Size(33, 13);
-            this.LabelLibro2.TabIndex = 10;
-            this.LabelLibro2.Text = "Libro:";
+            this.LabelLibro.AutoSize = true;
+            this.LabelLibro.Location = new System.Drawing.Point(3, 117);
+            this.LabelLibro.Name = "LabelLibro";
+            this.LabelLibro.Size = new System.Drawing.Size(33, 13);
+            this.LabelLibro.TabIndex = 10;
+            this.LabelLibro.Text = "Libro:";
             // 
             // LabelDescripcion
             // 
@@ -356,14 +358,14 @@
             this.LabelJurisdiccion2.TabIndex = 16;
             this.LabelJurisdiccion2.Text = "-";
             // 
-            // LabelTipoJuicio2
+            // LabelFuero2
             // 
-            this.LabelTipoJuicio2.AutoSize = true;
-            this.LabelTipoJuicio2.Location = new System.Drawing.Point(97, 52);
-            this.LabelTipoJuicio2.Name = "LabelTipoJuicio2";
-            this.LabelTipoJuicio2.Size = new System.Drawing.Size(10, 13);
-            this.LabelTipoJuicio2.TabIndex = 17;
-            this.LabelTipoJuicio2.Text = "-";
+            this.LabelFuero2.AutoSize = true;
+            this.LabelFuero2.Location = new System.Drawing.Point(97, 52);
+            this.LabelFuero2.Name = "LabelFuero2";
+            this.LabelFuero2.Size = new System.Drawing.Size(10, 13);
+            this.LabelFuero2.TabIndex = 17;
+            this.LabelFuero2.Text = "-";
             // 
             // LabelTipoProceso2
             // 
@@ -401,23 +403,14 @@
             this.LabelCaratula2.TabIndex = 21;
             this.LabelCaratula2.Text = "-";
             // 
-            // label24
+            // labelLibro2
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(97, 117);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(10, 13);
-            this.label24.TabIndex = 22;
-            this.label24.Text = "-";
-            // 
-            // LabelEtapa2
-            // 
-            this.LabelEtapa2.AutoSize = true;
-            this.LabelEtapa2.Location = new System.Drawing.Point(97, 168);
-            this.LabelEtapa2.Name = "LabelEtapa2";
-            this.LabelEtapa2.Size = new System.Drawing.Size(10, 13);
-            this.LabelEtapa2.TabIndex = 24;
-            this.LabelEtapa2.Text = "-";
+            this.labelLibro2.AutoSize = true;
+            this.labelLibro2.Location = new System.Drawing.Point(97, 117);
+            this.labelLibro2.Name = "labelLibro2";
+            this.labelLibro2.Size = new System.Drawing.Size(10, 13);
+            this.labelLibro2.TabIndex = 22;
+            this.labelLibro2.Text = "-";
             // 
             // LabelGrupoFamiliar
             // 
@@ -460,18 +453,18 @@
             this.LabelDemandante.AutoSize = true;
             this.LabelDemandante.Location = new System.Drawing.Point(3, 296);
             this.LabelDemandante.Name = "LabelDemandante";
-            this.LabelDemandante.Size = new System.Drawing.Size(71, 13);
+            this.LabelDemandante.Size = new System.Drawing.Size(76, 13);
             this.LabelDemandante.TabIndex = 30;
-            this.LabelDemandante.Text = "Demandante:";
+            this.LabelDemandante.Text = "Demandantes:";
             // 
             // LabelDemandado
             // 
             this.LabelDemandado.AutoSize = true;
-            this.LabelDemandado.Location = new System.Drawing.Point(3, 309);
+            this.LabelDemandado.Location = new System.Drawing.Point(3, 371);
             this.LabelDemandado.Name = "LabelDemandado";
-            this.LabelDemandado.Size = new System.Drawing.Size(68, 13);
+            this.LabelDemandado.Size = new System.Drawing.Size(73, 13);
             this.LabelDemandado.TabIndex = 31;
-            this.LabelDemandado.Text = "Demandado:";
+            this.LabelDemandado.Text = "Demandados:";
             // 
             // LabelJuez2
             // 
@@ -491,15 +484,6 @@
             this.LabelSecretario2.TabIndex = 34;
             this.LabelSecretario2.Text = "-";
             // 
-            // LabelDemandante2
-            // 
-            this.LabelDemandante2.AutoSize = true;
-            this.LabelDemandante2.Location = new System.Drawing.Point(97, 296);
-            this.LabelDemandante2.Name = "LabelDemandante2";
-            this.LabelDemandante2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDemandante2.TabIndex = 35;
-            this.LabelDemandante2.Text = "-";
-            // 
             // LabelPrecio2
             // 
             this.LabelPrecio2.AutoSize = true;
@@ -508,15 +492,6 @@
             this.LabelPrecio2.Size = new System.Drawing.Size(10, 13);
             this.LabelPrecio2.TabIndex = 36;
             this.LabelPrecio2.Text = "-";
-            // 
-            // LabelDemandado2
-            // 
-            this.LabelDemandado2.AutoSize = true;
-            this.LabelDemandado2.Location = new System.Drawing.Point(97, 309);
-            this.LabelDemandado2.Name = "LabelDemandado2";
-            this.LabelDemandado2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDemandado2.TabIndex = 37;
-            this.LabelDemandado2.Text = "-";
             // 
             // LabelJurisdiccion
             // 
@@ -545,37 +520,103 @@
             this.LabelExpediente.TabIndex = 0;
             this.LabelExpediente.Text = "Nro Expediente:";
             // 
-            // BotonVerDocumentacion
+            // CuadroBienes
             // 
-            this.BotonVerDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BotonVerDocumentacion.Enabled = false;
-            this.BotonVerDocumentacion.Location = new System.Drawing.Point(208, 325);
-            this.BotonVerDocumentacion.Name = "BotonVerDocumentacion";
-            this.BotonVerDocumentacion.Size = new System.Drawing.Size(120, 19);
-            this.BotonVerDocumentacion.TabIndex = 177;
-            this.BotonVerDocumentacion.Text = "Ver";
-            this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
+            this.CuadroBienes.Location = new System.Drawing.Point(97, 184);
+            this.CuadroBienes.Multiline = true;
+            this.CuadroBienes.Name = "CuadroBienes";
+            this.CuadroBienes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroBienes.Size = new System.Drawing.Size(342, 32);
+            this.CuadroBienes.TabIndex = 172;
             // 
-            // BotonBuscar
+            // CuadroDescripcion
             // 
-            this.BotonBuscar.Location = new System.Drawing.Point(335, 9);
-            this.BotonBuscar.Name = "BotonBuscar";
-            this.BotonBuscar.Size = new System.Drawing.Size(90, 28);
-            this.BotonBuscar.TabIndex = 96;
-            this.BotonBuscar.Text = "Buscar";
-            this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.CuadroDescripcion.Location = new System.Drawing.Point(97, 133);
+            this.CuadroDescripcion.Multiline = true;
+            this.CuadroDescripcion.Name = "CuadroDescripcion";
+            this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDescripcion.Size = new System.Drawing.Size(342, 32);
+            this.CuadroDescripcion.TabIndex = 173;
+            // 
+            // LabelEtapa2
+            // 
+            this.LabelEtapa2.AutoSize = true;
+            this.LabelEtapa2.Location = new System.Drawing.Point(97, 168);
+            this.LabelEtapa2.Name = "LabelEtapa2";
+            this.LabelEtapa2.Size = new System.Drawing.Size(10, 13);
+            this.LabelEtapa2.TabIndex = 24;
+            this.LabelEtapa2.Text = "-";
+            // 
+            // CuadroGrupoFamiliar
+            // 
+            this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(97, 222);
+            this.CuadroGrupoFamiliar.Multiline = true;
+            this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
+            this.CuadroGrupoFamiliar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(342, 32);
+            this.CuadroGrupoFamiliar.TabIndex = 174;
+            // 
+            // BotonCancelar
+            // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCancelar.Location = new System.Drawing.Point(356, 645);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(95, 22);
+            this.BotonCancelar.TabIndex = 185;
+            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
+            // 
+            // BotonConsultarDemandante
+            // 
+            this.BotonConsultarDemandante.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDemandante.Enabled = false;
+            this.BotonConsultarDemandante.Location = new System.Drawing.Point(457, 382);
+            this.BotonConsultarDemandante.Name = "BotonConsultarDemandante";
+            this.BotonConsultarDemandante.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarDemandante.TabIndex = 181;
+            this.BotonConsultarDemandante.Text = "Consultar";
+            this.BotonConsultarDemandante.UseVisualStyleBackColor = true;
+            this.BotonConsultarDemandante.Click += new System.EventHandler(this.BotonConsultarDemandante_Click);
+            // 
+            // BotonConsultarDemandados
+            // 
+            this.BotonConsultarDemandados.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDemandados.Enabled = false;
+            this.BotonConsultarDemandados.Location = new System.Drawing.Point(457, 457);
+            this.BotonConsultarDemandados.Name = "BotonConsultarDemandados";
+            this.BotonConsultarDemandados.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarDemandados.TabIndex = 183;
+            this.BotonConsultarDemandados.Text = "Consultar";
+            this.BotonConsultarDemandados.UseVisualStyleBackColor = true;
+            this.BotonConsultarDemandados.Click += new System.EventHandler(this.BotonConsultarDemandados_Click);
+            // 
+            // BotonConsultarDocumentos
+            // 
+            this.BotonConsultarDocumentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDocumentos.Enabled = false;
+            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(457, 532);
+            this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
+            this.BotonConsultarDocumentos.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarDocumentos.TabIndex = 184;
+            this.BotonConsultarDocumentos.Text = "Consultar";
+            this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click);
             // 
             // BajaJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 506);
-            this.Controls.Add(this.BotonBuscar);
-            this.Controls.Add(this.Layout);
-            this.Controls.Add(this.BotonBuscarPorOtroCampo);
+            this.ClientSize = new System.Drawing.Size(543, 679);
             this.Controls.Add(this.BotonCancelar);
+            this.Controls.Add(this.BotonConsultarDocumentos);
+            this.Controls.Add(this.BotonConsultarDemandados);
             this.Controls.Add(this.BotonAceptar);
-            this.Controls.Add(this.CuadroNumeroDeExpediente);
+            this.Controls.Add(this.Layout);
+            this.Controls.Add(this.BotonConsultarDemandante);
+            this.Controls.Add(this.BotonBuscar);
+            this.Controls.Add(this.BotonBusquedaAvanzada);
+            this.Controls.Add(this.CuadroNroExpediente);
             this.Controls.Add(this.label1);
             this.Name = "BajaJuicio";
             this.Text = "BajaJuicio";
@@ -588,13 +629,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BotonBuscarPorOtroCampo;
-        private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.TextBox CuadroNumeroDeExpediente;
+        private System.Windows.Forms.Button BotonBusquedaAvanzada;
+        private System.Windows.Forms.TextBox CuadroNroExpediente;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BotonBuscar;
+        private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.TableLayoutPanel Layout;
-        private System.Windows.Forms.Label LabelExpediente;
+        private System.Windows.Forms.ListBox ListBoxDocumentos;
+        private System.Windows.Forms.ListBox ListBoxDemandados;
+        private System.Windows.Forms.ListBox ListBoxDemandantes;
+        private System.Windows.Forms.Label labelDocumentos;
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.Label LabelFolio;
         private System.Windows.Forms.Label LabelFuero;
@@ -603,19 +647,18 @@
         private System.Windows.Forms.Label LabelCompetencia;
         private System.Windows.Forms.Label LabelRecurso;
         private System.Windows.Forms.Label LabelCaratula;
-        private System.Windows.Forms.Label LabelLibro2;
+        private System.Windows.Forms.Label LabelLibro;
         private System.Windows.Forms.Label LabelDescripcion;
         private System.Windows.Forms.Label LabelBienes;
         private System.Windows.Forms.Label LabelFecha2;
         private System.Windows.Forms.Label LabelFolio2;
         private System.Windows.Forms.Label LabelJurisdiccion2;
-        private System.Windows.Forms.Label LabelTipoJuicio2;
+        private System.Windows.Forms.Label LabelFuero2;
         private System.Windows.Forms.Label LabelTipoProceso2;
         private System.Windows.Forms.Label LabelCompetencia2;
         private System.Windows.Forms.Label LabelRecurso2;
         private System.Windows.Forms.Label LabelCaratula2;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label LabelEtapa2;
+        private System.Windows.Forms.Label labelLibro2;
         private System.Windows.Forms.Label LabelGrupoFamiliar;
         private System.Windows.Forms.Label LabelJuez;
         private System.Windows.Forms.Label LabelSecretario;
@@ -624,16 +667,17 @@
         private System.Windows.Forms.Label LabelDemandado;
         private System.Windows.Forms.Label LabelJuez2;
         private System.Windows.Forms.Label LabelSecretario2;
-        private System.Windows.Forms.Label LabelDemandante2;
         private System.Windows.Forms.Label LabelPrecio2;
-        private System.Windows.Forms.Label LabelDemandado2;
         private System.Windows.Forms.Label LabelJurisdiccion;
         private System.Windows.Forms.Label LabelEtapa;
-        private System.Windows.Forms.Button BotonBuscar;
-        private System.Windows.Forms.Label labelDocumentos;
-        private System.Windows.Forms.Button BotonVerDocumentacion;
-        private System.Windows.Forms.TextBox CuadroDescripcion;
-        private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
+        private System.Windows.Forms.Label LabelExpediente;
         private System.Windows.Forms.TextBox CuadroBienes;
+        private System.Windows.Forms.TextBox CuadroDescripcion;
+        private System.Windows.Forms.Label LabelEtapa2;
+        private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
+        private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.Button BotonConsultarDemandante;
+        private System.Windows.Forms.Button BotonConsultarDemandados;
+        private System.Windows.Forms.Button BotonConsultarDocumentos;
     }
 }

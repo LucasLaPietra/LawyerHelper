@@ -44,6 +44,12 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
+        public void BajaLogicaPersona(Persona pPersona)
+        {
+            iUdT.RepositorioPersona.BajaLogicaPersona(pPersona);
+            //iUdT.Guardar();
+        }
+
         public Persona ObtenerPersona(int pId)
         {
             return iUdT.RepositorioPersona.Obtener(pId);

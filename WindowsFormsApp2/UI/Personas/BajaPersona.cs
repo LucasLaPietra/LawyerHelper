@@ -66,7 +66,7 @@ namespace LawyerHelper.UI.Personas
 
                 if (iMensaje == DialogResult.Yes)
                 {
-                    iControladorPersona.BajaPersona(iPersona);
+                    iControladorPersona.BajaLogicaPersona(iPersona);
                     MessageBox.Show("Persona dada de baja con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }                
