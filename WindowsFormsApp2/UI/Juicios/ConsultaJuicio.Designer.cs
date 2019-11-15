@@ -77,7 +77,6 @@
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonConsultarDemandados = new System.Windows.Forms.Button();
             this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
-            this.BotonMostrarTodo = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -590,15 +589,6 @@
             this.BotonConsultarDocumentos.Text = "Consultar";
             this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
             // 
-            // BotonMostrarTodo
-            // 
-            this.BotonMostrarTodo.Location = new System.Drawing.Point(359, 64);
-            this.BotonMostrarTodo.Name = "BotonMostrarTodo";
-            this.BotonMostrarTodo.Size = new System.Drawing.Size(172, 23);
-            this.BotonMostrarTodo.TabIndex = 4;
-            this.BotonMostrarTodo.Text = "Mostrar todos los juicios";
-            this.BotonMostrarTodo.UseVisualStyleBackColor = true;
-            // 
             // ConsultaJuicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -608,7 +598,6 @@
             this.Controls.Add(this.BotonConsultarDemandados);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.Layout);
-            this.Controls.Add(this.BotonMostrarTodo);
             this.Controls.Add(this.BotonBusquedaAvanzada);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.CuadroNroExpediente);
@@ -673,7 +662,6 @@
         private System.Windows.Forms.ListBox ListBoxDocumentos;
         private System.Windows.Forms.Button BotonConsultarDemandados;
         private System.Windows.Forms.Button BotonConsultarDocumentos;
-        private System.Windows.Forms.Button BotonMostrarTodo;
         private System.Windows.Forms.TableLayoutPanel Layout;
     }
 }

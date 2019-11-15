@@ -31,7 +31,43 @@ namespace LawyerHelper.UI.Personas
 
         }
 
-     
+        public ConsultaPersona(Persona pPersona)
+        {
+            InitializeComponent();
+            iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
+            //Asignacion de colores  
+            iFachada.AsignarColores(this);
+
+            BotonBuscar.Enabled = false;
+            BotonBuscar.Visible = false;
+            BotonBusquedaAvanzada.Enabled = false;
+            BotonBusquedaAvanzada.Visible = false;
+            CuadroApellido.ReadOnly = true;
+            CuadroNombre.ReadOnly = true;
+
+            CuadroNombre.Text = pPersona.Nombre;
+            CuadroApellido.Text = pPersona.Apellido;
+            LabelDNI2.Text = pPersona.Dni;
+            LabelDomicilio2.Text = pPersona.Domicilio;
+            LabelDomicilioLegal2.Text = pPersona.DomicilioLegal;
+            LabelEstadoCivil2.Text = pPersona.EstadoCivil;
+            LabelFechaNacimiento2.Text = pPersona.FechaNacimiento.ToShortDateString();
+            LabelLugarTrabajo2.Text = pPersona.LugarTrabajo;
+            LabelProfesion2.Text = pPersona.Profesion;
+            LabelRepresentante2.Text = pPersona.Representante;
+            LabelTelefono2.Text = pPersona.Telefono;
+
+            iJuicios = iControladorPersona.ObtenerJuicios(pPersona.PersonaId).ToList();
+            iCobros = pPersona.Cobros.ToList();
+            ListBoxJuicios.DataSource = iJuicios;
+            ListBoxJuicios.DisplayMember = "NroExpediente";
+            ListBoxCobros.DataSource = iCobros;
+            ListBoxCobros.DisplayMember = "Descripcion";
+
+        }
+
+
+
 
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
@@ -58,6 +94,13 @@ namespace LawyerHelper.UI.Personas
                 LabelProfesion2.Text = iPersona.Profesion;
                 LabelRepresentante2.Text = iPersona.Representante;
                 LabelTelefono2.Text = iPersona.Telefono;
+
+                iJuicios = iControladorPersona.ObtenerJuicios(iPersona.PersonaId).ToList();
+                iCobros = iPersona.Cobros.ToList();
+                ListBoxJuicios.DataSource = iJuicios;
+                ListBoxJuicios.DisplayMember = "NroExpediente";
+                ListBoxCobros.DataSource = iCobros;
+                ListBoxCobros.DisplayMember = "Descripcion";
             }
         }
 

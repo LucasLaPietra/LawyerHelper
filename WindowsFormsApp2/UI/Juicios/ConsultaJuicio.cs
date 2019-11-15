@@ -30,7 +30,47 @@ namespace WindowsFormsApp2.Juicios
             //Asignacion de colores      
             iFachada.AsignarColores(this);
         }
-        
+
+        public ConsultaJuicios(Juicio pJuicio)
+        {
+            InitializeComponent();
+            iControladorJuicio = new ControladorJuicio(UnidadDeTrabajo.Instancia);
+            //Asignacion de colores      
+            iFachada.AsignarColores(this);
+
+            BotonBuscar.Enabled = false;
+            BotonBuscar.Visible = false;
+            BotonBusquedaAvanzada.Enabled = false;
+            BotonBusquedaAvanzada.Visible = false;
+            CuadroNroExpediente.ReadOnly = true;
+            CuadroNroExpediente.Text = pJuicio.NroExpediente;
+
+            CuadroBienes.Text = pJuicio.Bienes;
+            CuadroDescripcion.Text = pJuicio.Descripcion;
+            CuadroGrupoFamiliar.Text = pJuicio.GrupoFamiliar;
+            LabelCaratula2.Text = pJuicio.Caratula;
+            LabelCompetencia2.Text = pJuicio.Competencia;
+            LabelEtapa2.Text = pJuicio.Etapa;
+            LabelExpediente2.Text = pJuicio.NroExpediente;
+            LabelFecha2.Text = pJuicio.Fecha.ToShortDateString();
+            LabelFolio2.Text = pJuicio.Folio;
+            LabelJuez2.Text = pJuicio.Juez;
+            LabelJurisdiccion2.Text = pJuicio.Jurisdiccion;
+            labelLibro2.Text = pJuicio.Libro;
+            LabelPrecio2.Text = pJuicio.Precio.ToString();
+            LabelRecurso2.Text = pJuicio.Recurso;
+            LabelSecretario2.Text = pJuicio.Secretario;
+            LabelTipoProceso2.Text = pJuicio.TipoProceso;
+            LabelFuero2.Text = pJuicio.Fuero;
+
+            iDemandados = pJuicio.Demandados.ToList();
+            iDemandantes = pJuicio.Demandantes.ToList();
+            ListBoxDemandados.DataSource = iDemandados;
+            ListBoxDemandados.DisplayMember = "Descripcion";
+            ListBoxDemandantes.DataSource = iDemandantes;
+            ListBoxDemandantes.DisplayMember = "Descripcion";
+        }
+
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -59,8 +99,8 @@ namespace WindowsFormsApp2.Juicios
 
         private void BotonBuscar_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 iJuicio = iControladorJuicio.BusquedaPorNroExpediente(CuadroNroExpediente.Text);
                 CuadroBienes.Text = iJuicio.Bienes;
                 CuadroDescripcion.Text = iJuicio.Descripcion;
@@ -86,11 +126,11 @@ namespace WindowsFormsApp2.Juicios
                 ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
                 ListBoxDemandantes.DisplayMember = "Descripcion";
-            //}
-            //catch (Exception)
-            //{
-             //   MessageBox.Show("Error al buscar el juicio, verifique que los campos sean correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
+            }
+            catch (Exception)
+            {
+               MessageBox.Show("Error al buscar el juicio, verifique que los campos sean correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)

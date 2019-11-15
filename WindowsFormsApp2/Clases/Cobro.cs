@@ -18,7 +18,11 @@ namespace LawyerHelper.Clases
 
         public bool Activo {get;  set;}
 
-        
+        public string Descripcion
+        {
+            get { return FechayHora.ToShortDateString() + "- Juicio:" + Juicio.NroExpediente + "-Persona:" + Persona.NombreyAp; }
+        }
+
         public Cobro(double pImporte, DateTime pFechayHora, String pDetalle, Juicio pJuicio, Persona pPersona)
         {
             this.Importe = pImporte;

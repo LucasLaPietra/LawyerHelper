@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace LawyerHelper.DAL.Repositorio
 {
@@ -17,7 +18,8 @@ namespace LawyerHelper.DAL.Repositorio
 
         public IList<Cobro> BusquedaCobroPorFecha(DateTime pFecha)
         {
-            List<Cobro> iQuery = iContext.Cobros.Where(n => n.FechayHora.Date == pFecha.Date).ToList();
+            DateTime iFecha = Convert.ToDateTime(pFecha.Date);
+            List<Cobro> iQuery = iContext.Cobros.Where(n => DbFunctions.TruncateTime(n.FechayHora) == iFecha).ToList();
             return iQuery;
         }
     }
