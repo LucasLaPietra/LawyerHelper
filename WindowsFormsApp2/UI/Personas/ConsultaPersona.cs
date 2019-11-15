@@ -79,7 +79,7 @@ namespace LawyerHelper.UI.Personas
                 iJuicios = iControladorPersona.ObtenerJuicios(iPersona.PersonaId).ToList();
                 iCobros = iPersona.Cobros.ToList();
                 ListBoxJuicios.DataSource = iJuicios;
-                ListBoxJuicios.DisplayMember = "NumeroDeExpediente";
+                ListBoxJuicios.DisplayMember = "NroExpediente";
                 ListBoxCobros.DataSource = iCobros;
                 ListBoxCobros.DisplayMember = "Descripcion";
             }

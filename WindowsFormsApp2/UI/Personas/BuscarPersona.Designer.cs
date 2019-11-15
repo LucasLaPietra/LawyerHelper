@@ -349,7 +349,7 @@
             this.BotonMostrarTodos.Name = "BotonMostrarTodos";
             this.BotonMostrarTodos.Size = new System.Drawing.Size(434, 30);
             this.BotonMostrarTodos.TabIndex = 99;
-            this.BotonMostrarTodos.Text = "Mostrar todos los juicios";
+            this.BotonMostrarTodos.Text = "Mostrar todos las personas";
             this.BotonMostrarTodos.UseVisualStyleBackColor = true;
             this.BotonMostrarTodos.Click += new System.EventHandler(this.BotonMostrarTodos_Click);
             // 

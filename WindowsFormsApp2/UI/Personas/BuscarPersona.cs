@@ -54,7 +54,14 @@ namespace LawyerHelper.UI.Personas
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-            iResultado = ComboBoxResultados.SelectedItem;            
+            try
+            {
+                iResultado = ComboBoxResultados.SelectedItem;
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Debe seleccionar una persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)

@@ -25,6 +25,7 @@ namespace LawyerHelper.UI.Juicios
             set { iResultado = value; }
         }
         Fachada iFachada = new Fachada();
+        List<Juicio> iResultados;
         ControladorJuicio iControladorJuicio;
         public BuscarJuicio()
         {
@@ -35,12 +36,43 @@ namespace LawyerHelper.UI.Juicios
 
         private void BotonMostrarTodos_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                iResultados = iControladorJuicio.MostrarJuicios().ToList();
+                ComboBoxResultados.DataSource = iResultados;
+                ComboBoxResultados.DisplayMember = "NroExpediente";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al mostrar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                iResultado = ComboBoxResultados.SelectedItem;
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Debe seleccionar un juicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
 
+        private void BotonBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                iResultados = iControladorJuicio.BusquedaAvanzadaJuicio(comboBoxParametro.SelectedItem.ToString(), CuadroParametro.Text).ToList();
+                ComboBoxResultados.DataSource = iResultados;
+                ComboBoxResultados.DisplayMember = "NroExpediente";
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al buscar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

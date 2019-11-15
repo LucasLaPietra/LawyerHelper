@@ -83,9 +83,9 @@ namespace WindowsFormsApp2.Juicios
                 iDemandados = iJuicio.Demandados.ToList();
                 iDemandantes = iJuicio.Demandantes.ToList();
                 ListBoxDemandados.DataSource = iDemandados;
-                ListBoxDemandados.DisplayMember = "NombreyAp";
+                ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
-                ListBoxDemandantes.DisplayMember = "NombreyAp";
+                ListBoxDemandantes.DisplayMember = "Descripcion";
             //}
             //catch (Exception)
             //{

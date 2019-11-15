@@ -99,6 +99,7 @@
             this.BotonBuscar.TabIndex = 95;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // CuadroParametro
             // 
@@ -119,6 +120,24 @@
             // comboBoxParametro
             // 
             this.comboBoxParametro.FormattingEnabled = true;
+            this.comboBoxParametro.Items.AddRange(new object[] {
+            "NroExpediente",
+            "Juez",
+            "Secretario",
+            "Etapa",
+            "Descripcion",
+            "Bienes",
+            "Fecha",
+            "GrupoFamiliar",
+            "TipoProceso",
+            "Recurso",
+            "Competencia",
+            "Fuero",
+            "Caratula",
+            "Folio",
+            "Libro",
+            "Jurisdiccion",
+            "Precio"});
             this.comboBoxParametro.Location = new System.Drawing.Point(196, 15);
             this.comboBoxParametro.Name = "comboBoxParametro";
             this.comboBoxParametro.Size = new System.Drawing.Size(202, 21);

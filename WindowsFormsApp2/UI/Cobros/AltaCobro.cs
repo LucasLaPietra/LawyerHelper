@@ -79,7 +79,7 @@ namespace WindowsFormsApp2.Cobros
             if (iMenuNuevo.ShowDialog() == DialogResult.OK)
             {
                 iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
-                CuadroPersona.Text = iJuicio.NroExpediente;
+                CuadroJuicio.Text = iJuicio.NroExpediente;
             }
         }
     }
