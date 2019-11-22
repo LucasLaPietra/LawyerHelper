@@ -106,37 +106,9 @@
     <Compile Include="DAL\Repositorio\RepositorioPersona.cs" />
     <Compile Include="DAL\Repositorio\RepositorioRecordatorio.cs" />
     <Compile Include="DAL\Repositorio\UnidadDeTrabajo.cs" />
-    <Compile Include="Migrations\201910102123275_prueba.cs" />
-    <Compile Include="Migrations\201910102123275_prueba.Designer.cs">
-      <DependentUpon>201910102123275_prueba.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201910111848100_lucasp.cs" />
-    <Compile Include="Migrations\201910111848100_lucasp.Designer.cs">
-      <DependentUpon>201910111848100_lucasp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911011500561_Nueva.cs" />
-    <Compile Include="Migrations\201911011500561_Nueva.Designer.cs">
-      <DependentUpon>201911011500561_Nueva.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911022238579_Nueva1.cs" />
-    <Compile Include="Migrations\201911022238579_Nueva1.Designer.cs">
-      <DependentUpon>201911022238579_Nueva1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911130129521_virtual.cs" />
-    <Compile Include="Migrations\201911130129521_virtual.Designer.cs">
-      <DependentUpon>201911130129521_virtual.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911151501329_15-11.cs" />
-    <Compile Include="Migrations\201911151501329_15-11.Designer.cs">
-      <DependentUpon>201911151501329_15-11.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911220041430_documentos corregidos.cs" />
-    <Compile Include="Migrations\201911220041430_documentos corregidos.Designer.cs">
-      <DependentUpon>201911220041430_documentos corregidos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201911221435500_neva3.cs" />
-    <Compile Include="Migrations\201911221435500_neva3.Designer.cs">
-      <DependentUpon>201911221435500_neva3.cs</DependentUpon>
+    <Compile Include="Migrations\201911221737123_ad.cs" />
+    <Compile Include="Migrations\201911221737123_ad.Designer.cs">
+      <DependentUpon>201911221737123_ad.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -399,29 +371,8 @@
     <Compile Include="UI\Personas\MenuPersonasUC.Designer.cs">
       <DependentUpon>MenuPersonasUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\201910102123275_prueba.resx">
-      <DependentUpon>201910102123275_prueba.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201910111848100_lucasp.resx">
-      <DependentUpon>201910111848100_lucasp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911011500561_Nueva.resx">
-      <DependentUpon>201911011500561_Nueva.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911022238579_Nueva1.resx">
-      <DependentUpon>201911022238579_Nueva1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911130129521_virtual.resx">
-      <DependentUpon>201911130129521_virtual.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911151501329_15-11.resx">
-      <DependentUpon>201911151501329_15-11.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911220041430_documentos corregidos.resx">
-      <DependentUpon>201911220041430_documentos corregidos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201911221435500_neva3.resx">
-      <DependentUpon>201911221435500_neva3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201911221737123_ad.resx">
+      <DependentUpon>201911221737123_ad.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\AltaRecordatorio.resx">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>

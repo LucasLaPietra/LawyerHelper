@@ -31,13 +31,14 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-        public void ModificarDocumento(string pNroFoja,string pTipoDocumento, bool pEnExpediente, string pNombre, string pDetalle, DateTime pFecha,Juicio pJuicio)
+        public void ModificarDocumento(int pId, string pNroFoja,string pTipoDocumento, bool pEnExpediente, string pNombre, string pDetalle, DateTime pFecha,Juicio pJuicio)
         {
             Documento iDocumento = new Documento(pTipoDocumento, pNroFoja,pEnExpediente, pNombre, pDetalle, pFecha, pJuicio);
+            iDocumento.DocumentoId = pId;
             iUdT.RepositorioDocumento.Modificar(iDocumento);
-            iUdT.RepositorioDocumento.ModificarDocumento(iDocumento);
+            //iUdT.RepositorioDocumento.ModificarDocumento(iDocumento);
             //no me deja utilizar el savechanges de la unit of work, pero si si la hago desde el repositorio
-            //iUdT.Guardar();
+            iUdT.Guardar();
         }
 
         public void BajaDocumento(Documento pDocumento)

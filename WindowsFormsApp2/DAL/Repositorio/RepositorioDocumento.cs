@@ -31,8 +31,7 @@ namespace LawyerHelper.DAL.Repositorio
         public void ModificarDocumento(Documento pDocumento)
         {
             Documento iQuery;
-            List<Documento> ListaPorJuicio = iContext.Documentos.Where(n => n.Juicio.JuicioId == pDocumento.Juicio.JuicioId).ToList();
-            iQuery = ListaPorJuicio.First(n => n.NroFoja == (pDocumento.NroFoja));
+            iQuery = iContext.Documentos.First(n => n.Juicio.JuicioId == pDocumento.Juicio.JuicioId && n.NroFoja == (pDocumento.NroFoja));            
             iQuery.Fecha = pDocumento.Fecha;
             iQuery.EnExpediente = pDocumento.EnExpediente;
             iQuery.Detalle = pDocumento.Detalle;

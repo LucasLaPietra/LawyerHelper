@@ -37,7 +37,7 @@ namespace LawyerHelper.Clases
 
         public IList<Documento> DocumentosActivos
         {
-            get { return Documentos.Where(n => n.Activo == true).ToList(); }
+            get { return null; }
         }
 
 

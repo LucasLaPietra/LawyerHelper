@@ -42,7 +42,9 @@ namespace LawyerHelper.DAL.Repositorio
             {
                 throw new NullReferenceException(nameof(pEntity));
             }
-            this.iContext.Entry(pEntity).State = EntityState.Modified;
+            this.iContext.Set<TEntity>().Attach(pEntity);
+            var entry = iContext.Entry(pEntity);
+            entry.State = EntityState.Modified;
         }
         
         public TEntity Obtener(int pId)

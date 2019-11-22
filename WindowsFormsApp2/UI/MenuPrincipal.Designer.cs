@@ -135,7 +135,7 @@
             this.BotonCobros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonCobros.Image = global::LawyerHelper.Properties.Resources.tag;
             this.BotonCobros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonCobros.Location = new System.Drawing.Point(-1, 344);
+            this.BotonCobros.Location = new System.Drawing.Point(-1, 342);
             this.BotonCobros.Name = "BotonCobros";
             this.BotonCobros.Size = new System.Drawing.Size(210, 75);
             this.BotonCobros.TabIndex = 4;
@@ -152,7 +152,7 @@
             this.BotonPagos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonPagos.Image = global::LawyerHelper.Properties.Resources.tag;
             this.BotonPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonPagos.Location = new System.Drawing.Point(-1, 419);
+            this.BotonPagos.Location = new System.Drawing.Point(-1, 416);
             this.BotonPagos.Name = "BotonPagos";
             this.BotonPagos.Size = new System.Drawing.Size(210, 75);
             this.BotonPagos.TabIndex = 3;
@@ -169,7 +169,7 @@
             this.BotonAgenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonAgenda.Image = global::LawyerHelper.Properties.Resources.calendar;
             this.BotonAgenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonAgenda.Location = new System.Drawing.Point(-1, 270);
+            this.BotonAgenda.Location = new System.Drawing.Point(-1, 268);
             this.BotonAgenda.Name = "BotonAgenda";
             this.BotonAgenda.Size = new System.Drawing.Size(210, 75);
             this.BotonAgenda.TabIndex = 2;
@@ -203,7 +203,7 @@
             this.BotonPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonPersonas.Image = global::LawyerHelper.Properties.Resources.user_4;
             this.BotonPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonPersonas.Location = new System.Drawing.Point(-1, 120);
+            this.BotonPersonas.Location = new System.Drawing.Point(-1, 121);
             this.BotonPersonas.Name = "BotonPersonas";
             this.BotonPersonas.Size = new System.Drawing.Size(210, 75);
             this.BotonPersonas.TabIndex = 0;
