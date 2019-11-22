@@ -29,7 +29,13 @@ namespace LawyerHelper.Clases
             this.Nombre = pNombre;
             this.Detalle = pDetalle;
             this.Fecha = pFecha;
+            this.Juicio = pJuicio;
             this.Activo = true;
+        }
+
+        public Documento()
+        {
+           
         }
     }
 }

@@ -130,6 +130,10 @@
     <Compile Include="Migrations\201911151501329_15-11.Designer.cs">
       <DependentUpon>201911151501329_15-11.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201911220041430_documentos corregidos.cs" />
+    <Compile Include="Migrations\201911220041430_documentos corregidos.Designer.cs">
+      <DependentUpon>201911220041430_documentos corregidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -408,6 +412,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911151501329_15-11.resx">
       <DependentUpon>201911151501329_15-11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911220041430_documentos corregidos.resx">
+      <DependentUpon>201911220041430_documentos corregidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\AltaRecordatorio.resx">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>

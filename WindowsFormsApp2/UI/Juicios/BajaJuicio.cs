@@ -46,7 +46,7 @@ namespace LawyerHelper.UI.Juicios
 
         private void BotonConsultarDocumentos_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)
