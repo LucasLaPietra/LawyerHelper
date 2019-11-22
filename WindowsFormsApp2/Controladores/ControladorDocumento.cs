@@ -31,7 +31,16 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-         public void BajaDocumento(Documento pDocumento)
+        public void ModificarDocumento(string pNroFoja,string pTipoDocumento, bool pEnExpediente, string pNombre, string pDetalle, DateTime pFecha,Juicio pJuicio)
+        {
+            Documento iDocumento = new Documento(pTipoDocumento, pNroFoja,pEnExpediente, pNombre, pDetalle, pFecha, pJuicio);
+            iUdT.RepositorioDocumento.Modificar(iDocumento);
+            iUdT.RepositorioDocumento.ModificarDocumento(iDocumento);
+            //no me deja utilizar el savechanges de la unit of work, pero si si la hago desde el repositorio
+            //iUdT.Guardar();
+        }
+
+        public void BajaDocumento(Documento pDocumento)
         {
             iUdT.RepositorioDocumento.Eliminar(pDocumento);
             iUdT.Guardar();
@@ -39,8 +48,8 @@ namespace LawyerHelper.Controladores
 
         public Documento BusquedaPorNroFoja(string pNroFoja)
         {
-            Documento iDocumento = iUdT.RepositorioDocumento.BusquedaPorNroFoja(pNroFoja);
-            return iDocumento;
+            //Documento iDocumento = iUdT.RepositorioDocumento.BusquedaPorNroFoja(pNroFoja);
+            return null;
         }
 
 

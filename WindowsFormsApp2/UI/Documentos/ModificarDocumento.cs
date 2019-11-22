@@ -19,6 +19,7 @@ namespace LawyerHelper.UI.Documentos
     {
         ControladorDocumento iControladorDocumento;
         Fachada iFachada = new Fachada();
+        Documento iDocumento;
         public ModificarDocumento()
         {
             InitializeComponent();
@@ -29,6 +30,46 @@ namespace LawyerHelper.UI.Documentos
         }
 
         private void ModificarDocumento_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                iDocumento = iControladorDocumento.BusquedaPorNroFoja(CuadroNumeroFoja.Text);
+                CuadroDetalle.Text = iDocumento.Detalle;
+                TimePickerFecha.Value = iDocumento.Fecha;
+                CuadroNumeroFoja.Text = iDocumento.NroFoja;
+                CuadroNombreDocumento.Text = iDocumento.Nombre;
+                CuadroTipo.Text = iDocumento.TipoDocumento;
+                CheckEnExpediente.Checked = iDocumento.EnExpediente;
+
+                CuadroJuicio.Text = iDocumento.Juicio.NroExpediente;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al buscar el documento, verifique que el numero de foja sea correcto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BotonConsultarJuicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonCambiarJuicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonAceptar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonCancelar_Click(object sender, EventArgs e)
         {
 
         }

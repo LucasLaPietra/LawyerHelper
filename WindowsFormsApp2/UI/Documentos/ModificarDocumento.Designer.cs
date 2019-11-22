@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             this.TimePickerFecha = new System.Windows.Forms.DateTimePicker();
-            this.ComboBoxTipoDocumento = new System.Windows.Forms.ComboBox();
             this.CuadroNumeroFoja = new System.Windows.Forms.TextBox();
             this.CuadroNombreDocumento = new System.Windows.Forms.TextBox();
-            this.CheckVuelta = new System.Windows.Forms.CheckBox();
             this.CheckEnExpediente = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,6 +42,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.CuadroDetalle = new System.Windows.Forms.TextBox();
+            this.BotonConsultarJuicio = new System.Windows.Forms.Button();
+            this.CuadroJuicio = new System.Windows.Forms.TextBox();
+            this.LabelJuicio = new System.Windows.Forms.Label();
+            this.BotonCambiarJuicio = new System.Windows.Forms.Button();
+            this.CuadroTipo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // TimePickerFecha
@@ -54,19 +56,11 @@
             this.TimePickerFecha.Size = new System.Drawing.Size(276, 20);
             this.TimePickerFecha.TabIndex = 38;
             // 
-            // ComboBoxTipoDocumento
-            // 
-            this.ComboBoxTipoDocumento.FormattingEnabled = true;
-            this.ComboBoxTipoDocumento.Location = new System.Drawing.Point(148, 142);
-            this.ComboBoxTipoDocumento.Name = "ComboBoxTipoDocumento";
-            this.ComboBoxTipoDocumento.Size = new System.Drawing.Size(277, 21);
-            this.ComboBoxTipoDocumento.TabIndex = 37;
-            // 
             // CuadroNumeroFoja
             // 
             this.CuadroNumeroFoja.Location = new System.Drawing.Point(108, 25);
             this.CuadroNumeroFoja.Name = "CuadroNumeroFoja";
-            this.CuadroNumeroFoja.Size = new System.Drawing.Size(243, 20);
+            this.CuadroNumeroFoja.Size = new System.Drawing.Size(262, 20);
             this.CuadroNumeroFoja.TabIndex = 35;
             // 
             // CuadroNombreDocumento
@@ -75,16 +69,6 @@
             this.CuadroNombreDocumento.Name = "CuadroNombreDocumento";
             this.CuadroNombreDocumento.Size = new System.Drawing.Size(277, 20);
             this.CuadroNombreDocumento.TabIndex = 34;
-            // 
-            // CheckVuelta
-            // 
-            this.CheckVuelta.AutoSize = true;
-            this.CheckVuelta.Location = new System.Drawing.Point(149, 412);
-            this.CheckVuelta.Name = "CheckVuelta";
-            this.CheckVuelta.Size = new System.Drawing.Size(35, 17);
-            this.CheckVuelta.TabIndex = 33;
-            this.CheckVuelta.Text = "Si";
-            this.CheckVuelta.UseVisualStyleBackColor = true;
             // 
             // CheckEnExpediente
             // 
@@ -96,15 +80,6 @@
             this.CheckEnExpediente.Text = "Si";
             this.CheckEnExpediente.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 414);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 13);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Vuelta";
-            // 
             // BotonCancelar
             // 
             this.BotonCancelar.Location = new System.Drawing.Point(275, 457);
@@ -113,6 +88,7 @@
             this.BotonCancelar.TabIndex = 30;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonAceptar
             // 
@@ -122,6 +98,7 @@
             this.BotonAceptar.TabIndex = 29;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // label6
             // 
@@ -185,6 +162,7 @@
             this.BotonBuscar.TabIndex = 39;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // CuadroDetalle
             // 
@@ -195,20 +173,68 @@
             this.CuadroDetalle.Size = new System.Drawing.Size(304, 108);
             this.CuadroDetalle.TabIndex = 172;
             // 
+            // BotonConsultarJuicio
+            // 
+            this.BotonConsultarJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonConsultarJuicio.Location = new System.Drawing.Point(296, 412);
+            this.BotonConsultarJuicio.Name = "BotonConsultarJuicio";
+            this.BotonConsultarJuicio.Size = new System.Drawing.Size(75, 23);
+            this.BotonConsultarJuicio.TabIndex = 223;
+            this.BotonConsultarJuicio.Text = "Consultar";
+            this.BotonConsultarJuicio.UseVisualStyleBackColor = true;
+            this.BotonConsultarJuicio.Click += new System.EventHandler(this.BotonConsultarJuicio_Click);
+            // 
+            // CuadroJuicio
+            // 
+            this.CuadroJuicio.Location = new System.Drawing.Point(149, 414);
+            this.CuadroJuicio.Name = "CuadroJuicio";
+            this.CuadroJuicio.Size = new System.Drawing.Size(141, 20);
+            this.CuadroJuicio.TabIndex = 222;
+            this.CuadroJuicio.Text = "Ninguno";
+            // 
+            // LabelJuicio
+            // 
+            this.LabelJuicio.AutoSize = true;
+            this.LabelJuicio.Location = new System.Drawing.Point(27, 417);
+            this.LabelJuicio.Name = "LabelJuicio";
+            this.LabelJuicio.Size = new System.Drawing.Size(37, 13);
+            this.LabelJuicio.TabIndex = 221;
+            this.LabelJuicio.Text = "Juicio:";
+            // 
+            // BotonCambiarJuicio
+            // 
+            this.BotonCambiarJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCambiarJuicio.Location = new System.Drawing.Point(377, 412);
+            this.BotonCambiarJuicio.Name = "BotonCambiarJuicio";
+            this.BotonCambiarJuicio.Size = new System.Drawing.Size(75, 23);
+            this.BotonCambiarJuicio.TabIndex = 224;
+            this.BotonCambiarJuicio.Text = "Cambiar";
+            this.BotonCambiarJuicio.UseVisualStyleBackColor = true;
+            this.BotonCambiarJuicio.Click += new System.EventHandler(this.BotonCambiarJuicio_Click);
+            // 
+            // CuadroTipo
+            // 
+            this.CuadroTipo.Location = new System.Drawing.Point(148, 143);
+            this.CuadroTipo.Name = "CuadroTipo";
+            this.CuadroTipo.Size = new System.Drawing.Size(277, 20);
+            this.CuadroTipo.TabIndex = 225;
+            // 
             // ModificarDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 496);
+            this.Controls.Add(this.CuadroTipo);
+            this.Controls.Add(this.BotonCambiarJuicio);
+            this.Controls.Add(this.BotonConsultarJuicio);
+            this.Controls.Add(this.CuadroJuicio);
+            this.Controls.Add(this.LabelJuicio);
             this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.TimePickerFecha);
-            this.Controls.Add(this.ComboBoxTipoDocumento);
             this.Controls.Add(this.CuadroNumeroFoja);
             this.Controls.Add(this.CuadroNombreDocumento);
-            this.Controls.Add(this.CheckVuelta);
             this.Controls.Add(this.CheckEnExpediente);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.label6);
@@ -228,12 +254,9 @@
         #endregion
 
         private System.Windows.Forms.DateTimePicker TimePickerFecha;
-        private System.Windows.Forms.ComboBox ComboBoxTipoDocumento;
         private System.Windows.Forms.TextBox CuadroNumeroFoja;
         private System.Windows.Forms.TextBox CuadroNombreDocumento;
-        private System.Windows.Forms.CheckBox CheckVuelta;
         private System.Windows.Forms.CheckBox CheckEnExpediente;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Label label6;
@@ -244,5 +267,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.TextBox CuadroDetalle;
+        private System.Windows.Forms.Button BotonConsultarJuicio;
+        private System.Windows.Forms.TextBox CuadroJuicio;
+        private System.Windows.Forms.Label LabelJuicio;
+        private System.Windows.Forms.Button BotonCambiarJuicio;
+        private System.Windows.Forms.TextBox CuadroTipo;
     }
 }

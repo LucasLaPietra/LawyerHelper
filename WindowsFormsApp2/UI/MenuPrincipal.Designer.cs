@@ -28,17 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPrincipal));
             this.LabelTitulo = new System.Windows.Forms.Label();
             this.LabelCreditos = new System.Windows.Forms.Label();
             this.PanelOpciones = new System.Windows.Forms.Panel();
             this.FlechaPagos = new System.Windows.Forms.PictureBox();
             this.FlechaCobros = new System.Windows.Forms.PictureBox();
-            this.FlechaDocumentos = new System.Windows.Forms.PictureBox();
             this.FlechaAgenda = new System.Windows.Forms.PictureBox();
             this.FlechaJuicios = new System.Windows.Forms.PictureBox();
             this.FlechaPersonas = new System.Windows.Forms.PictureBox();
-            this.BotonDocumentos = new System.Windows.Forms.Button();
             this.BotonCobros = new System.Windows.Forms.Button();
             this.BotonPagos = new System.Windows.Forms.Button();
             this.BotonAgenda = new System.Windows.Forms.Button();
@@ -46,7 +43,6 @@
             this.BotonPersonas = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaPagos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaCobros)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaDocumentos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaAgenda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaJuicios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaPersonas)).BeginInit();
@@ -66,11 +62,11 @@
             // LabelCreditos
             // 
             this.LabelCreditos.AutoSize = true;
-            this.LabelCreditos.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelCreditos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.LabelCreditos.Location = new System.Drawing.Point(257, 639);
             this.LabelCreditos.Name = "LabelCreditos";
-            this.LabelCreditos.Size = new System.Drawing.Size(215, 13);
+            this.LabelCreditos.Size = new System.Drawing.Size(207, 13);
             this.LabelCreditos.TabIndex = 6;
             this.LabelCreditos.Text = "Alba, Chrispens, La Pietra, Retamar - 2019";
             // 
@@ -84,7 +80,7 @@
             // FlechaPagos
             // 
             this.FlechaPagos.Image = global::LawyerHelper.Properties.Resources.flechita;
-            this.FlechaPagos.Location = new System.Drawing.Point(215, 522);
+            this.FlechaPagos.Location = new System.Drawing.Point(215, 444);
             this.FlechaPagos.Name = "FlechaPagos";
             this.FlechaPagos.Size = new System.Drawing.Size(24, 24);
             this.FlechaPagos.TabIndex = 14;
@@ -94,22 +90,12 @@
             // FlechaCobros
             // 
             this.FlechaCobros.Image = global::LawyerHelper.Properties.Resources.flechita;
-            this.FlechaCobros.Location = new System.Drawing.Point(215, 444);
+            this.FlechaCobros.Location = new System.Drawing.Point(215, 370);
             this.FlechaCobros.Name = "FlechaCobros";
             this.FlechaCobros.Size = new System.Drawing.Size(24, 24);
             this.FlechaCobros.TabIndex = 13;
             this.FlechaCobros.TabStop = false;
             this.FlechaCobros.Visible = false;
-            // 
-            // FlechaDocumentos
-            // 
-            this.FlechaDocumentos.Image = global::LawyerHelper.Properties.Resources.flechita;
-            this.FlechaDocumentos.Location = new System.Drawing.Point(215, 372);
-            this.FlechaDocumentos.Name = "FlechaDocumentos";
-            this.FlechaDocumentos.Size = new System.Drawing.Size(24, 24);
-            this.FlechaDocumentos.TabIndex = 12;
-            this.FlechaDocumentos.TabStop = false;
-            this.FlechaDocumentos.Visible = false;
             // 
             // FlechaAgenda
             // 
@@ -141,32 +127,15 @@
             this.FlechaPersonas.TabStop = false;
             this.FlechaPersonas.Visible = false;
             // 
-            // BotonDocumentos
-            // 
-            this.BotonDocumentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
-            this.BotonDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonDocumentos.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BotonDocumentos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.BotonDocumentos.Image = ((System.Drawing.Image)(resources.GetObject("BotonDocumentos.Image")));
-            this.BotonDocumentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonDocumentos.Location = new System.Drawing.Point(-1, 345);
-            this.BotonDocumentos.Name = "BotonDocumentos";
-            this.BotonDocumentos.Size = new System.Drawing.Size(210, 75);
-            this.BotonDocumentos.TabIndex = 8;
-            this.BotonDocumentos.Text = "Documentos";
-            this.BotonDocumentos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BotonDocumentos.UseVisualStyleBackColor = false;
-            this.BotonDocumentos.Click += new System.EventHandler(this.BotonDocumentos_Click);
-            // 
             // BotonCobros
             // 
             this.BotonCobros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonCobros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCobros.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonCobros.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonCobros.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonCobros.Image = global::LawyerHelper.Properties.Resources.tag;
             this.BotonCobros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonCobros.Location = new System.Drawing.Point(-1, 420);
+            this.BotonCobros.Location = new System.Drawing.Point(-1, 344);
             this.BotonCobros.Name = "BotonCobros";
             this.BotonCobros.Size = new System.Drawing.Size(210, 75);
             this.BotonCobros.TabIndex = 4;
@@ -179,11 +148,11 @@
             // 
             this.BotonPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonPagos.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonPagos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonPagos.Image = global::LawyerHelper.Properties.Resources.tag;
             this.BotonPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonPagos.Location = new System.Drawing.Point(-1, 495);
+            this.BotonPagos.Location = new System.Drawing.Point(-1, 419);
             this.BotonPagos.Name = "BotonPagos";
             this.BotonPagos.Size = new System.Drawing.Size(210, 75);
             this.BotonPagos.TabIndex = 3;
@@ -196,7 +165,7 @@
             // 
             this.BotonAgenda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonAgenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgenda.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonAgenda.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonAgenda.Image = global::LawyerHelper.Properties.Resources.calendar;
             this.BotonAgenda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,7 +182,7 @@
             // 
             this.BotonJuicios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonJuicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonJuicios.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonJuicios.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonJuicios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonJuicios.Image = global::LawyerHelper.Properties.Resources.pencil;
             this.BotonJuicios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,7 +199,7 @@
             // 
             this.BotonPersonas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
             this.BotonPersonas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonPersonas.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BotonPersonas.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BotonPersonas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
             this.BotonPersonas.Image = global::LawyerHelper.Properties.Resources.user_4;
             this.BotonPersonas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,11 +220,9 @@
             this.ClientSize = new System.Drawing.Size(484, 661);
             this.Controls.Add(this.FlechaPagos);
             this.Controls.Add(this.FlechaCobros);
-            this.Controls.Add(this.FlechaDocumentos);
             this.Controls.Add(this.FlechaAgenda);
             this.Controls.Add(this.FlechaJuicios);
             this.Controls.Add(this.FlechaPersonas);
-            this.Controls.Add(this.BotonDocumentos);
             this.Controls.Add(this.PanelOpciones);
             this.Controls.Add(this.LabelCreditos);
             this.Controls.Add(this.LabelTitulo);
@@ -269,7 +236,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FlechaPagos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaCobros)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.FlechaDocumentos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaAgenda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaJuicios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FlechaPersonas)).EndInit();
@@ -288,11 +254,9 @@
         private System.Windows.Forms.Label LabelTitulo;
         private System.Windows.Forms.Label LabelCreditos;
         private System.Windows.Forms.Panel PanelOpciones;
-        private System.Windows.Forms.Button BotonDocumentos;
         private System.Windows.Forms.PictureBox FlechaPersonas;
         private System.Windows.Forms.PictureBox FlechaJuicios;
         private System.Windows.Forms.PictureBox FlechaAgenda;
-        private System.Windows.Forms.PictureBox FlechaDocumentos;
         private System.Windows.Forms.PictureBox FlechaCobros;
         private System.Windows.Forms.PictureBox FlechaPagos;
     }
