@@ -43,7 +43,7 @@ namespace LawyerHelper.UI.Documentos
 
         private void BotonConsulta_Click(object sender, EventArgs e)
         {
-            ModificarDocumento iMenuNuevo = new ModificarDocumento();
+            ConsultaDocumento iMenuNuevo = new ConsultaDocumento();
             iMenuNuevo.ShowDialog();
         }
     }

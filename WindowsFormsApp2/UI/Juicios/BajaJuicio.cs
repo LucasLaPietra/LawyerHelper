@@ -13,6 +13,7 @@ using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using LawyerHelper.UI.Personas;
+using LawyerHelper.UI.Documentos;
 
 namespace LawyerHelper.UI.Juicios
 {
@@ -21,6 +22,7 @@ namespace LawyerHelper.UI.Juicios
         Juicio iJuicio;
         List<Demandado> iDemandados;
         List<Demandante> iDemandantes;
+        List<Documento> iDocumentos;
         ControladorJuicio iControladorJuicio;
         Fachada iFachada = new Fachada();
         public BajaJuicio()
@@ -46,7 +48,8 @@ namespace LawyerHelper.UI.Juicios
 
         private void BotonConsultarDocumentos_Click(object sender, EventArgs e)
         {
-            
+            ConsultaDocumento iMenuNuevo = new ConsultaDocumento(iDocumentos[ListBoxDocumentos.SelectedIndex]);
+            iMenuNuevo.ShowDialog();
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)
@@ -103,10 +106,18 @@ namespace LawyerHelper.UI.Juicios
 
                 iDemandados = iJuicio.Demandados.ToList();
                 iDemandantes = iJuicio.Demandantes.ToList();
+                iDocumentos = iJuicio.Documentos.ToList();
                 ListBoxDemandados.DataSource = iDemandados;
                 ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
                 ListBoxDemandantes.DisplayMember = "Descripcion";
+                ListBoxDocumentos.DataSource = iDocumentos;
+                ListBoxDocumentos.DisplayMember = "Nombre";
+
+                if (iDocumentos.Count > 0)
+                    BotonConsultarDocumentos.Enabled = true;
+                BotonConsultarDemandados.Enabled = true;
+                BotonConsultarDemandante.Enabled = true;
             }
             catch (Exception)
             {
@@ -139,13 +150,20 @@ namespace LawyerHelper.UI.Juicios
                 LabelFuero2.Text = iJuicio.Fuero;
 
                 iDemandados = iJuicio.Demandados.ToList();
-                iDemandantes = iControladorJuicio.ObtenerDemandantes(iJuicio.JuicioId).ToList();
+                iDemandantes = iJuicio.Demandantes.ToList();
+                iDocumentos = iJuicio.Documentos.ToList();
                 ListBoxDemandados.DataSource = iDemandados;
-                ListBoxDemandados.DisplayMember = "NombreyAp";
+                ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
-                ListBoxDemandantes.DisplayMember = "NombreyAp";
-                ListBoxDocumentos.DataSource = iJuicio.Documentos;
+                ListBoxDemandantes.DisplayMember = "Descripcion";
+                ListBoxDocumentos.DataSource = iDocumentos;
                 ListBoxDocumentos.DisplayMember = "Nombre";
+
+
+                if (iDocumentos.Count > 0)
+                    BotonConsultarDocumentos.Enabled = true;
+                BotonConsultarDemandados.Enabled = true;
+                BotonConsultarDemandante.Enabled = true;
             }
         }
     }
