@@ -42,9 +42,6 @@
             this.TimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.CuadroTipoDocumento = new System.Windows.Forms.TextBox();
-            this.BotonAgregarJuicio = new System.Windows.Forms.Button();
-            this.CuadroJuicio = new System.Windows.Forms.TextBox();
-            this.LabelJuicio = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -103,7 +100,7 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(249, 471);
+            this.BotonCancelar.Location = new System.Drawing.Point(249, 431);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 12;
@@ -113,7 +110,7 @@
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(37, 471);
+            this.BotonAceptar.Location = new System.Drawing.Point(37, 431);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 11;
@@ -169,42 +166,11 @@
             this.CuadroTipoDocumento.Size = new System.Drawing.Size(250, 20);
             this.CuadroTipoDocumento.TabIndex = 172;
             // 
-            // BotonAgregarJuicio
-            // 
-            this.BotonAgregarJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgregarJuicio.Location = new System.Drawing.Point(297, 424);
-            this.BotonAgregarJuicio.Name = "BotonAgregarJuicio";
-            this.BotonAgregarJuicio.Size = new System.Drawing.Size(75, 23);
-            this.BotonAgregarJuicio.TabIndex = 192;
-            this.BotonAgregarJuicio.Text = "Agregar";
-            this.BotonAgregarJuicio.UseVisualStyleBackColor = true;
-            this.BotonAgregarJuicio.Click += new System.EventHandler(this.BotonAgregarJuicio_Click);
-            // 
-            // CuadroJuicio
-            // 
-            this.CuadroJuicio.Location = new System.Drawing.Point(122, 426);
-            this.CuadroJuicio.Name = "CuadroJuicio";
-            this.CuadroJuicio.Size = new System.Drawing.Size(169, 20);
-            this.CuadroJuicio.TabIndex = 191;
-            this.CuadroJuicio.Text = "Ninguno";
-            // 
-            // LabelJuicio
-            // 
-            this.LabelJuicio.AutoSize = true;
-            this.LabelJuicio.Location = new System.Drawing.Point(74, 429);
-            this.LabelJuicio.Name = "LabelJuicio";
-            this.LabelJuicio.Size = new System.Drawing.Size(37, 13);
-            this.LabelJuicio.TabIndex = 190;
-            this.LabelJuicio.Text = "Juicio:";
-            // 
             // AltaDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 521);
-            this.Controls.Add(this.BotonAgregarJuicio);
-            this.Controls.Add(this.CuadroJuicio);
-            this.Controls.Add(this.LabelJuicio);
+            this.ClientSize = new System.Drawing.Size(384, 467);
             this.Controls.Add(this.CuadroTipoDocumento);
             this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.TimePickerFecha);
@@ -242,8 +208,5 @@
         private System.Windows.Forms.DateTimePicker TimePickerFecha;
         private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.TextBox CuadroTipoDocumento;
-        private System.Windows.Forms.Button BotonAgregarJuicio;
-        private System.Windows.Forms.TextBox CuadroJuicio;
-        private System.Windows.Forms.Label LabelJuicio;
     }
 }

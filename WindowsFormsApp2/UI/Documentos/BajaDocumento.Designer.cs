@@ -37,9 +37,6 @@
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.BotonAceptar = new System.Windows.Forms.Button();
-            this.BotonConsultarJuicio = new System.Windows.Forms.Button();
-            this.CuadroJuicio = new System.Windows.Forms.TextBox();
-            this.LabelJuicio = new System.Windows.Forms.Label();
             this.CuadroDetalle = new System.Windows.Forms.TextBox();
             this.LabelDetalle = new System.Windows.Forms.Label();
             this.LabelFecha = new System.Windows.Forms.Label();
@@ -48,12 +45,14 @@
             this.LabelTipoDocumento = new System.Windows.Forms.Label();
             this.LabelNombre = new System.Windows.Forms.Label();
             this.LabelFoja2 = new System.Windows.Forms.Label();
+            this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
+            this.BotonMostrarTodos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelFecha2
             // 
             this.LabelFecha2.AutoSize = true;
-            this.LabelFecha2.Location = new System.Drawing.Point(141, 238);
+            this.LabelFecha2.Location = new System.Drawing.Point(143, 303);
             this.LabelFecha2.Name = "LabelFecha2";
             this.LabelFecha2.Size = new System.Drawing.Size(10, 13);
             this.LabelFecha2.TabIndex = 78;
@@ -62,7 +61,7 @@
             // LabelTipo2
             // 
             this.LabelTipo2.AutoSize = true;
-            this.LabelTipo2.Location = new System.Drawing.Point(141, 102);
+            this.LabelTipo2.Location = new System.Drawing.Point(143, 167);
             this.LabelTipo2.Name = "LabelTipo2";
             this.LabelTipo2.Size = new System.Drawing.Size(10, 13);
             this.LabelTipo2.TabIndex = 77;
@@ -71,7 +70,7 @@
             // LabelNombre2
             // 
             this.LabelNombre2.AutoSize = true;
-            this.LabelNombre2.Location = new System.Drawing.Point(141, 62);
+            this.LabelNombre2.Location = new System.Drawing.Point(143, 127);
             this.LabelNombre2.Name = "LabelNombre2";
             this.LabelNombre2.Size = new System.Drawing.Size(10, 13);
             this.LabelNombre2.TabIndex = 76;
@@ -98,7 +97,7 @@
             // 
             this.CheckEnExpediente.AutoCheck = false;
             this.CheckEnExpediente.AutoSize = true;
-            this.CheckEnExpediente.Location = new System.Drawing.Point(144, 187);
+            this.CheckEnExpediente.Location = new System.Drawing.Point(146, 252);
             this.CheckEnExpediente.Name = "CheckEnExpediente";
             this.CheckEnExpediente.Size = new System.Drawing.Size(35, 17);
             this.CheckEnExpediente.TabIndex = 71;
@@ -107,7 +106,7 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(277, 495);
+            this.BotonCancelar.Location = new System.Drawing.Point(279, 521);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 69;
@@ -126,7 +125,7 @@
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(19, 495);
+            this.BotonAceptar.Location = new System.Drawing.Point(21, 521);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(100, 23);
             this.BotonAceptar.TabIndex = 80;
@@ -134,37 +133,9 @@
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
-            // BotonConsultarJuicio
-            // 
-            this.BotonConsultarJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonConsultarJuicio.Location = new System.Drawing.Point(297, 445);
-            this.BotonConsultarJuicio.Name = "BotonConsultarJuicio";
-            this.BotonConsultarJuicio.Size = new System.Drawing.Size(75, 23);
-            this.BotonConsultarJuicio.TabIndex = 202;
-            this.BotonConsultarJuicio.Text = "Consultar";
-            this.BotonConsultarJuicio.UseVisualStyleBackColor = true;
-            this.BotonConsultarJuicio.Click += new System.EventHandler(this.BotonConsultarJuicio_Click);
-            // 
-            // CuadroJuicio
-            // 
-            this.CuadroJuicio.Location = new System.Drawing.Point(122, 447);
-            this.CuadroJuicio.Name = "CuadroJuicio";
-            this.CuadroJuicio.Size = new System.Drawing.Size(169, 20);
-            this.CuadroJuicio.TabIndex = 201;
-            this.CuadroJuicio.Text = "Ninguno";
-            // 
-            // LabelJuicio
-            // 
-            this.LabelJuicio.AutoSize = true;
-            this.LabelJuicio.Location = new System.Drawing.Point(74, 450);
-            this.LabelJuicio.Name = "LabelJuicio";
-            this.LabelJuicio.Size = new System.Drawing.Size(37, 13);
-            this.LabelJuicio.TabIndex = 200;
-            this.LabelJuicio.Text = "Juicio:";
-            // 
             // CuadroDetalle
             // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(122, 277);
+            this.CuadroDetalle.Location = new System.Drawing.Point(124, 342);
             this.CuadroDetalle.Multiline = true;
             this.CuadroDetalle.Name = "CuadroDetalle";
             this.CuadroDetalle.ReadOnly = true;
@@ -175,7 +146,7 @@
             // LabelDetalle
             // 
             this.LabelDetalle.AutoSize = true;
-            this.LabelDetalle.Location = new System.Drawing.Point(71, 280);
+            this.LabelDetalle.Location = new System.Drawing.Point(73, 345);
             this.LabelDetalle.Name = "LabelDetalle";
             this.LabelDetalle.Size = new System.Drawing.Size(40, 13);
             this.LabelDetalle.TabIndex = 198;
@@ -184,7 +155,7 @@
             // LabelFecha
             // 
             this.LabelFecha.AutoSize = true;
-            this.LabelFecha.Location = new System.Drawing.Point(74, 238);
+            this.LabelFecha.Location = new System.Drawing.Point(76, 303);
             this.LabelFecha.Name = "LabelFecha";
             this.LabelFecha.Size = new System.Drawing.Size(37, 13);
             this.LabelFecha.TabIndex = 197;
@@ -193,7 +164,7 @@
             // LabelExpediente
             // 
             this.LabelExpediente.AutoSize = true;
-            this.LabelExpediente.Location = new System.Drawing.Point(36, 188);
+            this.LabelExpediente.Location = new System.Drawing.Point(38, 253);
             this.LabelExpediente.Name = "LabelExpediente";
             this.LabelExpediente.Size = new System.Drawing.Size(75, 13);
             this.LabelExpediente.TabIndex = 196;
@@ -202,7 +173,7 @@
             // LabelFoja
             // 
             this.LabelFoja.AutoSize = true;
-            this.LabelFoja.Location = new System.Drawing.Point(32, 149);
+            this.LabelFoja.Location = new System.Drawing.Point(34, 214);
             this.LabelFoja.Name = "LabelFoja";
             this.LabelFoja.Size = new System.Drawing.Size(79, 13);
             this.LabelFoja.TabIndex = 195;
@@ -211,7 +182,7 @@
             // LabelTipoDocumento
             // 
             this.LabelTipoDocumento.AutoSize = true;
-            this.LabelTipoDocumento.Location = new System.Drawing.Point(12, 102);
+            this.LabelTipoDocumento.Location = new System.Drawing.Point(14, 167);
             this.LabelTipoDocumento.Name = "LabelTipoDocumento";
             this.LabelTipoDocumento.Size = new System.Drawing.Size(99, 13);
             this.LabelTipoDocumento.TabIndex = 194;
@@ -220,7 +191,7 @@
             // LabelNombre
             // 
             this.LabelNombre.AutoSize = true;
-            this.LabelNombre.Location = new System.Drawing.Point(64, 62);
+            this.LabelNombre.Location = new System.Drawing.Point(66, 127);
             this.LabelNombre.Name = "LabelNombre";
             this.LabelNombre.Size = new System.Drawing.Size(47, 13);
             this.LabelNombre.TabIndex = 193;
@@ -229,21 +200,40 @@
             // LabelFoja2
             // 
             this.LabelFoja2.AutoSize = true;
-            this.LabelFoja2.Location = new System.Drawing.Point(141, 149);
+            this.LabelFoja2.Location = new System.Drawing.Point(143, 214);
             this.LabelFoja2.Name = "LabelFoja2";
             this.LabelFoja2.Size = new System.Drawing.Size(10, 13);
             this.LabelFoja2.TabIndex = 203;
             this.LabelFoja2.Text = "-";
             // 
+            // ComboBoxResultados
+            // 
+            this.ComboBoxResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxResultados.FormattingEnabled = true;
+            this.ComboBoxResultados.Location = new System.Drawing.Point(21, 92);
+            this.ComboBoxResultados.Name = "ComboBoxResultados";
+            this.ComboBoxResultados.Size = new System.Drawing.Size(353, 21);
+            this.ComboBoxResultados.TabIndex = 205;
+            this.ComboBoxResultados.SelectedIndexChanged += new System.EventHandler(this.ComboBoxResultados_SelectedIndexChanged);
+            // 
+            // BotonMostrarTodos
+            // 
+            this.BotonMostrarTodos.Location = new System.Drawing.Point(17, 51);
+            this.BotonMostrarTodos.Name = "BotonMostrarTodos";
+            this.BotonMostrarTodos.Size = new System.Drawing.Size(357, 30);
+            this.BotonMostrarTodos.TabIndex = 204;
+            this.BotonMostrarTodos.Text = "Mostrar todos los documentos";
+            this.BotonMostrarTodos.UseVisualStyleBackColor = true;
+            this.BotonMostrarTodos.Click += new System.EventHandler(this.BotonMostrarTodos_Click);
+            // 
             // BajaDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 531);
+            this.ClientSize = new System.Drawing.Size(384, 561);
+            this.Controls.Add(this.ComboBoxResultados);
+            this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.LabelFoja2);
-            this.Controls.Add(this.BotonConsultarJuicio);
-            this.Controls.Add(this.CuadroJuicio);
-            this.Controls.Add(this.LabelJuicio);
             this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.LabelDetalle);
             this.Controls.Add(this.LabelFecha);
@@ -277,9 +267,6 @@
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.Button BotonConsultarJuicio;
-        private System.Windows.Forms.TextBox CuadroJuicio;
-        private System.Windows.Forms.Label LabelJuicio;
         private System.Windows.Forms.TextBox CuadroDetalle;
         private System.Windows.Forms.Label LabelDetalle;
         private System.Windows.Forms.Label LabelFecha;
@@ -288,5 +275,7 @@
         private System.Windows.Forms.Label LabelTipoDocumento;
         private System.Windows.Forms.Label LabelNombre;
         private System.Windows.Forms.Label LabelFoja2;
+        private System.Windows.Forms.ComboBox ComboBoxResultados;
+        private System.Windows.Forms.Button BotonMostrarTodos;
     }
 }

@@ -15,6 +15,7 @@ using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using LawyerHelper.UI.Juicios;
 using LawyerHelper.UI.Personas;
+using LawyerHelper.UI.Documentos;
 
 namespace WindowsFormsApp2.Juicios
 {
@@ -123,6 +124,9 @@ namespace WindowsFormsApp2.Juicios
                 ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
                 ListBoxDemandantes.DisplayMember = "Descripcion";
+                BotonConsultarDemandados.Enabled = true;
+                BotonConsultarDemandante.Enabled = true;
+                BotonConsultarDocumentos.Enabled = true;
             }
             catch (Exception)
             {
@@ -160,8 +164,9 @@ namespace WindowsFormsApp2.Juicios
                 ListBoxDemandados.DisplayMember = "NombreyAp";
                 ListBoxDemandantes.DataSource = iDemandantes;
                 ListBoxDemandantes.DisplayMember = "NombreyAp";
-                ListBoxDocumentos.DataSource = iJuicio.Documentos;
-                ListBoxDocumentos.DisplayMember = "Nombre";
+                BotonConsultarDemandados.Enabled = true;
+                BotonConsultarDemandante.Enabled = true;
+                BotonConsultarDocumentos.Enabled = true;
             }
         }
 
@@ -179,7 +184,8 @@ namespace WindowsFormsApp2.Juicios
 
         private void BotonConsultarDocumentos_Click(object sender, EventArgs e)
         {
-
+            ConsultaDocumento iMenuNuevo = new ConsultaDocumento(iJuicio);
+            iMenuNuevo.ShowDialog();
         }
     }
 }

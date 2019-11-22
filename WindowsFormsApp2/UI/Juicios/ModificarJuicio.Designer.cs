@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.CuadroDetalle = new System.Windows.Forms.TextBox();
+            this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.CuadroPrecio = new System.Windows.Forms.TextBox();
             this.CuadroSecretario = new System.Windows.Forms.TextBox();
             this.CuadroJuez = new System.Windows.Forms.TextBox();
@@ -78,11 +78,13 @@
             this.RadioButtonCliente2 = new System.Windows.Forms.RadioButton();
             this.RadioButtonCliente1 = new System.Windows.Forms.RadioButton();
             this.Layout1 = new System.Windows.Forms.TableLayoutPanel();
-            this.ListBoxDocumentos = new System.Windows.Forms.ListBox();
-            this.LabelDocumentos = new System.Windows.Forms.Label();
+            this.BotonModificarDocumentos = new System.Windows.Forms.Button();
             this.BotonEliminarDocumentos = new System.Windows.Forms.Button();
             this.BotonAgregarDocumentos = new System.Windows.Forms.Button();
-            this.BotonModificarDocumentos = new System.Windows.Forms.Button();
+            this.LabelDocumentos = new System.Windows.Forms.Label();
+            this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
+            this.BotonConsultarDemandado = new System.Windows.Forms.Button();
+            this.BotonConsultarDemandante = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.Layout1.SuspendLayout();
             this.SuspendLayout();
@@ -92,7 +94,7 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.CuadroDetalle, 1, 10);
+            this.tableLayoutPanel1.Controls.Add(this.CuadroDescripcion, 1, 10);
             this.tableLayoutPanel1.Controls.Add(this.CuadroPrecio, 1, 16);
             this.tableLayoutPanel1.Controls.Add(this.CuadroSecretario, 1, 15);
             this.tableLayoutPanel1.Controls.Add(this.CuadroJuez, 1, 14);
@@ -149,14 +151,14 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(428, 464);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
-            // CuadroDetalle
+            // CuadroDescripcion
             // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(97, 237);
-            this.CuadroDetalle.Multiline = true;
-            this.CuadroDetalle.Name = "CuadroDetalle";
-            this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.CuadroDetalle.Size = new System.Drawing.Size(324, 35);
-            this.CuadroDetalle.TabIndex = 173;
+            this.CuadroDescripcion.Location = new System.Drawing.Point(97, 237);
+            this.CuadroDescripcion.Multiline = true;
+            this.CuadroDescripcion.Name = "CuadroDescripcion";
+            this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.CuadroDescripcion.Size = new System.Drawing.Size(324, 35);
+            this.CuadroDescripcion.TabIndex = 173;
             // 
             // CuadroPrecio
             // 
@@ -437,6 +439,7 @@
             this.BotonBuscar.TabIndex = 9;
             this.BotonBuscar.Text = "Buscar";
             this.BotonBuscar.UseVisualStyleBackColor = true;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // CuadroNroExpediente
             // 
@@ -464,6 +467,7 @@
             this.BotonAceptar.TabIndex = 10;
             this.BotonAceptar.Text = "Aceptar";
             this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
             // BotonCancelar
             // 
@@ -474,6 +478,7 @@
             this.BotonCancelar.TabIndex = 11;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // BotonBusquedaAvanzada
             // 
@@ -483,6 +488,7 @@
             this.BotonBusquedaAvanzada.TabIndex = 12;
             this.BotonBusquedaAvanzada.Text = "Buscar por otro campo";
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
+            this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
             // ListBoxDemandantes
             // 
@@ -502,6 +508,7 @@
             // 
             // BotonEliminarDemandado
             // 
+            this.BotonEliminarDemandado.Enabled = false;
             this.BotonEliminarDemandado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonEliminarDemandado.Location = new System.Drawing.Point(873, 209);
             this.BotonEliminarDemandado.Name = "BotonEliminarDemandado";
@@ -509,9 +516,11 @@
             this.BotonEliminarDemandado.TabIndex = 81;
             this.BotonEliminarDemandado.Text = "Eliminar";
             this.BotonEliminarDemandado.UseVisualStyleBackColor = true;
+            this.BotonEliminarDemandado.Click += new System.EventHandler(this.BotonEliminarDemandado_Click);
             // 
             // BotonAgregarDemandado
             // 
+            this.BotonAgregarDemandado.Enabled = false;
             this.BotonAgregarDemandado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonAgregarDemandado.Location = new System.Drawing.Point(873, 180);
             this.BotonAgregarDemandado.Name = "BotonAgregarDemandado";
@@ -519,9 +528,11 @@
             this.BotonAgregarDemandado.TabIndex = 80;
             this.BotonAgregarDemandado.Text = "Agregar";
             this.BotonAgregarDemandado.UseVisualStyleBackColor = true;
+            this.BotonAgregarDemandado.Click += new System.EventHandler(this.BotonAgregarDemandado_Click);
             // 
             // BotonEliminarDemandante
             // 
+            this.BotonEliminarDemandante.Enabled = false;
             this.BotonEliminarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonEliminarDemandante.Location = new System.Drawing.Point(873, 135);
             this.BotonEliminarDemandante.Name = "BotonEliminarDemandante";
@@ -529,9 +540,11 @@
             this.BotonEliminarDemandante.TabIndex = 79;
             this.BotonEliminarDemandante.Text = "Eliminar";
             this.BotonEliminarDemandante.UseVisualStyleBackColor = true;
+            this.BotonEliminarDemandante.Click += new System.EventHandler(this.BotonEliminarDemandante_Click);
             // 
             // BotonAgregarDemandante
             // 
+            this.BotonAgregarDemandante.Enabled = false;
             this.BotonAgregarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonAgregarDemandante.Location = new System.Drawing.Point(873, 106);
             this.BotonAgregarDemandante.Name = "BotonAgregarDemandante";
@@ -539,11 +552,12 @@
             this.BotonAgregarDemandante.TabIndex = 78;
             this.BotonAgregarDemandante.Text = "Agregar";
             this.BotonAgregarDemandante.UseVisualStyleBackColor = true;
+            this.BotonAgregarDemandante.Click += new System.EventHandler(this.BotonAgregarDemandante_Click);
             // 
             // RadioButtonCliente2
             // 
             this.RadioButtonCliente2.AutoSize = true;
-            this.RadioButtonCliente2.Location = new System.Drawing.Point(954, 196);
+            this.RadioButtonCliente2.Location = new System.Drawing.Point(954, 212);
             this.RadioButtonCliente2.Name = "RadioButtonCliente2";
             this.RadioButtonCliente2.Size = new System.Drawing.Size(57, 17);
             this.RadioButtonCliente2.TabIndex = 83;
@@ -554,7 +568,7 @@
             // RadioButtonCliente1
             // 
             this.RadioButtonCliente1.AutoSize = true;
-            this.RadioButtonCliente1.Location = new System.Drawing.Point(954, 123);
+            this.RadioButtonCliente1.Location = new System.Drawing.Point(954, 138);
             this.RadioButtonCliente1.Name = "RadioButtonCliente1";
             this.RadioButtonCliente1.Size = new System.Drawing.Size(57, 17);
             this.RadioButtonCliente1.TabIndex = 82;
@@ -567,28 +581,62 @@
             this.Layout1.ColumnCount = 2;
             this.Layout1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.Layout1.Controls.Add(this.ListBoxDocumentos, 1, 2);
+            this.Layout1.Controls.Add(this.BotonModificarDocumentos, 1, 4);
+            this.Layout1.Controls.Add(this.BotonEliminarDocumentos, 1, 3);
             this.Layout1.Controls.Add(this.ListBoxDemandados, 1, 1);
+            this.Layout1.Controls.Add(this.BotonAgregarDocumentos, 1, 2);
             this.Layout1.Controls.Add(this.LabelDemandante, 0, 0);
             this.Layout1.Controls.Add(this.ListBoxDemandantes, 1, 0);
             this.Layout1.Controls.Add(this.LabelDemandado, 0, 1);
             this.Layout1.Controls.Add(this.LabelDocumentos, 0, 2);
+            this.Layout1.Controls.Add(this.BotonConsultarDocumentos, 1, 5);
             this.Layout1.Location = new System.Drawing.Point(456, 94);
             this.Layout1.Name = "Layout1";
-            this.Layout1.RowCount = 3;
+            this.Layout1.RowCount = 6;
             this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.Layout1.Size = new System.Drawing.Size(411, 271);
             this.Layout1.TabIndex = 84;
             // 
-            // ListBoxDocumentos
+            // BotonModificarDocumentos
             // 
-            this.ListBoxDocumentos.FormattingEnabled = true;
-            this.ListBoxDocumentos.Location = new System.Drawing.Point(85, 153);
-            this.ListBoxDocumentos.Name = "ListBoxDocumentos";
-            this.ListBoxDocumentos.Size = new System.Drawing.Size(324, 108);
-            this.ListBoxDocumentos.TabIndex = 85;
+            this.BotonModificarDocumentos.Enabled = false;
+            this.BotonModificarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonModificarDocumentos.Location = new System.Drawing.Point(85, 211);
+            this.BotonModificarDocumentos.Name = "BotonModificarDocumentos";
+            this.BotonModificarDocumentos.Size = new System.Drawing.Size(324, 23);
+            this.BotonModificarDocumentos.TabIndex = 87;
+            this.BotonModificarDocumentos.Text = "Modificar Documentos";
+            this.BotonModificarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonModificarDocumentos.Click += new System.EventHandler(this.BotonModificarDocumentos_Click);
+            // 
+            // BotonEliminarDocumentos
+            // 
+            this.BotonEliminarDocumentos.Enabled = false;
+            this.BotonEliminarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonEliminarDocumentos.Location = new System.Drawing.Point(85, 182);
+            this.BotonEliminarDocumentos.Name = "BotonEliminarDocumentos";
+            this.BotonEliminarDocumentos.Size = new System.Drawing.Size(324, 23);
+            this.BotonEliminarDocumentos.TabIndex = 86;
+            this.BotonEliminarDocumentos.Text = "Eliminar Documentos";
+            this.BotonEliminarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonEliminarDocumentos.Click += new System.EventHandler(this.BotonEliminarDocumentos_Click);
+            // 
+            // BotonAgregarDocumentos
+            // 
+            this.BotonAgregarDocumentos.Enabled = false;
+            this.BotonAgregarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAgregarDocumentos.Location = new System.Drawing.Point(85, 153);
+            this.BotonAgregarDocumentos.Name = "BotonAgregarDocumentos";
+            this.BotonAgregarDocumentos.Size = new System.Drawing.Size(324, 23);
+            this.BotonAgregarDocumentos.TabIndex = 85;
+            this.BotonAgregarDocumentos.Text = "Agregar Documento";
+            this.BotonAgregarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonAgregarDocumentos.Click += new System.EventHandler(this.BotonAgregarDocumentos_Click);
             // 
             // LabelDocumentos
             // 
@@ -599,44 +647,47 @@
             this.LabelDocumentos.TabIndex = 32;
             this.LabelDocumentos.Text = "Documentos:";
             // 
-            // BotonEliminarDocumentos
+            // BotonConsultarDocumentos
             // 
-            this.BotonEliminarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonEliminarDocumentos.Location = new System.Drawing.Point(873, 294);
-            this.BotonEliminarDocumentos.Name = "BotonEliminarDocumentos";
-            this.BotonEliminarDocumentos.Size = new System.Drawing.Size(75, 23);
-            this.BotonEliminarDocumentos.TabIndex = 86;
-            this.BotonEliminarDocumentos.Text = "Eliminar";
-            this.BotonEliminarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonConsultarDocumentos.Enabled = false;
+            this.BotonConsultarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(85, 240);
+            this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
+            this.BotonConsultarDocumentos.Size = new System.Drawing.Size(324, 23);
+            this.BotonConsultarDocumentos.TabIndex = 88;
+            this.BotonConsultarDocumentos.Text = "Consultar Documentos";
+            this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click);
             // 
-            // BotonAgregarDocumentos
+            // BotonConsultarDemandado
             // 
-            this.BotonAgregarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgregarDocumentos.Location = new System.Drawing.Point(873, 265);
-            this.BotonAgregarDocumentos.Name = "BotonAgregarDocumentos";
-            this.BotonAgregarDocumentos.Size = new System.Drawing.Size(75, 23);
-            this.BotonAgregarDocumentos.TabIndex = 85;
-            this.BotonAgregarDocumentos.Text = "Agregar";
-            this.BotonAgregarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonConsultarDemandado.Enabled = false;
+            this.BotonConsultarDemandado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonConsultarDemandado.Location = new System.Drawing.Point(954, 180);
+            this.BotonConsultarDemandado.Name = "BotonConsultarDemandado";
+            this.BotonConsultarDemandado.Size = new System.Drawing.Size(75, 23);
+            this.BotonConsultarDemandado.TabIndex = 85;
+            this.BotonConsultarDemandado.Text = "Consultar";
+            this.BotonConsultarDemandado.UseVisualStyleBackColor = true;
             // 
-            // BotonModificarDocumentos
+            // BotonConsultarDemandante
             // 
-            this.BotonModificarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonModificarDocumentos.Location = new System.Drawing.Point(873, 323);
-            this.BotonModificarDocumentos.Name = "BotonModificarDocumentos";
-            this.BotonModificarDocumentos.Size = new System.Drawing.Size(75, 23);
-            this.BotonModificarDocumentos.TabIndex = 87;
-            this.BotonModificarDocumentos.Text = "Modificar";
-            this.BotonModificarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonConsultarDemandante.Enabled = false;
+            this.BotonConsultarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonConsultarDemandante.Location = new System.Drawing.Point(954, 106);
+            this.BotonConsultarDemandante.Name = "BotonConsultarDemandante";
+            this.BotonConsultarDemandante.Size = new System.Drawing.Size(75, 23);
+            this.BotonConsultarDemandante.TabIndex = 86;
+            this.BotonConsultarDemandante.Text = "Consultar";
+            this.BotonConsultarDemandante.UseVisualStyleBackColor = true;
             // 
             // ModificarJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 604);
-            this.Controls.Add(this.BotonModificarDocumentos);
-            this.Controls.Add(this.BotonEliminarDocumentos);
-            this.Controls.Add(this.BotonAgregarDocumentos);
+            this.Controls.Add(this.BotonConsultarDemandante);
+            this.Controls.Add(this.BotonConsultarDemandado);
             this.Controls.Add(this.Layout1);
             this.Controls.Add(this.RadioButtonCliente2);
             this.Controls.Add(this.RadioButtonCliente1);
@@ -702,7 +753,7 @@
         private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.Button BotonBusquedaAvanzada;
         private System.Windows.Forms.DateTimePicker dateTimeFecha;
-        private System.Windows.Forms.TextBox CuadroDetalle;
+        private System.Windows.Forms.TextBox CuadroDescripcion;
         private System.Windows.Forms.TextBox CuadroBienes;
         private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
         private System.Windows.Forms.ListBox ListBoxDemandantes;
@@ -714,10 +765,12 @@
         private System.Windows.Forms.RadioButton RadioButtonCliente2;
         private System.Windows.Forms.RadioButton RadioButtonCliente1;
         private System.Windows.Forms.TableLayoutPanel Layout1;
-        private System.Windows.Forms.ListBox ListBoxDocumentos;
         private System.Windows.Forms.Label LabelDocumentos;
         private System.Windows.Forms.Button BotonEliminarDocumentos;
         private System.Windows.Forms.Button BotonAgregarDocumentos;
         private System.Windows.Forms.Button BotonModificarDocumentos;
+        private System.Windows.Forms.Button BotonConsultarDocumentos;
+        private System.Windows.Forms.Button BotonConsultarDemandado;
+        private System.Windows.Forms.Button BotonConsultarDemandante;
     }
 }

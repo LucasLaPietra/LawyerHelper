@@ -46,12 +46,6 @@ namespace LawyerHelper.UI.Juicios
             iMenuNuevo.ShowDialog();
         }
 
-        private void BotonConsultarDocumentos_Click(object sender, EventArgs e)
-        {
-            ConsultaDocumento iMenuNuevo = new ConsultaDocumento(iDocumentos[ListBoxDocumentos.SelectedIndex]);
-            iMenuNuevo.ShowDialog();
-        }
-
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
             DialogResult iMensaje = MessageBox.Show("Seguro que desea cerrar la ventana?", "Aceptar", MessageBoxButtons.YesNoCancel);
@@ -111,13 +105,9 @@ namespace LawyerHelper.UI.Juicios
                 ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
                 ListBoxDemandantes.DisplayMember = "Descripcion";
-                ListBoxDocumentos.DataSource = iDocumentos;
-                ListBoxDocumentos.DisplayMember = "Nombre";
-
-                if (iDocumentos.Count > 0)
-                    BotonConsultarDocumentos.Enabled = true;
                 BotonConsultarDemandados.Enabled = true;
                 BotonConsultarDemandante.Enabled = true;
+                BotonConsultarDocumentos.Enabled = true;
             }
             catch (Exception)
             {
@@ -156,15 +146,16 @@ namespace LawyerHelper.UI.Juicios
                 ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
                 ListBoxDemandantes.DisplayMember = "Descripcion";
-                ListBoxDocumentos.DataSource = iDocumentos;
-                ListBoxDocumentos.DisplayMember = "Nombre";
-
-
-                if (iDocumentos.Count > 0)
-                    BotonConsultarDocumentos.Enabled = true;
                 BotonConsultarDemandados.Enabled = true;
                 BotonConsultarDemandante.Enabled = true;
+                BotonConsultarDocumentos.Enabled = true;
             }
+        }
+
+        private void BotonConsultarDocumentos_Click_1(object sender, EventArgs e)
+        {
+            ConsultaDocumento iMenuNuevo = new ConsultaDocumento(iJuicio);
+            iMenuNuevo.ShowDialog();
         }
     }
 }

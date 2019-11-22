@@ -42,16 +42,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.CuadroDetalle = new System.Windows.Forms.TextBox();
-            this.BotonConsultarJuicio = new System.Windows.Forms.Button();
-            this.CuadroJuicio = new System.Windows.Forms.TextBox();
-            this.LabelJuicio = new System.Windows.Forms.Label();
-            this.BotonCambiarJuicio = new System.Windows.Forms.Button();
             this.CuadroTipo = new System.Windows.Forms.TextBox();
+            this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
+            this.BotonMostrarTodos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TimePickerFecha
             // 
-            this.TimePickerFecha.Location = new System.Drawing.Point(149, 238);
+            this.TimePickerFecha.Location = new System.Drawing.Point(149, 291);
             this.TimePickerFecha.Name = "TimePickerFecha";
             this.TimePickerFecha.Size = new System.Drawing.Size(276, 20);
             this.TimePickerFecha.TabIndex = 38;
@@ -65,7 +63,7 @@
             // 
             // CuadroNombreDocumento
             // 
-            this.CuadroNombreDocumento.Location = new System.Drawing.Point(148, 86);
+            this.CuadroNombreDocumento.Location = new System.Drawing.Point(148, 139);
             this.CuadroNombreDocumento.Name = "CuadroNombreDocumento";
             this.CuadroNombreDocumento.Size = new System.Drawing.Size(277, 20);
             this.CuadroNombreDocumento.TabIndex = 34;
@@ -73,7 +71,7 @@
             // CheckEnExpediente
             // 
             this.CheckEnExpediente.AutoSize = true;
-            this.CheckEnExpediente.Location = new System.Drawing.Point(148, 194);
+            this.CheckEnExpediente.Location = new System.Drawing.Point(148, 247);
             this.CheckEnExpediente.Name = "CheckEnExpediente";
             this.CheckEnExpediente.Size = new System.Drawing.Size(35, 17);
             this.CheckEnExpediente.TabIndex = 32;
@@ -82,7 +80,7 @@
             // 
             // BotonCancelar
             // 
-            this.BotonCancelar.Location = new System.Drawing.Point(275, 457);
+            this.BotonCancelar.Location = new System.Drawing.Point(275, 482);
             this.BotonCancelar.Name = "BotonCancelar";
             this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
             this.BotonCancelar.TabIndex = 30;
@@ -92,7 +90,7 @@
             // 
             // BotonAceptar
             // 
-            this.BotonAceptar.Location = new System.Drawing.Point(63, 457);
+            this.BotonAceptar.Location = new System.Drawing.Point(63, 482);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
             this.BotonAceptar.TabIndex = 29;
@@ -103,7 +101,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(27, 288);
+            this.label6.Location = new System.Drawing.Point(27, 341);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(40, 13);
             this.label6.TabIndex = 28;
@@ -112,7 +110,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(27, 237);
+            this.label5.Location = new System.Drawing.Point(27, 290);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 13);
             this.label5.TabIndex = 27;
@@ -121,7 +119,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 196);
+            this.label4.Location = new System.Drawing.Point(25, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
             this.label4.TabIndex = 26;
@@ -139,7 +137,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(23, 146);
+            this.label2.Location = new System.Drawing.Point(23, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 13);
             this.label2.TabIndex = 24;
@@ -148,7 +146,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 90);
+            this.label1.Location = new System.Drawing.Point(25, 143);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 13);
             this.label1.TabIndex = 23;
@@ -166,69 +164,48 @@
             // 
             // CuadroDetalle
             // 
-            this.CuadroDetalle.Location = new System.Drawing.Point(148, 285);
+            this.CuadroDetalle.Location = new System.Drawing.Point(148, 338);
             this.CuadroDetalle.Multiline = true;
             this.CuadroDetalle.Name = "CuadroDetalle";
             this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CuadroDetalle.Size = new System.Drawing.Size(304, 108);
             this.CuadroDetalle.TabIndex = 172;
             // 
-            // BotonConsultarJuicio
-            // 
-            this.BotonConsultarJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonConsultarJuicio.Location = new System.Drawing.Point(296, 412);
-            this.BotonConsultarJuicio.Name = "BotonConsultarJuicio";
-            this.BotonConsultarJuicio.Size = new System.Drawing.Size(75, 23);
-            this.BotonConsultarJuicio.TabIndex = 223;
-            this.BotonConsultarJuicio.Text = "Consultar";
-            this.BotonConsultarJuicio.UseVisualStyleBackColor = true;
-            this.BotonConsultarJuicio.Click += new System.EventHandler(this.BotonConsultarJuicio_Click);
-            // 
-            // CuadroJuicio
-            // 
-            this.CuadroJuicio.Location = new System.Drawing.Point(149, 414);
-            this.CuadroJuicio.Name = "CuadroJuicio";
-            this.CuadroJuicio.Size = new System.Drawing.Size(141, 20);
-            this.CuadroJuicio.TabIndex = 222;
-            this.CuadroJuicio.Text = "Ninguno";
-            // 
-            // LabelJuicio
-            // 
-            this.LabelJuicio.AutoSize = true;
-            this.LabelJuicio.Location = new System.Drawing.Point(27, 417);
-            this.LabelJuicio.Name = "LabelJuicio";
-            this.LabelJuicio.Size = new System.Drawing.Size(37, 13);
-            this.LabelJuicio.TabIndex = 221;
-            this.LabelJuicio.Text = "Juicio:";
-            // 
-            // BotonCambiarJuicio
-            // 
-            this.BotonCambiarJuicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCambiarJuicio.Location = new System.Drawing.Point(377, 412);
-            this.BotonCambiarJuicio.Name = "BotonCambiarJuicio";
-            this.BotonCambiarJuicio.Size = new System.Drawing.Size(75, 23);
-            this.BotonCambiarJuicio.TabIndex = 224;
-            this.BotonCambiarJuicio.Text = "Cambiar";
-            this.BotonCambiarJuicio.UseVisualStyleBackColor = true;
-            this.BotonCambiarJuicio.Click += new System.EventHandler(this.BotonCambiarJuicio_Click);
-            // 
             // CuadroTipo
             // 
-            this.CuadroTipo.Location = new System.Drawing.Point(148, 143);
+            this.CuadroTipo.Location = new System.Drawing.Point(148, 196);
             this.CuadroTipo.Name = "CuadroTipo";
             this.CuadroTipo.Size = new System.Drawing.Size(277, 20);
             this.CuadroTipo.TabIndex = 225;
+            // 
+            // ComboBoxResultados
+            // 
+            this.ComboBoxResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxResultados.FormattingEnabled = true;
+            this.ComboBoxResultados.Location = new System.Drawing.Point(17, 101);
+            this.ComboBoxResultados.Name = "ComboBoxResultados";
+            this.ComboBoxResultados.Size = new System.Drawing.Size(435, 21);
+            this.ComboBoxResultados.TabIndex = 227;
+            this.ComboBoxResultados.SelectedIndexChanged += new System.EventHandler(this.ComboBoxResultados_SelectedIndexChanged);
+            // 
+            // BotonMostrarTodos
+            // 
+            this.BotonMostrarTodos.Location = new System.Drawing.Point(13, 60);
+            this.BotonMostrarTodos.Name = "BotonMostrarTodos";
+            this.BotonMostrarTodos.Size = new System.Drawing.Size(439, 30);
+            this.BotonMostrarTodos.TabIndex = 226;
+            this.BotonMostrarTodos.Text = "Mostrar todos los documentos";
+            this.BotonMostrarTodos.UseVisualStyleBackColor = true;
+            this.BotonMostrarTodos.Click += new System.EventHandler(this.BotonMostrarTodos_Click);
             // 
             // ModificarDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 496);
+            this.ClientSize = new System.Drawing.Size(464, 527);
+            this.Controls.Add(this.ComboBoxResultados);
+            this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.CuadroTipo);
-            this.Controls.Add(this.BotonCambiarJuicio);
-            this.Controls.Add(this.BotonConsultarJuicio);
-            this.Controls.Add(this.CuadroJuicio);
-            this.Controls.Add(this.LabelJuicio);
             this.Controls.Add(this.CuadroDetalle);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.TimePickerFecha);
@@ -267,10 +244,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.TextBox CuadroDetalle;
-        private System.Windows.Forms.Button BotonConsultarJuicio;
-        private System.Windows.Forms.TextBox CuadroJuicio;
-        private System.Windows.Forms.Label LabelJuicio;
-        private System.Windows.Forms.Button BotonCambiarJuicio;
         private System.Windows.Forms.TextBox CuadroTipo;
+        private System.Windows.Forms.ComboBox ComboBoxResultados;
+        private System.Windows.Forms.Button BotonMostrarTodos;
     }
 }

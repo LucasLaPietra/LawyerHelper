@@ -21,12 +21,13 @@ namespace LawyerHelper.UI.Documentos
         ControladorDocumento iControladorDocumento;
         Fachada iFachada = new Fachada();
         Juicio iJuicio = null;
-        public AltaDocumento()
+        public AltaDocumento(Juicio pJuicio)
         {
             InitializeComponent();
             iControladorDocumento = new ControladorDocumento(UnidadDeTrabajo.Instancia);
             //Asignacion de colores      
             iFachada.AsignarColores(this);
+            iJuicio = pJuicio;
 
         }
 
@@ -64,16 +65,6 @@ namespace LawyerHelper.UI.Documentos
             {
                 this.Close();
             }
-        }
-
-        private void BotonAgregarJuicio_Click(object sender, EventArgs e)
-        {
-            BuscarJuicio iMenuNuevo = new BuscarJuicio();
-            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
-            {
-                iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
-                CuadroJuicio.Text = iJuicio.NroExpediente;
-            }
-        }
+        }       
     }
 }

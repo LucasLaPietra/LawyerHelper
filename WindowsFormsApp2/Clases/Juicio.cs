@@ -35,6 +35,11 @@ namespace LawyerHelper.Clases
 
         public bool Activo {get;  set;}
 
+        public IList<Documento> DocumentosActivos
+        {
+            get { return Documentos.Where(n => n.Activo == true).ToList(); }
+        }
+
 
         public Juicio(string pNroExpediente,String pJuez,String pSecretario,String pEtapa,String pDescripcion,String pBienes,DateTime pFecha,String pGrupoFamiliar,String pTipoProceso,
          String pRecurso,String pCompetencia,String pFuero,String pCaratula,String pFolio,String pLibro,String pJurisdiccion,Double pPrecio )

@@ -13,6 +13,7 @@ using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using WindowsFormsApp2;
+using LawyerHelper.UI.Documentos;
 
 
 namespace WindowsFormsApp2.Juicios
@@ -114,7 +115,7 @@ namespace WindowsFormsApp2.Juicios
 
         private void BotonAgregarDocumentos_Click(object sender, EventArgs e)
         {
-
+       
         }
 
         private void BotonEliminarDocumentos_Click(object sender, EventArgs e)
@@ -135,6 +136,26 @@ namespace WindowsFormsApp2.Juicios
             {
                 this.Close();
             }
+        }
+
+        private void ListBoxDocumentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonAgregarDocumentos_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonConsultarDocumentos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BotonEliminarDocumentos_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -46,10 +46,22 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-        public Documento BusquedaPorNroFoja(string pNroFoja)
+        public void BajaLogicaDocumento(Documento pDocumento)
         {
-            //Documento iDocumento = iUdT.RepositorioDocumento.BusquedaPorNroFoja(pNroFoja);
-            return null;
+            iUdT.RepositorioDocumento.BajaLogicaDocumento(pDocumento);
+            iUdT.Guardar();
+        }
+
+        public Documento BusquedaPorNroFoja(string pNroFoja,Juicio pJuicio)
+        {
+            Documento iDocumento = iUdT.RepositorioDocumento.BusquedaPorNroFoja(pNroFoja,pJuicio);
+            return iDocumento;
+        }
+
+        public List<Documento> MostrarDocumentosDeJuicio(Juicio pJuicio)
+        {
+            List<Documento> iDocumentos = iUdT.RepositorioDocumento.MostrarTodosDeUnJuicio(pJuicio);
+            return iDocumentos;
         }
 
 

@@ -20,6 +20,10 @@ namespace LawyerHelper.Clases
 
         public bool Activo {get;  set;}
 
+        public String Descripcion
+        {
+            get { return NroFoja + " " + Nombre; }
+        }
 
         public Documento (String pTipoDocumento, String pNroFoja, Boolean pEnExpediente, String pNombre, String pDetalle, DateTime pFecha, Juicio pJuicio)
         {

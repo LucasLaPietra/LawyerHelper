@@ -17,27 +17,37 @@ namespace LawyerHelper.DAL.Repositorio
 
         public Documento BusquedaPorNroFoja(string pNroFoja,Juicio pJuicio)
         {
-            List<Documento> ListaPorJuicio = iContext.Documentos.Where(n => n.Juicio == pJuicio).ToList();
+            List<Documento> ListaPorJuicio = iContext.Documentos.Where(n => n.Juicio.JuicioId == pJuicio.JuicioId).ToList();
             Documento iQuery = ListaPorJuicio.FirstOrDefault(n => n.NroFoja == pNroFoja);
             return iQuery;
         }
 
         public List<Documento> MostrarTodosDeUnJuicio(Juicio pJuicio)
         {
-            List<Documento> iQuery = iContext.Documentos.Where(n => n.Juicio == pJuicio).ToList();
+            List<Documento> iQuery = iContext.Documentos.Where(n => n.Juicio.JuicioId == pJuicio.JuicioId).ToList();
             return iQuery;
         }
 
         public void ModificarDocumento(Documento pDocumento)
         {
             Documento iQuery;
-            iQuery = iContext.Documentos.First(n => n.NroFoja == (pDocumento.NroFoja));
+            List<Documento> ListaPorJuicio = iContext.Documentos.Where(n => n.Juicio.JuicioId == pDocumento.Juicio.JuicioId).ToList();
+            iQuery = ListaPorJuicio.First(n => n.NroFoja == (pDocumento.NroFoja));
             iQuery.Fecha = pDocumento.Fecha;
             iQuery.EnExpediente = pDocumento.EnExpediente;
             iQuery.Detalle = pDocumento.Detalle;
             iQuery.Juicio = pDocumento.Juicio;
             iQuery.Nombre = pDocumento.Nombre;
             iQuery.TipoDocumento = pDocumento.TipoDocumento;
+            iContext.SaveChanges();
+        }
+
+        public void BajaLogicaDocumento(Documento pDocumento)
+        {
+            Documento iQuery;
+            List<Documento> ListaPorJuicio = iContext.Documentos.Where(n => n.Juicio == pDocumento.Juicio).ToList();
+            iQuery = ListaPorJuicio.First(n => n.NroFoja == (pDocumento.NroFoja));
+            iQuery.Activo = false;
             iContext.SaveChanges();
         }
     }

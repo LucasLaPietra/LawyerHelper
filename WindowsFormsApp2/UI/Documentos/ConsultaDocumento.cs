@@ -21,14 +21,16 @@ namespace LawyerHelper.UI.Documentos
         ControladorDocumento iControladorDocumento;
         Fachada iFachada = new Fachada();
         Documento iDocumento;
+        List<Documento> iDocumentos;
+        Juicio iJuicio;
 
-        public ConsultaDocumento()
+        public ConsultaDocumento(Juicio pJuicio)
         {
             InitializeComponent();
             iControladorDocumento = new ControladorDocumento(UnidadDeTrabajo.Instancia);
             //Asignacion de colores 
             iFachada.AsignarColores(this);
-
+            iJuicio = pJuicio;
         }
 
         public ConsultaDocumento(Documento pDocumento)
@@ -50,15 +52,14 @@ namespace LawyerHelper.UI.Documentos
             LabelNombre2.Text = pDocumento.Nombre;
             LabelTipo2.Text = pDocumento.TipoDocumento;
             CheckEnExpediente.Checked = pDocumento.EnExpediente;
-
-            CuadroJuicio.Text = pDocumento.Juicio.NroExpediente;
+         
         }
 
         private void BotonBuscar_Click(object sender, EventArgs e)
         {
             try
             {
-                iDocumento = iControladorDocumento.BusquedaPorNroFoja(CuadroNumeroFoja.Text);
+                iDocumento = iControladorDocumento.BusquedaPorNroFoja(CuadroNumeroFoja.Text, iJuicio);
                 CuadroDetalle.Text = iDocumento.Detalle;
                 LabelFecha2.Text = iDocumento.Fecha.ToShortDateString();
                 LabelFoja2.Text = iDocumento.NroFoja;
@@ -66,7 +67,6 @@ namespace LawyerHelper.UI.Documentos
                 LabelTipo2.Text = iDocumento.TipoDocumento;
                 CheckEnExpediente.Checked = iDocumento.EnExpediente;
 
-                CuadroJuicio.Text = iDocumento.Juicio.NroExpediente;
             }
             catch (Exception)
             {
@@ -88,6 +88,24 @@ namespace LawyerHelper.UI.Documentos
             {
                 this.Close();
             }
+        }
+
+        private void BotonMostrarTodos_Click(object sender, EventArgs e)
+        {
+            iDocumentos = iControladorDocumento.MostrarDocumentosDeJuicio(iJuicio);
+            ComboBoxResultados.DataSource = iDocumentos;
+            ComboBoxResultados.DisplayMember = "Descripcion";
+        }
+
+        private void ComboBoxResultados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            iDocumento = iDocumentos[ComboBoxResultados.SelectedIndex];
+            CuadroDetalle.Text = iDocumento.Detalle;
+            LabelFecha2.Text = iDocumento.Fecha.ToShortDateString();
+            LabelFoja2.Text = iDocumento.NroFoja;
+            LabelNombre2.Text = iDocumento.Nombre;
+            LabelTipo2.Text = iDocumento.TipoDocumento;
+            CheckEnExpediente.Checked = iDocumento.EnExpediente;
         }
     }
 }

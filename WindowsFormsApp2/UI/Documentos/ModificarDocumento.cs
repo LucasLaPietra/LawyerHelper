@@ -20,13 +20,15 @@ namespace LawyerHelper.UI.Documentos
         ControladorDocumento iControladorDocumento;
         Fachada iFachada = new Fachada();
         Documento iDocumento;
-        public ModificarDocumento()
+        List<Documento> iDocumentos;
+        Juicio iJuicio;
+        public ModificarDocumento(Juicio pJuicio)
         {
             InitializeComponent();
             iControladorDocumento = new ControladorDocumento(UnidadDeTrabajo.Instancia);
             //Asignacion de colores     
             iFachada.AsignarColores(this);
-
+            iJuicio = pJuicio;
         }
 
         private void ModificarDocumento_Load(object sender, EventArgs e)
@@ -38,7 +40,7 @@ namespace LawyerHelper.UI.Documentos
         {
             try
             {
-                iDocumento = iControladorDocumento.BusquedaPorNroFoja(CuadroNumeroFoja.Text);
+                iDocumento = iControladorDocumento.BusquedaPorNroFoja(CuadroNumeroFoja.Text, iJuicio);
                 CuadroDetalle.Text = iDocumento.Detalle;
                 TimePickerFecha.Value = iDocumento.Fecha;
                 CuadroNumeroFoja.Text = iDocumento.NroFoja;
@@ -46,7 +48,6 @@ namespace LawyerHelper.UI.Documentos
                 CuadroTipo.Text = iDocumento.TipoDocumento;
                 CheckEnExpediente.Checked = iDocumento.EnExpediente;
 
-                CuadroJuicio.Text = iDocumento.Juicio.NroExpediente;
             }
             catch (Exception)
             {
@@ -54,24 +55,50 @@ namespace LawyerHelper.UI.Documentos
             }
         }
 
-        private void BotonConsultarJuicio_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BotonCambiarJuicio_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                DialogResult iMensaje = MessageBox.Show("Seguro que desea modificar este documento?", "Confirmacion", MessageBoxButtons.YesNoCancel);
 
+                if (iMensaje == DialogResult.Yes)
+                {
+                    iControladorDocumento.ModificarDocumento(iDocumento.NroFoja, CuadroTipo.Text, CheckEnExpediente.Checked, CuadroNombreDocumento.Text, CuadroDetalle.Text, TimePickerFecha.Value, iDocumento.Juicio);
+                    MessageBox.Show("Documento modificado con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al modificar el documento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
+            DialogResult iMensaje = MessageBox.Show("Seguro que desea cancelar?", "Cancelar", MessageBoxButtons.YesNoCancel);
 
+            if (iMensaje == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void BotonMostrarTodos_Click(object sender, EventArgs e)
+        {
+            iDocumentos = iControladorDocumento.MostrarDocumentosDeJuicio(iJuicio);
+            ComboBoxResultados.DataSource = iDocumentos;
+            ComboBoxResultados.DisplayMember = "Descripcion";
+        }
+
+        private void ComboBoxResultados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            iDocumento = iDocumentos[ComboBoxResultados.SelectedIndex];
+            CuadroDetalle.Text = iDocumento.Detalle;
+            TimePickerFecha.Value = iDocumento.Fecha;
+            CuadroNumeroFoja.Text = iDocumento.NroFoja;
+            CuadroNombreDocumento.Text = iDocumento.Nombre;
+            CuadroTipo.Text = iDocumento.TipoDocumento;
+            CheckEnExpediente.Checked = iDocumento.EnExpediente;
         }
     }
 }

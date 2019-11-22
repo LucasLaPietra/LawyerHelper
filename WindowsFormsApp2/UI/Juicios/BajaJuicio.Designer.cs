@@ -34,7 +34,6 @@
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
-            this.ListBoxDocumentos = new System.Windows.Forms.ListBox();
             this.ListBoxDemandados = new System.Windows.Forms.ListBox();
             this.ListBoxDemandantes = new System.Windows.Forms.ListBox();
             this.labelDocumentos = new System.Windows.Forms.Label();
@@ -133,7 +132,7 @@
             this.Layout.ColumnCount = 2;
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.Layout.Controls.Add(this.ListBoxDocumentos, 1, 19);
+            this.Layout.Controls.Add(this.BotonConsultarDocumentos, 1, 19);
             this.Layout.Controls.Add(this.ListBoxDemandados, 1, 18);
             this.Layout.Controls.Add(this.ListBoxDemandantes, 1, 17);
             this.Layout.Controls.Add(this.labelDocumentos, 0, 19);
@@ -198,14 +197,6 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.Layout.Size = new System.Drawing.Size(439, 529);
             this.Layout.TabIndex = 180;
-            // 
-            // ListBoxDocumentos
-            // 
-            this.ListBoxDocumentos.FormattingEnabled = true;
-            this.ListBoxDocumentos.Location = new System.Drawing.Point(97, 449);
-            this.ListBoxDocumentos.Name = "ListBoxDocumentos";
-            this.ListBoxDocumentos.Size = new System.Drawing.Size(324, 69);
-            this.ListBoxDocumentos.TabIndex = 178;
             // 
             // ListBoxDemandados
             // 
@@ -595,13 +586,13 @@
             // 
             this.BotonConsultarDocumentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BotonConsultarDocumentos.Enabled = false;
-            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(457, 532);
+            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(102, 449);
             this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
-            this.BotonConsultarDocumentos.Size = new System.Drawing.Size(73, 25);
-            this.BotonConsultarDocumentos.TabIndex = 184;
-            this.BotonConsultarDocumentos.Text = "Consultar";
+            this.BotonConsultarDocumentos.Size = new System.Drawing.Size(332, 25);
+            this.BotonConsultarDocumentos.TabIndex = 186;
+            this.BotonConsultarDocumentos.Text = "Consultar Documentos";
             this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
-            this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click);
+            this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click_1);
             // 
             // BajaJuicio
             // 
@@ -609,7 +600,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(543, 679);
             this.Controls.Add(this.BotonCancelar);
-            this.Controls.Add(this.BotonConsultarDocumentos);
             this.Controls.Add(this.BotonConsultarDemandados);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.Layout);
@@ -635,7 +625,6 @@
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.TableLayoutPanel Layout;
-        private System.Windows.Forms.ListBox ListBoxDocumentos;
         private System.Windows.Forms.ListBox ListBoxDemandados;
         private System.Windows.Forms.ListBox ListBoxDemandantes;
         private System.Windows.Forms.Label labelDocumentos;
