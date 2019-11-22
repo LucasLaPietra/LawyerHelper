@@ -38,7 +38,7 @@
             // 
             this.BotonConsulta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonConsulta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.BotonConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonConsulta.ForeColor = System.Drawing.Color.Black;
             this.BotonConsulta.Location = new System.Drawing.Point(0, 150);
             this.BotonConsulta.Name = "BotonConsulta";
             this.BotonConsulta.Size = new System.Drawing.Size(230, 50);
@@ -51,7 +51,7 @@
             // 
             this.BotonModificacion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonModificacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.BotonModificacion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonModificacion.ForeColor = System.Drawing.Color.Black;
             this.BotonModificacion.Location = new System.Drawing.Point(0, 100);
             this.BotonModificacion.Name = "BotonModificacion";
             this.BotonModificacion.Size = new System.Drawing.Size(230, 50);
@@ -64,7 +64,7 @@
             // 
             this.BotonBaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.BotonBaja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonBaja.ForeColor = System.Drawing.Color.Black;
             this.BotonBaja.Location = new System.Drawing.Point(0, 50);
             this.BotonBaja.Name = "BotonBaja";
             this.BotonBaja.Size = new System.Drawing.Size(230, 50);
@@ -77,7 +77,7 @@
             // 
             this.BotonAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.BotonAlta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonAlta.ForeColor = System.Drawing.Color.Black;
             this.BotonAlta.Location = new System.Drawing.Point(0, 0);
             this.BotonAlta.Name = "BotonAlta";
             this.BotonAlta.Size = new System.Drawing.Size(230, 50);

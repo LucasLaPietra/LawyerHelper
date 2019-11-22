@@ -77,7 +77,7 @@
             // 
             this.BotonAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.BotonAlta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
+            this.BotonAlta.ForeColor = System.Drawing.Color.Silver;
             this.BotonAlta.Location = new System.Drawing.Point(0, 75);
             this.BotonAlta.Name = "BotonAlta";
             this.BotonAlta.Size = new System.Drawing.Size(230, 50);
