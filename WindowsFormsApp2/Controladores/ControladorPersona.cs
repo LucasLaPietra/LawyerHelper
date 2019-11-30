@@ -27,15 +27,20 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
-        public void ModificarPersona( string pNombre, string pApellido, string pDni, string pDomicilio,
-    string pTelefono, DateTime pFecha, string pProfesion, string pLugarTrabajo, string pCuil, string pEstadoCivil, string pRepLegal, string pDomiLegal)
+        public void ModificarPersona( int pId, string pNombre, string pApellido, string pDni, string pDomicilio,
+    string pTelefono, DateTime pFecha, string pProfesion, string pLugarTrabajo, string pCuil, string pEstadoCivil, string pRepresentante, string pDomiLegal)
         {
-            Persona iPersona = new Persona( pNombre, pApellido, pDni, pDomicilio,
-            pTelefono, pFecha, pProfesion, pLugarTrabajo, pCuil, pEstadoCivil, pRepLegal, pDomiLegal);
-            iUdT.RepositorioPersona.ModificarPersona(iPersona);
-            iUdT.RepositorioPersona.Modificar(iPersona);
-            //no me deja utilizar el savechanges de la unit of work, pero si si la hago desde el repositorio
-            //iUdT.Guardar();
+            Persona iQuery = iUdT.RepositorioPersona.Obtener(pId);
+            iQuery.Dni = pDni;
+            iQuery.Domicilio = pDomicilio;
+            iQuery.DomicilioLegal = pDomiLegal;
+            iQuery.EstadoCivil = pEstadoCivil;
+            iQuery.FechaNacimiento = pFecha;
+            iQuery.LugarTrabajo = pLugarTrabajo;
+            iQuery.Profesion = pProfesion;
+            iQuery.Representante = pRepresentante;
+            iQuery.Telefono = pTelefono;
+            iUdT.Guardar();
         }
 
         public void BajaPersona(Persona pPersona)
@@ -46,8 +51,9 @@ namespace LawyerHelper.Controladores
 
         public void BajaLogicaPersona(Persona pPersona)
         {
-            iUdT.RepositorioPersona.BajaLogicaPersona(pPersona);
-            //iUdT.Guardar();
+            Persona iQuery = iUdT.RepositorioPersona.Obtener(pPersona.PersonaId);
+            iQuery.Activo = false;
+            iUdT.Guardar();
         }
 
         public Persona ObtenerPersona(int pId)

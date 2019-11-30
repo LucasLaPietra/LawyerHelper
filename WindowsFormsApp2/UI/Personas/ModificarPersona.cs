@@ -27,9 +27,7 @@ namespace LawyerHelper.UI.Personas
             InitializeComponent();
             iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
             //Asignacion de colores  
-            iFachada.AsignarColores(this);    
-            
-            
+            iFachada.AsignarColores(this);                         
         }
 
         private void LabelDomicilio2_Click(object sender, EventArgs e)
@@ -70,8 +68,8 @@ namespace LawyerHelper.UI.Personas
                 DialogResult iMensaje = MessageBox.Show("Seguro que desea modificar esta persona?", "Confirmacion", MessageBoxButtons.YesNoCancel);
 
                 if (iMensaje == DialogResult.Yes)
-               {
-                    iControladorPersona.ModificarPersona(CuadroNombre.Text, CuadroApellido.Text, CuadroDNI.Text, CuadroDomicilio.Text, CuadroTelefono.Text, CuadroFechaNacimiento.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroRepresentante.Text, CuadroDomicilioLegal.Text);
+                {
+                    iControladorPersona.ModificarPersona(iPersona.PersonaId,CuadroNombre.Text, CuadroApellido.Text, CuadroDNI.Text, CuadroDomicilio.Text, CuadroTelefono.Text, CuadroFechaNacimiento.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroRepresentante.Text, CuadroDomicilioLegal.Text);
                     MessageBox.Show("Persona modificada con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -97,6 +95,8 @@ namespace LawyerHelper.UI.Personas
             if (iMenuNuevo.ShowDialog() == DialogResult.OK)
             {
                 iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                CuadroApellido.Text = iPersona.Apellido;
+                CuadroNombre.Text = iPersona.Nombre;
                 CuadroDNI.Text = iPersona.Dni;
                 CuadroDomicilio.Text = iPersona.Domicilio;
                 CuadroDomicilioLegal.Text = iPersona.DomicilioLegal;

@@ -57,8 +57,8 @@ namespace LawyerHelper.UI.Documentos
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-           // try
-            //{
+           try
+            {
                 DialogResult iMensaje = MessageBox.Show("Seguro que desea modificar este documento?", "Confirmacion", MessageBoxButtons.YesNoCancel);
 
                 if (iMensaje == DialogResult.Yes)
@@ -66,11 +66,11 @@ namespace LawyerHelper.UI.Documentos
                     iControladorDocumento.ModificarDocumento(iDocumento.DocumentoId,iDocumento.NroFoja, CuadroTipo.Text, CheckEnExpediente.Checked, CuadroNombreDocumento.Text, CuadroDetalle.Text, TimePickerFecha.Value, iDocumento.Juicio);
                     MessageBox.Show("Documento modificado con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-           /* }
+           }
             catch (Exception)
             {
                 MessageBox.Show("Error al modificar el documento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
+            }
         }
 
         private void BotonCancelar_Click(object sender, EventArgs e)

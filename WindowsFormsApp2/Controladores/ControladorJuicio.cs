@@ -30,6 +30,34 @@ namespace LawyerHelper.Controladores
              iUdT.Guardar();           
         }
 
+        public void ModificarJuicio(int pId,string pNroExpediente, string pJuez, string pSecretario, string pEtapa,
+            string pDescripcion, string pBienes, DateTime pFecha, string pGrupoFamiliar, string pTipoProceso,
+            string pRecurso, string pCompetencia, string pFuero, string pCaratula, string pFolio, string pLibro,
+            string pJurisdiccion, Double pPrecio,List<Demandado> pDemandados, List<Demandante> pDemandantes)
+        {
+            Juicio iQuery = iUdT.RepositorioJuicio.Obtener(pId);
+            iQuery.Bienes = pBienes;
+            iQuery.Descripcion = pDescripcion;
+            iQuery.GrupoFamiliar = pGrupoFamiliar;
+            iQuery.Caratula = pCaratula;
+            iQuery.Competencia = pCompetencia;
+            iQuery.Etapa = pEtapa;
+            iQuery.NroExpediente = pNroExpediente;
+            iQuery.Fecha = pFecha;
+            iQuery.Folio = pFolio;
+            iQuery.Juez = pJuez;
+            iQuery.Jurisdiccion = pJurisdiccion;
+            iQuery.Libro = pLibro;
+            iQuery.Precio = pPrecio;
+            iQuery.Recurso = pRecurso;
+            iQuery.Secretario = pSecretario;
+            iQuery.TipoProceso = pTipoProceso;
+            iQuery.Fuero = pFuero;
+            iQuery.Demandados = pDemandados;
+            iQuery.Demandantes = pDemandantes;
+            iUdT.Guardar();
+        }
+
         public void BajaJuicio(Juicio pJuicio)
         {
             iUdT.RepositorioJuicio.Eliminar(pJuicio);
@@ -38,8 +66,9 @@ namespace LawyerHelper.Controladores
 
         public void BajaLogicaJuicio(Juicio pJuicio)
         {
-            iUdT.RepositorioJuicio.BajaLogicaJuicio(pJuicio);
-            //iUdT.Guardar();
+            Juicio iQuery = iUdT.RepositorioJuicio.Obtener(pJuicio.JuicioId);
+            iQuery.Activo = false;
+            iUdT.Guardar();
         }
 
         public Juicio ObtenerJuicio(int pId)
