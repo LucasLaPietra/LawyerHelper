@@ -11,7 +11,7 @@ namespace LawyerHelper.DAL.Interfaces
     {
         IList<Persona> BusquedaPersonas(string Parametro, string Valor);
         void ModificarPersona(Persona pPersona);
-
+        IList<Persona> BusquedaPersonasActivas(string Parametro, string Valor, bool pActivo);
         void BajaLogicaPersona(Persona pPersona);
         void PersonaIgualDni(String pDni);
     }

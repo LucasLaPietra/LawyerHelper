@@ -62,6 +62,13 @@ namespace LawyerHelper.DAL.Repositorio
             return iQuery;
         }
 
+        public IList<Persona> BusquedaPersonasActivas(string Parametro, string Valor, bool pActivo)
+        {
+            List<Persona> iQuery=BusquedaPersonas(Parametro,Valor).ToList();
+            iQuery=iQuery.Where(n => n.Activo == pActivo).ToList();
+            return iQuery;
+        }
+
         public void ModificarPersona(Persona pPersona)
         {
             Persona iQuery;

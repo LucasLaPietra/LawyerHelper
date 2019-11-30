@@ -28,6 +28,13 @@ namespace LawyerHelper.DAL.Repositorio
             return iQuery;
         }
 
+        public IList<Documento> BusquedaDocumentosActivos(Juicio pJuicio, bool pActivo)
+        {
+            List<Documento> iQuery = MostrarTodosDeUnJuicio(pJuicio);
+            iQuery = iQuery.Where(n => n.Activo == pActivo).ToList();
+            return iQuery;
+        }
+
         public void ModificarDocumento(Documento pDocumento)
         {
             Documento iQuery;
