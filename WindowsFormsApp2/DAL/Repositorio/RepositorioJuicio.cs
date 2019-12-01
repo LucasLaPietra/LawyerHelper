@@ -109,7 +109,7 @@ namespace LawyerHelper.DAL.Repositorio
         public void JuicioIgualExpediente(string pNroExpediente)
         {
             bool Resultado;
-            Resultado = iContext.Juicios.Any(n => n.NroExpediente == pNroExpediente);       
+            Resultado = iContext.Juicios.Any(n => n.NroExpediente == pNroExpediente && n.Activo == true);       
             if (Resultado==true)
             {
                 throw new InvalidOperationException();

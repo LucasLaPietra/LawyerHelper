@@ -78,9 +78,27 @@ namespace LawyerHelper.Controladores
             return iUdT.RepositorioPersona.BusquedaPersonas(pParametro,pValor);
         }
 
+        public IList<Persona> ObtenerTodosActivos(bool pActivo)
+        {
+            List<Persona> iQuery= iUdT.RepositorioPersona.ObtenerTodos().ToList();
+            iQuery = iQuery.Where(n => n.Activo == pActivo).ToList();
+            return iQuery;
+        }
+
+        public IList<Persona> BusquedaAvanzadaPersonaActivos(string pParametro, string pValor,bool pActivo)
+        {
+            return iUdT.RepositorioPersona.BusquedaPersonasActivas(pParametro, pValor,pActivo);
+        }
+
+        public void PersonaIgualDni(string pDni)
+        {
+            iUdT.RepositorioPersona.PersonaIgualDni(pDni);
+        }
+
         public Persona BusquedaPorNombreyAp(string pApellido, string pNombre)
         {
             List<Persona> ListaApellido= iUdT.RepositorioPersona.BusquedaPersonas("Apellido", pApellido).ToList();
+            ListaApellido = ListaApellido.Where(n => n.Activo == true).ToList();
             Persona iResultado = ListaApellido.FirstOrDefault(n => n.Nombre == pNombre);
             return iResultado;
         }

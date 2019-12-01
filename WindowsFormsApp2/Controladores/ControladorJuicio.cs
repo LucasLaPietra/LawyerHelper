@@ -30,6 +30,11 @@ namespace LawyerHelper.Controladores
              iUdT.Guardar();           
         }
 
+        public void JuicioIgualExpediente(string pNroExpediente)
+        {
+            iUdT.RepositorioJuicio.JuicioIgualExpediente(pNroExpediente);
+        }
+
         public void ModificarJuicio(int pId,string pNroExpediente, string pJuez, string pSecretario, string pEtapa,
             string pDescripcion, string pBienes, DateTime pFecha, string pGrupoFamiliar, string pTipoProceso,
             string pRecurso, string pCompetencia, string pFuero, string pCaratula, string pFolio, string pLibro,
@@ -79,6 +84,18 @@ namespace LawyerHelper.Controladores
         public IList<Juicio> BusquedaAvanzadaJuicio(string pParametro, string pValor)
         {
             return iUdT.RepositorioJuicio.BusquedaJuicios(pParametro,pValor);
+        }
+
+        public IList<Juicio> ObtenerTodosActivos(bool pActivo)
+        {
+            List<Juicio> iQuery = iUdT.RepositorioJuicio.ObtenerTodos().ToList();
+            iQuery = iQuery.Where(n => n.Activo == pActivo).ToList();
+            return iQuery;
+        }
+
+        public IList<Juicio> BusquedaAvanzadaJuiciosActivos(string pParametro, string pValor, bool pActivo)
+        {
+            return iUdT.RepositorioJuicio.BusquedaJuciosActivos(pParametro, pValor, pActivo);
         }
 
         public IList<Demandante> ObtenerDemandantes(int pId)

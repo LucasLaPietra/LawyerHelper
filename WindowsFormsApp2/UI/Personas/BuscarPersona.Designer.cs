@@ -54,6 +54,7 @@
             this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.BotonMostrarTodos = new System.Windows.Forms.Button();
+            this.CheckBoxEliminados = new System.Windows.Forms.CheckBox();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -353,11 +354,22 @@
             this.BotonMostrarTodos.UseVisualStyleBackColor = true;
             this.BotonMostrarTodos.Click += new System.EventHandler(this.BotonMostrarTodos_Click);
             // 
+            // CheckBoxEliminados
+            // 
+            this.CheckBoxEliminados.AutoSize = true;
+            this.CheckBoxEliminados.Location = new System.Drawing.Point(351, 23);
+            this.CheckBoxEliminados.Name = "CheckBoxEliminados";
+            this.CheckBoxEliminados.Size = new System.Drawing.Size(111, 17);
+            this.CheckBoxEliminados.TabIndex = 100;
+            this.CheckBoxEliminados.Text = "Buscar eliminados";
+            this.CheckBoxEliminados.UseVisualStyleBackColor = true;
+            // 
             // BuscarPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 381);
+            this.Controls.Add(this.CheckBoxEliminados);
             this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.ComboBoxResultados);
@@ -406,5 +418,6 @@
         private System.Windows.Forms.ComboBox ComboBoxResultados;
         private System.Windows.Forms.Button BotonAceptar;
         private System.Windows.Forms.Button BotonMostrarTodos;
+        private System.Windows.Forms.CheckBox CheckBoxEliminados;
     }
 }

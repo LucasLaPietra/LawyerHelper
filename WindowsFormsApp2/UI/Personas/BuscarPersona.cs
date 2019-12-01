@@ -19,6 +19,7 @@ namespace LawyerHelper.UI.Personas
     public partial class BuscarPersona : Form
     {
         object iResultado;
+        Persona iSeleccionado;
         public object PersonaEncontrada
         { get {return iResultado;}
             set {iResultado = value;}
@@ -42,7 +43,7 @@ namespace LawyerHelper.UI.Personas
         {
             try
             {
-                iResultados = iControladorPersona.BusquedaAvanzadaPersona(comboBoxParametro.SelectedItem.ToString(), CuadroParametro.Text).ToList();
+                iResultados = iControladorPersona.BusquedaAvanzadaPersonaActivos(comboBoxParametro.SelectedItem.ToString(), CuadroParametro.Text,!CheckBoxEliminados.Checked).ToList();
                 ComboBoxResultados.DataSource = iResultados;
                 ComboBoxResultados.DisplayMember = "NombreyAp";
             }
@@ -56,11 +57,31 @@ namespace LawyerHelper.UI.Personas
         {
             try
             {
-                iResultado = ComboBoxResultados.SelectedItem;
+                if(iSeleccionado.Activo==false)
+                {
+                    DialogResult result = MessageBox.Show("Esta persona esta eliminada, quiere volver a darla de alta?", "Confirmacion", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        iControladorPersona.AltaLogicaPersona(iSeleccionado);
+                        iResultado = ComboBoxResultados.SelectedItem;
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    iResultado = ComboBoxResultados.SelectedItem;
+                }               
             }
             catch (NullReferenceException)
             {
                 MessageBox.Show("Debe seleccionar una persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Ya existe una persona activa con este DNI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -71,7 +92,7 @@ namespace LawyerHelper.UI.Personas
 
         private void ComboBoxResultados_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Persona iSeleccionado = (Persona)ComboBoxResultados.SelectedItem;
+            iSeleccionado = (Persona)ComboBoxResultados.SelectedItem;
             LabelNombre2.Text = iSeleccionado.Nombre;
             LabelApellido2.Text = iSeleccionado.Apellido;
             LabelDNI2.Text = iSeleccionado.Dni;
@@ -86,7 +107,7 @@ namespace LawyerHelper.UI.Personas
         {
             try
             {
-                iResultados = iControladorPersona.ObtenerTodos().ToList();
+                iResultados = iControladorPersona.ObtenerTodosActivos(!CheckBoxEliminados.Checked).ToList();
                 ComboBoxResultados.DataSource = iResultados;
                 ComboBoxResultados.DisplayMember = "NombreyAp";
             }

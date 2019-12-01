@@ -61,7 +61,7 @@ namespace LawyerHelper.DAL.Repositorio
         {
             bool Resultado;
             List<Documento> ListaPorJuicio = iContext.Documentos.Where(n => n.Juicio.JuicioId == pJuicio.JuicioId).ToList();
-            Resultado = ListaPorJuicio.Any(n => n.NroFoja == pNroFoja);
+            Resultado = ListaPorJuicio.Any(n => n.NroFoja == pNroFoja && n.Activo == true);
             if (Resultado == true)
             {
                 throw new InvalidOperationException();
