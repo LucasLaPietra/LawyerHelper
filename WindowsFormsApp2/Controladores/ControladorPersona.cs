@@ -56,6 +56,13 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
+        public void AltaLogicaPersona(Persona pPersona)
+        {
+            Persona iQuery = iUdT.RepositorioPersona.Obtener(pPersona.PersonaId);
+            iQuery.Activo = false;
+            iUdT.Guardar();
+        }
+
         public Persona ObtenerPersona(int pId)
         {
             return iUdT.RepositorioPersona.Obtener(pId);

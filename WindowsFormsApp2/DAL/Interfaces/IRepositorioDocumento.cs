@@ -14,5 +14,6 @@ namespace LawyerHelper.DAL.Interfaces
         void ModificarDocumento(Documento pDocumento);
         List<Documento> MostrarTodosDeUnJuicio(Juicio pJuicio);
         void BajaLogicaDocumento(Documento pDocumento);
+        void DocumentoIgualFoja(string pNroFoja, Juicio pJuicio);
     }
 }

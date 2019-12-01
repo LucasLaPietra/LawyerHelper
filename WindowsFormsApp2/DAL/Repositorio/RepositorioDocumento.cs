@@ -56,6 +56,17 @@ namespace LawyerHelper.DAL.Repositorio
             iQuery.Activo = false;
             iContext.SaveChanges();
         }
+
+        public void DocumentoIgualFoja(string pNroFoja, Juicio pJuicio)
+        {
+            bool Resultado;
+            List<Documento> ListaPorJuicio = iContext.Documentos.Where(n => n.Juicio.JuicioId == pJuicio.JuicioId).ToList();
+            Resultado = ListaPorJuicio.Any(n => n.NroFoja == pNroFoja);
+            if (Resultado == true)
+            {
+                throw new InvalidOperationException();
+            }
+        }
     }
 
 

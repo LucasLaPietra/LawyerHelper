@@ -42,12 +42,16 @@ namespace LawyerHelper.UI.Documentos
             {
                 if (iJuicio == null)
                 {
-                    throw new InvalidOperationException();
+                    throw new ArgumentException();
                 }
                 iControladorDocumento.RegistrarDocumento(CuadroTipoDocumento.Text, CuadroFoja.Text, CheckEnExpediente.Checked, CuadroNombreDocumento.Text, CuadroDetalle.Text, TimePickerFecha.Value, iJuicio);
                 MessageBox.Show("Documento añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (InvalidOperationException)
+            {
+                MessageBox.Show("Ya existe un documento con este numero de foja", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
             {
                 MessageBox.Show("No se asociaron juicios ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

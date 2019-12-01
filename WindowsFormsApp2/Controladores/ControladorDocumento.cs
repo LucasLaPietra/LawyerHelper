@@ -27,6 +27,7 @@ namespace LawyerHelper.Controladores
         public void RegistrarDocumento( String pTipoDocumento, String pNroFoja, Boolean pEnExpediente, String pNombre, String pDetalle, DateTime pFecha, Juicio pJuicio)
             {
             Documento iDocumento = new Documento(pTipoDocumento,  pNroFoja,  pEnExpediente,  pNombre,  pDetalle, pFecha, pJuicio);
+            iUdT.RepositorioDocumento.DocumentoIgualFoja(pNroFoja, pJuicio);
             iUdT.RepositorioDocumento.Agregar(iDocumento);
             iUdT.Guardar();
         }
