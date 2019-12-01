@@ -76,6 +76,14 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
+        public void AltaLogicaJuicio(Juicio pJuicio)
+        {
+            Juicio iQuery = iUdT.RepositorioJuicio.Obtener(pJuicio.JuicioId);
+            iUdT.RepositorioJuicio.JuicioIgualExpediente(pJuicio.NroExpediente);
+            iQuery.Activo = true;
+            iUdT.Guardar();
+        }
+
         public Juicio ObtenerJuicio(int pId)
         {
             return iUdT.RepositorioJuicio.Obtener(pId);
@@ -125,7 +133,7 @@ namespace LawyerHelper.Controladores
         
         public Juicio BusquedaPorNroExpediente(string pNroExpediente)
         {
-            IList<Juicio> iJuicios = iUdT.RepositorioJuicio.BusquedaJuicios("NroExpediente", pNroExpediente);
+            IList<Juicio> iJuicios = iUdT.RepositorioJuicio.BusquedaJuciosActivos("NroExpediente", pNroExpediente,true);
             Juicio iJuicio = iJuicios.FirstOrDefault();
             return iJuicio;
         }

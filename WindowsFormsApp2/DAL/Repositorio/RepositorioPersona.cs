@@ -96,7 +96,7 @@ namespace LawyerHelper.DAL.Repositorio
         public void PersonaIgualDni(String pDni)
         {
             bool Resultado;
-            Resultado = iContext.Personas.Any(n => n.Dni == pDni );
+            Resultado = iContext.Personas.Any(n => n.Dni == pDni && n.Activo==true);
             if (Resultado == true)
             {
                 throw new InvalidOperationException();

@@ -34,8 +34,13 @@
             this.labelCuadroParametro = new System.Windows.Forms.Label();
             this.comboBoxParametro = new System.Windows.Forms.ComboBox();
             this.LabelComboBoxParametro = new System.Windows.Forms.Label();
+            this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
+            this.BotonAceptar = new System.Windows.Forms.Button();
+            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.CheckBoxEliminados = new System.Windows.Forms.CheckBox();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
-            this.labelDocumentos = new System.Windows.Forms.Label();
+            this.ListBoxDemandados = new System.Windows.Forms.ListBox();
+            this.ListBoxDemandantes = new System.Windows.Forms.ListBox();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.LabelFolio = new System.Windows.Forms.Label();
             this.LabelFuero = new System.Windows.Forms.Label();
@@ -44,18 +49,18 @@
             this.LabelCompetencia = new System.Windows.Forms.Label();
             this.LabelRecurso = new System.Windows.Forms.Label();
             this.LabelCaratula = new System.Windows.Forms.Label();
-            this.LabelLibro2 = new System.Windows.Forms.Label();
+            this.LabelLibro = new System.Windows.Forms.Label();
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.LabelBienes = new System.Windows.Forms.Label();
             this.LabelFecha2 = new System.Windows.Forms.Label();
             this.LabelFolio2 = new System.Windows.Forms.Label();
             this.LabelJurisdiccion2 = new System.Windows.Forms.Label();
-            this.LabelTipoJuicio2 = new System.Windows.Forms.Label();
+            this.LabelFuero2 = new System.Windows.Forms.Label();
             this.LabelTipoProceso2 = new System.Windows.Forms.Label();
             this.LabelCompetencia2 = new System.Windows.Forms.Label();
             this.LabelRecurso2 = new System.Windows.Forms.Label();
             this.LabelCaratula2 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
+            this.labelLibro2 = new System.Windows.Forms.Label();
             this.LabelGrupoFamiliar = new System.Windows.Forms.Label();
             this.LabelJuez = new System.Windows.Forms.Label();
             this.LabelSecretario = new System.Windows.Forms.Label();
@@ -64,9 +69,7 @@
             this.LabelDemandado = new System.Windows.Forms.Label();
             this.LabelJuez2 = new System.Windows.Forms.Label();
             this.LabelSecretario2 = new System.Windows.Forms.Label();
-            this.LabelDemandante2 = new System.Windows.Forms.Label();
             this.LabelPrecio2 = new System.Windows.Forms.Label();
-            this.LabelDemandado2 = new System.Windows.Forms.Label();
             this.LabelJurisdiccion = new System.Windows.Forms.Label();
             this.LabelEtapa = new System.Windows.Forms.Label();
             this.LabelExpediente = new System.Windows.Forms.Label();
@@ -74,10 +77,6 @@
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.LabelEtapa2 = new System.Windows.Forms.Label();
             this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
-            this.BotonVerDocumentacion = new System.Windows.Forms.Button();
-            this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
-            this.BotonAceptar = new System.Windows.Forms.Button();
-            this.BotonCancelar = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,12 +151,55 @@
             this.LabelComboBoxParametro.TabIndex = 91;
             this.LabelComboBoxParametro.Text = "Seleccionar parametro de busqueda:";
             // 
+            // ComboBoxResultados
+            // 
+            this.ComboBoxResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ComboBoxResultados.FormattingEnabled = true;
+            this.ComboBoxResultados.Location = new System.Drawing.Point(39, 119);
+            this.ComboBoxResultados.Name = "ComboBoxResultados";
+            this.ComboBoxResultados.Size = new System.Drawing.Size(439, 21);
+            this.ComboBoxResultados.TabIndex = 100;
+            this.ComboBoxResultados.SelectedIndexChanged += new System.EventHandler(this.ComboBoxResultados_SelectedIndexChanged);
+            // 
+            // BotonAceptar
+            // 
+            this.BotonAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAceptar.Location = new System.Drawing.Point(39, 603);
+            this.BotonAceptar.Name = "BotonAceptar";
+            this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
+            this.BotonAceptar.TabIndex = 102;
+            this.BotonAceptar.Text = "Aceptar";
+            this.BotonAceptar.UseVisualStyleBackColor = true;
+            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
+            // 
+            // BotonCancelar
+            // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCancelar.Location = new System.Drawing.Point(383, 603);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
+            this.BotonCancelar.TabIndex = 101;
+            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
+            // 
+            // CheckBoxEliminados
+            // 
+            this.CheckBoxEliminados.AutoSize = true;
+            this.CheckBoxEliminados.Location = new System.Drawing.Point(404, 17);
+            this.CheckBoxEliminados.Name = "CheckBoxEliminados";
+            this.CheckBoxEliminados.Size = new System.Drawing.Size(111, 17);
+            this.CheckBoxEliminados.TabIndex = 103;
+            this.CheckBoxEliminados.Text = "Buscar eliminados";
+            this.CheckBoxEliminados.UseVisualStyleBackColor = true;
+            // 
             // Layout
             // 
             this.Layout.ColumnCount = 2;
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.Layout.Controls.Add(this.labelDocumentos, 0, 19);
+            this.Layout.Controls.Add(this.ListBoxDemandados, 1, 18);
+            this.Layout.Controls.Add(this.ListBoxDemandantes, 1, 17);
             this.Layout.Controls.Add(this.LabelFecha, 0, 1);
             this.Layout.Controls.Add(this.LabelFolio, 0, 2);
             this.Layout.Controls.Add(this.LabelFuero, 0, 4);
@@ -166,18 +208,18 @@
             this.Layout.Controls.Add(this.LabelCompetencia, 0, 6);
             this.Layout.Controls.Add(this.LabelRecurso, 0, 7);
             this.Layout.Controls.Add(this.LabelCaratula, 0, 8);
-            this.Layout.Controls.Add(this.LabelLibro2, 0, 9);
+            this.Layout.Controls.Add(this.LabelLibro, 0, 9);
             this.Layout.Controls.Add(this.LabelDescripcion, 0, 10);
             this.Layout.Controls.Add(this.LabelBienes, 0, 12);
             this.Layout.Controls.Add(this.LabelFecha2, 1, 1);
             this.Layout.Controls.Add(this.LabelFolio2, 1, 2);
             this.Layout.Controls.Add(this.LabelJurisdiccion2, 1, 3);
-            this.Layout.Controls.Add(this.LabelTipoJuicio2, 1, 4);
+            this.Layout.Controls.Add(this.LabelFuero2, 1, 4);
             this.Layout.Controls.Add(this.LabelTipoProceso2, 1, 5);
             this.Layout.Controls.Add(this.LabelCompetencia2, 1, 6);
             this.Layout.Controls.Add(this.LabelRecurso2, 1, 7);
             this.Layout.Controls.Add(this.LabelCaratula2, 1, 8);
-            this.Layout.Controls.Add(this.label24, 1, 9);
+            this.Layout.Controls.Add(this.labelLibro2, 1, 9);
             this.Layout.Controls.Add(this.LabelGrupoFamiliar, 0, 13);
             this.Layout.Controls.Add(this.LabelJuez, 0, 14);
             this.Layout.Controls.Add(this.LabelSecretario, 0, 15);
@@ -186,9 +228,7 @@
             this.Layout.Controls.Add(this.LabelDemandado, 0, 18);
             this.Layout.Controls.Add(this.LabelJuez2, 1, 14);
             this.Layout.Controls.Add(this.LabelSecretario2, 1, 15);
-            this.Layout.Controls.Add(this.LabelDemandante2, 1, 17);
             this.Layout.Controls.Add(this.LabelPrecio2, 1, 16);
-            this.Layout.Controls.Add(this.LabelDemandado2, 1, 18);
             this.Layout.Controls.Add(this.LabelJurisdiccion, 0, 3);
             this.Layout.Controls.Add(this.LabelEtapa, 0, 11);
             this.Layout.Controls.Add(this.LabelExpediente, 0, 0);
@@ -196,10 +236,9 @@
             this.Layout.Controls.Add(this.CuadroDescripcion, 1, 10);
             this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
             this.Layout.Controls.Add(this.CuadroGrupoFamiliar, 1, 13);
-            this.Layout.Controls.Add(this.BotonVerDocumentacion, 1, 19);
-            this.Layout.Location = new System.Drawing.Point(39, 152);
+            this.Layout.Location = new System.Drawing.Point(39, 146);
             this.Layout.Name = "Layout";
-            this.Layout.RowCount = 20;
+            this.Layout.RowCount = 19;
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -219,19 +258,24 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Layout.Size = new System.Drawing.Size(439, 347);
-            this.Layout.TabIndex = 99;
+            this.Layout.Size = new System.Drawing.Size(439, 448);
+            this.Layout.TabIndex = 104;
             // 
-            // labelDocumentos
+            // ListBoxDemandados
             // 
-            this.labelDocumentos.AutoSize = true;
-            this.labelDocumentos.Location = new System.Drawing.Point(3, 322);
-            this.labelDocumentos.Name = "labelDocumentos";
-            this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
-            this.labelDocumentos.TabIndex = 175;
-            this.labelDocumentos.Text = "Documentos:";
+            this.ListBoxDemandados.FormattingEnabled = true;
+            this.ListBoxDemandados.Location = new System.Drawing.Point(97, 374);
+            this.ListBoxDemandados.Name = "ListBoxDemandados";
+            this.ListBoxDemandados.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandados.TabIndex = 178;
+            // 
+            // ListBoxDemandantes
+            // 
+            this.ListBoxDemandantes.FormattingEnabled = true;
+            this.ListBoxDemandantes.Location = new System.Drawing.Point(97, 299);
+            this.ListBoxDemandantes.Name = "ListBoxDemandantes";
+            this.ListBoxDemandantes.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandantes.TabIndex = 178;
             // 
             // LabelFecha
             // 
@@ -305,14 +349,14 @@
             this.LabelCaratula.TabIndex = 9;
             this.LabelCaratula.Text = "Caratula:";
             // 
-            // LabelLibro2
+            // LabelLibro
             // 
-            this.LabelLibro2.AutoSize = true;
-            this.LabelLibro2.Location = new System.Drawing.Point(3, 117);
-            this.LabelLibro2.Name = "LabelLibro2";
-            this.LabelLibro2.Size = new System.Drawing.Size(33, 13);
-            this.LabelLibro2.TabIndex = 10;
-            this.LabelLibro2.Text = "Libro:";
+            this.LabelLibro.AutoSize = true;
+            this.LabelLibro.Location = new System.Drawing.Point(3, 117);
+            this.LabelLibro.Name = "LabelLibro";
+            this.LabelLibro.Size = new System.Drawing.Size(33, 13);
+            this.LabelLibro.TabIndex = 10;
+            this.LabelLibro.Text = "Libro:";
             // 
             // LabelDescripcion
             // 
@@ -359,14 +403,14 @@
             this.LabelJurisdiccion2.TabIndex = 16;
             this.LabelJurisdiccion2.Text = "-";
             // 
-            // LabelTipoJuicio2
+            // LabelFuero2
             // 
-            this.LabelTipoJuicio2.AutoSize = true;
-            this.LabelTipoJuicio2.Location = new System.Drawing.Point(97, 52);
-            this.LabelTipoJuicio2.Name = "LabelTipoJuicio2";
-            this.LabelTipoJuicio2.Size = new System.Drawing.Size(10, 13);
-            this.LabelTipoJuicio2.TabIndex = 17;
-            this.LabelTipoJuicio2.Text = "-";
+            this.LabelFuero2.AutoSize = true;
+            this.LabelFuero2.Location = new System.Drawing.Point(97, 52);
+            this.LabelFuero2.Name = "LabelFuero2";
+            this.LabelFuero2.Size = new System.Drawing.Size(10, 13);
+            this.LabelFuero2.TabIndex = 17;
+            this.LabelFuero2.Text = "-";
             // 
             // LabelTipoProceso2
             // 
@@ -404,14 +448,14 @@
             this.LabelCaratula2.TabIndex = 21;
             this.LabelCaratula2.Text = "-";
             // 
-            // label24
+            // labelLibro2
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(97, 117);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(10, 13);
-            this.label24.TabIndex = 22;
-            this.label24.Text = "-";
+            this.labelLibro2.AutoSize = true;
+            this.labelLibro2.Location = new System.Drawing.Point(97, 117);
+            this.labelLibro2.Name = "labelLibro2";
+            this.labelLibro2.Size = new System.Drawing.Size(10, 13);
+            this.labelLibro2.TabIndex = 22;
+            this.labelLibro2.Text = "-";
             // 
             // LabelGrupoFamiliar
             // 
@@ -454,18 +498,18 @@
             this.LabelDemandante.AutoSize = true;
             this.LabelDemandante.Location = new System.Drawing.Point(3, 296);
             this.LabelDemandante.Name = "LabelDemandante";
-            this.LabelDemandante.Size = new System.Drawing.Size(71, 13);
+            this.LabelDemandante.Size = new System.Drawing.Size(76, 13);
             this.LabelDemandante.TabIndex = 30;
-            this.LabelDemandante.Text = "Demandante:";
+            this.LabelDemandante.Text = "Demandantes:";
             // 
             // LabelDemandado
             // 
             this.LabelDemandado.AutoSize = true;
-            this.LabelDemandado.Location = new System.Drawing.Point(3, 309);
+            this.LabelDemandado.Location = new System.Drawing.Point(3, 371);
             this.LabelDemandado.Name = "LabelDemandado";
-            this.LabelDemandado.Size = new System.Drawing.Size(68, 13);
+            this.LabelDemandado.Size = new System.Drawing.Size(73, 13);
             this.LabelDemandado.TabIndex = 31;
-            this.LabelDemandado.Text = "Demandado:";
+            this.LabelDemandado.Text = "Demandados:";
             // 
             // LabelJuez2
             // 
@@ -485,15 +529,6 @@
             this.LabelSecretario2.TabIndex = 34;
             this.LabelSecretario2.Text = "-";
             // 
-            // LabelDemandante2
-            // 
-            this.LabelDemandante2.AutoSize = true;
-            this.LabelDemandante2.Location = new System.Drawing.Point(97, 296);
-            this.LabelDemandante2.Name = "LabelDemandante2";
-            this.LabelDemandante2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDemandante2.TabIndex = 35;
-            this.LabelDemandante2.Text = "-";
-            // 
             // LabelPrecio2
             // 
             this.LabelPrecio2.AutoSize = true;
@@ -502,15 +537,6 @@
             this.LabelPrecio2.Size = new System.Drawing.Size(10, 13);
             this.LabelPrecio2.TabIndex = 36;
             this.LabelPrecio2.Text = "-";
-            // 
-            // LabelDemandado2
-            // 
-            this.LabelDemandado2.AutoSize = true;
-            this.LabelDemandado2.Location = new System.Drawing.Point(97, 309);
-            this.LabelDemandado2.Name = "LabelDemandado2";
-            this.LabelDemandado2.Size = new System.Drawing.Size(10, 13);
-            this.LabelDemandado2.TabIndex = 37;
-            this.LabelDemandado2.Text = "-";
             // 
             // LabelJurisdiccion
             // 
@@ -544,7 +570,6 @@
             this.CuadroBienes.Location = new System.Drawing.Point(97, 184);
             this.CuadroBienes.Multiline = true;
             this.CuadroBienes.Name = "CuadroBienes";
-            this.CuadroBienes.ReadOnly = true;
             this.CuadroBienes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CuadroBienes.Size = new System.Drawing.Size(342, 32);
             this.CuadroBienes.TabIndex = 172;
@@ -554,7 +579,6 @@
             this.CuadroDescripcion.Location = new System.Drawing.Point(97, 133);
             this.CuadroDescripcion.Multiline = true;
             this.CuadroDescripcion.Name = "CuadroDescripcion";
-            this.CuadroDescripcion.ReadOnly = true;
             this.CuadroDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CuadroDescripcion.Size = new System.Drawing.Size(342, 32);
             this.CuadroDescripcion.TabIndex = 173;
@@ -573,62 +597,20 @@
             this.CuadroGrupoFamiliar.Location = new System.Drawing.Point(97, 222);
             this.CuadroGrupoFamiliar.Multiline = true;
             this.CuadroGrupoFamiliar.Name = "CuadroGrupoFamiliar";
-            this.CuadroGrupoFamiliar.ReadOnly = true;
             this.CuadroGrupoFamiliar.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(342, 32);
             this.CuadroGrupoFamiliar.TabIndex = 174;
-            // 
-            // BotonVerDocumentacion
-            // 
-            this.BotonVerDocumentacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BotonVerDocumentacion.Enabled = false;
-            this.BotonVerDocumentacion.Location = new System.Drawing.Point(208, 325);
-            this.BotonVerDocumentacion.Name = "BotonVerDocumentacion";
-            this.BotonVerDocumentacion.Size = new System.Drawing.Size(120, 19);
-            this.BotonVerDocumentacion.TabIndex = 176;
-            this.BotonVerDocumentacion.Text = "Ver";
-            this.BotonVerDocumentacion.UseVisualStyleBackColor = true;
-            // 
-            // ComboBoxResultados
-            // 
-            this.ComboBoxResultados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ComboBoxResultados.FormattingEnabled = true;
-            this.ComboBoxResultados.Location = new System.Drawing.Point(39, 119);
-            this.ComboBoxResultados.Name = "ComboBoxResultados";
-            this.ComboBoxResultados.Size = new System.Drawing.Size(439, 21);
-            this.ComboBoxResultados.TabIndex = 100;
-            // 
-            // BotonAceptar
-            // 
-            this.BotonAceptar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAceptar.Location = new System.Drawing.Point(45, 505);
-            this.BotonAceptar.Name = "BotonAceptar";
-            this.BotonAceptar.Size = new System.Drawing.Size(95, 24);
-            this.BotonAceptar.TabIndex = 102;
-            this.BotonAceptar.Text = "Aceptar";
-            this.BotonAceptar.UseVisualStyleBackColor = true;
-            this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
-            // 
-            // BotonCancelar
-            // 
-            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(383, 505);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(95, 24);
-            this.BotonCancelar.TabIndex = 101;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
             // 
             // BuscarJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(518, 541);
+            this.ClientSize = new System.Drawing.Size(518, 639);
+            this.Controls.Add(this.Layout);
+            this.Controls.Add(this.CheckBoxEliminados);
             this.Controls.Add(this.BotonAceptar);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.ComboBoxResultados);
-            this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.CuadroParametro);
@@ -651,7 +633,13 @@
         private System.Windows.Forms.Label labelCuadroParametro;
         private System.Windows.Forms.ComboBox comboBoxParametro;
         private System.Windows.Forms.Label LabelComboBoxParametro;
+        private System.Windows.Forms.ComboBox ComboBoxResultados;
+        private System.Windows.Forms.Button BotonAceptar;
+        private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.CheckBox CheckBoxEliminados;
         private System.Windows.Forms.TableLayoutPanel Layout;
+        private System.Windows.Forms.ListBox ListBoxDemandados;
+        private System.Windows.Forms.ListBox ListBoxDemandantes;
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.Label LabelFolio;
         private System.Windows.Forms.Label LabelFuero;
@@ -660,19 +648,18 @@
         private System.Windows.Forms.Label LabelCompetencia;
         private System.Windows.Forms.Label LabelRecurso;
         private System.Windows.Forms.Label LabelCaratula;
-        private System.Windows.Forms.Label LabelLibro2;
+        private System.Windows.Forms.Label LabelLibro;
         private System.Windows.Forms.Label LabelDescripcion;
         private System.Windows.Forms.Label LabelBienes;
         private System.Windows.Forms.Label LabelFecha2;
         private System.Windows.Forms.Label LabelFolio2;
         private System.Windows.Forms.Label LabelJurisdiccion2;
-        private System.Windows.Forms.Label LabelTipoJuicio2;
+        private System.Windows.Forms.Label LabelFuero2;
         private System.Windows.Forms.Label LabelTipoProceso2;
         private System.Windows.Forms.Label LabelCompetencia2;
         private System.Windows.Forms.Label LabelRecurso2;
         private System.Windows.Forms.Label LabelCaratula2;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label LabelEtapa2;
+        private System.Windows.Forms.Label labelLibro2;
         private System.Windows.Forms.Label LabelGrupoFamiliar;
         private System.Windows.Forms.Label LabelJuez;
         private System.Windows.Forms.Label LabelSecretario;
@@ -681,19 +668,13 @@
         private System.Windows.Forms.Label LabelDemandado;
         private System.Windows.Forms.Label LabelJuez2;
         private System.Windows.Forms.Label LabelSecretario2;
-        private System.Windows.Forms.Label LabelDemandante2;
         private System.Windows.Forms.Label LabelPrecio2;
-        private System.Windows.Forms.Label LabelDemandado2;
         private System.Windows.Forms.Label LabelJurisdiccion;
         private System.Windows.Forms.Label LabelEtapa;
         private System.Windows.Forms.Label LabelExpediente;
-        private System.Windows.Forms.ComboBox ComboBoxResultados;
-        private System.Windows.Forms.Button BotonAceptar;
-        private System.Windows.Forms.Button BotonCancelar;
         private System.Windows.Forms.TextBox CuadroBienes;
         private System.Windows.Forms.TextBox CuadroDescripcion;
+        private System.Windows.Forms.Label LabelEtapa2;
         private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
-        private System.Windows.Forms.Label labelDocumentos;
-        private System.Windows.Forms.Button BotonVerDocumentacion;
     }
 }

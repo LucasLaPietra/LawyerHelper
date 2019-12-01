@@ -59,7 +59,8 @@ namespace LawyerHelper.Controladores
         public void AltaLogicaPersona(Persona pPersona)
         {
             Persona iQuery = iUdT.RepositorioPersona.Obtener(pPersona.PersonaId);
-            iQuery.Activo = false;
+            iUdT.RepositorioPersona.PersonaIgualDni(pPersona.Dni);
+            iQuery.Activo = true;
             iUdT.Guardar();
         }
 
@@ -97,8 +98,7 @@ namespace LawyerHelper.Controladores
 
         public Persona BusquedaPorNombreyAp(string pApellido, string pNombre)
         {
-            List<Persona> ListaApellido= iUdT.RepositorioPersona.BusquedaPersonas("Apellido", pApellido).ToList();
-            ListaApellido = ListaApellido.Where(n => n.Activo == true).ToList();
+            List<Persona> ListaApellido= iUdT.RepositorioPersona.BusquedaPersonasActivas("Apellido", pApellido,true).ToList();
             Persona iResultado = ListaApellido.FirstOrDefault(n => n.Nombre == pNombre);
             return iResultado;
         }
