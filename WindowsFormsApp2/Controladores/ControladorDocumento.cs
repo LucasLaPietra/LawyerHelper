@@ -44,6 +44,21 @@ namespace LawyerHelper.Controladores
             iUdT.Guardar();
         }
 
+        public void BajaLogicaDocumento(Documento pDocumento, Juicio pJuicio)
+        {
+            Documento iQuery = iUdT.RepositorioDocumento.Obtener(pDocumento.DocumentoId);
+            iQuery.Activo = false;
+            iUdT.Guardar();
+        }
+
+        public void AltaLogicaDocumento(Documento pDocumento, Juicio pJuicio)
+        {
+            Documento iQuery = iUdT.RepositorioDocumento.Obtener(pDocumento.DocumentoId);
+            iUdT.RepositorioDocumento.DocumentoIgualFoja(pDocumento.NroFoja, pJuicio);
+            iQuery.Activo = true;
+            iUdT.Guardar();
+        }
+
         public void BajaDocumento(Documento pDocumento)
         {
             iUdT.RepositorioDocumento.Eliminar(pDocumento);
@@ -63,12 +78,26 @@ namespace LawyerHelper.Controladores
             return iDocumento;
         }
 
+        public Documento BusquedaPorNroFojaActivos(string pNroFoja, Juicio pJuicio, bool pActivo)
+        {
+            Documento iDocumento = iUdT.RepositorioDocumento.BusquedaPorNroFoja(pNroFoja, pJuicio);
+            if (iDocumento.Activo == pActivo)
+                return iDocumento;
+            else
+                return null;
+        }
+
         public List<Documento> MostrarDocumentosDeJuicio(Juicio pJuicio)
         {
             List<Documento> iDocumentos = iUdT.RepositorioDocumento.MostrarTodosDeUnJuicio(pJuicio);
             return iDocumentos;
         }
 
-
+        public List<Documento> MostrarDocumentosDeJuicioActivos(Juicio pJuicio, bool pActivo)
+        {
+            List<Documento> iDocumentos = iUdT.RepositorioDocumento.MostrarTodosDeUnJuicio(pJuicio);
+            List<Documento> iQuery = iDocumentos.Where(n => n.Activo == pActivo).ToList();
+            return iQuery;
+        }
     }
 }

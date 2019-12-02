@@ -45,6 +45,7 @@
             this.CuadroTipo = new System.Windows.Forms.TextBox();
             this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
             this.BotonMostrarTodos = new System.Windows.Forms.Button();
+            this.CheckBoxEliminados = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // TimePickerFecha
@@ -58,7 +59,7 @@
             // 
             this.CuadroNumeroFoja.Location = new System.Drawing.Point(108, 25);
             this.CuadroNumeroFoja.Name = "CuadroNumeroFoja";
-            this.CuadroNumeroFoja.Size = new System.Drawing.Size(262, 20);
+            this.CuadroNumeroFoja.Size = new System.Drawing.Size(150, 20);
             this.CuadroNumeroFoja.TabIndex = 35;
             // 
             // CuadroNombreDocumento
@@ -154,7 +155,7 @@
             // 
             // BotonBuscar
             // 
-            this.BotonBuscar.Location = new System.Drawing.Point(377, 24);
+            this.BotonBuscar.Location = new System.Drawing.Point(264, 24);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(75, 23);
             this.BotonBuscar.TabIndex = 39;
@@ -198,11 +199,22 @@
             this.BotonMostrarTodos.UseVisualStyleBackColor = true;
             this.BotonMostrarTodos.Click += new System.EventHandler(this.BotonMostrarTodos_Click);
             // 
+            // CheckBoxEliminados
+            // 
+            this.CheckBoxEliminados.AutoSize = true;
+            this.CheckBoxEliminados.Location = new System.Drawing.Point(345, 27);
+            this.CheckBoxEliminados.Name = "CheckBoxEliminados";
+            this.CheckBoxEliminados.Size = new System.Drawing.Size(111, 17);
+            this.CheckBoxEliminados.TabIndex = 228;
+            this.CheckBoxEliminados.Text = "Buscar eliminados";
+            this.CheckBoxEliminados.UseVisualStyleBackColor = true;
+            // 
             // ModificarDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 527);
+            this.Controls.Add(this.CheckBoxEliminados);
             this.Controls.Add(this.ComboBoxResultados);
             this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.CuadroTipo);
@@ -247,5 +259,6 @@
         private System.Windows.Forms.TextBox CuadroTipo;
         private System.Windows.Forms.ComboBox ComboBoxResultados;
         private System.Windows.Forms.Button BotonMostrarTodos;
+        private System.Windows.Forms.CheckBox CheckBoxEliminados;
     }
 }
