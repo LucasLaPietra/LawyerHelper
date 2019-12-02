@@ -42,7 +42,7 @@ namespace LawyerHelper.UI.Documentos
 
                 if (iMensaje == DialogResult.Yes)
                 {
-                    iControladorDocumento.BajaDocumento(iDocumento);
+                    iControladorDocumento.BajaLogicaDocumento(iDocumento);
                     MessageBox.Show("Documento dado de baja con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }

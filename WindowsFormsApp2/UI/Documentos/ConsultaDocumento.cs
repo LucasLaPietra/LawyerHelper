@@ -59,7 +59,7 @@ namespace LawyerHelper.UI.Documentos
         {
             try
             {
-                iDocumento = iControladorDocumento.BusquedaPorNroFoja(CuadroNumeroFoja.Text, iJuicio);
+                iDocumento = iControladorDocumento.BusquedaPorNroFojaActivos(CuadroNumeroFoja.Text, iJuicio, !CheckBoxEliminados.Checked);
                 CuadroDetalle.Text = iDocumento.Detalle;
                 LabelFecha2.Text = iDocumento.Fecha.ToShortDateString();
                 LabelFoja2.Text = iDocumento.NroFoja;
@@ -92,7 +92,7 @@ namespace LawyerHelper.UI.Documentos
 
         private void BotonMostrarTodos_Click(object sender, EventArgs e)
         {
-            iDocumentos = iControladorDocumento.MostrarDocumentosDeJuicio(iJuicio);
+            iDocumentos = iControladorDocumento.MostrarDocumentosDeJuicioActivos(iJuicio, !CheckBoxEliminados.Checked);
             ComboBoxResultados.DataSource = iDocumentos;
             ComboBoxResultados.DisplayMember = "Descripcion";
         }

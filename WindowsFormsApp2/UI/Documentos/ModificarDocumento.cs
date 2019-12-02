@@ -40,7 +40,7 @@ namespace LawyerHelper.UI.Documentos
         {
             try
             {
-                iDocumento = iControladorDocumento.BusquedaPorNroFoja(CuadroNumeroFoja.Text, iJuicio);
+                iDocumento = iControladorDocumento.BusquedaPorNroFojaActivos(CuadroNumeroFoja.Text, iJuicio,!CheckBoxEliminados.Checked);
                 CuadroDetalle.Text = iDocumento.Detalle;
                 TimePickerFecha.Value = iDocumento.Fecha;
                 CuadroNumeroFoja.Text = iDocumento.NroFoja;
@@ -59,12 +59,25 @@ namespace LawyerHelper.UI.Documentos
         {
            try
             {
-                DialogResult iMensaje = MessageBox.Show("Seguro que desea modificar este documento?", "Confirmacion", MessageBoxButtons.YesNoCancel);
-
-                if (iMensaje == DialogResult.Yes)
+                if (iDocumento.Activo == false)
                 {
-                    iControladorDocumento.ModificarDocumento(iDocumento.DocumentoId,iDocumento.NroFoja, CuadroTipo.Text, CheckEnExpediente.Checked, CuadroNombreDocumento.Text, CuadroDetalle.Text, TimePickerFecha.Value, iDocumento.Juicio);
-                    MessageBox.Show("Documento modificado con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult result = MessageBox.Show("Este documento esta eliminado, quiere volver a darlo de alta?", "Confirmacion", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        iControladorDocumento.AltaLogicaDocumento(iDocumento,iJuicio);
+                        iControladorDocumento.ModificarDocumento(iDocumento.DocumentoId, iDocumento.NroFoja, CuadroTipo.Text, CheckEnExpediente.Checked, CuadroNombreDocumento.Text, CuadroDetalle.Text, TimePickerFecha.Value, iDocumento.Juicio);
+                        MessageBox.Show("Documento dado de alta y modificado con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    DialogResult iMensaje = MessageBox.Show("Seguro que desea modificar este documento?", "Confirmacion", MessageBoxButtons.YesNoCancel);
+
+                    if (iMensaje == DialogResult.Yes)
+                    {
+                        iControladorDocumento.ModificarDocumento(iDocumento.DocumentoId, iDocumento.NroFoja, CuadroTipo.Text, CheckEnExpediente.Checked, CuadroNombreDocumento.Text, CuadroDetalle.Text, TimePickerFecha.Value, iDocumento.Juicio);
+                        MessageBox.Show("Documento modificado con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
            }
             catch (Exception)
@@ -85,7 +98,7 @@ namespace LawyerHelper.UI.Documentos
 
         private void BotonMostrarTodos_Click(object sender, EventArgs e)
         {
-            iDocumentos = iControladorDocumento.MostrarDocumentosDeJuicio(iJuicio);
+            iDocumentos = iControladorDocumento.MostrarDocumentosDeJuicioActivos(iJuicio,!CheckBoxEliminados.Checked);
             ComboBoxResultados.DataSource = iDocumentos;
             ComboBoxResultados.DisplayMember = "Descripcion";
         }

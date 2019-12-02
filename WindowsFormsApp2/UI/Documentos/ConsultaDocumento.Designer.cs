@@ -46,6 +46,7 @@
             this.LabelFojaTitulo = new System.Windows.Forms.Label();
             this.ComboBoxResultados = new System.Windows.Forms.ComboBox();
             this.BotonMostrarTodos = new System.Windows.Forms.Button();
+            this.CheckBoxEliminados = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // BotonCancelar
@@ -210,17 +211,28 @@
             // 
             this.BotonMostrarTodos.Location = new System.Drawing.Point(15, 51);
             this.BotonMostrarTodos.Name = "BotonMostrarTodos";
-            this.BotonMostrarTodos.Size = new System.Drawing.Size(357, 30);
+            this.BotonMostrarTodos.Size = new System.Drawing.Size(245, 30);
             this.BotonMostrarTodos.TabIndex = 222;
             this.BotonMostrarTodos.Text = "Mostrar todos los documentos";
             this.BotonMostrarTodos.UseVisualStyleBackColor = true;
             this.BotonMostrarTodos.Click += new System.EventHandler(this.BotonMostrarTodos_Click);
+            // 
+            // CheckBoxEliminados
+            // 
+            this.CheckBoxEliminados.AutoSize = true;
+            this.CheckBoxEliminados.Location = new System.Drawing.Point(266, 59);
+            this.CheckBoxEliminados.Name = "CheckBoxEliminados";
+            this.CheckBoxEliminados.Size = new System.Drawing.Size(111, 17);
+            this.CheckBoxEliminados.TabIndex = 229;
+            this.CheckBoxEliminados.Text = "Buscar eliminados";
+            this.CheckBoxEliminados.UseVisualStyleBackColor = true;
             // 
             // ConsultaDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 561);
+            this.Controls.Add(this.CheckBoxEliminados);
             this.Controls.Add(this.ComboBoxResultados);
             this.Controls.Add(this.BotonMostrarTodos);
             this.Controls.Add(this.LabelFoja2);
@@ -265,5 +277,6 @@
         private System.Windows.Forms.Label LabelFojaTitulo;
         private System.Windows.Forms.ComboBox ComboBoxResultados;
         private System.Windows.Forms.Button BotonMostrarTodos;
+        private System.Windows.Forms.CheckBox CheckBoxEliminados;
     }
 }
