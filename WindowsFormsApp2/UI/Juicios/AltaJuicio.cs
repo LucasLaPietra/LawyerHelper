@@ -57,6 +57,10 @@ namespace WindowsFormsApp2.Juicios
             {
                MessageBox.Show("Ya existe un juicio con ese mismo numero de expediente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (MissingMemberException)
+            {
+                MessageBox.Show("El demandante y demandado no puede ser la misma persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception)
             {
                 MessageBox.Show("juicio no fue añadido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

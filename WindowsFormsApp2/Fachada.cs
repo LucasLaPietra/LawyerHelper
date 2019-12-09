@@ -22,7 +22,13 @@ namespace WindowsFormsApp2
            ControladorJuicio iControladorJuicio = new ControladorJuicio(UnidadDeTrabajo.Instancia);
            ControladorPersona iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
             Juicio iJuicio = iControladorJuicio.BusquedaPorNroExpediente(pNroExpediente);
-            foreach(Persona iPersona in pListaDemandados)
+            bool iRepetidos = pListaDemandados.Intersect(pListaDemandantes).Any();
+            if (iRepetidos==true)
+            {
+                throw new MissingMemberException();
+            }
+
+            foreach (Persona iPersona in pListaDemandados)
             {               
                 iControladorDemandado.RegistrarDemandado(pDemandadosClientes, iJuicio, iPersona);
             }
