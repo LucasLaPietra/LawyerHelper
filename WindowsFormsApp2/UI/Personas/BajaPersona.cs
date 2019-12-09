@@ -78,14 +78,21 @@ namespace LawyerHelper.UI.Personas
         }
 
         private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
-        {           
-            BuscarPersona iMenuNuevo = new BuscarPersona();
-            if (iMenuNuevo.ShowDialog()==DialogResult.OK)
+        {
+            try
             {
-                iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
-                LabelNombre3.Text = iPersona.Nombre;
-                LabelApellido3.Text = iPersona.Apellido;
-                LabelDNI3.Text = iPersona.Dni;
+                BuscarPersona iMenuNuevo = new BuscarPersona();
+                if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+                {
+                    iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                    LabelNombre3.Text = iPersona.Nombre;
+                    LabelApellido3.Text = iPersona.Apellido;
+                    LabelDNI3.Text = iPersona.Dni;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ninguna persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

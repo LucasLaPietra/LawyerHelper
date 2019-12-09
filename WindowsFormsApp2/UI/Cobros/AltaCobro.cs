@@ -28,7 +28,6 @@ namespace WindowsFormsApp2.Cobros
             InitializeComponent();
             CuadroHora.Text = DateTime.Now.Hour.ToString();
             CuadroMinutos.Text = DateTime.Now.Minute.ToString();
-            CuadroAM.Text = DateTime.Now.ToString("tt");
             iControladorCobro = new ControladorCobro(UnidadDeTrabajo.Instancia);
             iFachada.AsignarColores(this);
         }
@@ -42,8 +41,7 @@ namespace WindowsFormsApp2.Cobros
         {
             try
             {
-                int iHora = iFachada.Convertir24Hs((Convert.ToInt32(CuadroHora.Text)), CuadroAM.Text);
-                DateTime iFechayHora = new DateTime(CuadroFecha.Value.Year, CuadroFecha.Value.Month, CuadroFecha.Value.Day, iHora, (Convert.ToInt32(CuadroMinutos.Text)),0);            
+                DateTime iFechayHora = new DateTime(CuadroFecha.Value.Year, CuadroFecha.Value.Month, CuadroFecha.Value.Day, (Convert.ToInt32(CuadroHora.Text)), (Convert.ToInt32(CuadroMinutos.Text)),0);            
                 if(iJuicio==null||iPersona==null)
                 {
                     throw new InvalidOperationException();

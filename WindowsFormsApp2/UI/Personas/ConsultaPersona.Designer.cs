@@ -34,6 +34,8 @@
             this.CuadroApellido = new System.Windows.Forms.TextBox();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
+            this.ListBoxCobros = new System.Windows.Forms.ListBox();
+            this.ListBoxJuicios = new System.Windows.Forms.ListBox();
             this.LabelDNI = new System.Windows.Forms.Label();
             this.LabelDNI2 = new System.Windows.Forms.Label();
             this.LabelDomicilio = new System.Windows.Forms.Label();
@@ -58,8 +60,6 @@
             this.LabelCobrosAsociados = new System.Windows.Forms.Label();
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonBusquedaAvanzada = new System.Windows.Forms.Button();
-            this.ListBoxJuicios = new System.Windows.Forms.ListBox();
-            this.ListBoxCobros = new System.Windows.Forms.ListBox();
             this.BotonConsultarJuicio = new System.Windows.Forms.Button();
             this.BotonConsultarCobro = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
@@ -113,8 +113,8 @@
             // Layout
             // 
             this.Layout.ColumnCount = 2;
-            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.12291F));
+            this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 67.8771F));
             this.Layout.Controls.Add(this.ListBoxCobros, 1, 11);
             this.Layout.Controls.Add(this.ListBoxJuicios, 1, 10);
             this.Layout.Controls.Add(this.LabelDNI, 0, 0);
@@ -157,6 +157,22 @@
             this.Layout.Size = new System.Drawing.Size(358, 286);
             this.Layout.TabIndex = 5;
             // 
+            // ListBoxCobros
+            // 
+            this.ListBoxCobros.FormattingEnabled = true;
+            this.ListBoxCobros.Location = new System.Drawing.Point(118, 208);
+            this.ListBoxCobros.Name = "ListBoxCobros";
+            this.ListBoxCobros.Size = new System.Drawing.Size(237, 69);
+            this.ListBoxCobros.TabIndex = 179;
+            // 
+            // ListBoxJuicios
+            // 
+            this.ListBoxJuicios.FormattingEnabled = true;
+            this.ListBoxJuicios.Location = new System.Drawing.Point(118, 133);
+            this.ListBoxJuicios.Name = "ListBoxJuicios";
+            this.ListBoxJuicios.Size = new System.Drawing.Size(237, 69);
+            this.ListBoxJuicios.TabIndex = 179;
+            // 
             // LabelDNI
             // 
             this.LabelDNI.AutoSize = true;
@@ -169,7 +185,7 @@
             // LabelDNI2
             // 
             this.LabelDNI2.AutoSize = true;
-            this.LabelDNI2.Location = new System.Drawing.Point(182, 0);
+            this.LabelDNI2.Location = new System.Drawing.Point(118, 0);
             this.LabelDNI2.Name = "LabelDNI2";
             this.LabelDNI2.Size = new System.Drawing.Size(10, 13);
             this.LabelDNI2.TabIndex = 1;
@@ -187,7 +203,7 @@
             // LabelDomicilio2
             // 
             this.LabelDomicilio2.AutoSize = true;
-            this.LabelDomicilio2.Location = new System.Drawing.Point(182, 13);
+            this.LabelDomicilio2.Location = new System.Drawing.Point(118, 13);
             this.LabelDomicilio2.Name = "LabelDomicilio2";
             this.LabelDomicilio2.Size = new System.Drawing.Size(10, 13);
             this.LabelDomicilio2.TabIndex = 3;
@@ -205,7 +221,7 @@
             // LabelTelefono2
             // 
             this.LabelTelefono2.AutoSize = true;
-            this.LabelTelefono2.Location = new System.Drawing.Point(182, 26);
+            this.LabelTelefono2.Location = new System.Drawing.Point(118, 26);
             this.LabelTelefono2.Name = "LabelTelefono2";
             this.LabelTelefono2.Size = new System.Drawing.Size(10, 13);
             this.LabelTelefono2.TabIndex = 5;
@@ -223,7 +239,7 @@
             // LabelFechaNacimiento2
             // 
             this.LabelFechaNacimiento2.AutoSize = true;
-            this.LabelFechaNacimiento2.Location = new System.Drawing.Point(182, 39);
+            this.LabelFechaNacimiento2.Location = new System.Drawing.Point(118, 39);
             this.LabelFechaNacimiento2.Name = "LabelFechaNacimiento2";
             this.LabelFechaNacimiento2.Size = new System.Drawing.Size(10, 13);
             this.LabelFechaNacimiento2.TabIndex = 7;
@@ -241,7 +257,7 @@
             // LabelProfesion2
             // 
             this.LabelProfesion2.AutoSize = true;
-            this.LabelProfesion2.Location = new System.Drawing.Point(182, 52);
+            this.LabelProfesion2.Location = new System.Drawing.Point(118, 52);
             this.LabelProfesion2.Name = "LabelProfesion2";
             this.LabelProfesion2.Size = new System.Drawing.Size(10, 13);
             this.LabelProfesion2.TabIndex = 9;
@@ -259,7 +275,7 @@
             // LabelLugarTrabajo2
             // 
             this.LabelLugarTrabajo2.AutoSize = true;
-            this.LabelLugarTrabajo2.Location = new System.Drawing.Point(182, 65);
+            this.LabelLugarTrabajo2.Location = new System.Drawing.Point(118, 65);
             this.LabelLugarTrabajo2.Name = "LabelLugarTrabajo2";
             this.LabelLugarTrabajo2.Size = new System.Drawing.Size(10, 13);
             this.LabelLugarTrabajo2.TabIndex = 11;
@@ -277,7 +293,7 @@
             // LabelCUIL2
             // 
             this.LabelCUIL2.AutoSize = true;
-            this.LabelCUIL2.Location = new System.Drawing.Point(182, 78);
+            this.LabelCUIL2.Location = new System.Drawing.Point(118, 78);
             this.LabelCUIL2.Name = "LabelCUIL2";
             this.LabelCUIL2.Size = new System.Drawing.Size(10, 13);
             this.LabelCUIL2.TabIndex = 13;
@@ -295,7 +311,7 @@
             // LabelEstadoCivil2
             // 
             this.LabelEstadoCivil2.AutoSize = true;
-            this.LabelEstadoCivil2.Location = new System.Drawing.Point(182, 91);
+            this.LabelEstadoCivil2.Location = new System.Drawing.Point(118, 91);
             this.LabelEstadoCivil2.Name = "LabelEstadoCivil2";
             this.LabelEstadoCivil2.Size = new System.Drawing.Size(10, 13);
             this.LabelEstadoCivil2.TabIndex = 15;
@@ -313,7 +329,7 @@
             // LabelRepresentante2
             // 
             this.LabelRepresentante2.AutoSize = true;
-            this.LabelRepresentante2.Location = new System.Drawing.Point(182, 104);
+            this.LabelRepresentante2.Location = new System.Drawing.Point(118, 104);
             this.LabelRepresentante2.Name = "LabelRepresentante2";
             this.LabelRepresentante2.Size = new System.Drawing.Size(10, 13);
             this.LabelRepresentante2.TabIndex = 17;
@@ -331,7 +347,7 @@
             // LabelDomicilioLegal2
             // 
             this.LabelDomicilioLegal2.AutoSize = true;
-            this.LabelDomicilioLegal2.Location = new System.Drawing.Point(182, 117);
+            this.LabelDomicilioLegal2.Location = new System.Drawing.Point(118, 117);
             this.LabelDomicilioLegal2.Name = "LabelDomicilioLegal2";
             this.LabelDomicilioLegal2.Size = new System.Drawing.Size(10, 13);
             this.LabelDomicilioLegal2.TabIndex = 19;
@@ -349,7 +365,7 @@
             // LabelCobrosAsociados
             // 
             this.LabelCobrosAsociados.AutoSize = true;
-            this.LabelCobrosAsociados.Location = new System.Drawing.Point(3, 206);
+            this.LabelCobrosAsociados.Location = new System.Drawing.Point(3, 205);
             this.LabelCobrosAsociados.Name = "LabelCobrosAsociados";
             this.LabelCobrosAsociados.Size = new System.Drawing.Size(91, 13);
             this.LabelCobrosAsociados.TabIndex = 22;
@@ -377,22 +393,6 @@
             this.BotonBusquedaAvanzada.UseVisualStyleBackColor = true;
             this.BotonBusquedaAvanzada.Click += new System.EventHandler(this.BotonBusquedaAvanzada_Click);
             // 
-            // ListBoxJuicios
-            // 
-            this.ListBoxJuicios.FormattingEnabled = true;
-            this.ListBoxJuicios.Location = new System.Drawing.Point(182, 133);
-            this.ListBoxJuicios.Name = "ListBoxJuicios";
-            this.ListBoxJuicios.Size = new System.Drawing.Size(173, 69);
-            this.ListBoxJuicios.TabIndex = 179;
-            // 
-            // ListBoxCobros
-            // 
-            this.ListBoxCobros.FormattingEnabled = true;
-            this.ListBoxCobros.Location = new System.Drawing.Point(182, 209);
-            this.ListBoxCobros.Name = "ListBoxCobros";
-            this.ListBoxCobros.Size = new System.Drawing.Size(173, 69);
-            this.ListBoxCobros.TabIndex = 179;
-            // 
             // BotonConsultarJuicio
             // 
             this.BotonConsultarJuicio.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -403,6 +403,7 @@
             this.BotonConsultarJuicio.TabIndex = 177;
             this.BotonConsultarJuicio.Text = "Consultar";
             this.BotonConsultarJuicio.UseVisualStyleBackColor = true;
+            this.BotonConsultarJuicio.Click += new System.EventHandler(this.BotonConsultarJuicio_Click);
             // 
             // BotonConsultarCobro
             // 
@@ -414,6 +415,7 @@
             this.BotonConsultarCobro.TabIndex = 178;
             this.BotonConsultarCobro.Text = "Consultar";
             this.BotonConsultarCobro.UseVisualStyleBackColor = true;
+            this.BotonConsultarCobro.Click += new System.EventHandler(this.BotonConsultarCobro_Click);
             // 
             // ConsultaPersona
             // 

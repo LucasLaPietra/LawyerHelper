@@ -35,7 +35,6 @@
             this.CuadroJuicio = new System.Windows.Forms.TextBox();
             this.LabelJuicio = new System.Windows.Forms.Label();
             this.CuadroDetalle = new System.Windows.Forms.TextBox();
-            this.CuadroAM = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CuadroMinutos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,7 +65,6 @@
             this.BotonCancelar.TabIndex = 10;
             this.BotonCancelar.Text = "Cancelar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
-            
             // 
             // CuadroImporte
             // 
@@ -111,17 +109,6 @@
             this.CuadroDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.CuadroDetalle.Size = new System.Drawing.Size(221, 108);
             this.CuadroDetalle.TabIndex = 183;
-            // 
-            // CuadroAM
-            // 
-            this.CuadroAM.FormattingEnabled = true;
-            this.CuadroAM.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.CuadroAM.Location = new System.Drawing.Point(136, 53);
-            this.CuadroAM.Name = "CuadroAM";
-            this.CuadroAM.Size = new System.Drawing.Size(46, 21);
-            this.CuadroAM.TabIndex = 182;
             // 
             // label3
             // 
@@ -220,7 +207,6 @@
             this.Controls.Add(this.CuadroJuicio);
             this.Controls.Add(this.LabelJuicio);
             this.Controls.Add(this.CuadroDetalle);
-            this.Controls.Add(this.CuadroAM);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CuadroMinutos);
             this.Controls.Add(this.label2);
@@ -250,7 +236,6 @@
         private System.Windows.Forms.TextBox CuadroJuicio;
         private System.Windows.Forms.Label LabelJuicio;
         private System.Windows.Forms.TextBox CuadroDetalle;
-        private System.Windows.Forms.ComboBox CuadroAM;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox CuadroMinutos;
         private System.Windows.Forms.Label label2;

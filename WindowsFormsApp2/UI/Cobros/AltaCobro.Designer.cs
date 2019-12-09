@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.CuadroAM = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CuadroMinutos = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,17 +48,6 @@
             this.CuadroImporte = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.CuadroImporte)).BeginInit();
             this.SuspendLayout();
-            // 
-            // CuadroAM
-            // 
-            this.CuadroAM.FormattingEnabled = true;
-            this.CuadroAM.Items.AddRange(new object[] {
-            "AM",
-            "PM"});
-            this.CuadroAM.Location = new System.Drawing.Point(136, 60);
-            this.CuadroAM.Name = "CuadroAM";
-            this.CuadroAM.Size = new System.Drawing.Size(46, 21);
-            this.CuadroAM.TabIndex = 32;
             // 
             // label3
             // 
@@ -233,7 +221,6 @@
             this.Controls.Add(this.LabelJuicio);
             this.Controls.Add(this.LabelPersona);
             this.Controls.Add(this.CuadroDetalle);
-            this.Controls.Add(this.CuadroAM);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.CuadroMinutos);
             this.Controls.Add(this.label2);
@@ -253,8 +240,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox CuadroAM;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox CuadroMinutos;
         private System.Windows.Forms.Label label2;

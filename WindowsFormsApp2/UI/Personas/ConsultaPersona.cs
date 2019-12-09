@@ -12,6 +12,9 @@ using LawyerHelper.Controladores;
 using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using WindowsFormsApp2;
+using WindowsFormsApp2.Juicios;
+using LawyerHelper.UI.Juicios;
+using LawyerHelper.UI.Cobros;
 
 namespace LawyerHelper.UI.Personas
 {
@@ -81,26 +84,37 @@ namespace LawyerHelper.UI.Personas
 
         private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
         {
-            BuscarPersona iMenuNuevo = new BuscarPersona();
-            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            try
             {
-                iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
-                LabelDNI2.Text = iPersona.Dni;
-                LabelDomicilio2.Text = iPersona.Domicilio;
-                LabelDomicilioLegal2.Text = iPersona.DomicilioLegal;
-                LabelEstadoCivil2.Text = iPersona.EstadoCivil;
-                LabelFechaNacimiento2.Text = iPersona.FechaNacimiento.ToShortDateString();
-                LabelLugarTrabajo2.Text = iPersona.LugarTrabajo;
-                LabelProfesion2.Text = iPersona.Profesion;
-                LabelRepresentante2.Text = iPersona.Representante;
-                LabelTelefono2.Text = iPersona.Telefono;
+                BuscarPersona iMenuNuevo = new BuscarPersona();
+                if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+                {
+                    iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                    LabelDNI2.Text = iPersona.Dni;
+                    LabelDomicilio2.Text = iPersona.Domicilio;
+                    LabelDomicilioLegal2.Text = iPersona.DomicilioLegal;
+                    LabelEstadoCivil2.Text = iPersona.EstadoCivil;
+                    LabelFechaNacimiento2.Text = iPersona.FechaNacimiento.ToShortDateString();
+                    LabelLugarTrabajo2.Text = iPersona.LugarTrabajo;
+                    LabelProfesion2.Text = iPersona.Profesion;
+                    LabelRepresentante2.Text = iPersona.Representante;
+                    LabelTelefono2.Text = iPersona.Telefono;
 
-                iJuicios = iControladorPersona.ObtenerJuicios(iPersona.PersonaId).ToList();
-                iCobros = iPersona.Cobros.ToList();
-                ListBoxJuicios.DataSource = iJuicios;
-                ListBoxJuicios.DisplayMember = "NroExpediente";
-                ListBoxCobros.DataSource = iCobros;
-                ListBoxCobros.DisplayMember = "Descripcion";
+                    BotonConsultarJuicio.Enabled = true;
+                    if (iPersona.Cobros.Count > 0)
+                        BotonConsultarCobro.Enabled = true;
+
+                    iJuicios = iControladorPersona.ObtenerJuicios(iPersona.PersonaId).ToList();
+                    iCobros = iPersona.Cobros.ToList();
+                    ListBoxJuicios.DataSource = iJuicios;
+                    ListBoxJuicios.DisplayMember = "NroExpediente";
+                    ListBoxCobros.DataSource = iCobros;
+                    ListBoxCobros.DisplayMember = "Descripcion";
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ninguna persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -119,6 +133,10 @@ namespace LawyerHelper.UI.Personas
                 LabelRepresentante2.Text = iPersona.Representante;
                 LabelTelefono2.Text = iPersona.Telefono;
 
+                BotonConsultarJuicio.Enabled = true;
+                if (iPersona.Cobros.Count > 0)
+                    BotonConsultarCobro.Enabled = true;
+
                 iJuicios = iControladorPersona.ObtenerJuicios(iPersona.PersonaId).ToList();
                 iCobros = iPersona.Cobros.ToList();
                 ListBoxJuicios.DataSource = iJuicios;
@@ -130,6 +148,18 @@ namespace LawyerHelper.UI.Personas
             {
                 MessageBox.Show("Error al buscar la persona, verifique que los campos sean correctos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void BotonConsultarJuicio_Click(object sender, EventArgs e)
+        {
+            ConsultaJuicios iMenuNuevo = new ConsultaJuicios(iJuicios[ListBoxJuicios.SelectedIndex]);
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonConsultarCobro_Click(object sender, EventArgs e)
+        {
+            ConsultaCobro iMenuNuevo = new ConsultaCobro(iCobros[ListBoxCobros.SelectedIndex]);
+            iMenuNuevo.ShowDialog();
         }
     }
 }

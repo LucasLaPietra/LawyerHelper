@@ -32,6 +32,19 @@ namespace LawyerHelper.UI.Cobros
             iFachada.AsignarColores(this);
         }
 
+        public ConsultaCobro(Cobro pCobro)
+        {
+            InitializeComponent();
+            iControladorCobro = new ControladorCobro(UnidadDeTrabajo.Instancia);
+            //Asignacion de colores      
+            iFachada.AsignarColores(this);
+
+            iCobro = pCobro;
+            LabelHora2.Text = iCobro.FechayHora.ToShortTimeString();
+            LabelImporte2.Text = iCobro.Importe.ToString();
+            CuadroDetalle.Text = iCobro.Detalle;
+        }
+
         private void ConsultaCobro_Load(object sender, EventArgs e)
         {
             iCobros = iControladorCobro.ObtenerCobrosPorFecha(DateTimePickerFecha.Value);
