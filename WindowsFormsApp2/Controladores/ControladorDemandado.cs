@@ -23,6 +23,19 @@ namespace LawyerHelper.Controladores
             return iQuery;
         }
 
+        public IList<Demandado> MostrarDemandadosDeUnJuicio(Juicio pJuicio)
+        {
+            IList<Demandado> iQuery = iUdT.RepositorioDemandado.BuscarDemandadosDeUnJuicio(pJuicio.JuicioId);
+            return iQuery;
+        }
+
+        public void BajaDemandadosDeUnJuicio(Juicio pJuicio)
+        {
+            IList<Demandado> iDemandados = MostrarDemandadosDeUnJuicio(pJuicio);
+            foreach (Demandado iDemandado in iDemandados)
+                BajaDemandado(iDemandado);
+        }
+
         public void RegistrarDemandado(Boolean pCliente, Juicio pJuicio, Persona pPersona)
         {
             Demandado iDemandado = new Demandado(pCliente, pJuicio, pPersona);

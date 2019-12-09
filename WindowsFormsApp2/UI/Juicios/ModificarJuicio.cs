@@ -22,6 +22,8 @@ namespace LawyerHelper.UI.Juicios
         Juicio iJuicio;
         List<Demandado> iDemandados;
         List<Demandante> iDemandantes;
+        List<Persona> iListaDemandados = new List<Persona>();
+        List<Persona> iListaDemandantes = new List<Persona>();
         Fachada iFachada = new Fachada();
         ControladorJuicio iControladorJuicio;
         public ModificarJuicio()
@@ -56,18 +58,24 @@ namespace LawyerHelper.UI.Juicios
 
                 iDemandados = iJuicio.Demandados.ToList();
                 iDemandantes = iJuicio.Demandantes.ToList();
-                ListBoxDemandados.DataSource = iDemandados;
-                ListBoxDemandados.DisplayMember = "Descripcion";
-                ListBoxDemandantes.DataSource = iDemandantes;
-                ListBoxDemandantes.DisplayMember = "Descripcion";
+                if (iDemandados[0].Cliente==true)
+                    RadioButtonCliente2.Checked = true;
+                else
+                    RadioButtonCliente1.Checked = true;
+                foreach (Demandado i in iDemandados)
+                    iListaDemandados.Add(i.Persona);
+                foreach (Demandante i in iDemandantes)
+                    iListaDemandantes.Add(i.Persona);
+                ListBoxDemandados.DataSource = iListaDemandados;
+                ListBoxDemandados.DisplayMember = "NombreyAp";
+                ListBoxDemandantes.DataSource = iListaDemandantes;
+                ListBoxDemandantes.DisplayMember = "NombreyAp";
                 BotonAgregarDemandado.Enabled = true;
-                if (iDemandados.Count > 1)
+                if (iListaDemandados.Count > 1)
                     BotonEliminarDemandado.Enabled = true;
-                BotonConsultarDemandado.Enabled = true;
                 BotonAgregarDemandante.Enabled = true;
-                if (iDemandados.Count > 1)
+                if (iListaDemandantes.Count > 1)
                     BotonEliminarDemandante.Enabled = true;
-                BotonConsultarDemandante.Enabled = true;
                 BotonEliminarDocumentos.Enabled = true;
                 BotonModificarDocumentos.Enabled = true;
                 BotonConsultarDocumentos.Enabled = true;
@@ -115,28 +123,79 @@ namespace LawyerHelper.UI.Juicios
 
         private void BotonAceptar_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                iControladorJuicio.ModificarJuicio(iJuicio.JuicioId, CuadroNroExpediente.Text, CuadroJuez.Text, CuadroSecretario.Text, CuadroEtapa.Text, CuadroDescripcion.Text, CuadroBienes.Text,
+                    dateTimeFecha.Value, CuadroGrupoFamiliar.Text, CuadroTipoDeProceso.Text, CuadroRecurso.Text, CuadroCompetencia.Text, CuadroFuero.Text, CuadroCaratula.Text,
+                    CuadroFolio.Text, CuadroLibro.Text, CuadroJurisdiccion.Text, Convert.ToDouble(CuadroPrecio.Value));
+                iFachada.ModificarDemandadosyDemandantes(CuadroNroExpediente.Text, iListaDemandados, iListaDemandantes, RadioButtonCliente2.Checked, RadioButtonCliente1.Checked);
+                MessageBox.Show("Juicio modificado con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (InvalidOperationException)
+            {
+                MessageBox.Show("Ya existe un juicio con ese mismo numero de expediente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (MissingMemberException)
+            {
+                MessageBox.Show("El demandante y demandado no puede ser la misma persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("juicio no fue modificado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotonAgregarDemandante_Click(object sender, EventArgs e)
         {
-
+            BuscarPersona iMenuNuevo = new BuscarPersona();
+            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            {
+                Persona iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                iListaDemandantes.Add(iPersona);
+                ListBoxDemandantes.DataSource = null;
+                ListBoxDemandantes.DataSource = iListaDemandantes;
+                ListBoxDemandantes.DisplayMember = "NombreyAp";
+            }
         }
 
         private void BotonEliminarDemandante_Click(object sender, EventArgs e)
         {
-
+            int selectedIndex = ListBoxDemandantes.SelectedIndex;
+            iListaDemandantes.RemoveAt(selectedIndex);
+            ListBoxDemandantes.DataSource = null;
+            ListBoxDemandantes.DataSource = iListaDemandantes;
+            ListBoxDemandantes.DisplayMember = "NombreyAp";
+            if (ListBoxDemandantes.Items.Count == 0)
+            {
+                BotonEliminarDemandante.Enabled = false;
+            }
         }
 
         private void BotonAgregarDemandado_Click(object sender, EventArgs e)
         {
-
+            BuscarPersona iMenuNuevo = new BuscarPersona();
+            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            {
+                Persona iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                iListaDemandados.Add(iPersona);
+                ListBoxDemandados.DataSource = null;
+                ListBoxDemandados.DataSource = iListaDemandados;
+                ListBoxDemandados.DisplayMember = "NombreyAp";
+            }
         }
 
         private void BotonEliminarDemandado_Click(object sender, EventArgs e)
         {
-
-        }
+            iListaDemandados.Remove((Persona)ListBoxDemandados.SelectedItem);
+            ListBoxDemandados.DataSource = null;
+            ListBoxDemandados.DataSource = iListaDemandados;
+            ListBoxDemandados.DisplayMember = "NombreyAp";
+            if (ListBoxDemandados.Items.Count == 0)
+            {
+                BotonEliminarDemandado.Enabled = false;
+            }
+        }        
 
         private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
         {
@@ -164,23 +223,31 @@ namespace LawyerHelper.UI.Juicios
 
                 iDemandados = iJuicio.Demandados.ToList();
                 iDemandantes = iJuicio.Demandantes.ToList();
-                ListBoxDemandados.DataSource = iDemandados;
-                ListBoxDemandados.DisplayMember = "Descripcion";
-                ListBoxDemandantes.DataSource = iDemandantes;
-                ListBoxDemandantes.DisplayMember = "Descripcion";
+                if (iDemandados[0].Cliente==true)
+                    RadioButtonCliente2.Checked = true;
+                else
+                    RadioButtonCliente1.Checked = true;
+                foreach (Demandado i in iDemandados)
+                    iListaDemandados.Add(i.Persona);
+                foreach (Demandante i in iDemandantes)
+                    iListaDemandantes.Add(i.Persona);
+                ListBoxDemandados.DataSource = iListaDemandados;
+                ListBoxDemandados.DisplayMember = "NombreyAp";
+                ListBoxDemandantes.DataSource = iListaDemandantes;
+                ListBoxDemandantes.DisplayMember = "NombreyAp";
                 BotonAgregarDemandado.Enabled = true;
-                if (iDemandados.Count > 1)
+                if (iListaDemandados.Count > 1)
                     BotonEliminarDemandado.Enabled = true;
-                BotonConsultarDemandado.Enabled = true;
                 BotonAgregarDemandante.Enabled = true;
-                if (iDemandados.Count > 1)
+                if (iListaDemandantes.Count > 1)
                     BotonEliminarDemandante.Enabled = true;
-                BotonConsultarDemandante.Enabled = true;
                 BotonEliminarDocumentos.Enabled = true;
                 BotonModificarDocumentos.Enabled = true;
                 BotonConsultarDocumentos.Enabled = true;
                 BotonAgregarDocumentos.Enabled = true;
             }
         }
+
+
     }
 }

@@ -38,7 +38,7 @@ namespace LawyerHelper.Controladores
         public void ModificarJuicio(int pId,string pNroExpediente, string pJuez, string pSecretario, string pEtapa,
             string pDescripcion, string pBienes, DateTime pFecha, string pGrupoFamiliar, string pTipoProceso,
             string pRecurso, string pCompetencia, string pFuero, string pCaratula, string pFolio, string pLibro,
-            string pJurisdiccion, Double pPrecio,List<Demandado> pDemandados, List<Demandante> pDemandantes)
+            string pJurisdiccion, Double pPrecio)
         {
             Juicio iQuery = iUdT.RepositorioJuicio.Obtener(pId);
             iQuery.Bienes = pBienes;
@@ -58,8 +58,6 @@ namespace LawyerHelper.Controladores
             iQuery.Secretario = pSecretario;
             iQuery.TipoProceso = pTipoProceso;
             iQuery.Fuero = pFuero;
-            iQuery.Demandados = pDemandados;
-            iQuery.Demandantes = pDemandantes;
             iUdT.Guardar();
         }
 

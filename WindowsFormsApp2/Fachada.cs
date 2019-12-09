@@ -38,6 +38,32 @@ namespace WindowsFormsApp2
             }
         }
 
+        public void ModificarDemandadosyDemandantes(string pNroExpediente, List<Persona> pListaDemandados, List<Persona> pListaDemandantes,
+            bool pDemandadosClientes, bool pDemandantesClientes)
+        {
+            ControladorDemandado iControladorDemandado = new ControladorDemandado(UnidadDeTrabajo.Instancia);
+            ControladorDemandante iControladorDemandante = new ControladorDemandante(UnidadDeTrabajo.Instancia);
+            ControladorJuicio iControladorJuicio = new ControladorJuicio(UnidadDeTrabajo.Instancia);
+            ControladorPersona iControladorPersona = new ControladorPersona(UnidadDeTrabajo.Instancia);
+            Juicio iJuicio = iControladorJuicio.BusquedaPorNroExpediente(pNroExpediente);
+            iControladorDemandado.BajaDemandadosDeUnJuicio(iJuicio);
+            iControladorDemandante.BajaDemandantesDeUnJuicio(iJuicio);
+            bool iRepetidos = pListaDemandados.Intersect(pListaDemandantes).Any();
+            if (iRepetidos == true)
+            {
+                throw new MissingMemberException();
+            }
+
+            foreach (Persona iPersona in pListaDemandados)
+            {
+                    iControladorDemandado.RegistrarDemandado(pDemandadosClientes, iJuicio, iPersona);
+            }
+            foreach (Persona iPersona in pListaDemandantes)
+            {
+                    iControladorDemandante.RegistrarDemandante(pDemandantesClientes, iJuicio, iPersona.PersonaId);
+            }
+        }
+
         public int Convertir24Hs(int pHora, string AMPM)
         {
             int iResultado;
