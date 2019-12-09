@@ -22,7 +22,6 @@ namespace LawyerHelper.UI.Juicios
         Juicio iJuicio;
         List<Demandado> iDemandados;
         List<Demandante> iDemandantes;
-        List<Documento> iDocumentos;
         ControladorJuicio iControladorJuicio;
         Fachada iFachada = new Fachada();
         public BajaJuicio()
@@ -100,7 +99,6 @@ namespace LawyerHelper.UI.Juicios
 
                 iDemandados = iJuicio.Demandados.ToList();
                 iDemandantes = iJuicio.Demandantes.ToList();
-                iDocumentos = iJuicio.Documentos.ToList();
                 ListBoxDemandados.DataSource = iDemandados;
                 ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
@@ -141,7 +139,6 @@ namespace LawyerHelper.UI.Juicios
 
                 iDemandados = iJuicio.Demandados.ToList();
                 iDemandantes = iJuicio.Demandantes.ToList();
-                iDocumentos = iJuicio.Documentos.ToList();
                 ListBoxDemandados.DataSource = iDemandados;
                 ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;

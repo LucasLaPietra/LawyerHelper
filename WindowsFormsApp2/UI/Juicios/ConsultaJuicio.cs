@@ -161,9 +161,9 @@ namespace WindowsFormsApp2.Juicios
                 iDemandados = iJuicio.Demandados.ToList();
                 iDemandantes = iControladorJuicio.ObtenerDemandantes(iJuicio.JuicioId).ToList();
                 ListBoxDemandados.DataSource =iDemandados;
-                ListBoxDemandados.DisplayMember = "NombreyAp";
+                ListBoxDemandados.DisplayMember = "Descripcion";
                 ListBoxDemandantes.DataSource = iDemandantes;
-                ListBoxDemandantes.DisplayMember = "NombreyAp";
+                ListBoxDemandantes.DisplayMember = "Descripcion";
                 BotonConsultarDemandados.Enabled = true;
                 BotonConsultarDemandante.Enabled = true;
                 BotonConsultarDocumentos.Enabled = true;
