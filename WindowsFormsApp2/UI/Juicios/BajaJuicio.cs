@@ -154,5 +154,10 @@ namespace LawyerHelper.UI.Juicios
             ConsultaDocumento iMenuNuevo = new ConsultaDocumento(iJuicio);
             iMenuNuevo.ShowDialog();
         }
+
+        private void CuadroNroExpediente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            iFachada.SoloNumeros(e);
+        }
     }
 }

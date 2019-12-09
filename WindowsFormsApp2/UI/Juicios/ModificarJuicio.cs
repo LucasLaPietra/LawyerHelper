@@ -248,6 +248,9 @@ namespace LawyerHelper.UI.Juicios
             }
         }
 
-
+        private void CuadroNroExpediente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            iFachada.SoloNumeros(e);
+        }
     }
 }

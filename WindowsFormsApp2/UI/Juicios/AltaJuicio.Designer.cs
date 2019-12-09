@@ -39,7 +39,6 @@
             this.LabelDescripcion = new System.Windows.Forms.Label();
             this.LabelPrecio = new System.Windows.Forms.Label();
             this.CuadroFolio = new System.Windows.Forms.TextBox();
-            this.CuadroExpediente = new System.Windows.Forms.TextBox();
             this.CuadroJuez = new System.Windows.Forms.TextBox();
             this.CuadroSecretario = new System.Windows.Forms.TextBox();
             this.CuadroEtapa = new System.Windows.Forms.TextBox();
@@ -79,6 +78,7 @@
             this.BotonEliminarDemandante = new System.Windows.Forms.Button();
             this.BotonAgregarDemandante = new System.Windows.Forms.Button();
             this.CuadroPrecio = new System.Windows.Forms.NumericUpDown();
+            this.CuadroExpediente = new System.Windows.Forms.TextBox();
             this.Layout2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CuadroPrecio)).BeginInit();
             this.SuspendLayout();
@@ -178,14 +178,6 @@
             this.CuadroFolio.Name = "CuadroFolio";
             this.CuadroFolio.Size = new System.Drawing.Size(168, 20);
             this.CuadroFolio.TabIndex = 26;
-            // 
-            // CuadroExpediente
-            // 
-            this.CuadroExpediente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CuadroExpediente.Location = new System.Drawing.Point(94, 79);
-            this.CuadroExpediente.Name = "CuadroExpediente";
-            this.CuadroExpediente.Size = new System.Drawing.Size(164, 20);
-            this.CuadroExpediente.TabIndex = 27;
             // 
             // CuadroJuez
             // 
@@ -562,6 +554,16 @@
             this.CuadroPrecio.Size = new System.Drawing.Size(385, 20);
             this.CuadroPrecio.TabIndex = 99;
             // 
+            // CuadroExpediente
+            // 
+            this.CuadroExpediente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CuadroExpediente.Location = new System.Drawing.Point(94, 79);
+            this.CuadroExpediente.Name = "CuadroExpediente";
+            this.CuadroExpediente.Size = new System.Drawing.Size(164, 20);
+            this.CuadroExpediente.TabIndex = 27;
+            this.CuadroExpediente.TextChanged += new System.EventHandler(this.CuadroExpediente_TextChanged);
+            this.CuadroExpediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CuadroExpediente_KeyPress);
+            // 
             // AltaJuicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,7 +640,6 @@
         private System.Windows.Forms.Label LabelDescripcion;
         private System.Windows.Forms.Label LabelPrecio;
         private System.Windows.Forms.TextBox CuadroFolio;
-        private System.Windows.Forms.TextBox CuadroExpediente;
         private System.Windows.Forms.TextBox CuadroJuez;
         private System.Windows.Forms.TextBox CuadroSecretario;
         private System.Windows.Forms.TextBox CuadroEtapa;
@@ -678,5 +679,6 @@
         private System.Windows.Forms.Button BotonEliminarDemandante;
         private System.Windows.Forms.Button BotonAgregarDemandante;
         private System.Windows.Forms.NumericUpDown CuadroPrecio;
+        private System.Windows.Forms.TextBox CuadroExpediente;
     }
 }

@@ -439,6 +439,7 @@
             this.CuadroNroExpediente.Name = "CuadroNroExpediente";
             this.CuadroNroExpediente.Size = new System.Drawing.Size(257, 20);
             this.CuadroNroExpediente.TabIndex = 8;
+            this.CuadroNroExpediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CuadroNroExpediente_KeyPress);
             // 
             // label1
             // 

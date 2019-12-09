@@ -34,6 +34,7 @@
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
+            this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
             this.ListBoxDemandados = new System.Windows.Forms.ListBox();
             this.ListBoxDemandantes = new System.Windows.Forms.ListBox();
             this.labelDocumentos = new System.Windows.Forms.Label();
@@ -76,7 +77,6 @@
             this.BotonCancelar = new System.Windows.Forms.Button();
             this.BotonConsultarDemandante = new System.Windows.Forms.Button();
             this.BotonConsultarDemandados = new System.Windows.Forms.Button();
-            this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +96,7 @@
             this.CuadroNroExpediente.Name = "CuadroNroExpediente";
             this.CuadroNroExpediente.Size = new System.Drawing.Size(315, 20);
             this.CuadroNroExpediente.TabIndex = 34;
+            this.CuadroNroExpediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CuadroNroExpediente_KeyPress);
             // 
             // label1
             // 
@@ -197,6 +198,18 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
             this.Layout.Size = new System.Drawing.Size(439, 529);
             this.Layout.TabIndex = 180;
+            // 
+            // BotonConsultarDocumentos
+            // 
+            this.BotonConsultarDocumentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDocumentos.Enabled = false;
+            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(102, 449);
+            this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
+            this.BotonConsultarDocumentos.Size = new System.Drawing.Size(332, 25);
+            this.BotonConsultarDocumentos.TabIndex = 186;
+            this.BotonConsultarDocumentos.Text = "Consultar Documentos";
+            this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
+            this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click_1);
             // 
             // ListBoxDemandados
             // 
@@ -581,18 +594,6 @@
             this.BotonConsultarDemandados.Text = "Consultar";
             this.BotonConsultarDemandados.UseVisualStyleBackColor = true;
             this.BotonConsultarDemandados.Click += new System.EventHandler(this.BotonConsultarDemandados_Click);
-            // 
-            // BotonConsultarDocumentos
-            // 
-            this.BotonConsultarDocumentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BotonConsultarDocumentos.Enabled = false;
-            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(102, 449);
-            this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
-            this.BotonConsultarDocumentos.Size = new System.Drawing.Size(332, 25);
-            this.BotonConsultarDocumentos.TabIndex = 186;
-            this.BotonConsultarDocumentos.Text = "Consultar Documentos";
-            this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
-            this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click_1);
             // 
             // BajaJuicio
             // 

@@ -162,5 +162,15 @@ namespace WindowsFormsApp2.Juicios
         {
 
         }
+
+        private void CuadroExpediente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CuadroExpediente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            iFachada.SoloNumeros(e);
+        }
     }
 }

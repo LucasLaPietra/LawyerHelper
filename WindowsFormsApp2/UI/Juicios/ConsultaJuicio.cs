@@ -187,5 +187,10 @@ namespace WindowsFormsApp2.Juicios
             ConsultaDocumento iMenuNuevo = new ConsultaDocumento(iJuicio);
             iMenuNuevo.ShowDialog();
         }
+
+        private void CuadroNroExpediente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            iFachada.SoloNumeros(e);
+        }
     }
 }

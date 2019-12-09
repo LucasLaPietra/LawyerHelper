@@ -69,5 +69,10 @@ namespace WindowsFormsApp2.Personas
         {
 
         }
+
+        private void CuadroDNI_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            iFachada.SoloNumeros(e);
+        }
     }
 }

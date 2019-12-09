@@ -94,6 +94,7 @@
             this.CuadroDNI.Size = new System.Drawing.Size(262, 20);
             this.CuadroDNI.TabIndex = 62;
             this.CuadroDNI.TextChanged += new System.EventHandler(this.CuadroNombre_TextChanged);
+            this.CuadroDNI.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CuadroDNI_KeyPress);
             // 
             // CuadroNombre
             // 

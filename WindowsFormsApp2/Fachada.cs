@@ -83,6 +83,11 @@ namespace WindowsFormsApp2
             }
         }
 
+        public void SoloNumeros(KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
         public static void MostrarContenidoPanel(Panel p)
         {
             foreach (Control c in p.Controls)
