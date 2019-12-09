@@ -199,52 +199,59 @@ namespace LawyerHelper.UI.Juicios
 
         private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
         {
-            BuscarJuicio iMenuNuevo = new BuscarJuicio();
-            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            try
             {
-                iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
-                CuadroBienes.Text = iJuicio.Bienes;
-                CuadroDescripcion.Text = iJuicio.Descripcion;
-                CuadroGrupoFamiliar.Text = iJuicio.GrupoFamiliar;
-                CuadroCaratula.Text = iJuicio.Caratula;
-                CuadroCompetencia.Text = iJuicio.Competencia;
-                CuadroEtapa.Text = iJuicio.Etapa;
-                CuadroNroExpediente.Text = iJuicio.NroExpediente;
-                dateTimeFecha.Text = iJuicio.Fecha.ToShortDateString();
-                CuadroFolio.Text = iJuicio.Folio;
-                CuadroJuez.Text = iJuicio.Juez;
-                CuadroJurisdiccion.Text = iJuicio.Jurisdiccion;
-                CuadroLibro.Text = iJuicio.Libro;
-                CuadroPrecio.Text = iJuicio.Precio.ToString();
-                CuadroRecurso.Text = iJuicio.Recurso;
-                CuadroSecretario.Text = iJuicio.Secretario;
-                CuadroTipoDeProceso.Text = iJuicio.TipoProceso;
-                CuadroFuero.Text = iJuicio.Fuero;
+                BuscarJuicio iMenuNuevo = new BuscarJuicio();
+                if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+                {
+                    iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
+                    CuadroBienes.Text = iJuicio.Bienes;
+                    CuadroDescripcion.Text = iJuicio.Descripcion;
+                    CuadroGrupoFamiliar.Text = iJuicio.GrupoFamiliar;
+                    CuadroCaratula.Text = iJuicio.Caratula;
+                    CuadroCompetencia.Text = iJuicio.Competencia;
+                    CuadroEtapa.Text = iJuicio.Etapa;
+                    CuadroNroExpediente.Text = iJuicio.NroExpediente;
+                    dateTimeFecha.Text = iJuicio.Fecha.ToShortDateString();
+                    CuadroFolio.Text = iJuicio.Folio;
+                    CuadroJuez.Text = iJuicio.Juez;
+                    CuadroJurisdiccion.Text = iJuicio.Jurisdiccion;
+                    CuadroLibro.Text = iJuicio.Libro;
+                    CuadroPrecio.Text = iJuicio.Precio.ToString();
+                    CuadroRecurso.Text = iJuicio.Recurso;
+                    CuadroSecretario.Text = iJuicio.Secretario;
+                    CuadroTipoDeProceso.Text = iJuicio.TipoProceso;
+                    CuadroFuero.Text = iJuicio.Fuero;
 
-                iDemandados = iJuicio.Demandados.ToList();
-                iDemandantes = iJuicio.Demandantes.ToList();
-                if (iDemandados[0].Cliente==true)
-                    RadioButtonCliente2.Checked = true;
-                else
-                    RadioButtonCliente1.Checked = true;
-                foreach (Demandado i in iDemandados)
-                    iListaDemandados.Add(i.Persona);
-                foreach (Demandante i in iDemandantes)
-                    iListaDemandantes.Add(i.Persona);
-                ListBoxDemandados.DataSource = iListaDemandados;
-                ListBoxDemandados.DisplayMember = "NombreyAp";
-                ListBoxDemandantes.DataSource = iListaDemandantes;
-                ListBoxDemandantes.DisplayMember = "NombreyAp";
-                BotonAgregarDemandado.Enabled = true;
-                if (iListaDemandados.Count > 1)
-                    BotonEliminarDemandado.Enabled = true;
-                BotonAgregarDemandante.Enabled = true;
-                if (iListaDemandantes.Count > 1)
-                    BotonEliminarDemandante.Enabled = true;
-                BotonEliminarDocumentos.Enabled = true;
-                BotonModificarDocumentos.Enabled = true;
-                BotonConsultarDocumentos.Enabled = true;
-                BotonAgregarDocumentos.Enabled = true;
+                    iDemandados = iJuicio.Demandados.ToList();
+                    iDemandantes = iJuicio.Demandantes.ToList();
+                    if (iDemandados[0].Cliente == true)
+                        RadioButtonCliente2.Checked = true;
+                    else
+                        RadioButtonCliente1.Checked = true;
+                    foreach (Demandado i in iDemandados)
+                        iListaDemandados.Add(i.Persona);
+                    foreach (Demandante i in iDemandantes)
+                        iListaDemandantes.Add(i.Persona);
+                    ListBoxDemandados.DataSource = iListaDemandados;
+                    ListBoxDemandados.DisplayMember = "NombreyAp";
+                    ListBoxDemandantes.DataSource = iListaDemandantes;
+                    ListBoxDemandantes.DisplayMember = "NombreyAp";
+                    BotonAgregarDemandado.Enabled = true;
+                    if (iListaDemandados.Count > 1)
+                        BotonEliminarDemandado.Enabled = true;
+                    BotonAgregarDemandante.Enabled = true;
+                    if (iListaDemandantes.Count > 1)
+                        BotonEliminarDemandante.Enabled = true;
+                    BotonEliminarDocumentos.Enabled = true;
+                    BotonModificarDocumentos.Enabled = true;
+                    BotonConsultarDocumentos.Enabled = true;
+                    BotonAgregarDocumentos.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ningun juicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

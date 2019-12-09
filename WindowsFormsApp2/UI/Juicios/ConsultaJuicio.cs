@@ -136,37 +136,44 @@ namespace WindowsFormsApp2.Juicios
 
         private void BotonBusquedaAvanzada_Click(object sender, EventArgs e)
         {
-            BuscarJuicio iMenuNuevo = new BuscarJuicio();
-            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            try
             {
-                iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
-                CuadroBienes.Text = iJuicio.Bienes;
-                CuadroDescripcion.Text = iJuicio.Descripcion;
-                CuadroGrupoFamiliar.Text = iJuicio.GrupoFamiliar;
-                LabelCaratula2.Text = iJuicio.Caratula;
-                LabelCompetencia2.Text = iJuicio.Competencia;
-                LabelEtapa2.Text = iJuicio.Etapa;
-                LabelExpediente2.Text = iJuicio.NroExpediente;
-                LabelFecha2.Text = iJuicio.Fecha.ToShortDateString();
-                LabelFolio2.Text = iJuicio.Folio;
-                LabelJuez2.Text = iJuicio.Juez;
-                LabelJurisdiccion2.Text = iJuicio.Jurisdiccion;
-                labelLibro2.Text = iJuicio.Libro;
-                LabelPrecio2.Text = iJuicio.Precio.ToString();
-                LabelRecurso2.Text = iJuicio.Recurso;
-                LabelSecretario2.Text = iJuicio.Secretario;
-                LabelTipoProceso2.Text = iJuicio.TipoProceso;
-                LabelFuero2.Text = iJuicio.Fuero;
+                BuscarJuicio iMenuNuevo = new BuscarJuicio();
+                if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+                {
+                    iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
+                    CuadroBienes.Text = iJuicio.Bienes;
+                    CuadroDescripcion.Text = iJuicio.Descripcion;
+                    CuadroGrupoFamiliar.Text = iJuicio.GrupoFamiliar;
+                    LabelCaratula2.Text = iJuicio.Caratula;
+                    LabelCompetencia2.Text = iJuicio.Competencia;
+                    LabelEtapa2.Text = iJuicio.Etapa;
+                    LabelExpediente2.Text = iJuicio.NroExpediente;
+                    LabelFecha2.Text = iJuicio.Fecha.ToShortDateString();
+                    LabelFolio2.Text = iJuicio.Folio;
+                    LabelJuez2.Text = iJuicio.Juez;
+                    LabelJurisdiccion2.Text = iJuicio.Jurisdiccion;
+                    labelLibro2.Text = iJuicio.Libro;
+                    LabelPrecio2.Text = iJuicio.Precio.ToString();
+                    LabelRecurso2.Text = iJuicio.Recurso;
+                    LabelSecretario2.Text = iJuicio.Secretario;
+                    LabelTipoProceso2.Text = iJuicio.TipoProceso;
+                    LabelFuero2.Text = iJuicio.Fuero;
 
-                iDemandados = iJuicio.Demandados.ToList();
-                iDemandantes = iControladorJuicio.ObtenerDemandantes(iJuicio.JuicioId).ToList();
-                ListBoxDemandados.DataSource =iDemandados;
-                ListBoxDemandados.DisplayMember = "Descripcion";
-                ListBoxDemandantes.DataSource = iDemandantes;
-                ListBoxDemandantes.DisplayMember = "Descripcion";
-                BotonConsultarDemandados.Enabled = true;
-                BotonConsultarDemandante.Enabled = true;
-                BotonConsultarDocumentos.Enabled = true;
+                    iDemandados = iJuicio.Demandados.ToList();
+                    iDemandantes = iControladorJuicio.ObtenerDemandantes(iJuicio.JuicioId).ToList();
+                    ListBoxDemandados.DataSource = iDemandados;
+                    ListBoxDemandados.DisplayMember = "Descripcion";
+                    ListBoxDemandantes.DataSource = iDemandantes;
+                    ListBoxDemandantes.DisplayMember = "Descripcion";
+                    BotonConsultarDemandados.Enabled = true;
+                    BotonConsultarDemandante.Enabled = true;
+                    BotonConsultarDocumentos.Enabled = true;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ningun juicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
