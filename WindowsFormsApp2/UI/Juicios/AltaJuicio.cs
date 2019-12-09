@@ -51,6 +51,7 @@ namespace WindowsFormsApp2.Juicios
                     CuadroFolio.Text, CuadroLibro.Text, CuadroJurisdiccion.Text, Convert.ToDouble(CuadroPrecio.Value));
                 iFachada.AltaDemandadosyDemandantes(CuadroExpediente.Text, iListaDemandados, iListaDemandantes, RadioButtonDemandados.Checked, RadioButtonDemandantes.Checked);
                 MessageBox.Show("Juicio añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
            catch (InvalidOperationException)
             {

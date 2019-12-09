@@ -69,6 +69,7 @@ namespace WindowsFormsApp2.Pagos
                 }
                 iControladorPagos.RegistrarPago((Convert.ToDouble(CuadroImporte.Text)), iFechayHora, CuadroDetalle.Text, iJuicio);
                 MessageBox.Show("Pago añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (InvalidOperationException)
             {

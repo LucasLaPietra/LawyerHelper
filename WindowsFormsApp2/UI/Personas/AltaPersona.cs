@@ -32,6 +32,7 @@ namespace WindowsFormsApp2.Personas
             {                
                 iControladorPersona.RegistrarPersona(CuadroNombre.Text, CuadroApellido.Text, CuadroDNI.Text, CuadroDomReal.Text, CuadroTelefono.Text, CuadroFecha.Value, CuadroProfesion.Text, CuadroLugarTrabajo.Text, CuadroCUIL.Text, CuadroEstadoCivil.Text, CuadroRepresentante.Text, CuadroDomLegal.Text);
                 MessageBox.Show("Persona añadida con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (InvalidOperationException)
             {

@@ -37,6 +37,7 @@ namespace LawyerHelper.UI.Agenda
                 DateTime iFechayHora = new DateTime(CuadroFecha.Value.Year, CuadroFecha.Value.Month, CuadroFecha.Value.Day, iHora, (Convert.ToInt32(CuadroMinutos.Text)), 0);
                 iControladorRecordatorio.RegistrarRecordatorio(CuadroLugar.Text, CuadroTipo.Text, CuadroDescripcion.Text, iFechayHora);
                 MessageBox.Show("Recordatorio añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (Exception)
             {

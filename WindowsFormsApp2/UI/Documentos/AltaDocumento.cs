@@ -46,6 +46,7 @@ namespace LawyerHelper.UI.Documentos
                 }
                 iControladorDocumento.RegistrarDocumento(CuadroTipoDocumento.Text, CuadroFoja.Text, CheckEnExpediente.Checked, CuadroNombreDocumento.Text, CuadroDetalle.Text, TimePickerFecha.Value, iJuicio);
                 MessageBox.Show("Documento añadido con exito", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (InvalidOperationException)
             {
