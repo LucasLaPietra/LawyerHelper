@@ -143,6 +143,7 @@
             this.BotonCancelar.TabIndex = 172;
             this.BotonCancelar.Text = "Aceptar";
             this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
             // 
             // LabelHora2
             // 

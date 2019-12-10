@@ -69,14 +69,38 @@ namespace LawyerHelper.UI.Cobros
 
         private void BotonJuiciosAsignados_Click(object sender, EventArgs e)
         {
-            ConsultaJuicios iMenuNuevo = new ConsultaJuicios(iCobro.Juicio);
-            iMenuNuevo.ShowDialog();
+            try
+            {
+                ConsultaJuicios iMenuNuevo = new ConsultaJuicios(iCobro.Juicio);
+                iMenuNuevo.ShowDialog();
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Debe seleccionar un cobro primero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotonPersonasAsociadas_Click(object sender, EventArgs e)
         {
-            ConsultaPersona iMenuNuevo = new ConsultaPersona(iCobro.Persona);
-            iMenuNuevo.ShowDialog();
+            try
+            {
+                ConsultaPersona iMenuNuevo = new ConsultaPersona(iCobro.Persona);
+                iMenuNuevo.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Debe seleccionar un cobro primero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BotonCancelar_Click(object sender, EventArgs e)
+        {
+            DialogResult iMensaje = MessageBox.Show("Seguro que desea cancelar?", "Cancelar", MessageBoxButtons.YesNoCancel);
+
+            if (iMensaje == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
     }
 }

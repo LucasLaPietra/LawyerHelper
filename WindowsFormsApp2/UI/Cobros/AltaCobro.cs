@@ -72,21 +72,35 @@ namespace WindowsFormsApp2.Cobros
 
         private void BotonAgregarPersona_Click(object sender, EventArgs e)
         {
-            BuscarPersona iMenuNuevo = new BuscarPersona();
-            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            try
             {
-                iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
-                CuadroPersona.Text = iPersona.Apellido+" "+iPersona.Nombre;
+                BuscarPersona iMenuNuevo = new BuscarPersona();
+                if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+                {
+                    iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
+                    CuadroPersona.Text = iPersona.Apellido + " " + iPersona.Nombre;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ninguna persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void BotonAgregarJuicio_Click(object sender, EventArgs e)
         {
-            BuscarJuicio iMenuNuevo = new BuscarJuicio();
-            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            try
             {
-                iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
-                CuadroJuicio.Text = iJuicio.NroExpediente;
+                BuscarJuicio iMenuNuevo = new BuscarJuicio();
+                if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+                {
+                    iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
+                    CuadroJuicio.Text = iJuicio.NroExpediente;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ningun juicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

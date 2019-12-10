@@ -48,11 +48,18 @@ namespace WindowsFormsApp2.Pagos
 
         private void BotonAgregarJuicio_Click(object sender, EventArgs e)
         {
-            BuscarJuicio iMenuNuevo = new BuscarJuicio();
-            if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+            try
             {
-                iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
-                CuadroJuicio.Text = iJuicio.NroExpediente;
+                BuscarJuicio iMenuNuevo = new BuscarJuicio();
+                if (iMenuNuevo.ShowDialog() == DialogResult.OK)
+                {
+                    iJuicio = (Juicio)iMenuNuevo.JuicioEncontrado;
+                    CuadroJuicio.Text = iJuicio.NroExpediente;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ningun juicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -48,8 +48,15 @@ namespace LawyerHelper.UI.Pagos
 
         private void BotonJuiciosAsignados_Click(object sender, EventArgs e)
         {
-            ConsultaJuicios iMenuNuevo = new ConsultaJuicios(iPago.Juicio);
-            iMenuNuevo.ShowDialog();
+            try
+            {
+                ConsultaJuicios iMenuNuevo = new ConsultaJuicios(iPago.Juicio);
+                iMenuNuevo.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Debe seleccionar un cobro primero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BotonCancelar_Click_1(object sender, EventArgs e)

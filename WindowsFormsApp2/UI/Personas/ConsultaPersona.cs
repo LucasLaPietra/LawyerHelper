@@ -60,6 +60,10 @@ namespace LawyerHelper.UI.Personas
             LabelRepresentante2.Text = pPersona.Representante;
             LabelTelefono2.Text = pPersona.Telefono;
 
+            BotonConsultarJuicio.Enabled = true;
+            if (iPersona.Cobros.Count > 0)
+                BotonConsultarCobro.Enabled = true;
+
             iJuicios = iControladorPersona.ObtenerJuicios(pPersona.PersonaId).ToList();
             iCobros = pPersona.Cobros.ToList();
             ListBoxJuicios.DataSource = iJuicios;

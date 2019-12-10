@@ -48,6 +48,10 @@ namespace WindowsFormsApp2.Juicios
             CuadroNroExpediente.ReadOnly = true;
             CuadroNroExpediente.Text = pJuicio.NroExpediente;
 
+            BotonConsultarDemandados.Enabled = true;
+            BotonConsultarDemandante.Enabled = true;
+            BotonConsultarDocumentos.Enabled = true;
+
             CuadroBienes.Text = pJuicio.Bienes;
             CuadroDescripcion.Text = pJuicio.Descripcion;
             CuadroGrupoFamiliar.Text = pJuicio.GrupoFamiliar;
