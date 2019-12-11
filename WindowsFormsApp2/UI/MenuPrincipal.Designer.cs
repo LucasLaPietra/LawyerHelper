@@ -64,7 +64,7 @@
             this.LabelCreditos.AutoSize = true;
             this.LabelCreditos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelCreditos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(182)))), ((int)(((byte)(208)))));
-            this.LabelCreditos.Location = new System.Drawing.Point(257, 639);
+            this.LabelCreditos.Location = new System.Drawing.Point(265, 599);
             this.LabelCreditos.Name = "LabelCreditos";
             this.LabelCreditos.Size = new System.Drawing.Size(207, 13);
             this.LabelCreditos.TabIndex = 6;
@@ -74,7 +74,7 @@
             // 
             this.PanelOpciones.Location = new System.Drawing.Point(242, 55);
             this.PanelOpciones.Name = "PanelOpciones";
-            this.PanelOpciones.Size = new System.Drawing.Size(230, 550);
+            this.PanelOpciones.Size = new System.Drawing.Size(230, 500);
             this.PanelOpciones.TabIndex = 7;
             // 
             // FlechaPagos
@@ -217,7 +217,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(37)))), ((int)(((byte)(57)))));
-            this.ClientSize = new System.Drawing.Size(484, 661);
+            this.ClientSize = new System.Drawing.Size(484, 621);
             this.Controls.Add(this.FlechaPagos);
             this.Controls.Add(this.FlechaCobros);
             this.Controls.Add(this.FlechaAgenda);

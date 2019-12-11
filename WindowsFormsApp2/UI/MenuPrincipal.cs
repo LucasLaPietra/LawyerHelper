@@ -29,6 +29,7 @@ namespace WindowsFormsApp2
         public MenuPrincipal()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)

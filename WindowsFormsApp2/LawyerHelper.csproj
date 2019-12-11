@@ -12,7 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <PublishUrl>publish\</PublishUrl>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\Users\User\Documents\LawyerHelper\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>false</UpdateEnabled>
@@ -22,10 +23,10 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +47,27 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E531D29AF74BD6929DD71CCDFAAC19DA92A4D1A5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>LawyerHelper_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -106,9 +128,9 @@
     <Compile Include="DAL\Repositorio\RepositorioPersona.cs" />
     <Compile Include="DAL\Repositorio\RepositorioRecordatorio.cs" />
     <Compile Include="DAL\Repositorio\UnidadDeTrabajo.cs" />
-    <Compile Include="Migrations\201911221737123_ad.cs" />
-    <Compile Include="Migrations\201911221737123_ad.Designer.cs">
-      <DependentUpon>201911221737123_ad.cs</DependentUpon>
+    <Compile Include="Migrations\201912111453370_final.cs" />
+    <Compile Include="Migrations\201912111453370_final.Designer.cs">
+      <DependentUpon>201912111453370_final.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -152,12 +174,6 @@
     <Compile Include="UI\Ajustes.Designer.cs">
       <DependentUpon>Ajustes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\CobrosAsociados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\CobrosAsociados.Designer.cs">
-      <DependentUpon>CobrosAsociados.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Cobros\AltaCobro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,12 +198,6 @@
     </Compile>
     <Compile Include="UI\Cobros\MenuCobrosUC.Designer.cs">
       <DependentUpon>MenuCobrosUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\DocumentosAsociados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\DocumentosAsociados.Designer.cs">
-      <DependentUpon>DocumentosAsociados.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Documentos\AltaDocumento.cs">
       <SubType>Form</SubType>
@@ -218,12 +228,6 @@
     </Compile>
     <Compile Include="UI\Documentos\ModificarDocumento.Designer.cs">
       <DependentUpon>ModificarDocumento.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\JuiciosAsociados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\JuiciosAsociados.Designer.cs">
-      <DependentUpon>JuiciosAsociados.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Juicios\AltaJuicio.cs">
       <SubType>Form</SubType>
@@ -279,12 +283,6 @@
     <Compile Include="UI\Juicios\ModificarJuicio.Designer.cs">
       <DependentUpon>ModificarJuicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\PagosAsociados.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\PagosAsociados.Designer.cs">
-      <DependentUpon>PagosAsociados.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Pagos\AltaPago.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,12 +312,6 @@
     </Compile>
     <Compile Include="UI\Pagos\MenuPagosUC.Designer.cs">
       <DependentUpon>MenuPagosUC.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\PersonasAsociadas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\PersonasAsociadas.Designer.cs">
-      <DependentUpon>PersonasAsociadas.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Personas\AltaPersona.cs">
       <SubType>Form</SubType>
@@ -371,8 +363,8 @@
     <Compile Include="UI\Personas\MenuPersonasUC.Designer.cs">
       <DependentUpon>MenuPersonasUC.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Migrations\201911221737123_ad.resx">
-      <DependentUpon>201911221737123_ad.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201912111453370_final.resx">
+      <DependentUpon>201912111453370_final.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Agenda\AltaRecordatorio.resx">
       <DependentUpon>AltaRecordatorio.cs</DependentUpon>
@@ -490,7 +482,9 @@
     <EmbeddedResource Include="UI\Personas\ModificarPersona.resx">
       <DependentUpon>ModificarPersona.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LawyerHelper_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -545,6 +539,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
