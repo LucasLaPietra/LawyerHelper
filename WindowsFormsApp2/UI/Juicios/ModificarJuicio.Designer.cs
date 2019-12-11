@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.CuadroPrecio = new System.Windows.Forms.NumericUpDown();
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.CuadroSecretario = new System.Windows.Forms.TextBox();
             this.CuadroJuez = new System.Windows.Forms.TextBox();
@@ -82,10 +83,15 @@
             this.BotonAgregarDocumentos = new System.Windows.Forms.Button();
             this.LabelDocumentos = new System.Windows.Forms.Label();
             this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
-            this.CuadroPrecio = new System.Windows.Forms.NumericUpDown();
+            this.LabelCobros = new System.Windows.Forms.Label();
+            this.LabelPagos = new System.Windows.Forms.Label();
+            this.ListBoxCobros = new System.Windows.Forms.ListBox();
+            this.ListBoxPagos = new System.Windows.Forms.ListBox();
+            this.BotonConsultarCobro = new System.Windows.Forms.Button();
+            this.BotonConsultarPagos = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            this.Layout1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CuadroPrecio)).BeginInit();
+            this.Layout1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -149,6 +155,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(428, 464);
             this.tableLayoutPanel1.TabIndex = 6;
+            // 
+            // CuadroPrecio
+            // 
+            this.CuadroPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CuadroPrecio.DecimalPlaces = 2;
+            this.CuadroPrecio.Location = new System.Drawing.Point(97, 438);
+            this.CuadroPrecio.Name = "CuadroPrecio";
+            this.CuadroPrecio.Size = new System.Drawing.Size(324, 20);
+            this.CuadroPrecio.TabIndex = 100;
             // 
             // CuadroDescripcion
             // 
@@ -574,32 +589,38 @@
             this.Layout1.ColumnCount = 2;
             this.Layout1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.Layout1.Controls.Add(this.BotonModificarDocumentos, 1, 4);
-            this.Layout1.Controls.Add(this.BotonEliminarDocumentos, 1, 3);
+            this.Layout1.Controls.Add(this.ListBoxPagos, 1, 3);
+            this.Layout1.Controls.Add(this.ListBoxCobros, 1, 2);
+            this.Layout1.Controls.Add(this.LabelPagos, 0, 3);
+            this.Layout1.Controls.Add(this.BotonModificarDocumentos, 1, 6);
+            this.Layout1.Controls.Add(this.BotonEliminarDocumentos, 1, 5);
             this.Layout1.Controls.Add(this.ListBoxDemandados, 1, 1);
-            this.Layout1.Controls.Add(this.BotonAgregarDocumentos, 1, 2);
+            this.Layout1.Controls.Add(this.BotonAgregarDocumentos, 1, 4);
             this.Layout1.Controls.Add(this.LabelDemandante, 0, 0);
             this.Layout1.Controls.Add(this.ListBoxDemandantes, 1, 0);
             this.Layout1.Controls.Add(this.LabelDemandado, 0, 1);
-            this.Layout1.Controls.Add(this.LabelDocumentos, 0, 2);
-            this.Layout1.Controls.Add(this.BotonConsultarDocumentos, 1, 5);
+            this.Layout1.Controls.Add(this.LabelDocumentos, 0, 4);
+            this.Layout1.Controls.Add(this.BotonConsultarDocumentos, 1, 7);
+            this.Layout1.Controls.Add(this.LabelCobros, 0, 2);
             this.Layout1.Location = new System.Drawing.Point(456, 94);
             this.Layout1.Name = "Layout1";
-            this.Layout1.RowCount = 6;
+            this.Layout1.RowCount = 8;
             this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Layout1.Size = new System.Drawing.Size(411, 271);
+            this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout1.Size = new System.Drawing.Size(411, 421);
             this.Layout1.TabIndex = 84;
             // 
             // BotonModificarDocumentos
             // 
             this.BotonModificarDocumentos.Enabled = false;
             this.BotonModificarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonModificarDocumentos.Location = new System.Drawing.Point(85, 211);
+            this.BotonModificarDocumentos.Location = new System.Drawing.Point(85, 361);
             this.BotonModificarDocumentos.Name = "BotonModificarDocumentos";
             this.BotonModificarDocumentos.Size = new System.Drawing.Size(324, 23);
             this.BotonModificarDocumentos.TabIndex = 87;
@@ -611,7 +632,7 @@
             // 
             this.BotonEliminarDocumentos.Enabled = false;
             this.BotonEliminarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonEliminarDocumentos.Location = new System.Drawing.Point(85, 182);
+            this.BotonEliminarDocumentos.Location = new System.Drawing.Point(85, 332);
             this.BotonEliminarDocumentos.Name = "BotonEliminarDocumentos";
             this.BotonEliminarDocumentos.Size = new System.Drawing.Size(324, 23);
             this.BotonEliminarDocumentos.TabIndex = 86;
@@ -623,7 +644,7 @@
             // 
             this.BotonAgregarDocumentos.Enabled = false;
             this.BotonAgregarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAgregarDocumentos.Location = new System.Drawing.Point(85, 153);
+            this.BotonAgregarDocumentos.Location = new System.Drawing.Point(85, 303);
             this.BotonAgregarDocumentos.Name = "BotonAgregarDocumentos";
             this.BotonAgregarDocumentos.Size = new System.Drawing.Size(324, 23);
             this.BotonAgregarDocumentos.TabIndex = 85;
@@ -634,7 +655,7 @@
             // LabelDocumentos
             // 
             this.LabelDocumentos.AutoSize = true;
-            this.LabelDocumentos.Location = new System.Drawing.Point(3, 150);
+            this.LabelDocumentos.Location = new System.Drawing.Point(3, 300);
             this.LabelDocumentos.Name = "LabelDocumentos";
             this.LabelDocumentos.Size = new System.Drawing.Size(70, 13);
             this.LabelDocumentos.TabIndex = 32;
@@ -644,7 +665,7 @@
             // 
             this.BotonConsultarDocumentos.Enabled = false;
             this.BotonConsultarDocumentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(85, 240);
+            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(85, 390);
             this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
             this.BotonConsultarDocumentos.Size = new System.Drawing.Size(324, 23);
             this.BotonConsultarDocumentos.TabIndex = 88;
@@ -652,20 +673,71 @@
             this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
             this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click);
             // 
-            // CuadroPrecio
+            // LabelCobros
             // 
-            this.CuadroPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CuadroPrecio.DecimalPlaces = 2;
-            this.CuadroPrecio.Location = new System.Drawing.Point(97, 438);
-            this.CuadroPrecio.Name = "CuadroPrecio";
-            this.CuadroPrecio.Size = new System.Drawing.Size(324, 20);
-            this.CuadroPrecio.TabIndex = 100;
+            this.LabelCobros.AutoSize = true;
+            this.LabelCobros.Location = new System.Drawing.Point(3, 150);
+            this.LabelCobros.Name = "LabelCobros";
+            this.LabelCobros.Size = new System.Drawing.Size(43, 13);
+            this.LabelCobros.TabIndex = 89;
+            this.LabelCobros.Text = "Cobros:";
+            // 
+            // LabelPagos
+            // 
+            this.LabelPagos.AutoSize = true;
+            this.LabelPagos.Location = new System.Drawing.Point(3, 225);
+            this.LabelPagos.Name = "LabelPagos";
+            this.LabelPagos.Size = new System.Drawing.Size(40, 13);
+            this.LabelPagos.TabIndex = 85;
+            this.LabelPagos.Text = "Pagos:";
+            // 
+            // ListBoxCobros
+            // 
+            this.ListBoxCobros.FormattingEnabled = true;
+            this.ListBoxCobros.Location = new System.Drawing.Point(85, 153);
+            this.ListBoxCobros.Name = "ListBoxCobros";
+            this.ListBoxCobros.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxCobros.TabIndex = 181;
+            // 
+            // ListBoxPagos
+            // 
+            this.ListBoxPagos.FormattingEnabled = true;
+            this.ListBoxPagos.Location = new System.Drawing.Point(85, 228);
+            this.ListBoxPagos.Name = "ListBoxPagos";
+            this.ListBoxPagos.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxPagos.TabIndex = 181;
+            // 
+            // BotonConsultarCobro
+            // 
+            this.BotonConsultarCobro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarCobro.Enabled = false;
+            this.BotonConsultarCobro.Location = new System.Drawing.Point(873, 249);
+            this.BotonConsultarCobro.Name = "BotonConsultarCobro";
+            this.BotonConsultarCobro.Size = new System.Drawing.Size(75, 25);
+            this.BotonConsultarCobro.TabIndex = 181;
+            this.BotonConsultarCobro.Text = "Consultar";
+            this.BotonConsultarCobro.UseVisualStyleBackColor = true;
+            this.BotonConsultarCobro.Click += new System.EventHandler(this.BotonConsultarCobro_Click);
+            // 
+            // BotonConsultarPagos
+            // 
+            this.BotonConsultarPagos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarPagos.Enabled = false;
+            this.BotonConsultarPagos.Location = new System.Drawing.Point(873, 327);
+            this.BotonConsultarPagos.Name = "BotonConsultarPagos";
+            this.BotonConsultarPagos.Size = new System.Drawing.Size(75, 25);
+            this.BotonConsultarPagos.TabIndex = 182;
+            this.BotonConsultarPagos.Text = "Consultar";
+            this.BotonConsultarPagos.UseVisualStyleBackColor = true;
+            this.BotonConsultarPagos.Click += new System.EventHandler(this.BotonConsultarPagos_Click);
             // 
             // ModificarJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1034, 604);
+            this.Controls.Add(this.BotonConsultarPagos);
+            this.Controls.Add(this.BotonConsultarCobro);
             this.Controls.Add(this.Layout1);
             this.Controls.Add(this.RadioButtonCliente2);
             this.Controls.Add(this.RadioButtonCliente1);
@@ -684,9 +756,9 @@
             this.Text = "Modificar Juicios";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CuadroPrecio)).EndInit();
             this.Layout1.ResumeLayout(false);
             this.Layout1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CuadroPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -749,5 +821,11 @@
         private System.Windows.Forms.Button BotonModificarDocumentos;
         private System.Windows.Forms.Button BotonConsultarDocumentos;
         private System.Windows.Forms.NumericUpDown CuadroPrecio;
+        private System.Windows.Forms.Label LabelPagos;
+        private System.Windows.Forms.Label LabelCobros;
+        private System.Windows.Forms.ListBox ListBoxCobros;
+        private System.Windows.Forms.ListBox ListBoxPagos;
+        private System.Windows.Forms.Button BotonConsultarCobro;
+        private System.Windows.Forms.Button BotonConsultarPagos;
     }
 }

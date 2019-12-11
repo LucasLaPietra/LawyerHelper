@@ -14,6 +14,8 @@ using LawyerHelper.DAL.Interfaces;
 using LawyerHelper.DAL.Repositorio;
 using WindowsFormsApp2;
 using LawyerHelper.UI.Documentos;
+using LawyerHelper.UI.Cobros;
+using LawyerHelper.UI.Pagos;
 
 namespace LawyerHelper.UI.Juicios
 {
@@ -22,6 +24,8 @@ namespace LawyerHelper.UI.Juicios
         Juicio iJuicio;
         List<Demandado> iDemandados;
         List<Demandante> iDemandantes;
+        List<Cobro> iCobros;
+        List<Pago> iPagos;
         List<Persona> iListaDemandados = new List<Persona>();
         List<Persona> iListaDemandantes = new List<Persona>();
         Fachada iFachada = new Fachada();
@@ -70,6 +74,17 @@ namespace LawyerHelper.UI.Juicios
                 ListBoxDemandados.DisplayMember = "NombreyAp";
                 ListBoxDemandantes.DataSource = iListaDemandantes;
                 ListBoxDemandantes.DisplayMember = "NombreyAp";
+                iCobros = iJuicio.Cobros.ToList();
+                iPagos = iJuicio.Pagos.ToList();
+                ListBoxCobros.DataSource = iCobros;
+                ListBoxCobros.DisplayMember = "Descripcion";
+                ListBoxPagos.DataSource = iPagos;
+                ListBoxPagos.DisplayMember = "Descripcion";
+
+                if (iJuicio.Cobros.Count > 0)
+                    BotonConsultarCobro.Enabled = true;
+                if (iJuicio.Pagos.Count > 0)
+                    BotonConsultarPagos.Enabled = true;
                 BotonAgregarDemandado.Enabled = true;
                 if (iListaDemandados.Count > 1)
                     BotonEliminarDemandado.Enabled = true;
@@ -237,6 +252,17 @@ namespace LawyerHelper.UI.Juicios
                     ListBoxDemandados.DisplayMember = "NombreyAp";
                     ListBoxDemandantes.DataSource = iListaDemandantes;
                     ListBoxDemandantes.DisplayMember = "NombreyAp";
+                    iCobros = iJuicio.Cobros.ToList();
+                    iPagos = iJuicio.Pagos.ToList();
+                    ListBoxCobros.DataSource = iCobros;
+                    ListBoxCobros.DisplayMember = "Descripcion";
+                    ListBoxPagos.DataSource = iPagos;
+                    ListBoxPagos.DisplayMember = "Descripcion";
+
+                    if (iJuicio.Cobros.Count > 0)
+                        BotonConsultarCobro.Enabled = true;
+                    if (iJuicio.Pagos.Count > 0)
+                        BotonConsultarPagos.Enabled = true;
                     BotonAgregarDemandado.Enabled = true;
                     if (iListaDemandados.Count > 1)
                         BotonEliminarDemandado.Enabled = true;
@@ -258,6 +284,18 @@ namespace LawyerHelper.UI.Juicios
         private void CuadroNroExpediente_KeyPress(object sender, KeyPressEventArgs e)
         {
             iFachada.SoloNumeros(e);
+        }
+
+        private void BotonConsultarCobro_Click(object sender, EventArgs e)
+        {
+            ConsultaCobro iMenuNuevo = new ConsultaCobro(iCobros[ListBoxCobros.SelectedIndex]);
+            iMenuNuevo.ShowDialog();
+        }
+
+        private void BotonConsultarPagos_Click(object sender, EventArgs e)
+        {
+            ConsultaPago iMenuNuevo = new ConsultaPago(iPagos[ListBoxPagos.SelectedIndex]);
+            iMenuNuevo.ShowDialog();
         }
     }
 }

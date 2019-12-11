@@ -29,7 +29,20 @@ namespace LawyerHelper.UI.Pagos
             iControladorPago =new ControladorPago(UnidadDeTrabajo.Instancia);
             //Asignacion de colores      
             iFachada.AsignarColores(this);
-        }       
+        }
+
+        public ConsultaPago(Pago pPago)
+        {
+            InitializeComponent();
+            iControladorPago = new ControladorPago(UnidadDeTrabajo.Instancia);
+            //Asignacion de colores      
+            iFachada.AsignarColores(this);
+
+            iPago = pPago;
+            LabelHora2.Text = iPago.FechayHora.ToShortTimeString();
+            LabelImporte2.Text = iPago.Importe.ToString();
+            CuadroDetalle.Text = iPago.Detalle;
+        }
 
         private void dateTimePickerFecha_ValueChanged(object sender, EventArgs e)
         {

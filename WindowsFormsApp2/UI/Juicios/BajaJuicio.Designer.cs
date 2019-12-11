@@ -33,10 +33,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
             this.BotonAceptar = new System.Windows.Forms.Button();
+            this.BotonCancelar = new System.Windows.Forms.Button();
+            this.BotonConsultarDemandante = new System.Windows.Forms.Button();
+            this.BotonConsultarDemandados = new System.Windows.Forms.Button();
             this.Layout = new System.Windows.Forms.TableLayoutPanel();
+            this.ListBoxPagos = new System.Windows.Forms.ListBox();
             this.BotonConsultarDocumentos = new System.Windows.Forms.Button();
+            this.ListBoxCobros = new System.Windows.Forms.ListBox();
             this.ListBoxDemandados = new System.Windows.Forms.ListBox();
+            this.LabelPagos = new System.Windows.Forms.Label();
             this.ListBoxDemandantes = new System.Windows.Forms.ListBox();
+            this.LabelCobros = new System.Windows.Forms.Label();
             this.labelDocumentos = new System.Windows.Forms.Label();
             this.LabelFecha = new System.Windows.Forms.Label();
             this.LabelFolio = new System.Windows.Forms.Label();
@@ -74,9 +81,8 @@
             this.CuadroDescripcion = new System.Windows.Forms.TextBox();
             this.LabelEtapa2 = new System.Windows.Forms.Label();
             this.CuadroGrupoFamiliar = new System.Windows.Forms.TextBox();
-            this.BotonCancelar = new System.Windows.Forms.Button();
-            this.BotonConsultarDemandante = new System.Windows.Forms.Button();
-            this.BotonConsultarDemandados = new System.Windows.Forms.Button();
+            this.BotonConsultarPagos = new System.Windows.Forms.Button();
+            this.BotonConsultarCobro = new System.Windows.Forms.Button();
             this.Layout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,7 +126,7 @@
             // BotonAceptar
             // 
             this.BotonAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonAceptar.Location = new System.Drawing.Point(100, 645);
+            this.BotonAceptar.Location = new System.Drawing.Point(101, 696);
             this.BotonAceptar.Name = "BotonAceptar";
             this.BotonAceptar.Size = new System.Drawing.Size(95, 22);
             this.BotonAceptar.TabIndex = 182;
@@ -128,15 +134,54 @@
             this.BotonAceptar.UseVisualStyleBackColor = true;
             this.BotonAceptar.Click += new System.EventHandler(this.BotonAceptar_Click);
             // 
+            // BotonCancelar
+            // 
+            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonCancelar.Location = new System.Drawing.Point(357, 696);
+            this.BotonCancelar.Name = "BotonCancelar";
+            this.BotonCancelar.Size = new System.Drawing.Size(95, 22);
+            this.BotonCancelar.TabIndex = 185;
+            this.BotonCancelar.Text = "Cancelar";
+            this.BotonCancelar.UseVisualStyleBackColor = true;
+            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
+            // 
+            // BotonConsultarDemandante
+            // 
+            this.BotonConsultarDemandante.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDemandante.Enabled = false;
+            this.BotonConsultarDemandante.Location = new System.Drawing.Point(457, 382);
+            this.BotonConsultarDemandante.Name = "BotonConsultarDemandante";
+            this.BotonConsultarDemandante.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarDemandante.TabIndex = 181;
+            this.BotonConsultarDemandante.Text = "Consultar";
+            this.BotonConsultarDemandante.UseVisualStyleBackColor = true;
+            this.BotonConsultarDemandante.Click += new System.EventHandler(this.BotonConsultarDemandante_Click);
+            // 
+            // BotonConsultarDemandados
+            // 
+            this.BotonConsultarDemandados.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarDemandados.Enabled = false;
+            this.BotonConsultarDemandados.Location = new System.Drawing.Point(457, 444);
+            this.BotonConsultarDemandados.Name = "BotonConsultarDemandados";
+            this.BotonConsultarDemandados.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarDemandados.TabIndex = 183;
+            this.BotonConsultarDemandados.Text = "Consultar";
+            this.BotonConsultarDemandados.UseVisualStyleBackColor = true;
+            this.BotonConsultarDemandados.Click += new System.EventHandler(this.BotonConsultarDemandados_Click);
+            // 
             // Layout
             // 
             this.Layout.ColumnCount = 2;
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.Layout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.Layout.Controls.Add(this.BotonConsultarDocumentos, 1, 19);
+            this.Layout.Controls.Add(this.ListBoxPagos, 1, 20);
+            this.Layout.Controls.Add(this.BotonConsultarDocumentos, 1, 21);
+            this.Layout.Controls.Add(this.ListBoxCobros, 1, 19);
             this.Layout.Controls.Add(this.ListBoxDemandados, 1, 18);
+            this.Layout.Controls.Add(this.LabelPagos, 0, 20);
             this.Layout.Controls.Add(this.ListBoxDemandantes, 1, 17);
-            this.Layout.Controls.Add(this.labelDocumentos, 0, 19);
+            this.Layout.Controls.Add(this.LabelCobros, 0, 19);
+            this.Layout.Controls.Add(this.labelDocumentos, 0, 21);
             this.Layout.Controls.Add(this.LabelFecha, 0, 1);
             this.Layout.Controls.Add(this.LabelFolio, 0, 2);
             this.Layout.Controls.Add(this.LabelFuero, 0, 4);
@@ -173,9 +218,9 @@
             this.Layout.Controls.Add(this.CuadroDescripcion, 1, 10);
             this.Layout.Controls.Add(this.LabelEtapa2, 1, 11);
             this.Layout.Controls.Add(this.CuadroGrupoFamiliar, 1, 13);
-            this.Layout.Location = new System.Drawing.Point(12, 83);
+            this.Layout.Location = new System.Drawing.Point(15, 83);
             this.Layout.Name = "Layout";
-            this.Layout.RowCount = 20;
+            this.Layout.RowCount = 22;
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -195,42 +240,77 @@
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.Layout.Size = new System.Drawing.Size(439, 529);
-            this.Layout.TabIndex = 180;
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Layout.Size = new System.Drawing.Size(439, 581);
+            this.Layout.TabIndex = 186;
+            // 
+            // ListBoxPagos
+            // 
+            this.ListBoxPagos.FormattingEnabled = true;
+            this.ListBoxPagos.Location = new System.Drawing.Point(97, 485);
+            this.ListBoxPagos.Name = "ListBoxPagos";
+            this.ListBoxPagos.Size = new System.Drawing.Size(337, 56);
+            this.ListBoxPagos.TabIndex = 184;
             // 
             // BotonConsultarDocumentos
             // 
             this.BotonConsultarDocumentos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BotonConsultarDocumentos.Enabled = false;
-            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(102, 449);
+            this.BotonConsultarDocumentos.Location = new System.Drawing.Point(102, 547);
             this.BotonConsultarDocumentos.Name = "BotonConsultarDocumentos";
             this.BotonConsultarDocumentos.Size = new System.Drawing.Size(332, 25);
-            this.BotonConsultarDocumentos.TabIndex = 186;
+            this.BotonConsultarDocumentos.TabIndex = 179;
             this.BotonConsultarDocumentos.Text = "Consultar Documentos";
             this.BotonConsultarDocumentos.UseVisualStyleBackColor = true;
-            this.BotonConsultarDocumentos.Click += new System.EventHandler(this.BotonConsultarDocumentos_Click_1);
+            // 
+            // ListBoxCobros
+            // 
+            this.ListBoxCobros.FormattingEnabled = true;
+            this.ListBoxCobros.Location = new System.Drawing.Point(97, 423);
+            this.ListBoxCobros.Name = "ListBoxCobros";
+            this.ListBoxCobros.Size = new System.Drawing.Size(337, 56);
+            this.ListBoxCobros.TabIndex = 185;
             // 
             // ListBoxDemandados
             // 
             this.ListBoxDemandados.FormattingEnabled = true;
-            this.ListBoxDemandados.Location = new System.Drawing.Point(97, 374);
+            this.ListBoxDemandados.Location = new System.Drawing.Point(97, 361);
             this.ListBoxDemandados.Name = "ListBoxDemandados";
-            this.ListBoxDemandados.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandados.Size = new System.Drawing.Size(337, 56);
             this.ListBoxDemandados.TabIndex = 178;
+            // 
+            // LabelPagos
+            // 
+            this.LabelPagos.AutoSize = true;
+            this.LabelPagos.Location = new System.Drawing.Point(3, 482);
+            this.LabelPagos.Name = "LabelPagos";
+            this.LabelPagos.Size = new System.Drawing.Size(40, 13);
+            this.LabelPagos.TabIndex = 182;
+            this.LabelPagos.Text = "Pagos:";
             // 
             // ListBoxDemandantes
             // 
             this.ListBoxDemandantes.FormattingEnabled = true;
             this.ListBoxDemandantes.Location = new System.Drawing.Point(97, 299);
             this.ListBoxDemandantes.Name = "ListBoxDemandantes";
-            this.ListBoxDemandantes.Size = new System.Drawing.Size(324, 69);
+            this.ListBoxDemandantes.Size = new System.Drawing.Size(337, 56);
             this.ListBoxDemandantes.TabIndex = 178;
+            // 
+            // LabelCobros
+            // 
+            this.LabelCobros.AutoSize = true;
+            this.LabelCobros.Location = new System.Drawing.Point(3, 420);
+            this.LabelCobros.Name = "LabelCobros";
+            this.LabelCobros.Size = new System.Drawing.Size(43, 13);
+            this.LabelCobros.TabIndex = 183;
+            this.LabelCobros.Text = "Cobros:";
             // 
             // labelDocumentos
             // 
             this.labelDocumentos.AutoSize = true;
-            this.labelDocumentos.Location = new System.Drawing.Point(3, 446);
+            this.labelDocumentos.Location = new System.Drawing.Point(3, 544);
             this.labelDocumentos.Name = "labelDocumentos";
             this.labelDocumentos.Size = new System.Drawing.Size(70, 13);
             this.labelDocumentos.TabIndex = 175;
@@ -464,7 +544,7 @@
             // LabelDemandado
             // 
             this.LabelDemandado.AutoSize = true;
-            this.LabelDemandado.Location = new System.Drawing.Point(3, 371);
+            this.LabelDemandado.Location = new System.Drawing.Point(3, 358);
             this.LabelDemandado.Name = "LabelDemandado";
             this.LabelDemandado.Size = new System.Drawing.Size(73, 13);
             this.LabelDemandado.TabIndex = 31;
@@ -560,50 +640,41 @@
             this.CuadroGrupoFamiliar.Size = new System.Drawing.Size(342, 32);
             this.CuadroGrupoFamiliar.TabIndex = 174;
             // 
-            // BotonCancelar
+            // BotonConsultarPagos
             // 
-            this.BotonCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BotonCancelar.Location = new System.Drawing.Point(356, 645);
-            this.BotonCancelar.Name = "BotonCancelar";
-            this.BotonCancelar.Size = new System.Drawing.Size(95, 22);
-            this.BotonCancelar.TabIndex = 185;
-            this.BotonCancelar.Text = "Cancelar";
-            this.BotonCancelar.UseVisualStyleBackColor = true;
-            this.BotonCancelar.Click += new System.EventHandler(this.BotonCancelar_Click);
+            this.BotonConsultarPagos.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarPagos.Enabled = false;
+            this.BotonConsultarPagos.Location = new System.Drawing.Point(457, 568);
+            this.BotonConsultarPagos.Name = "BotonConsultarPagos";
+            this.BotonConsultarPagos.Size = new System.Drawing.Size(71, 25);
+            this.BotonConsultarPagos.TabIndex = 188;
+            this.BotonConsultarPagos.Text = "Consultar";
+            this.BotonConsultarPagos.UseVisualStyleBackColor = true;
+            this.BotonConsultarPagos.Click += new System.EventHandler(this.BotonConsultarPagos_Click);
             // 
-            // BotonConsultarDemandante
+            // BotonConsultarCobro
             // 
-            this.BotonConsultarDemandante.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BotonConsultarDemandante.Enabled = false;
-            this.BotonConsultarDemandante.Location = new System.Drawing.Point(457, 382);
-            this.BotonConsultarDemandante.Name = "BotonConsultarDemandante";
-            this.BotonConsultarDemandante.Size = new System.Drawing.Size(73, 25);
-            this.BotonConsultarDemandante.TabIndex = 181;
-            this.BotonConsultarDemandante.Text = "Consultar";
-            this.BotonConsultarDemandante.UseVisualStyleBackColor = true;
-            this.BotonConsultarDemandante.Click += new System.EventHandler(this.BotonConsultarDemandante_Click);
-            // 
-            // BotonConsultarDemandados
-            // 
-            this.BotonConsultarDemandados.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BotonConsultarDemandados.Enabled = false;
-            this.BotonConsultarDemandados.Location = new System.Drawing.Point(457, 457);
-            this.BotonConsultarDemandados.Name = "BotonConsultarDemandados";
-            this.BotonConsultarDemandados.Size = new System.Drawing.Size(73, 25);
-            this.BotonConsultarDemandados.TabIndex = 183;
-            this.BotonConsultarDemandados.Text = "Consultar";
-            this.BotonConsultarDemandados.UseVisualStyleBackColor = true;
-            this.BotonConsultarDemandados.Click += new System.EventHandler(this.BotonConsultarDemandados_Click);
+            this.BotonConsultarCobro.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.BotonConsultarCobro.Enabled = false;
+            this.BotonConsultarCobro.Location = new System.Drawing.Point(457, 506);
+            this.BotonConsultarCobro.Name = "BotonConsultarCobro";
+            this.BotonConsultarCobro.Size = new System.Drawing.Size(73, 25);
+            this.BotonConsultarCobro.TabIndex = 187;
+            this.BotonConsultarCobro.Text = "Consultar";
+            this.BotonConsultarCobro.UseVisualStyleBackColor = true;
+            this.BotonConsultarCobro.Click += new System.EventHandler(this.BotonConsultarCobro_Click);
             // 
             // BajaJuicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 679);
+            this.ClientSize = new System.Drawing.Size(543, 730);
+            this.Controls.Add(this.BotonConsultarPagos);
+            this.Controls.Add(this.BotonConsultarCobro);
+            this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonCancelar);
             this.Controls.Add(this.BotonConsultarDemandados);
             this.Controls.Add(this.BotonAceptar);
-            this.Controls.Add(this.Layout);
             this.Controls.Add(this.BotonConsultarDemandante);
             this.Controls.Add(this.BotonBuscar);
             this.Controls.Add(this.BotonBusquedaAvanzada);
@@ -625,9 +696,17 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BotonBuscar;
         private System.Windows.Forms.Button BotonAceptar;
+        private System.Windows.Forms.Button BotonCancelar;
+        private System.Windows.Forms.Button BotonConsultarDemandante;
+        private System.Windows.Forms.Button BotonConsultarDemandados;
         private System.Windows.Forms.TableLayoutPanel Layout;
+        private System.Windows.Forms.ListBox ListBoxPagos;
+        private System.Windows.Forms.Button BotonConsultarDocumentos;
+        private System.Windows.Forms.ListBox ListBoxCobros;
         private System.Windows.Forms.ListBox ListBoxDemandados;
+        private System.Windows.Forms.Label LabelPagos;
         private System.Windows.Forms.ListBox ListBoxDemandantes;
+        private System.Windows.Forms.Label LabelCobros;
         private System.Windows.Forms.Label labelDocumentos;
         private System.Windows.Forms.Label LabelFecha;
         private System.Windows.Forms.Label LabelFolio;
@@ -665,9 +744,7 @@
         private System.Windows.Forms.TextBox CuadroDescripcion;
         private System.Windows.Forms.Label LabelEtapa2;
         private System.Windows.Forms.TextBox CuadroGrupoFamiliar;
-        private System.Windows.Forms.Button BotonCancelar;
-        private System.Windows.Forms.Button BotonConsultarDemandante;
-        private System.Windows.Forms.Button BotonConsultarDemandados;
-        private System.Windows.Forms.Button BotonConsultarDocumentos;
+        private System.Windows.Forms.Button BotonConsultarPagos;
+        private System.Windows.Forms.Button BotonConsultarCobro;
     }
 }
