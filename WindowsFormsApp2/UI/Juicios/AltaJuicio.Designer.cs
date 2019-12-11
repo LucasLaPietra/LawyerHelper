@@ -503,6 +503,7 @@
             // 
             // BotonEliminarDemandado
             // 
+            this.BotonEliminarDemandado.Enabled = false;
             this.BotonEliminarDemandado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonEliminarDemandado.Location = new System.Drawing.Point(922, 135);
             this.BotonEliminarDemandado.Name = "BotonEliminarDemandado";
@@ -525,6 +526,7 @@
             // 
             // BotonEliminarDemandante
             // 
+            this.BotonEliminarDemandante.Enabled = false;
             this.BotonEliminarDemandante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BotonEliminarDemandante.Location = new System.Drawing.Point(922, 61);
             this.BotonEliminarDemandante.Name = "BotonEliminarDemandante";
@@ -561,7 +563,6 @@
             this.CuadroExpediente.Name = "CuadroExpediente";
             this.CuadroExpediente.Size = new System.Drawing.Size(164, 20);
             this.CuadroExpediente.TabIndex = 27;
-            this.CuadroExpediente.TextChanged += new System.EventHandler(this.CuadroExpediente_TextChanged);
             this.CuadroExpediente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CuadroExpediente_KeyPress);
             // 
             // AltaJuicios

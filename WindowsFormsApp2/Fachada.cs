@@ -27,7 +27,10 @@ namespace WindowsFormsApp2
             {
                 throw new MissingMemberException();
             }
-
+            if (pListaDemandados.Count == 0 || pListaDemandantes.Count == 0)
+            {
+                throw new NullReferenceException();
+            }
             foreach (Persona iPersona in pListaDemandados)
             {               
                 iControladorDemandado.RegistrarDemandado(pDemandadosClientes, iJuicio, iPersona);

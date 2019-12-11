@@ -61,6 +61,10 @@ namespace WindowsFormsApp2.Juicios
             {
                 MessageBox.Show("El demandante y demandado no puede ser la misma persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Debe cargarse al menos un demandado y un demandante", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception)
             {
                 MessageBox.Show("juicio no fue añadido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -77,6 +81,10 @@ namespace WindowsFormsApp2.Juicios
                 ListBoxDemandantes.DataSource = null;
                 ListBoxDemandantes.DataSource = iListaDemandantes;
                 ListBoxDemandantes.DisplayMember = "NombreyAp";
+                if (ListBoxDemandantes.Items.Count > 1)
+                {
+                    BotonEliminarDemandante.Enabled = true;
+                }
             }
         }
 
@@ -87,7 +95,7 @@ namespace WindowsFormsApp2.Juicios
             ListBoxDemandantes.DataSource = null;
             ListBoxDemandantes.DataSource = iListaDemandantes;
             ListBoxDemandantes.DisplayMember = "NombreyAp";
-            if (ListBoxDemandantes.Items.Count == 0)
+            if (ListBoxDemandantes.Items.Count <= 1)
             {
                 BotonEliminarDemandante.Enabled = false;
             }
@@ -103,6 +111,10 @@ namespace WindowsFormsApp2.Juicios
                 ListBoxDemandados.DataSource = null;
                 ListBoxDemandados.DataSource = iListaDemandados;
                 ListBoxDemandados.DisplayMember = "NombreyAp";
+                if (ListBoxDemandados.Items.Count > 1)
+                {
+                    BotonEliminarDemandado.Enabled = true;
+                }
             }
         }
 
@@ -112,26 +124,11 @@ namespace WindowsFormsApp2.Juicios
             ListBoxDemandados.DataSource = null;
             ListBoxDemandados.DataSource = iListaDemandados;
             ListBoxDemandados.DisplayMember = "NombreyAp";
-            if (ListBoxDemandados.Items.Count == 0)
+            if (ListBoxDemandados.Items.Count <=1)
             {
                 BotonEliminarDemandado.Enabled = false;
             }
-        }
-
-        private void BotonAgregarDocumentos_Click(object sender, EventArgs e)
-        {
-       
-        }
-
-        private void BotonEliminarDocumentos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BotonModificarDocumentos_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void BotonCancelar_Click(object sender, EventArgs e)
         {
@@ -141,32 +138,7 @@ namespace WindowsFormsApp2.Juicios
             {
                 this.Close();
             }
-        }
-
-        private void ListBoxDocumentos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BotonAgregarDocumentos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BotonConsultarDocumentos_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void BotonEliminarDocumentos_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CuadroExpediente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        }     
 
         private void CuadroExpediente_KeyPress(object sender, KeyPressEventArgs e)
         {
