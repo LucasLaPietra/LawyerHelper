@@ -75,10 +75,6 @@ namespace LawyerHelper.UI.Personas
                     iResultado = ComboBoxResultados.SelectedItem;
                 }               
             }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Debe seleccionar una persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             catch (InvalidOperationException)
             {
                 MessageBox.Show("Ya existe una persona activa con este DNI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -163,6 +163,8 @@ namespace LawyerHelper.UI.Juicios
 
         private void BotonAgregarDemandante_Click(object sender, EventArgs e)
         {
+            try
+            { 
             BuscarPersona iMenuNuevo = new BuscarPersona();
             if (iMenuNuevo.ShowDialog() == DialogResult.OK)
             {
@@ -171,6 +173,15 @@ namespace LawyerHelper.UI.Juicios
                 ListBoxDemandantes.DataSource = null;
                 ListBoxDemandantes.DataSource = iListaDemandantes;
                 ListBoxDemandantes.DisplayMember = "NombreyAp";
+                    if (ListBoxDemandantes.Items.Count > 1)
+                    {
+                        BotonEliminarDemandante.Enabled = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ninguna persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -181,7 +192,7 @@ namespace LawyerHelper.UI.Juicios
             ListBoxDemandantes.DataSource = null;
             ListBoxDemandantes.DataSource = iListaDemandantes;
             ListBoxDemandantes.DisplayMember = "NombreyAp";
-            if (ListBoxDemandantes.Items.Count == 0)
+            if (ListBoxDemandantes.Items.Count <= 1)
             {
                 BotonEliminarDemandante.Enabled = false;
             }
@@ -189,6 +200,8 @@ namespace LawyerHelper.UI.Juicios
 
         private void BotonAgregarDemandado_Click(object sender, EventArgs e)
         {
+            try
+            { 
             BuscarPersona iMenuNuevo = new BuscarPersona();
             if (iMenuNuevo.ShowDialog() == DialogResult.OK)
             {
@@ -197,6 +210,15 @@ namespace LawyerHelper.UI.Juicios
                 ListBoxDemandados.DataSource = null;
                 ListBoxDemandados.DataSource = iListaDemandados;
                 ListBoxDemandados.DisplayMember = "NombreyAp";
+                    if (ListBoxDemandados.Items.Count > 1)
+                    {
+                        BotonEliminarDemandado.Enabled = true;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ninguna persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -206,7 +228,7 @@ namespace LawyerHelper.UI.Juicios
             ListBoxDemandados.DataSource = null;
             ListBoxDemandados.DataSource = iListaDemandados;
             ListBoxDemandados.DisplayMember = "NombreyAp";
-            if (ListBoxDemandados.Items.Count == 0)
+            if (ListBoxDemandados.Items.Count <= 1)
             {
                 BotonEliminarDemandado.Enabled = false;
             }

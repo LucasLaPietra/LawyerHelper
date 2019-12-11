@@ -71,13 +71,9 @@ namespace LawyerHelper.UI.Juicios
                     iResultado = ComboBoxResultados.SelectedItem;
                 }
             }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("Debe seleccionar un Juicio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
             catch (InvalidOperationException)
             {
-                MessageBox.Show("Ya existe una persona activa con este DNI", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ya existe un juicio activo con este expediente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }           
             
         }

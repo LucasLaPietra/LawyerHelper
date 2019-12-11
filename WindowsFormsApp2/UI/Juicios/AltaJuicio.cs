@@ -73,6 +73,8 @@ namespace WindowsFormsApp2.Juicios
 
         private void BotonAgregarDemandante_Click(object sender, EventArgs e)
         {
+            try
+            { 
             BuscarPersona iMenuNuevo = new BuscarPersona();
             if (iMenuNuevo.ShowDialog() == DialogResult.OK)
             {
@@ -85,6 +87,11 @@ namespace WindowsFormsApp2.Juicios
                 {
                     BotonEliminarDemandante.Enabled = true;
                 }
+            }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ninguna persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -103,7 +110,9 @@ namespace WindowsFormsApp2.Juicios
 
         private void BotonAgregarDemandado_Click(object sender, EventArgs e)
         {
-            BuscarPersona iMenuNuevo = new BuscarPersona();
+            try
+            { 
+                BuscarPersona iMenuNuevo = new BuscarPersona();
             if (iMenuNuevo.ShowDialog() == DialogResult.OK)
             {
                 Persona iPersona = (Persona)iMenuNuevo.PersonaEncontrada;
@@ -115,6 +124,11 @@ namespace WindowsFormsApp2.Juicios
                 {
                     BotonEliminarDemandado.Enabled = true;
                 }
+            }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("No se devolvio ninguna persona", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
